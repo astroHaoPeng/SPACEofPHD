@@ -6,6 +6,8 @@
 
 我主搞航天偏大气以外轨道，涉猎还算广泛。
 
+比如讨论：MATLAB，JAVA，轨道动力学，优化算法，Google，小米，Android，修车，LaTeX，PPT，Word，Kindle，轨道竞赛，空间碎片，深空探测，行星探测，科幻，Machine Learning，营销推广，机器人，Arduino，时间管理，护眼软件，Mendeley，Zotero，Linux，macOS，Windows，一起黑百度……
+
 不谈政治、军事、流言。
 
 我认为不合适的，我会删。
