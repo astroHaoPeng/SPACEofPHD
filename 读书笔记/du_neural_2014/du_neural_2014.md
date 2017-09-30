@@ -118,6 +118,25 @@ RBF 是 MLP 的有效替代！
 
 RBF 和 MLP 都普遍应用于 classification 和 function approximation。
 
+RBF 是与 n 个中心向量的误差的 Gaussian function 的值的加权平均，训练时需要选择中心，调节权重。
+
+？？SVM 是什么样的网络算法？
+猜测 SVM 是平均
+
+>在数学建模领域，径向基函数网络（Radial basis function network，缩写 RBF network）是一种使用径向基函数作为激活函数的人工神经网络。径向基函数网络的输出是输入的径向基函数和神经元参数的线性组合。径向基函数网络具有多种用途，包括包括函数近似法、时间序列预测、分类和系统控制。[(径向基函数网络)](https://zh.wikipedia.org/wiki/%E5%BE%84%E5%90%91%E5%9F%BA%E5%87%BD%E6%95%B0%E7%BD%91%E7%BB%9C)
+
+>RBF 拥有较小的支集。针对选定的样本点，它只对样本附近的输入有反应，如下图。
+>
+>![](src/RBF拥有较小的支集.png)
+>
+>光看模型，RBF Network 确实与 SVM with RBF kernel 无异。区别在于训练方式。
+>
+>RBF神经网络与BP神经网络都是非线性多层前向网络，它们都是通用逼近器。*！！对于任一个BP神经网络，总存在一个RBF神经网络可以代替它，反之亦然。*
+>
+>[RBF神经网络和BP神经网络有什么区别？](https://www.zhihu.com/question/44328472)
+
+SVM 和 RFB 的区别在于训练方式。
+
 
 ### 10.1.2
 
@@ -136,6 +155,14 @@ RBF 和 MLP 都普遍应用于 classification 和 function approximation。
 
 
 ## 10.7 ---> 看到这里 <---
+
+
+## 10.11 A Comparision of RBF Networks and MLPs
+
+
+
+
+
 
 
 
