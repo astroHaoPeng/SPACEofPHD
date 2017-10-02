@@ -1,0 +1,1229 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>du_neural_2014</title></head><body><article class="markdown-body"><h1 id="neural-networks-and-statistical-learning"><a name="user-content-neural-networks-and-statistical-learning" href="#neural-networks-and-statistical-learning" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Neural Networks and Statistical Learning</h1>
+<p>[1] K.-L. Du and M. N. S. Swamy, Neural Networks and Statistical Learning. London: Springer London, 2014.</p>
+<hr />
+<h1 id="hopfield-network"><a name="user-content-hopfield-network" href="#hopfield-network" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hopfield Network</h1>
+<blockquote>
+<p>The continuos Hopfield network has dominated the techniqeus for optimization problems, especially for combinatiorial problems. </p>
+<p>Hopfiled神经网络是一种递归神经网络，由约翰·霍普菲尔德在1982年发明。Hopfield网络是一种结合存储系统和二元系统的神经网络。它保证了向局部极小的收敛，但收敛到错误的局部极小值（local minimum），而非全局极小（global minimum）的情况也可能发生。Hopfiled网络也提供了模拟人类记忆的模型。<a href="https://zh.wikipedia.org/wiki/Hopfield%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C">(WikiPedia)</a></p>
+<p>联想记忆功能是离散Hopfield网络的一个重要应用范围。<a href="https://baike.baidu.com/item/HopField%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C">(百度百科：Hopfield神经网络)</a></p>
+</blockquote>
+<p>!! 可以用在组合优化</p>
+<p><strong>暂时用不到这个算法</strong></p>
+<h1 id="svm"><a name="user-content-svm" href="#svm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SVM</h1>
+<blockquote>
+<p>SVM is based on the statistical learning theory and is particularly useful for classification with small sample sizes. SVM has been used for classification, regression, and clustering. Thanks to its successful application in the SVM, the kernel method has aroused wide interest. (p2)</p>
+</blockquote>
+<p>Kolmogorov定理保证：三层网络，足够多节点，可以任意精度近似连续函数。<br />
+- [71] Hecht-Nielsen, R. (1987). Kolmogorov’s mapping neural network existence theorem. In Proceedings of the 1st IEEE International Conference on Neural Networks (Vol. 3, pp. 11–14). San Diego, CA.<br />
+- [81] Kolmogorov, A. N. (1957). On the representation of continuous functions of several variables by superposition of continuous functions of one variable and addition. Doklady Akademii Nauk USSR, 114(5), 953–956.</p>
+<hr />
+<h2 id="210-neural-networks-as-universal-machines"><a name="user-content-210-neural-networks-as-universal-machines" href="#210-neural-networks-as-universal-machines" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.10 Neural Networks as Universal Machines</h2>
+<h3 id="2103"><a name="user-content-2103" href="#2103" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.10.3</h3>
+<blockquote>
+<p>A three-layer feedforward network with a sufficient number of hidden units can approximate any continuous function to any degree of accuracy. This is guaranteed by Kolmogorov’s theorem [71, 81]. (p49)</p>
+<p>Kolmogorov’s theorem is the famous solution to Hilbert’s 13th problem. According to olmogorov’s theorem, a continuous multivariate function on a compact set can be expressed using superpositions and compositions of a finite number of singlevariable functions. </p>
+</blockquote>
+<p>Kolmogorov’s theorem &ndash;&gt; Hecht-Nielsen theorem &ndash;&gt; Stone–Weierstrass theorem (a generalization of the Weierstrass theorem)</p>
+<blockquote>
+<p>The Stone–Weierstrass theorem [118] is a generalization of the Weierstrass theorem, and is usually <strong>used for verifying a model’s approximation capability to dynamic systems</strong>.</p>
+</blockquote>
+<h3 id="2113-lasso"><a name="user-content-2113-lasso" href="#2113-lasso" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>2.11.3 LASSO</h3>
+<p>一种选择模型、选择模型自变量的算法。</p>
+<blockquote>
+<p>随着科技的进步，收集数据的技术也有了很大的发展。因此如何有效地从数据中挖掘出有用的信息也越来越受到人们的关注。统计建模无疑是目前处理这一问题的最有效的手段之一。在模型建立之初，为了尽量减小因缺少重要自变量而出现的模型偏差，人们通常会选择尽可能多的自变量。但实际建模过程中通常需要寻找对响应变量最具有解释性的自变量子集—即模型选择(或称变量选择、特征选择)，以提高模型的解释性和预测精度。所以模型选择在统计建模过程中是极其重要的问题。</p>
+<p>Lasso 的基本思想是在回归系数的绝对值之和小于一个常数的约束条件下，使残差平方和最小化，从而能够产生某些严格等于0 的回归系数，得到可以解释的模型。</p>
+<p>在分析这种模型的时候，人们根据问题本身的的专业理论及有关经验，常常把各种与因变量有关的自变量引进模型，其结果是把一些对因变量影响很小的，有些甚至没有影响的自变量也选入模型中。这样一来，不但计算量大，而且估计和预测的精度也会下降。此外，在一些情况下，某些自变量的观测数据获得代价昂贵，如果这些自变量本身对因变量的影响很小或根本没有影响，但我们不加选择都引到模型中，势必造成观测数据收集和模型应用费用不必要的加大。</p>
+<p>模型选择本质上是寻求模型稀疏表达的过程，而这种过程可以通过优化一个“损失”十“惩罚”的函数问题来完成。<a href="http://blog.sciencenet.cn/blog-252888-711579.html">(转载 - Lasso思想及算法)</a></p>
+<p>Lasso回归，和岭回归非常类似。<a href="http://www.jianshu.com/p/b628c90e1c1c">来源</a></p>
+</blockquote>
+<hr />
+<h2 id="31"><a name="user-content-31" href="#31" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.1</h2>
+<p>神经元的专业名称：<br />
+McCulloch–Pitts neuron == linear threshold gate</p>
+<h2 id="35"><a name="user-content-35" href="#35" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>3.5</h2>
+<blockquote>
+<p>Parallel perceptrons trained with the p-delta rule provide results comparable to that of MLP, madaline, decision tree (C4.5) and SVM, despite its simplicity [4]. (p75)</p>
+</blockquote>
+<hr />
+<h2 id="43"><a name="user-content-43" href="#43" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.3</h2>
+<blockquote>
+<p>BP with momentum.</p>
+<p>The momentum term can effectively magnify the descent in almost-flat steady downhill regions of the error surface by 1− 1τ. In regions with high fluctuations (due to high learning rates), the momentum has a stabilizing effect. The momentum term actually inserts secondorder information in the training process that performs like the CG method. The momentum term effectively smoothes the oscillations and accelerates the convergence. The role of the momentum term is shown in Fig. 4.2. BP with momentum is analyzed and the conditions for convergence are given in [128]. (p88)</p>
+</blockquote>
+<p>总的来说 momentum 项可以使收敛过程更平滑，避免震荡。</p>
+<h2 id="44-incremental-learning-versus-batch-learning"><a name="user-content-44-incremental-learning-versus-batch-learning" href="#44-incremental-learning-versus-batch-learning" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.4 Incremental Learning Versus Batch Learning</h2>
+<p>Incremental learning 的训练通常比 Batch learning 快，但是通常效果不如 batch learning 快。</p>
+<p>后续的研究暂时用不上。</p>
+<h2 id="46-optimizing-network-structure"><a name="user-content-46-optimizing-network-structure" href="#46-optimizing-network-structure" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.6 Optimizing Network Structure 优化网络结构</h2>
+<p>！！目前最需要的技术</p>
+<blockquote>
+<ul>
+<li>sensitiviey-based methods</li>
+<li>penalty-based methods</li>
+</ul>
+</blockquote>
+<h3 id="473-initializing-weights"><a name="user-content-473-initializing-weights" href="#473-initializing-weights" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>4.7.3 Initializing Weights</h3>
+<p>The initial weights of a network play a significant role in the convergence of a training method. Poor initial weight values may result in slow convergence or lead the network stuck at a local minimum. The objective of weight initialization is to find weights that are as close as possible to a global minimum before training, and to increase the convergence speed. By weight initialization, the outputs of the hidden neurons can be assigned in the nonsaturation region. (p108)</p>
+<h1 id="5"><a name="user-content-5" href="#5" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5</h1>
+<p>主要讲了各种先进的训练方法，暂时用不到，需要时可以查找参考。</p>
+<h2 id="55-extended-kalman-filtering-methods"><a name="user-content-55-extended-kalman-filtering-methods" href="#55-extended-kalman-filtering-methods" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>5.5 Extended Kalman Filtering Methods</h2>
+<p>The EKF method belongs to second-order methods. EKF is an optimum filtering method for a linear system resulting from the linearization of a nonlinear system. It attempts to estimate the state of a system that can be modeled as a linear system driven by an additive white Gaussian noise. It always estimates the optimum step size, namely, the Kalman gain, for weight updating and thus the rate of convergence is significantly increased when compared to that of the gradient-descent method. The EKF approach is an incremental training method. It is a general method for training any feedforward network. (p141)</p>
+<hr />
+<h1 id="10-radial-basis-function-networks"><a name="user-content-10-radial-basis-function-networks" href="#10-radial-basis-function-networks" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10 Radial Basis Function Networks</h1>
+<blockquote>
+<p>The RBF network is a universal approximator, and it is a popular alternative to the MLP, since it has a simpler structure and a much faster training process. </p>
+</blockquote>
+<p>RBF 是 MLP 的有效替代！</p>
+<p>RBF 和 MLP 都普遍应用于 classification 和 function approximation。</p>
+<p>RBF 是与 n 个中心向量的误差的 Gaussian function 的值的加权平均，训练时需要选择中心，调节权重。</p>
+<p>？？SVM 是什么样的网络算法？<br />
+猜测 SVM 是平均</p>
+<blockquote>
+<p>在数学建模领域，径向基函数网络（Radial basis function network，缩写 RBF network）是一种使用径向基函数作为激活函数的人工神经网络。径向基函数网络的输出是输入的径向基函数和神经元参数的线性组合。径向基函数网络具有多种用途，包括包括函数近似法、时间序列预测、分类和系统控制。<a href="https://zh.wikipedia.org/wiki/%E5%BE%84%E5%90%91%E5%9F%BA%E5%87%BD%E6%95%B0%E7%BD%91%E7%BB%9C">(径向基函数网络)</a></p>
+<p>RBF 拥有较小的支集。针对选定的样本点，它只对样本附近的输入有反应，如下图。</p>
+<p><img alt="" src="/Users/GroupMacBai/git/SPACEofPHD/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/du_neural_2014/src/RBF%E6%8B%A5%E6%9C%89%E8%BE%83%E5%B0%8F%E7%9A%84%E6%94%AF%E9%9B%86.png" /></p>
+<p>光看模型，RBF Network 确实与 SVM with RBF kernel 无异。区别在于训练方式。</p>
+<p>RBF神经网络与BP神经网络都是非线性多层前向网络，它们都是通用逼近器。<em>！！对于任一个BP神经网络，总存在一个RBF神经网络可以代替它，反之亦然。</em></p>
+<p><a href="https://www.zhihu.com/question/44328472">RBF神经网络和BP神经网络有什么区别？</a></p>
+</blockquote>
+<p>SVM 和 RFB 的区别在于训练方式。</p>
+<h3 id="1012"><a name="user-content-1012" href="#1012" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10.1.2</h3>
+<blockquote>
+<p>The Gaussian RBF network can approximate, to any degree of accuracy, any continuous function by a sufficient number of centers ci, i = 1,&hellip;, J2, and a common standard deviation σ &gt; 0 in Lp-norm, p ⊗ [1, ∀] [77]. A class of RBF networks can achieve universal approximation when the RBF is continuous andintegrable [77]. (p301) </p>
+</blockquote>
+<h3 id="1064-extreme-learning-machines"><a name="user-content-1064-extreme-learning-machines" href="#1064-extreme-learning-machines" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10.6.4 Extreme Learning Machines</h3>
+<p>？？这是什么模型和算法</p>
+<blockquote>
+<p>The algorithm performs several orders of magnitude faster than MLP, SVM, and Gaussian process, but maintains an accuracy that is comparable to that of SVM. </p>
+<p>ELM can be used to train neural networks with threshold functions directly instead of approximating them with sigmoidal functions for the ease of hardware implementation [39]. Also, ELM does not need manually tuned parameters and is much faster. Pruning of neurons in a network built using ELM has been proposed in [83] for classification purposes. (p317)</p>
+</blockquote>
+<p>？？貌似比 SVM 要好用，值得尝试学习</p>
+<h2 id="107-"><a name="user-content-107-" href="#107-" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10.7 &mdash;&gt; 看到这里 &lt;&mdash;</h2>
+<h2 id="1011-a-comparision-of-rbf-networks-and-mlps"><a name="user-content-1011-a-comparision-of-rbf-networks-and-mlps" href="#1011-a-comparision-of-rbf-networks-and-mlps" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>10.11 A Comparision of RBF Networks and MLPs</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>MLP</th>
+<th>RBF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td>global</td>
+<td>local</td>
+</tr>
+<tr>
+<td></td>
+<td>generaliation 效果更好</td>
+<td>extrapolation 效果受限</td>
+</tr>
+<tr>
+<td></td>
+<td>根据输入维度按多项式级数增加</td>
+<td>curse of dimensionality</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>（表格总结不完全，只列了理解的）</p>
+<blockquote>
+<p>In order to approximate a wide class of smooth functions, the number of hidden units required for the three-layer MLP is polynomial with respect to the input dimensions, while that for the localized RBF network is exponential [3]. (p327)</p>
+</blockquote>
+<hr />
+<h1 id="11-recurrent-neural-networks"><a name="user-content-11-recurrent-neural-networks" href="#11-recurrent-neural-networks" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>11 Recurrent Neural Networks</h1>
+<blockquote>
+<p>成功应用包括手写识别、语音识别、自然语言处理以及计算机视觉等一系列问题。</p>
+<p>递归神经网络（RNN）是目前最流行的几种深度学习网络结构之一，因其递归处理历史信息和建模历史记忆的功能特点而特别适用于处理时间、空间序列上有强关联的信息。</p>
+<p>其(成功)应用包括手写识别[Graves09]、语音识别[Graves13]、自然语言处理[Sutskever11][Sutskever14]以及计算机视觉等一系列问题。<br />
+<a href="https://zhuanlan.zhihu.com/p/22191239">(【青年学者专栏】递归神经网络(Recurrent Neural Network)学习)</a></p>
+<p>RNNs的目的使用来处理序列数据。</p>
+<p>RNNs已经被在实践中证明对NLP是非常成功的。如词向量表达、语句合法性检查、词性标注等。<br />
+机器翻译(Machine Translation)，<br />
+语音识别(Speech Recognition)，<br />
+图像描述生成 (Generating Image Descriptions)，<br />
+<a href="http://www.cnblogs.com/wangduo/p/6773333.html">(循环神经网络(Recurrent Neural Networks, RNN)介绍)</a></p>
+</blockquote>
+<p>！！暂时不需要看，目前的研究用不上</p>
+<h1 id="15-discriminant-analysis"><a name="user-content-15-discriminant-analysis" href="#15-discriminant-analysis" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>15 Discriminant Analysis</h1>
+<blockquote>
+<p>试图找到两类物体或事件的特征的一个线性组合，以能够特征化或区分它们。所得的组合可用来作为一个线性分类器，或者，更常见的是，为后续的分类做降维处理。</p>
+<p>LDA与方差分析（ANOVA）和回归分析紧密相关，这两种分析方法也试图通过一些特征或测量值的线性组合来表示一个因变量。</p>
+<p>LDA也与主成分分析（PCA）和因子分析紧密相关，它们都在寻找最佳解释数据的变量线性组合。<br />
+<a href="https://zh.wikipedia.org/wiki/%E7%B7%9A%E6%80%A7%E5%88%A4%E5%88%A5%E5%88%86%E6%9E%90#.E7.A0.B4.E4.BA.A7.E9.A2.84.E6.B5.8B">(WikiPedia: 线性判别分析)</a></p>
+</blockquote>
+<hr />
+<h1 id="16-svm"><a name="user-content-16-svm" href="#16-svm" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>16 SVM</h1>
+<ul>
+<li><em>kernel machines</em></li>
+<li>non-parametric</li>
+<li>optimal, minimize VC dimension</li>
+<li>based on computational learning theory</li>
+<li>three-layer feedforward network</li>
+<li>generalization error 与 input dimensionality 无关</li>
+<li>universal approximator for various kernels</li>
+<li>L-1 SVM 通常给出更少的 support vector</li>
+</ul>
+<p>SVM 分为 L-1 SVM（绝对值的和）和 L-2 SVM（欧氏距离）。</p>
+<h2 id="161-intro"><a name="user-content-161-intro" href="#161-intro" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>16.1 Intro</h2>
+<blockquote>
+<p>SVM [12, 201] is one of the most popular nonparametric classification algorithms. It is optimal and is based on computational learning theory [200, 202]. The goal of SVM is to minimize the VC dimension by finding the optimal hyperplane between classes, with the maximal margin, where the margin is defined as the distance of the closest point in each class to the separating hyperplane. </p>
+<p>SVM is a <strong>three-layer feedforward network</strong>. <br />
+It implements the structural riskminimization (SRM) principle that <strong>minimizes the upper bound of the generalization error</strong>. This induction principle is based on the fact that <strong>the generalization error is bounded</strong> by the sum of a <em>training error</em> and a <em>confidence-interval term</em> that depends on the VC dimension. <strong>Generalization errors of SVMs are not related to the input dimensionality, but to the margin with which it separates the data.</strong> Instead of minimizing the training error, SVM purports to minimize an upper bound of the generalization error and maximizes the margin between a separating hyperplane and the training data. </p>
+<p>SVM is a universal approximator for various kernels. <br />
+One of the main features of SVM is the absence of local minima. SVM is defined in terms of a subset of the learning data, called support vectors. It is a sparse representation of the training data, and allows the extraction of a condensed dataset based on the support vectors. (p469)</p>
+<p>The performance of every kernel-based method depends on the kernel type selected. However, there are no general theories for choosing a kernel in a datadependent way. (p470)<br />
+Nonlinear kernel functions are used to overcome the curse of dimensionality. </p>
+</blockquote>
+<h2 id="162-svm-model"><a name="user-content-162-svm-model" href="#162-svm-model" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>16.2 SVM Model</h2>
+<blockquote>
+<p>L1-SVMs are more popularly used than L2-SVMs because they usually yield classifiers with a much less number of support vectors, thus leading to better classification speed.</p>
+<p>The generalization ability of SVM depends on the geometrical concept of span of support vectors [203]. </p>
+<p>The selection of hyperparameters is investigated by using k-fold crossvalidation and leave-one-out criteria [47]. <br />
+The VC dimension of hyperplanes with margin ρ is less than D2/4ρ2, where D is the diameter of the smallest sphere containing the training points [201]. (p474)</p>
+<p>When both SVMs and feedforward networks use similar hidden-layer weights, accuracies are very similar [155]. Regarding the number of support vectors, sequential feedforward networks construct models with less hidden units than SVMs do and in the same range as sparse SVMs do. Computational time is lower for SVMs. (p474)<br />
+</p>
+</blockquote>
+<hr />
+<h1 id="17-other-kernel-methods"><a name="user-content-17-other-kernel-methods" href="#17-other-kernel-methods" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>17 Other Kernel Methods</h1>
+<hr />
+<h1 id="18-reinforcement-learning"><a name="user-content-18-reinforcement-learning" href="#18-reinforcement-learning" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>18 Reinforcement Learning</h1>
+<hr />
+<h1 id="20-combining-multiple-learners-data-fusion-and-emsemble-learning"><a name="user-content-20-combining-multiple-learners-data-fusion-and-emsemble-learning" href="#20-combining-multiple-learners-data-fusion-and-emsemble-learning" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>20 Combining Multiple Learners: Data Fusion and Emsemble Learning</h1>
+<hr />
+<h1 id="25-data-mining"><a name="user-content-25-data-mining" href="#25-data-mining" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>25 Data Mining</h1>
+<h1 id="35-math-35"><a name="user-content-35-math-35" href="#35-math-35" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a># Math #</h1>
+<h2 id="regularization"><a name="user-content-regularization" href="#regularization" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Regularization</h2>
+<p>通过添加正则化项来解决病态的优化问题</p>
+<blockquote>
+<p>Regularization, in mathematics and statistics and particularly in the fields of machine learning and inverse problems, is a process of introducing additional information in order to solve an ill-posed problem or to prevent overfitting. </p>
+<p>A theoretical justification for regularization is that it attempts to impose Occam&rsquo;s razor on the solution, as depicted in the figure. From a Bayesian point of view, many regularization techniques correspond to imposing certain prior distributions on model parameters. <a href="https://en.wikipedia.org/wiki/Regularization_(mathematics)">(Widipedia)</a></p>
+</blockquote>
+<p>Regularization can be motivated as a technique to improve the generalizability of a learned model. [不太懂]</p>
+<h1 id="35-others-35"><a name="user-content-35-others-35" href="#35-others-35" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a># Others #</h1>
+<p><a href="https://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/">原版：7 Types of Regression Techniques you should know</a></p>
+<p><a href="http://www.jianshu.com/p/b628c90e1c1c">翻译：回归系列之入门篇</a></p>
+<p><strong>目前不太适用的：</strong><br />
+线性回归，Logistic回归，多项式回归，Stepwise回归，Ridge回归（岭回归），Lasso回归，ElasticNet回归（约等于Ridge回归+Lasso回归）</p>
+<p>都是通常的回归算法，应用不到。</p></article></body></html>
