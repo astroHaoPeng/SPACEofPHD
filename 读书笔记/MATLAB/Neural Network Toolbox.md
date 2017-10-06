@@ -32,6 +32,63 @@ For small training sets, you can quickly apply deep learning by performing trans
 
 
 
+----------------
+[here](https://cn.mathworks.com/help/nnet/gs/fit-data-with-a-neural-network.html)
+
+If the performance on the training set is good, but the test set performance is significantly worse, which could indicate **overfitting**, then reducing the number of neurons can improve your results. 
+
+## [Divide Data for Optimal Neural Network Training](https://cn.mathworks.com/help/nnet/ug/divide-data-for-optimal-neural-network-training.html)
+See "Dividing the Data" for more discussion of the data division process.
+
+``net.divideFcn``存储函数，``net.divideParam``存储不同的`divideFcn`的变量
+- `dividerand`
+	- `net.divideParam.trainRatio`, `net.divideParam.valRatio`, `net.divideParam.testRatio`
+- `divideblock`
+	- similar parameter with `dividerand`
+	- using three contiguous blocks of the original data set 
+- `divideint`
+	- similar parameter with `dividerand`
+	- divided by an interleaved method
+- `divideind`
+	- `net.divideParam.trainInd`, `net.divideParam.valInd`, `net.divideParam.testInd`
+
+？？是否可以人为指定
+
+### [Improve Neural Network Generalization and Avoid Overfitting](https://cn.mathworks.com/help/nnet/ug/improve-neural-network-generalization-and-avoid-overfitting.html)
+??
+
+--------------------
+
+``fitnet``
+
+# 选择训练函数
+
+[Choose a Multilayer Neural Network Training Function](https://cn.mathworks.com/help/nnet/ref/fitnet.html)
+- **`trainlm`**: Levenberg-Marquardt 
+	-  In general, on function approximation problems, for networks that contain up to a few hundred weights, the Levenberg-Marquardt algorithm will have the fastest convergence.
+	- In many cases, trainlm is able to obtain lower mean square errors than any of the other algorithms tested.
+	- In addition, trainlm performance is relatively poor on pattern recognition problems. 
+- `trainbr`: Bayesian regularization training algorithm
+- **`trainbfg`**: BFGS Quasi-Newton
+	- The performance of trainbfg is similar to that of trainlm. 
+- ~`trainrp`~: Resilient Backpropagation 
+	- The trainrp function is the fastest algorithm on **pattern recognition** problems. However, it does not perform well on function approximation problems.
+	- When training large networks, and when training pattern recognition networks, trainscg and trainrp are good choices. Their memory requirements are relatively small, and yet they are much faster than standard gradient descent algorithms. [Ref](https://cn.mathworks.com/help/nnet/ug/train-and-apply-multilayer-neural-networks.html)
+- **`trainscg`**: Scaled *Conjugate Gradient*
+	- The SCG algorithm is almost as fast as the LM algorithm on function approximation problems (faster for large networks) and is almost as fast as trainrp on pattern recognition problems. 
+	- When training large networks, and when training pattern recognition networks, trainscg and trainrp are good choices. Their memory requirements are relatively small, and yet they are much faster than standard gradient descent algorithms. [Ref](https://cn.mathworks.com/help/nnet/ug/train-and-apply-multilayer-neural-networks.html)
+- `traincgb`: *Conjugate Gradient* with Powell/Beale Restarts
+- `traincgf`: Fletcher-Powell *Conjugate Gradient*
+- `traincgp`: Polak-Ribiére *Conjugate Gradient*
+- `trainoss`: One Step Secant
+- `traingdx`: Variable Learning Rate Gradient Descent
+	- usually much slower than the other methods
+- `traingdm`: Gradient Descent with Momentum
+- `traingd`: Gradient Descent
+
+
+
+
 
 -------------
 # 一些定义
