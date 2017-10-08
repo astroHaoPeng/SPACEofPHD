@@ -98,6 +98,30 @@ Generally, the normalization step is applied to both the input vectors and the t
 
 
 
+----------------------
+
+[Neural Network Training Concepts](https://cn.mathworks.com/help/nnet/ug/neural-network-training-concepts.html?searchHighlight=Training%20Styles&s_tid=doc_srchtitle)
+
+Incremental training is usually done with adapt; batch training is usually done with train.
+
+两种不同的训练模式：
+- `train` 为 Batch Training 
+	- **计算完所有训练集后更新**
+	- 可使用的训练方法更多
+	- 不是所有的方法都支持 GPU
+	- 一次完成指定的 epoch 或者达到收敛条件（待确认）
+- `adapt` 为 Incremental Training 
+	- **计算一个训练集更新一次，每个训练集可能不止一个数据点**
+	- 仅当训练集为 cell 时是 incremental training，如果是矩阵则为 batch training。
+	- 仅计算一次训练集，即一个 epoch，需要手动迭代
+- 两者可使用的训练算法不完全相同
+- **问题**
+	- [solved] `train` 内部是否调用 `adpat` 进行进行计算？猜测是这样，但是为何两者可用的算法又不同？代码中未见明显的互相调用。
+	-	[？？] 使用 `trainc` 或者 `trainr` 进行 `train` 时，也是 incremental，有何区别？猜测不是依赖数据点进行 incremental，而是根据 `net.inputs` 的个数进行，所以与 `adapt` 不同。（待确认）
+
+
+？？什么是 Dynamic Networks 和 Static Network 
+
 
 -------------
 # 一些定义
