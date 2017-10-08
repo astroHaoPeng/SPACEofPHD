@@ -88,6 +88,15 @@ See "Dividing the Data" for more discussion of the data division process.
 
 
 
+--------------------
+
+[Choose Neural Network Input-Output Processing Functions](https://www.mathworks.com/help/nnet/ug/choose-neural-network-input-output-processing-functions.html)
+
+It is standard practice to normalize the inputs before applying them to the network.
+
+Generally, the normalization step is applied to both the input vectors and the target vectors in the data set.
+
+
 
 
 -------------
