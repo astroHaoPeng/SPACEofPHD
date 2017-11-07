@@ -1,4 +1,5 @@
 # SPACEofPHD
+2017/11/07 [添加了相关国际会议的整理，会定期整理](https://github.com/AstroH-Peng/SPACEofPHD/blob/master/%E5%9B%BD%E9%99%85%E4%BC%9A%E8%AE%AE/aerospaceConference.md)。
 
 # 欢迎使用 issues 留言讨论几乎任何话题
 
