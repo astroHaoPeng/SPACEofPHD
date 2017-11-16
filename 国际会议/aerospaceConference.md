@@ -4,7 +4,7 @@
 | Name                                     | AbstractDeadline  | ConferenceDate                   | Location               | Others
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | ----------------- 
 | ~~7th European Conference on Space Debris~~ | | ~~18-21 April 2017~~ | ESA/ESOC, Darmstadt/Germany |
-| ~~9th International Workshop on Satellite Constellations and Formation Flying~~ |  | ~~June 19-21, 2017~~ | University of Colorado Boulder |
+| ~~9th International Workshop on Satellite Constellations and Formation Flying~~ |  | ~~June 19-21, 2017~~ | University of Colorado Boulder | [Final Program](http://ccar.colorado.edu/iwscff2017/IWSCFF-Program-Final.pdf) (I'm [here.](http://ccar.colorado.edu/iwscff2017/img/Group_picture.jpg))
 | ~~1st IAA Conference on Space Situational Awareness~~ | ~~June 30, 2017~~ | ~~Nov. 13-15, 2017~~       | Orlando, Florida       | [Final Program](http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSAFINALProgram3.pdf) |
 | 19th International Conference on Aerospace and Flight Software Engineering | ~~September 25, 2017~~ | November 23-24, 2017 | London, United Kingdom |
 | 7th CSA-IAA Conference on Advanced Space Technology | ~~August 1st, 2017~~ | November 23-24, 2017 | Shanghai, China |
