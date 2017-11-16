@@ -1,13 +1,13 @@
 **航天动力学方向**国际国内**会议**整理
 
 # 2017
-| Name                                     | AbstractDeadline  | ConferenceDate                   | Location               |
-| ---------------------------------------- | ------------------ | ---------------------- | ---------------------- |
-| ~7th European Conference on Space Debris~ | | ~18-21 April 2017~ | ESA/ESOC, Darmstadt/Germany |
-| ~9th International Workshop on Satellite Constellations and Formation Flying~ |  | ~June 19-21, 2017~ | University of Colorado Boulder |
-| 1st IAA Conference on Space Situational Awareness | ~June 30, 2017~ | Nov. 13-15, 2017       | Orlando, Florida       |
-| 19th International Conference on Aerospace and Flight Software Engineering | ~September 25, 2017~ | November 23-24, 2017 | London, United Kingdom |
-| 7th CSA-IAA Conference on Advanced Space Technology | ~August 1st, 2017~ | November 23-24, 2017 | Shanghai, China |
+| Name                                     | AbstractDeadline  | ConferenceDate                   | Location               | Others
+| ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | ----------------- 
+| ~~7th European Conference on Space Debris~~ | | ~~18-21 April 2017~~ | ESA/ESOC, Darmstadt/Germany |
+| ~~9th International Workshop on Satellite Constellations and Formation Flying~~ |  | ~~June 19-21, 2017~~ | University of Colorado Boulder |
+| ~~1st IAA Conference on Space Situational Awareness~~ | ~~June 30, 2017~~ | ~~Nov. 13-15, 2017~~       | Orlando, Florida       | [Final Program](http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSAFINALProgram3.pdf) |
+| 19th International Conference on Aerospace and Flight Software Engineering | ~~September 25, 2017~~ | November 23-24, 2017 | London, United Kingdom |
+| 7th CSA-IAA Conference on Advanced Space Technology | ~~August 1st, 2017~~ | November 23-24, 2017 | Shanghai, China |
 | (?) 4th IAA Conference on University Satellites Missions & CubeSat Workshop | (?) November 26, 2017 | 04-07 December 2017 | Roma, Italy |
 
 - *(?) means that I'm not sure about this and it needs feedback.*
