@@ -1,16 +1,17 @@
 **航天动力学方向**国际国内**会议**整理
 
 # 2017
-| Name                                     | AbstractDeadline  | ConferenceDate                   | Location               | Others
+| Name                                     | AbstractDeadline  | ConferenceDate (sorted from old to new)                  | Location               | Others
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | ----------------- 
+| ~~26th International Symposium on Space Flight Dynamics (ISSFD)~~ |  | ~~June 3-9, 2017~~ | Matsuyama, Japan | [Presentations & Papers](http://issfd2017.org/paperabstract.html)
 | ~~7th European Conference on Space Debris~~ | | ~~18-21 April 2017~~ | ESA/ESOC, Darmstadt/Germany |
 | ~~9th International Workshop on Satellite Constellations and Formation Flying~~ |  | ~~June 19-21, 2017~~ | University of Colorado Boulder | [Final Program](http://ccar.colorado.edu/iwscff2017/IWSCFF-Program-Final.pdf) (I'm [here.](http://ccar.colorado.edu/iwscff2017/img/Group_picture.jpg))
 | ~~1st IAA Conference on Space Situational Awareness~~ | ~~June 30, 2017~~ | ~~Nov. 13-15, 2017~~       | Orlando, Florida       | [Final Program](http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSAFINALProgram3.pdf) |
-| 19th International Conference on Aerospace and Flight Software Engineering | ~~September 25, 2017~~ | November 23-24, 2017 | London, United Kingdom |
-| 7th CSA-IAA Conference on Advanced Space Technology | ~~August 1st, 2017~~ | November 23-24, 2017 | Shanghai, China |
-| (?) 4th IAA Conference on University Satellites Missions & CubeSat Workshop | (?) November 26, 2017 | 04-07 December 2017 | Roma, Italy |
+| ~~19th International Conference on Aerospace and Flight Software Engineering~~ | ~~September 25, 2017~~ | ~~November 23-24, 2017~~ | London, United Kingdom |
+| ~~7th CSA-IAA Conference on Advanced Space Technology~~ | ~~August 1st, 2017~~ | ~~November 23-24, 2017~~ | Shanghai, China |
+| ~~(?) 4th IAA Conference on University Satellites Missions & CubeSat Workshop~~ | ~~(?) November 26, 2017~~ | 04-07 December 2017 | Roma, Italy |
 
-- *(?) means that I'm not sure about this and it needs feedback.*
+> *(?) means that I'm not sure about this and it needs feedback.*
 
 # 2018
 | Name                                     | AbstractDeadline  | ConferenceDate                   | Location               |
@@ -18,7 +19,7 @@
 | 28th AIAA/AAS Space Flight Mechanics Meeting | ~June 12, 2017~ | January 8-12, 2018 | Kissimmee, FL |
 | 49th Lunar and Planetary Science Conference (LPSC) | January 9, 2018 | March 19–23, 2018 | Woodlands, Texas |
 | 4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS) | Jan 31, 2018 | May 21-23, 2018 | Changsha, China | 
-| 69TH INTERNATIONAL ASTRONAUTICAL CONGRESS 2018 | February 28, 2018 | October 1-5, 2018 | Bremen, Germany |
+| 69th International Astronautical Congress 2018 | February 28, 2018 | October 1-5, 2018 | Bremen, Germany |
 | AAS/AIAA Astrodynamics Specialist Conference | April 9, 2018 | August 19-23, 2018 | Snowbird, UT |
 | 15th International Conference on Space Operations (SpaceOps) | July 17, 2017 | May 28-June 1, 2018 | Marseille, France |
 | 27th International Symposium on Space Flight Dynamics (ISSFD) |  |  |  |
