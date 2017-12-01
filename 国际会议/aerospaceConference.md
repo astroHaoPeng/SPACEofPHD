@@ -1,7 +1,7 @@
 **航天动力学方向**国际国内**会议**整理
 
 # 2017
-| Name                                     | AbstractDeadline  | ConferenceDate (sorted from old to new)                  | Location               | Others
+| Name                                     | AbstractDeadline  | ConferenceDate                  | Location               | Others
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | ----------------- 
 | ~~26th International Symposium on Space Flight Dynamics (ISSFD)~~ |  | ~~June 3-9, 2017~~ | Matsuyama, Japan | [Presentations & Papers](http://issfd2017.org/paperabstract.html)
 | ~~7th European Conference on Space Debris~~ | | ~~18-21 April 2017~~ | ESA/ESOC, Darmstadt/Germany |
@@ -16,7 +16,8 @@
 # 2018
 | Name                                     | AbstractDeadline  | ConferenceDate                   | Location               |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- |
-| 28th AIAA/AAS Space Flight Mechanics Meeting | ~June 12, 2017~ | January 8-12, 2018 | Kissimmee, FL |
+| **28th AIAA/AAS Space Flight Mechanics Meeting** | ~~June 12, 2017~~ | January 8-12, 2018 | Kissimmee, FL |
+| AIAA Science and Technology Forum and Exposition (AIAA SciTech 2018) |same|same|same|
 | 49th Lunar and Planetary Science Conference (LPSC) | January 9, 2018 | March 19–23, 2018 | Woodlands, Texas |
 | 4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS) | Jan 31, 2018 | May 21-23, 2018 | Changsha, China | 
 | 69th International Astronautical Congress 2018 | February 28, 2018 | October 1-5, 2018 | Bremen, Germany |
