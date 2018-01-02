@@ -9,21 +9,24 @@
 | ~~1st IAA Conference on Space Situational Awareness~~ | ~~June 30, 2017~~ | ~~Nov. 13-15, 2017~~       | Orlando, Florida       | [Final Program](http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSAFINALProgram3.pdf) |
 | ~~19th International Conference on Aerospace and Flight Software Engineering~~ | ~~September 25, 2017~~ | ~~November 23-24, 2017~~ | London, United Kingdom |
 | ~~7th CSA-IAA Conference on Advanced Space Technology~~ | ~~August 1st, 2017~~ | ~~November 23-24, 2017~~ | Shanghai, China |
-| ~~(?) 4th IAA Conference on University Satellites Missions & CubeSat Workshop~~ | ~~(?) November 26, 2017~~ | 04-07 December 2017 | Roma, Italy |
+| ~~(?) 4th IAA Conference on University Satellites Missions & CubeSat Workshop~~ | ~~(?) November 26, 2017~~ | ~~04-07 December 2017~~ | Roma, Italy |
 
 > *(?) means that I'm not sure about this and it needs feedback.*
 
 # 2018
 | Name                                     | AbstractDeadline  | ConferenceDate                   | Location               |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- |
-| **28th AIAA/AAS Space Flight Mechanics Meeting** | ~~June 12, 2017~~ | January 8-12, 2018 | Kissimmee, FL |
-| AIAA Science and Technology Forum and Exposition (AIAA SciTech 2018) |same|same|same|
-| 49th Lunar and Planetary Science Conference (LPSC) | January 9, 2018 | March 19–23, 2018 | Woodlands, Texas |
+| **28th AIAA/AAS Space Flight Mechanics Meeting** | ~~Jun 12, 2017~~ | Jan 8-12, 2018 | Kissimmee, FL |
+| AIAA Science and Technology Forum and Exposition (AIAA SciTech 2018) | ~~same~~ |same|same|
+| Special Session on Computational Intelligence in Aerospace Science and Engineering, 2018 WCCI | Jan 15, 2018 | Jul 8-13, 2018 | Rio, Brazil |
+| 49th Lunar and Planetary Science Conference (LPSC) | Jan 9, 2018 | Mar 19–23, 2018 | Woodlands, Texas |
 | 4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS) | Jan 31, 2018 | May 21-23, 2018 | Changsha, China | 
-| 69th International Astronautical Congress 2018 | February 28, 2018 | October 1-5, 2018 | Bremen, Germany |
-| AAS/AIAA Astrodynamics Specialist Conference | April 9, 2018 | August 19-23, 2018 | Snowbird, UT |
-| 15th International Conference on Space Operations (SpaceOps) | July 17, 2017 | May 28-June 1, 2018 | Marseille, France |
+| 69th International Astronautical Congress 2018 | Feb 28, 2018 | Oct 1-5, 2018 | Bremen, Germany |
+| AAS/AIAA Astrodynamics Specialist Conference | Apr 9, 2018 | Aug 19-23, 2018 | Snowbird, UT |
+| 15th International Conference on Space Operations (SpaceOps) | Jul 17, 2017 | May 28-June 1, 2018 | Marseille, France |
 | 27th International Symposium on Space Flight Dynamics (ISSFD) |  |  |  |
+
+> * WCCI -- World Congress on Computational Intelligence
 
 # 2019
 | Name                                     | AbstractDeadline  | ConferenceDate                   | Location               |
