@@ -3,14 +3,15 @@
 # 2018
 | Name                                     | AbstractDeadline  | ConferenceDate                   | Location               | Others |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | --- |
-| ~~28th AIAA/AAS Space Flight Mechanics Meeting (SciTech2018)~~ | ~~Jun 12, 2017~~ | ~~Jan 8-12, 2018~~ | Kissimmee, FL |  [Final Program.](https://arc.aiaa.org/doi/book/10.2514/MSFM18) (Me [here](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1966), Gaurav [here.](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1454)) |
-| Special Session on Computational Intelligence in Aerospace Science and Engineering, 2018 WCCI [1] | ~~Jan 15, 2018~~ | Jul 8-13, 2018 | Rio, Brazil |
-| 49th Lunar and Planetary Science Conference (LPSC) | ~~Jan 9, 2018~~ | Mar 19–23, 2018 | Woodlands, Texas |
-| 4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS) [2] | **Feb 28, 2018** | May 21-23, 2018 | Changsha, China | 
-| The Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference | **Mar 15, 2018** | Sept 11-14 | Wailea, Hawaii |
-| 69th International Astronautical Congress 2018 | **Feb 28, 2018** | Oct 1-5, 2018 | Bremen, Germany |
-| AAS/AIAA Astrodynamics Specialist Conference | **Apr 9, 2018** | Aug 19-23, 2018 | Snowbird, UT |
-| 15th International Conference on Space Operations (SpaceOps) | Jul 17, 2017 | May 28-June 1, 2018 | Marseille, France |
+| ~~28th AIAA/AAS Space Flight Mechanics Meeting (SciTech2018)~~ | ~~Jun 12, 2017~~ | ~~Jan 8-12~~ | Kissimmee, FL |  [Final Program.](https://arc.aiaa.org/doi/book/10.2514/MSFM18) (Me [here](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1966), Gaurav [here.](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1454)) |
+| Special Session on Computational Intelligence in Aerospace Science and Engineering WCCI [1] | ~~Jan 15~~ | Jul 8-13 | Rio, Brazil |
+| 49th Lunar and Planetary Science Conference (LPSC) | ~~Jan 9~~ | Mar 19–23 | Woodlands, Texas |
+| 4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS) [2] | **Feb 28** | May 21-23 | Changsha, China | 
+| 首届中国航天大会暨第三届中国航天高峰论坛 | **Mar 1 (全文)** | Apr 23-24 | 哈尔滨，中国 |
+| The Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference | **Mar 15** | Sept 11-14 | Wailea, Hawaii |
+| 69th International Astronautical Congress 2018 | **Feb 28** | Oct 1-5 | Bremen, Germany |
+| AAS/AIAA Astrodynamics Specialist Conference | **Apr 9** | Aug 19-23 | Snowbird, UT |
+| 15th International Conference on Space Operations (SpaceOps) | Jul 17, 2017 | May 28-June 1 | Marseille, France |
 
 > * [1] WCCI -- World Congress on Computational Intelligence
 > * [2] Topic of DYCOSS: *Dynamic and Control Make Space System Intelligent*
