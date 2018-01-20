@@ -5,7 +5,7 @@ welcome_message: Do not panic.
 description: To boldly go where no man has gone before.
 creator: PH
 
-url: 
+# url: 
 
 permalink: /:year/:month/:title/
 
