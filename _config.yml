@@ -1,37 +1,50 @@
-permalink: /blog/:year/:month/:title.html 
-include: ['.htaccess']
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "CNAME", "Gemfile", "Gemfile.lock"]
-markdown: kramdown
-highlights: pygments
-url: 
-cdn_url: 
-lsi: false
-safe: true
-timezone: Asia/Shanghai
-# auto: false 
-
-paginate: 8
-paginate_path: "page:num"
-
-kramdown:
-  auto_ids: true,
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
-
-JB :
-  IMAGE_PATH : 
-
-# presonal config
-domain: 
+# Basic
 title: SPACEofPHD
-description: TEST
-author: PH
-email: Astro.H.Peng@gmail.com
-github: AstroH-Peng
+subtitle: A confused looking at the universe.
+welcome_message: Do not panic.
+description: To boldly go where no man has gone before.
+creator: PH
 
-config:
-  js_dir:
-  img_dir:
-  css_dir:
+url: 
+
+permalink: /:year/:month/:title/
+
+# Format
+highlighter: rouge
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: 
+
+# The blog button should not be removed.
+blog_button:
+    title: 全部日志
+    description: Visit all blogs
+
+# Navigation buttons in the front page.
+nav:
+    - {title: 链接：ResearchGate, description: Find me at ResearchGate., url: 'https://www.researchgate.net/profile/Hao_Peng9'}
+    - {title: 链接：Google Scholar, description: Find me at Google Scholar., url: 'https://scholar.google.com/citations?user=kOEKfc0AAAAJ&hl=zh-CN'}
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    # disqus: vno-jekyll
+    # duoshuo: 
+    
+# Social
+social:
+    weibo: 
+    github: AstroH-Peng
+    twitter: 
+    gplus: 
+    mail: Astro.H.Peng@onevcat.com
+    rss:
+
+# Google Analytics
+ga:
+    # id: your_ga_id
+    # host: your_host
