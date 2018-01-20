@@ -16,7 +16,7 @@ tags:
 ## Abstract-open
 | Name                                     | `AbstractDeadline`  | ConferenceDate                   | Location               | Others |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | --- |
-| [COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | **Feb 9** | July 14-22 | Pasadena, CA
+| [COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | **Feb 9** | July 14-22 | Pasadena, CA |
 | [69th International Astronautical Congress 2018](https://www.iac2018.org/) | **Feb 28** | Oct 1-5 | Bremen, Germany |
 | [4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS)](http://www.dycoss2018.com/) [2] | **Feb 28** | May 21-23 | Changsha, China | 
 | [首届中国航天大会 暨第三届中国航天高峰论坛](http://www.csaspace.org.cn/CMS/Academic/ArticleShow.asp?ArticleID=1201) | **Mar 1 (全文)** | Apr 23-24 | 哈尔滨，中国 |
