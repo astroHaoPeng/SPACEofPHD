@@ -15,7 +15,7 @@ tags:
 
 ## Abstract-Open
  
-Name                                     | *AbstractDeadline*  | ConferenceDate                   | Location               | Others 
+Name                                     | *Abstract Deadline*  | Conference Date                   | Location               | Others 
 ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | --- 
 [AIAA SPACE Forum 2018](https://space.aiaa.org/) | **Feb 8** | Sept 17-19 | Orlando, FL |
 [COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | **Feb 9** | July 14-22 | Pasadena, CA |
@@ -27,7 +27,7 @@ Name                                     | *AbstractDeadline*  | ConferenceDate 
 
 ## Past and Abstract-Closed
 
-| Name                                     | AbstractDeadline  | *ConferenceDate*                   | Location               | Others |
+| Name                                     | Abstract Deadline  | *Conference Date*                   | Location               | Others |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | --- |
 | ~~28th AIAA/AAS Space Flight Mechanics Meeting (SciTech2018)~~ | ~~Jun 12, 2017~~ | ~~Jan 8-12~~ | Kissimmee, FL |  [Final Program.](https://arc.aiaa.org/doi/book/10.2514/MSFM18) (Me [here](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1966), Gaurav [here.](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1454)) |
 | Special Session on Computational Intelligence in Aerospace Science and Engineering WCCI [1] | ~~Jan 15~~ | Jul 8-13 | Rio, Brazil |
