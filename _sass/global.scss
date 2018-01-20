@@ -176,13 +176,14 @@ pre {
 
 table {
   color: $gray-darkest;
-  font-size: .9em;
-  text-align: center;
-  line-height: 40px;
+  font-size: 14pt;
+  text-align: middle;
+  line-height: 10px auto;
   border-spacing: 0;
   border: 2px solid darken($primary-color, 10%);
-  width: 90%;
-  margin: 50px auto;
+  width: 100%;
+  margin: 20px 0 10px 0;
+  padding: 5px 5px 5px 5px;
 }
 
 thead tr:first-child {
@@ -192,21 +193,21 @@ thead tr:first-child {
 }
 
 th {font-weight: bold;}
-th:first-child, td:first-child {padding: 0 15px 0 20px;}
+th, td {padding: 5px 5px 5px 5px;}
 
-thead tr:last-child th {
-    border-bottom: 1px solid $gray-light;
-}
+// thead tr:last-child th {
+//     border-bottom: 1px solid $gray-light;
+// }
 
 tbody tr:last-child td {border: none;}
 tbody td {
     border-bottom: 1px solid $gray-light;
-    font-size: .85em;
+    font-size: 1em;
 }
 
-td:last-child {
-  padding-right: 10px;
-}
+// td:last-child {
+//   padding-right: 0px;
+// }
 
 
 .date,
