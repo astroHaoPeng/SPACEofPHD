@@ -20,9 +20,14 @@ nav {
       display: block;
       position: relative;
       @extend .btn;
+
+      padding: 10px 10px;
+      border: 2px solid $primary-color;
+      border-radius: 26px 26px 12px 12px;
+      
       border-color: #FFF;
       color: #FFF;
-      opacity: .8;
+      opacity: .6;
 
       &:hover {
         color: #FFF;
