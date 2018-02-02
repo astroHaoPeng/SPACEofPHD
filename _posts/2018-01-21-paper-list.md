@@ -17,7 +17,6 @@ tags:
 1. ~~Peng, H., Bai, X., 2018b. Artificial Neural Network based Machine Learning Approach to Improve Orbit Prediction Accuracy (under review). Journal of Spacecraft and Rockets.~~
 1. ~~Peng, H., Bai, X., 2017a. Improving Orbit Prediction Accuracy through Supervised Machine Learning (to be accepted after minor revision). Advances in Space Research.~~
 1. ~~Peng, H., Bai, X., 2017b. Exploring Capability of Support Vector Machine for Improving Satellite Orbit Prediction Accuracy (under review after major revision). Journal of Aerospace Information Systems.~~
-1. ~~Peng, H., Bai, X., 2017c. Machine Learning to Improve Orbit Prediction Accuracy: Validations Using Publicly Available Data (under review). Journal of Guidance, Control, and Dynamics.~~
 
 ## RTBP/CRTBP/ERTBP Related (or R3BP/CR3BP/ER3BP)
 
