@@ -17,21 +17,21 @@ tags:
  
 Name                                     | *Abstract Deadline*  | Conference Date                   | Location               | Others 
 ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | --- 
-[COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | **Feb 16** | July 14-22 | Pasadena, CA |
-[69th International Astronautical Congress 2018](https://www.iac2018.org/) | **Feb 28** | Oct 1-5 | Bremen, Germany |
-[4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS)](http://www.dycoss2018.com/) [2] | **Feb 28** | May 21-23 | Changsha, China | 
 [首届中国航天大会 暨第三届中国航天高峰论坛](http://www.csaspace.org.cn/CMS/Academic/ArticleShow.asp?ArticleID=1201) | **Mar 1 (全文)** | Apr 23-24 | 哈尔滨，中国 |
-[AMOS Conference 2018](https://amostech.com/) | **Mar 15** | Sept 11-14 | Wailea, Hawaii |
+[69th International Astronautical Congress (IAC) 2018](https://www.iac2018.org/) | **Mar 11** | Oct 1-5 | Bremen, Germany |
+[AMOS Conference 2018](https://amostech.com/) [3] | **Mar 15** | Sept 11-14 | Wailea, Hawaii |
 [2018 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2018_summer/2018_summer.html) | **Apr 9** | Aug 19-23 | Snowbird, UT |
 
 ## Past and Abstract-Closed
 
 | Name                                     | Abstract Deadline  | *Conference Date*                   | Location               | Others |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | --- |
-| ~~28th AIAA/AAS Space Flight Mechanics Meeting (SciTech2018)~~ | ~~Jun 12, 2017~~ | ~~Jan 8-12~~ | Kissimmee, FL |  [Final Program.](https://arc.aiaa.org/doi/book/10.2514/MSFM18) (Me [here](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1966), Gaurav [here.](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1454)) |
+| ~~28th AIAA/AAS Space Flight Mechanics Meeting (SciTech2018)~~ | ~~Jun 12, 2017~~ | ~~Jan 8-12~~ | Kissimmee, FL | [Final Program.](https://arc.aiaa.org/doi/book/10.2514/MSFM18) (Me [here](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1966), Gaurav [here.](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1454)) |
+[4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS)](http://www.dycoss2018.com/) [2] | ~~Feb 28~~ | May 21-23 | Changsha, China | 
+| 49th Lunar and Planetary Science Conference (LPSC) | ~~Jan 9~~ | Mar 19–23 | Woodlands, Texas |
+| 15th International Conference on Space Operations (SpaceOps) | ~~Jul 17, 2017~~ | May 28-June 1 | Marseille, France |
 | Special Session on Computational Intelligence in Aerospace Science and Engineering WCCI [1] | ~~Jan 15~~ | Jul 8-13 | Rio, Brazil |
-| 49th Lunar and Planetary Science Conference (LPSC)                                          | ~~Jan 9~~ | Mar 19–23 | Woodlands, Texas |
-| 15th International Conference on Space Operations (SpaceOps)								 | ~~Jul 17, 2017~~ | May 28-June 1 | Marseille, France |
+[COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | ~~Feb 16~~ | July 14-22 | Pasadena, CA |
 | [AIAA SPACE Forum 2018](https://space.aiaa.org/) | ~~Feb 8~~ | Sept 17-19 | Orlando, FL |
 
 > * [1] WCCI -- World Congress on Computational Intelligence
