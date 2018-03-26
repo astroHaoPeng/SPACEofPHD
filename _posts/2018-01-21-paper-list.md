@@ -1,5 +1,5 @@
 ---
-title: 我的发表文章列表
+title: My Paper List
 date: 2018-01-21 11:51:52 -05:00
 layout: post
 categories:
@@ -30,6 +30,7 @@ tags:
 1. Peng, H., Yan, D., Xu, S., Ouyang, T., 2016. Linear stability of double–double orbits in the parallelogram four-body problem. Journal of Mathematical Analysis and Applications 433, 785–802. <https://doi.org/10.1016/j.jmaa.2015.08.014>
  
 
+------------------------------
 
 # Conference papers
 
