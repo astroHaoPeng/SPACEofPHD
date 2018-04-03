@@ -15,7 +15,7 @@ tags:
 
 1. Peng, H., Bai, X., 2018a. Recovering Area-to-Mass Ratio of Resident Space Objects through Data Mining. Acta Astronautica 142, 75–86. <https://doi.org/10.1016/j.actaastro.2017.09.030>
 1. Peng, H., Bai, X., 2017a. Improving Orbit Prediction Accuracy through Supervised Machine Learning. Advances in Space Research. <https://doi.org/10.1016/j.asr.2018.03.001>
-1. Peng, H., Bai, X., 2017b. Exploring Capability of Support Vector Machine for Improving Satellite Orbit Prediction Accuracy. Journal of Aerospace Information Systems. (accepted)
+1. Peng, H., Bai, X., 2017b. Exploring Capability of Support Vector Machine for Improving Satellite Orbit Prediction Accuracy. Journal of Aerospace Information Systems. <span id="ML-paper-1"></span> <https://arc.aiaa.org/doi/abs/10.2514/1.I010616>
 1. Peng, H., Bai, X., 2018b. Artificial Neural Network based Machine Learning Approach to Improve Orbit Prediction Accuracy. Journal of Spacecraft and Rockets. (accepted)
 
 ## RTBP/CRTBP/ERTBP Related (or R3BP/CR3BP/ER3BP)
@@ -36,8 +36,8 @@ tags:
 
 ## Machine Learning Related
 
-1. Peng, H., Bai, X., 2018. Using Artificial Neural Network in Machine Learning Approach to Improve Orbit Prediction Accuracy. American Institute of Aeronautics and Astronautics. <https://doi.org/10.2514/6.2018-1966> [has a journal-version] 
-1. Peng, H., Bai, X., 2017b. Limits of Machine Learning Approach on Improving Orbit Prediction Accuracy, in: Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference. Presented at the Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference, Wailea Marriott. <https://amostech.com/TechnicalPapers/2017/Astrodynamics/Bai.pdf> [has a journal-version] 
+1. Peng, H., Bai, X., 2018. Using Artificial Neural Network in Machine Learning Approach to Improve Orbit Prediction Accuracy. American Institute of Aeronautics and Astronautics. <https://doi.org/10.2514/6.2018-1966> [has a journal-version]
+1. Peng, H., Bai, X., 2017b. Limits of Machine Learning Approach on Improving Orbit Prediction Accuracy, in: Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference. Presented at the Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference, Wailea Marriott. <https://amostech.com/TechnicalPapers/2017/Astrodynamics/Bai.pdf> [has a [journal-version](#ML-paper-1)] 
 
 ## RTBP/CRTBP/ERTBP Related (or R3BP/CR3BP/ER3BP)
 
