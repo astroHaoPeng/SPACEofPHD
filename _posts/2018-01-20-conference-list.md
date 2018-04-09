@@ -11,17 +11,16 @@ tags:
 
 **航天动力学方向**国际国内**会议**整理
 
-# 2018
-
-## **Abstract-OPEN**
+# **Abstract-OPEN**
  
 | Name | *Abs. D.D.*  | Conf. Date | Location | Others 
 | --- | --- | --- | --- | --- 
 | 2018 IEEE International Conference on Systems, Man, and Cybernetics (SMC2018) | **Apr 14** | Oct 7-10, 2018 | Miyazaki, Japan
-| International Symposium on Lunar and Planetary Science 2018 | **Apr 20** | Jun 13-15 | Macau, China
+| International Symposium on Lunar and Planetary Science 2018 | **Apr 20** | Jun 13-15, 2018 | Macau, China
+| 5 th European Workshop on Space Debris Modelling and Remediation | **May 7** | June 25-27, 2018 | Paris
+| [SciTech 2019](https://scitech.aiaa.org/?utm_source=Informz&utm_medium=Email&utm_campaign=SciTech2018) | **Jun 11** | Jan. 7-11, 2019 | San Diego, CA |
 
-
-## Abstract-CLOSED
+# 2018
 
 | Name                                     | Abs. D.D.  | *Conf. Date*                   | Location               | Others |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | --- |
@@ -48,8 +47,7 @@ tags:
 
 | Name                                     | Abs. D.D.  | Conf. Date                   | Location               |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- |
-| SciTech 2019 | | Jan. 7-11 | San Diego, California |
-| [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | Sept 14 | Jan 13-17, 2019 | Ka'anapali, Maui, HI |
+| [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | **Sept 14** | Jan 13-17, 2019 | Ka'anapali, Maui, HI |
 | [27th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/) |  | 2019 | Australia |
 
 # 2020
