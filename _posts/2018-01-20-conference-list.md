@@ -19,6 +19,7 @@ tags:
 | International Symposium on Lunar and Planetary Science 2018 | **Apr 20** | Jun 13-15, 2018 | Macau, China
 | 5 th European Workshop on Space Debris Modelling and Remediation | **May 7** | June 25-27, 2018 | Paris
 | [SciTech 2019](https://scitech.aiaa.org/?utm_source=Informz&utm_medium=Email&utm_campaign=SciTech2018) | **Jun 11** | Jan. 7-11, 2019 | San Diego, CA |
+| [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | **Sept 14** | Jan 13-17, 2019 | Maui, HI |
 
 # 2018
 
@@ -47,7 +48,6 @@ tags:
 
 | Name                                     | Abs. D.D.  | Conf. Date                   | Location               |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- |
-| [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | **Sept 14** | Jan 13-17, 2019 | Ka'anapali, Maui, HI |
 | [27th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/) |  | 2019 | Australia |
 
 # 2020
