@@ -9,14 +9,14 @@ tags:
   - Information
 ---
 
-**航天动力学方向**国际国内**会议**整理
+*部分***航天动力学**方向会议
 
 # Abstract **OPEN**
  
 | Name | *Abs. D.D.*  | Conf. Date | Location | Others 
 | --- | --- | --- | --- | --- 
-| 5th European Workshop on Space Debris Modelling and Remediation | **May 7** | June 25-27, 2018 | Paris
 | [SciTech 2019](https://scitech.aiaa.org/?utm_source=Informz&utm_medium=Email&utm_campaign=SciTech2018) | **Jun 11** | Jan. 7-11, 2019 | San Diego, CA |
+| [27th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/) | **July 30** | ? Feb 24-28, 2019 | Australia | Held with [AIAC18](http://www.aiac18.com/about/)
 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | **Sept 14** | Jan 13-17, 2019 | Maui, HI |
 
 # Abstract closed
@@ -32,6 +32,7 @@ tags:
 | 39th IEEE Aerospace Conference | | ~~Mar 4-11~~ | Big Sky, Montana |
 [首届中国航天大会 暨第三届中国航天高峰论坛](http://www.csaspace.org.cn/CMS/Academic/ArticleShow.asp?ArticleID=1201) | ~~Mar 1 (全文)~~ | Apr 23-24 | 哈尔滨，中国 |
 [4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS)](http://www.dycoss2018.com/) [2] | ~~Feb 28~~ | May 21-23 | Changsha, China | 
+| 5th European Workshop on Space Debris Modelling and Remediation | ~~May 7~~ | June 25-27, 2018 | Paris
 | 15th International Conference on Space Operations (SpaceOps) | ~~Jul 17, 2017~~ | May 28-Jun 1 | Marseille, France |
 | International Symposium on Lunar and Planetary Science 2018 | ~~Apr 20~~ | Jun 13-15, 2018 | Macau, China
 | Special Session on Computational Intelligence in Aerospace Science and Engineering WCCI [1] | ~~Jan 15~~ | Jul 8-13 | Rio, Brazil |
@@ -46,18 +47,17 @@ tags:
 > * [2] Topic of DYCOSS: *Dynamic and Control Make Space System Intelligent*
 > * [3] AMOS -- Advanced Maui Optical and Space Surveillance Technologies 
 
-# 2019
+## 2019
 
-| Name                                     | Abs. D.D.  | Conf. Date                   | Location               |
-| ---------------------------------------- | ------------------ | ---------------------- | ---------------------- |
-| [27th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/) |  | 2019 | Australia |
+| Name | Abs. D.D. | Conf. Date | Location | Other |
+| --- | --- | --- | --- | --- |
 
-# 2020
+## 2020
 | Name | Abs. D.D. | Conf. Date | Location |
 | --- | --- | --- | --- |
 | AIAA SciTech 2020 | | Jan 6-10, 2020 | 
 
-# More
+## More
 
 | Name                                     | Abs. D.D.  | Conf. Date                   | Location               |
 | ---------------------------------------- | ------------------ | ---------------------- | ---------------------- |
