@@ -1,21 +1,7 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows shortcuts
-*.lnk
-
-# OSX
-# =========================
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
