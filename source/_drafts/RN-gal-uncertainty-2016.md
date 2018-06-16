@@ -93,5 +93,6 @@ circumvent these difficulties, and we will get back to this topic later in §3.1
 
 
 
+
 Bayesian neural networks
 ========================
