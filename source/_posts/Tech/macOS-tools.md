@@ -6,8 +6,8 @@ categories:
 tags:
   - 工具
   - macOS
+updated: '2018-06-12 12:02'
 date: 2018-02-28 22:13:42
-updated: 2018-06-12 12:02
 ---
 
 
@@ -21,6 +21,7 @@ QBlocker | 防止误操作关闭。有时候会失效
 清歌输入法 | 使用还算可以的五笔输入法
 
 无法解决的一些问题
+<!-- more -->
 - 编辑 PDF 的 table of content:
   - Foxit reader 可以编辑但是无法正确保存
   - Skim 不可以编辑。而且，注释和高亮是单独保存，不整合进PDF文件

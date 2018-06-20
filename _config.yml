@@ -54,12 +54,6 @@ index_generator:
   per_page: 10
   order_by: -updated
 
-# https://github.com/chekun/hexo-excerpt
-# excerpt:
-#   depth: 10
-#   excerpt_excludes: []
-#   more_excludes: []
-  
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -141,3 +135,14 @@ marked:
   smartypants: true
   modifyAnchors: ''
   autolink: true
+
+
+
+# Generate categories from directory-tree
+# Dependencies: https://github.com/xu-song/hexo-auto-category
+# depth: the depth of directory-tree you want to generate, should > 0
+# 这个插件会导致 hexo s 时文件不断被修改，很不完善
+# 暂时手动设置 category
+auto_category:
+ enable: false
+ depth: 1

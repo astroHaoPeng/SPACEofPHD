@@ -1,13 +1,14 @@
 ---
 title: 关于 Two-Line Elements 的整理
 comments: true
+categories:
+  - 学术
+tags:
+  - TLE
+  - Information
+mathjax: true
 date: 2018-06-13 14:40:41
 updated: 2018-06-13 14:40:41
-categories:
- - 综述
-tags:
- - TLE
- - Information
 ---
 
 TLE 的生成

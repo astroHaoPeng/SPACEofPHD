@@ -1,9 +1,10 @@
 ---
-title: 读书笔记/steinwart_support_2008
+title: steinwart_support_2008
 comments: true
+categories:
+  - 笔记
 date: 2018-06-15 13:12:42
 updated: 2018-06-15 13:12:42
-categories:
 tags:
 ---
 

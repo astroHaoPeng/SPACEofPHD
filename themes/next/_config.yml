@@ -118,18 +118,21 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
+  学术: categories/学术/ || newspaper-o
+  笔记: categories/笔记/  || sticky-note-o
+  categories: categories/ || th-list
   #about: /about/ || user
-  tags: tags/ || tags
-  categories: categories/ || th
   archives: archives/ || archive
+  tags: tags/ || tags
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+  我的文章: 2018/01/20/Information/my-contributions/ || list
 
 # Enable/Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: true
+  badges: false
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -264,7 +267,7 @@ excerpt_description: true
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
   enable: true
-  length: 10
+  length: 1000
 
 # Post meta display settings
 post_meta:

@@ -1,12 +1,16 @@
 ---
 title: vallado_fundamentals_1997
-date: 2016-06-12 10:03:30
 catagories: 读书笔记
-tags: 
- - 读书笔记
- - 轨道动力学
- - orbital dynamics
- - astrodynamics
+tags:
+  - 读书笔记
+  - 轨道动力学
+  - orbital dynamics
+  - astrodynamics
+categories:
+  - 笔记
+mathjax: true
+updated: 2018-06-20 12:17:48
+date: 2018-06-12 10:03:30
 ---
 
 Vallado, D. A., Fundamentals of Astrodynamics and Applications, New York, NY: The McGraw-Hill Companies, Inc., 1997.
@@ -30,8 +34,8 @@ TLE
 ===
 
 p140: 
-$B^* = \frac{1}{2} \frac{C_D A}{m} \rho_0$. 
-Ballistic Coefficient $BC = \frac{R_{earth}\rho_0}{2B^*}$. 
+$B^\* = \frac{1}{2} \frac{C\_D A}{m} \rho\_0$. 
+Ballistic Coefficient $BC = \frac{R\_{\rm Earth}\rho\_0}{2B^\*}$. 
 
 
 定轨 Orbit Determination

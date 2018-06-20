@@ -1,20 +1,18 @@
 ---
 title: 博士论文 "Uncertainty in Deep Learning" 阅读笔记
-comments: true
 date: 2018-06-16 15:09:29
 updated: 2018-06-16 15:09:29
 categories:
- - 读书笔记
+  - 笔记
 tags:
- - Thesis.phd
- - 读书笔记
- - 神经网络
- - Deep Learning
+  - Thesis.phd
+  - 读书笔记
+  - 神经网络
+  - Deep Learning
 mathjax: true
 ---
 
 Gal, Yarin, “Uncertainty in Deep Learning,” Doctor of Philosophy, University of Cambridge, 2016.
-
 
 Bayesian modeling 的一些基础知识
 ========================
@@ -35,6 +33,7 @@ $p(\bm{y}|\bm{x},\bm{\omega})$
 
 反映了在当前假设的函数参数 $\bm{\omega}$ 下，$\bm{x}$ 给出观测值 $\bm{y}$ 的概率。
 
+<!-- more -->
 ------
 
 获得一个观测集合 $\bm{X} = \\{\dots,\bm{x}_i,\dots\\}$ 和 $\bm{Y} = \\{\dots,\bm{y}_i,\dots\\}$ 后，
@@ -65,7 +64,7 @@ $p(\bm{y}^\*|\bm{x}^\*,\bm{X},\bm{Y}) = \int p(\bm{y}^\*|\bm{x}^\*,\bm{\omega})\
 
 -------
 
-*娈分推断方法 variational inference (Bayesian)*（我第一次听说）
+*娈分推断 variational inference (Bayesian)*（我第一次听说）
 ------------------------------
 
 因为通常无法准确计算 *后验分布*，所以定义一个
@@ -91,8 +90,33 @@ entire dataset), and the approach does not adapt to complex models (models in wh
 this last integral cannot be evaluated analytically). Recent advances in VI allow us to
 circumvent these difficulties, and we will get back to this topic later in §3.1.
 
+核心思想是用 可以处理的 相对简单的 概率分布，去近似真实的分布。
 
 
 
 Bayesian neural networks
 ========================
+
+
+HMC
+---
+
+Hamiltonian Monte Carlo, also Hybrid Monte Carlo
+
+was suggested for posterior inference, a technique based on dynamical
+simulation that does not rely on any prior assumptions about the form of the posterior
+distribution.
+
+HMC makes use of Hamiltonian dynamics in
+MCMC [Duane et al., 1987], following Newton’s laws of motion [Newton, 1687].
+
+HMC
+for example, even though shown to obtain good results, does not scale to large data
+[Neal, 1995], and it is difficult to explain the technique to non-experts.
+
+
+
+
+Markov chain Monte Carlo (MCMC) methods
+=======================================
+

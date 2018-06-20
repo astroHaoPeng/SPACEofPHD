@@ -1,12 +1,12 @@
 ---
 title: hexo-tricks
 comments: true
+categories:
+  - Tech
+tags:
+  - Tech
 date: 2018-06-16 17:11:23
 updated: 2018-06-16 17:11:23
-categories:
- - 折腾
-tags:
- - Tech
 ---
 
 (2016-06-16)

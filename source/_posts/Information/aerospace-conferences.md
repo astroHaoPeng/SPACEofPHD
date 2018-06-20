@@ -1,15 +1,15 @@
 ---
 title: Aerospace Conferences
-date: 2018-01-20 12:16:10 -05:00
-updated: 2018-06-06 11:11:27 -05:00
 layout: post
 categories:
-  - 国际会议
+  - Information
 tags:
   - Academic
   - Information
   - 会议 (Conference)
 top: 999
+date: 2018-01-20 17:16:10
+updated: 2018-06-06 16:11:27
 ---
 
 航天动力学方向的会议
@@ -25,6 +25,8 @@ top: 999
 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | **Sept 14** | Jan 13-17, 2019 | Maui, HI |
 
 # Abstract-closed
+
+<!-- more -->
 
 ## 2018
 
