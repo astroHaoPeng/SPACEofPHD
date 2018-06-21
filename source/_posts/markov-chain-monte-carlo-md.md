@@ -20,6 +20,14 @@ categories: 学术
 
 [ref-3] [靳志辉, LDA-math-MCMC 和 Gibbs Sampling](https://cosx.org/2013/01/lda-math-mcmc-and-gibbs-sampling)（我从这里开始仔细看算法，细致平稳条件）
 
+[ref-4] [shenxiaolu1984, 蒙特卡洛-马尔科夫链(MCMC)初步](https://blog.csdn.net/shenxiaolu1984/article/details/50499898)（简要介绍了4种采用方法，具体算法的公式挂了）
+
+<!-- [ref-5] [shenxiaolu1984, 蒙特卡洛-马尔科夫链(MCMC)的混合速度](https://blog.csdn.net/shenxiaolu1984/article/details/50543457) -->
+
+[ref-6] [qy20115549, HMC(Hamiltonian Monte Carlo抽样算法详细介绍)](https://blog.csdn.net/qy20115549/article/details/54561643)（未看）
+
+[ref-wiki-MCMC] [Markov chain Monte Carlo](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo)（未看）
+
 
 
 我的整理
@@ -31,6 +39,11 @@ categories: 学术
 - Markov Chain 的极限和平稳分布
 - 概率分布的采样，数值方法
 - 
+
+<!-- more -->
+
+In statistics, Markov chain Monte Carlo (MCMC) methods comprise a class of algorithms for sampling from a probability distribution. 
+是一种经典的概率分布采样方法。
 
 
 主要用于计算高维积分的数值近似。
@@ -44,6 +57,27 @@ categories: 学术
 然后，我们就可以以Monte Carlo思想通过这一个Markov Chain的模拟样本代替后验分布做统计分析 [ref-1]。
 
 Markov Chain 由转移概率矩阵和初始值唯一给定。
+
+Monte Carlo 方法的每一个采样是独立的，而 Markov Chain Monte Carlo 的采样是前后关联的。
+
+
+使用 MCMC
+---------
+
+设计MCMC方法的一个难处，在于如何设计合理的转移概率函数，使得MC链的稳态分布等于要求的概率分布。
+MCMC的另一个问题是混合速度，在这篇博客中有所讨论。[ref-4]
+
+MCMC是一个大类，有许多种具体算法，以下举例几种最为著名的：
+- Metropolis-Hastings(MH)
+- Gibbs Sampling
+- Slice Sampling
+- Elliptical Slice Sampling
+
+
+Hamiltonian Monte Carlo
+=======================
+
+Hamiltonian or Hybrid Monte Carlo (HMC)这种MCMC算法应用的是物理系统中动力学的概念来计算Markov链中的未来状态，而不是概率分布。
 
 
 应用
