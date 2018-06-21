@@ -1,11 +1,12 @@
 ---
-title: markov-chain-monte-carlo.md
+title: markov-chain-monte-carlo
 comments: true
 tags:
   - draft
 date: 2018-06-20 16:25:34
 updated: 2018-06-20 16:25:34
 categories: 学术
+mathjax: true
 ---
 
 
@@ -16,18 +17,29 @@ categories: 学术
 
 [ref-1] [Dylon 大仙, MCMC基本原理与应用（一）, 2015-06-03](https://rstudio-pubs-static.s3.amazonaws.com/84854_b3ae47177d5c4d22a95565c2d4e063bf.html)
 
-[ref-2] [daniel-D, 从随机过程到马尔科夫链蒙特卡洛方法](https://www.cnblogs.com/daniel-D/p/3388724.html)（不太好，讲得比较混乱）
+[ref-2] [daniel-D, 从随机过程到马尔科夫链蒙特卡洛方法](https://www.cnblogs.com/daniel-D/p/3388724.html)
+（不太好，讲得比较混乱）
 
-[ref-3] [靳志辉, LDA-math-MCMC 和 Gibbs Sampling](https://cosx.org/2013/01/lda-math-mcmc-and-gibbs-sampling)（我从这里开始仔细看算法，细致平稳条件）
+[ref-3] [靳志辉, LDA-math-MCMC 和 Gibbs Sampling](https://cosx.org/2013/01/lda-math-mcmc-and-gibbs-sampling)
+（我从这里开始仔细看算法，细致平稳条件）
 
-[ref-4] [shenxiaolu1984, 蒙特卡洛-马尔科夫链(MCMC)初步](https://blog.csdn.net/shenxiaolu1984/article/details/50499898)（简要介绍了4种采用方法，具体算法的公式挂了）
+[ref-4] [shenxiaolu1984, 蒙特卡洛-马尔科夫链(MCMC)初步](https://blog.csdn.net/shenxiaolu1984/article/details/50499898)
+（简要介绍了4种采用方法，具体算法的公式挂了）
 
 <!-- [ref-5] [shenxiaolu1984, 蒙特卡洛-马尔科夫链(MCMC)的混合速度](https://blog.csdn.net/shenxiaolu1984/article/details/50543457) -->
 
-[ref-6] [qy20115549, HMC(Hamiltonian Monte Carlo抽样算法详细介绍)](https://blog.csdn.net/qy20115549/article/details/54561643)（未看）
+[ref-6] [qy20115549, HMC(Hamiltonian Monte Carlo抽样算法详细介绍)](https://blog.csdn.net/qy20115549/article/details/54561643)
+（未看）
+
+[ref-7] [随机模拟-Monte Carlo积分及采样（详述直接采样、接受-拒绝采样、重要性采样）](https://www.jianshu.com/p/3d30070932a8)
+（讲了 Monte Carlo 积分与几种常见的采样方式的解释比较直观和深刻。MCMC 的主要作用之一是用来 支持 Monte Carlo 积分，其中涉及到了对某概率 $f(x)$ 的采样。）
+
+[ref-8] [Bin的专栏, 随机采样方法整理与讲解（MCMC、Gibbs Sampling等）](https://www.cnblogs.com/xbinworld/p/4266146.html)
+（推荐。基本是最正确的理解顺序。）
 
 [ref-wiki-MCMC] [Markov chain Monte Carlo](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo)（未看）
 
+[ref-wiki-Gibbs] 
 
 
 我的整理
@@ -69,9 +81,17 @@ MCMC的另一个问题是混合速度，在这篇博客中有所讨论。[ref-4]
 
 MCMC是一个大类，有许多种具体算法，以下举例几种最为著名的：
 - Metropolis-Hastings(MH)
+引入了接受概率，并放大其中一个概率为 1 加速收敛
 - Gibbs Sampling
+提议概率直接使用条件概率仅采样一个元素，接受概率自然为 1（？）
 - Slice Sampling
 - Elliptical Slice Sampling
+
+Gibbs Sampling
+--------------
+
+吉布斯采样适用于条件分布比边缘分布更容易采样的多变量分布 [ref-wiki-gibbs]。
+
 
 
 Hamiltonian Monte Carlo
