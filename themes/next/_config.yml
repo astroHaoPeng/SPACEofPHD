@@ -303,7 +303,7 @@ codeblock:
 
 # Wechat Subscriber
 wechat_subscriber:
-  enabled: true
+  enabled: false
   qcode: /uploads/qrcode_for_gh_680cad214213_344.jpg
   description: 扫描关注公众号SPACEofPHD
 

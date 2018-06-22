@@ -13,8 +13,8 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://45.63.5.49/blog
-root: /blog/
+url: http://45.63.5.49/SPACEofPHD
+root: /SPACEofPHD/
 permalink: :title-:year:month:day/
 permalink_defaults:
 
@@ -97,8 +97,9 @@ search:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@45.63.5.49:/home/git/hexo.git/,master
-  message: 
+  repo: 
+    vultr: git@45.63.5.49:/home/git/hexo.git/,master
+    github: git@github.com:AstroH-Peng/SPACEofPHD.git,gh-pages
 
 
 # https://github.com/theme-next/hexo-symbols-count-time
