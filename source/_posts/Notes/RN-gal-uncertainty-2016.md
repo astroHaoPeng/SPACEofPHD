@@ -1,7 +1,7 @@
 ---
 title: 博士论文 "Uncertainty in Deep Learning" 阅读笔记
 date: 2018-06-16 15:09:29
-updated: 2018-06-21 18:44:29
+updated: 2018-06-27 17:47:51
 categories:
   - 笔记
 tags:
@@ -11,6 +11,7 @@ tags:
   - Deep Learning
 mathjax: true
 ---
+
 
 Gal, Yarin, “Uncertainty in Deep Learning,” Doctor of Philosophy, University of Cambridge, 2016.
 
@@ -168,30 +169,38 @@ circumvent these difficulties, and we will get back to this topic later in §3.1
 ----------
 
 > *Kullback–Leibler (KL) divergence*: 
-$ {\rm KL}(q\_\theta(\bm{\omega})||p(\bm{\omega}||\bm{X},\bm{Y})) = \int q\_\theta(\bm{\omega}) \log \frac{q\_\theta(\bm{\omega})}{p(\bm{\omega}|\bm{X},\bm{Y})}\, {\rm d}\bm{\omega}$
+$ {\rm KL}(q_\theta(\bm{\omega})||p(\bm{\omega}||\bm{X},\bm{Y})) = \int q_\theta(\bm{\omega}) \log \frac{q_\theta(\bm{\omega})}{p(\bm{\omega}|\bm{X},\bm{Y})}\, {\rm d}\bm{\omega}$
 
-> *Lower evidence bound*:
-$ \mathcal{L}\_{\rm VI} = \int q\_\theta(\bm{\omega})\, \log p(\bm{Y}|\bm{X},\bm{\omega})\, {\rm d}\bm{\omega} - {\rm KL}( q\_\theta(\bm{\omega})||p(\bm{\omega}) ) $
+> *(Evidence Lower Bound (ELOB)*:
+$ \mathcal{L}_{\rm VI} = \int q_\theta(\bm{\omega})\, \log p(\bm{Y}|\bm{X},\bm{\omega})\, {\rm d}\bm{\omega} - {\rm KL}( q_\theta(\bm{\omega})||p(\bm{\omega}) ) $
 >
-> 这里作者定义的 $\mathcal{L}$ 看起来很奇怪，其它地方定义为 
-> $ \log p(\bm{Y}|\bm{X}) - {\rm KL}(q\_\theta(\bm{\omega})||p(\bm{\omega}|\bm{X},\bm{Y})) $
+> 这里作者定义的 $\mathcal{L}$ 看起来~~很奇怪~~，其它地方定义为 
+> $ \log p(\bm{Y}|\bm{X}) - {\rm KL}(q_\theta(\bm{\omega})||p(\bm{\omega}|\bm{X},\bm{Y})) $
 > 或者
 > $ \mathbb{E}\[\log p(\bm{\omega},\bm{Y}|\bm{X})\] + \mathbb{H}(\bm{\omega}) $
 > 经验证都是相等的（todo: 需要检查，待更深入理解后）
+>
+> 补充：根据[这里](http://jorbe.sinaapp.com/2017/09/23/variational_and_variational_bayes_methods/)，论文作者定义的 ELOB 是通常定义。
 
-最小化 KL divergence 可以得到 $p(\bm{\omega}|\bm{X},\bm{Y})$ 的近似 $q^\*\_\theta(\bm{\omega})$, 然后就可以代入 (eq-1) 中进行近似推理。
+最小化 KL divergence 可以得到 $p(\bm{\omega}|\bm{X},\bm{Y})$ 的近似 $q^\*_\theta(\bm{\omega})$, 然后就可以代入 (eq-1) 中进行近似推理。
 
-等价于 最大化 $\mathcal{L}\_{\rm VI}$。
+等价于 最大化 $\mathcal{L}_{\rm VI}$。
 
 本质上有 $ \log p(\bm{Y}|\bm{X}) = \mathcal{L} + {\rm KL} $，由于 $\rm KL$ 非负，所以最小化 KL 等价最大化 $\mathcal{L}$。
 
 这里讲了更多的关于 KL divergence 和 $\mathcal{L}$ 的原理：
 [Xitong YANG, Understanding the Variational Lower Bound](https://xyang35.github.io/2017/04/14/variational-lower-bound/)，其中提到关于计算方面的考虑，为什么通常选择最大化 $\mathcal{L}$。
 
+更多的关于贝叶斯推断的学习笔记整理在这里：{% post_link Academics/all-about-bayesian %}
+
 
 
 Bayesian neural networks
 ========================
+
+Hinton 和 Van Camp 提出和采用把 $q(\bm{\omega})$ 分散为独立分布的乘积。
+
+Neal 提出和采用 HMC 直接对后验分布采样。
 
 
 HMC
@@ -211,8 +220,177 @@ for example, even though shown to obtain good results, does not scale to large d
 [Neal, 1995], and it is difficult to explain the technique to non-experts.
 
 
+使用高斯先验，收敛到 GP。
+Neal
+[1995] further studied different prior distributions in Bayesian NNs, and showed that in
+the limit of the number of units the model would converge to various stable processes,
+depending on the prior used (for example, the model would converge to a Gaussian
+process when a Gaussian prior is used).
+
+
 
 
 Markov chain Monte Carlo (MCMC) methods
 =======================================
+
+更多详细内容整理在：{% post_link markov-chain-monte-carlo %}
+
+
+
+
+Bayesian Deep Learning
+======================
+
+Monte Carlo estimators in variational inference
+-----------
+
+在优化 $\mathcal{L}$ 时，需要计算积分相对 $q_\theta(\bm{\omega})$ 的偏微分。可以采用 Monte Carlo estimator 近似。
+
+$$ I(\theta) = \frac{\partial}{\partial \theta} \int f(x) p_\theta(x)\, {\rm d}x $$
+
+- score function estimator $\hat{I}_1$ (likelihood ratio estimator). Variance 较高，实际中常与 *variance reduction technique* 一同使用。
+
+$$ \frac{\partial}{\partial \theta} \int f(x) p_\theta(x)\, {\rm d}x 
+ = \int f(x) \frac{\partial}{\partial \theta} p_\theta(x)\, {\rm d}x 
+ = \int f(x) \frac{\partial \log p_\theta(x)}{\partial \theta} p_\theta(x)\, {\rm d}x 
+$$
+
+- pathwise derivative estimator $\hat{I}_2$ (re-parametrisation trick, infinitesimal perturbation analysis, and stochastic backpropagation). 假设 $p_\theta(x)$ 可以改写为无参数的分布 $p(\epsilon)$，则 $ x = g(\theta,\epsilon) $ 是确定的可微的双参数变换。
+
+$$\begin{aligned} 
+\frac{\partial}{\partial \theta} \int f(x) p_\theta(x)\, {\rm d}x &= \frac{\partial}{\partial \theta} \int f(x) \left( \int p_\theta(x,\epsilon)\, {\rm d}\epsilon \right)\, {\rm d}x \\\\
+ &= \frac{\partial}{\partial \theta} \iint f(x) p_\theta(x|\epsilon) p(\epsilon)\, {\rm d}\epsilon{\rm d}x \\\\
+ &= \frac{\partial}{\partial \theta} \int \left( \int f(x) \sigma\left(x-g(\theta,\epsilon)\right)\, {\rm d}x \right) p(\epsilon)\, {\rm d}\epsilon \\\\
+ &= \frac{\partial}{\partial \theta} \int f(g(\theta,\epsilon))p(\epsilon)\, {\rm d}\epsilon \\\\
+ &= \int f'(g(\theta,\epsilon)) \frac{\partial}{\partial \theta} g(\theta,\epsilon) p(\epsilon)\, {\rm d}\epsilon
+\end{aligned}$$
+
+- characteristic function estimator $\hat{I}_3$. 依赖于 Gaussian 分布的特征函数。$\frac{\partial}{\partial \mu}$ 与 $\hat{I}_2$ 完全相同，
+
+$$ \frac{\partial}{\partial \sigma} \int f(x) p_\theta(x)\, {\rm d}x
+  = 2\sigma \cdot \frac{1}{2} \int f''(x) p_\theta (x)\, {\rm d}x
+$$
+
+通常对 Variance 的估计，$\hat{I}_1 > \hat{I}_2 > \hat{I}_3$，作者提出一个条件可以判断什么时候 2，3 比 1 更优（没有仔细研究，感觉用处不大）。作者在后文中重点使用 $\hat{I}_2$。
+
+[comment]: # ( {% asset_img algorithm-1.png %} )
+
+[comment]: # ( {% asset_img algorithm-2.png %} )
+
+作者证明，当选择的 $p(\omega)$ 满足一定条件时，使用 dropout 训练得到的 NN 就是 BNN。
+
+
+
+Model Uncertainty in BNN
+------------------------
+
+注意区分 预测方差 $q_\theta(\bm{y}|\bm{x})$ 和 后验方差 $q_\theta(\bm{\omega})$。
+
+
+(Predictive variance and posterior variance). It is important to note the
+difference between the variance of the approximating distribution qθ(ω) and the
+variance of the predictive distribution qθ(y|x) (eq. (3.15)).
+
+### 对 regression 问题：
+
+We will perform moment-matching and estimate the first two moments of the predictive
+distribution empirically. The first moment can be estimated as follows:
+
+（证明过程在 pp47--48）
+
+一阶矩 / first moment: $ \hat{\mathbb{E}}[\bm{y}^\*] = \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^\*) $
+
+二阶矩 / second raw moment: $ \hat{\mathbb{E}}[(\bm{y}^\*)^T(\bm{y}^\*)] = \tau^{-1}\bm{I} + \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^\*)^T f^{\hat{\bm{\omega}}}(\bm{x}^\*) $
+
+预测方差 / predictive variance: $ \hat{\rm Var}[\bm{y}^\*] = \tau^{-1}\bm{I} + \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^\*)^T f^{\hat{\bm{\omega}}}(\bm{x}^\*) - \hat{\mathbb{E}}[y^\*]^T \hat{\mathbb{E}}[y^\*] $
+
+（利用了 $\mathbb{E}[x^2] = \mathbb{E}(x)^2 + {\rm Var}(x)$，通过一、二阶矩来计算方差。）
+
+本论文中，实际计算中，$f^{\hat{\bm{\omega}}}(\bm{x}^\*)$ 为使用 $T=10000$ 次 Dropout 训练的输出。
+
+其中 $tau$ 的模型精度，在 p18 给出定义 $p(\bm{y}|\bm{x},\bm{\omega}) = \mathcal{N}(\bm{y};f^\bm{\omega}(\bm{x}),\tau^{-1}\bm{I})$，可能理解为在输出中添加方差为 $\tau^{-1}$ 的噪声。
+
+> 问题：
+> - 应用到目前的轨道预测问题时，$\tau$ 是否应该是个常数？
+> - 如果不是常数，怎么拓展到 $\tau(\Delta t)$？
+>
+> 在 Gauss Processes Regression 中存在同样的问题。但是 GPR 中似乎拓展比较容易（？待确认）。
+
+作者 Gal 在代码中应该是使用 Bayesian Optimization 的办法，对 $\tau$ 进行遍历找到合适的参数。
+
+
+### 对 classification 问题：（有对应的几种策略，暂时用不到，未看）
+
+
+
+### 现实中的几个局限性：
+1. 训练时间不变，测试时间变T倍，但是对于GPU计算影响不大，因为有mini-batch; 
+2. 模型的uncertainty没有很好的办法进行校准，现实中会导致对不同的数据集不确定性不同（没太看懂）; 
+3. 变分推断VI已知会低估predictive variance。
+
+
+
+
+
+
+具体研究开源的代码
+===============
+
+4.3 Quantitative comparison
+---------------------------
+
+https://github.com/yaringal/DropoutUncertaintyExps
+
+这部分好像没有 regression，不过代码更简单、基础一些。
+
+~~YearPredictionMSD~~
+
+repo 中没有 data：data too big to fit in repo; please get in touch for dataset
+
+**bostonHousing**
+
+- from keras.models import Sequential
+- from keras.layers.core import Dense, Dropout, Activation
+
+使用了 Keras 中直接有的 Dropout 来实现网络的 construct 和 train。
+
+这部分代码是预测时的关键步骤：
+
+算 log-likelihood 做什么？ # We compute the test log-likelihood
+
+Gal 的代码是 2016 年的版本：DropoutUncertaintyExps。
+实验部分可以运行。
+Bayesian Optimization 参数的部分，spearmint 和 tensorflow=1.1.0 要求的 protobuf 版本依赖。（暂时没有解决，不会配置）
+
+
+
+4.2
+----
+
+Gal 主要实现了 4 种 VI 算法：
+- Bernoulli approximating distribution, implemented as **dropout**:
+- Multiplicative Gaussian approximating distribution, implemented as multiplicative
+Gaussian noise (MGN):
+- fully factorised Gaussian distribution
+- mixture of Gaussians (MoG) with two mixture components, factorised over
+the rows of the weight matrices
+
+
+
+
+
+4.6 Heteroscedastic uncertainty
+-------------------------------
+
+https://github.com/yaringal/HeteroscedasticDropoutUncertainty
+
+
+Homoscedastic regression assumes identical observation noise for every input
+point x. Heteroscedastic regression, on the other hand, assumes that observation noise
+can vary with input x [Le et al., 2005].
+- Homoscedastic/同方差的
+- Heteroscedastic/异方差的
+
+Heteroscedastic uncertainty 每个数据点 $\bm{x}$ 的观测噪音不同。
+
 
