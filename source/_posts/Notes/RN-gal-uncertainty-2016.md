@@ -394,3 +394,11 @@ can vary with input x [Le et al., 2005].
 Heteroscedastic uncertainty 每个数据点 $\bm{x}$ 的观测噪音不同。
 
 
+
+
+5 应用
+======
+
+
+5.3 Ex ploration in deep reinforcement learning
+-----------------------------------------------
