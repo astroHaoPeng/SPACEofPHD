@@ -39,11 +39,11 @@ updated: 2018-06-21 11:22:36
 - International Symposium on Lunar and Planetary Science 2018 | ~~Apr 20~~ | ~~Jun 13-15, 2018~~ | Macau, China
 - 5 th European Workshop on Space Debris Modelling and Remediation | ~~May 7~~ | ~~June 25-27, 2018~~ | Paris |
 - AIAA Atmospheric Flight Mechanics Conference | | ~~25–29 June 2018~~ | Atlanta, Georgia |
-- 
-- ------> current time <------
-- 
 - [Computational Intelligence in Aerospace Science and Engineering](http://www.ecomp.poli.br/~wcci2018/cross-disciplinary-sessions/#cdss19) [1] | ~~Jan 15~~ | Jul 8-13 | Rio, Brazil | Session Organisers: Dr. Ya-zhong Luo, Prof. Massimiliano Vasile |
 - [COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | ~~Feb 16~~ | Jul 14-22 | Pasadena, CA | |
+- 
+- ------> today <------
+- 
 - **[2018 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2018_summer/2018_summer.html)** | ~~Apr 9~~ | Aug 19-23 | Snowbird, UT | _**Me: [GPR](not-yet); [TLE-2](almost-ready)**_ |
 - [AMOS Conference 2018 (Advanced Maui Optical and Space Surveillance Technologies )](https://amostech.com/) | ~~Mar 15~~ | Sept 11-14 | Wailea, Hawaii | |
 - [2018 AIAA SPACE and Astronautics Forum and Exposition](https://space.aiaa.org/) | ~~Feb 8~~ | Sept 17-19 | Orlando, FL | |
@@ -57,10 +57,19 @@ updated: 2018-06-21 11:22:36
 
 - Name | Abstract Deadline | **Conference Date** | Location | Others |
 - [SciTech 2019](https://scitech.aiaa.org/?utm_source=Informz&utm_medium=Email&utm_campaign=SciTech2018) | ~~Jun 11, 2018~~ | Jan. 7-11, 2019 | San Diego, CA | |
+- 70th International Astronautical Congress (IAC) | 2019.02.28 | 2019.10.21-10.25 | Washington, US | |
+- International Conference on Tether in Space (TiS2019) | 2018.10.15 | 2019.06.12-06.14
 
 ## 2020
 - Name | Abstract Deadline | **Conference Date** | Location | Others |
 - AIAA SciTech 2020 | | Jan 6-10, 2020 |  |
+- 16th International Conference on Space Operations (SpaceOps) | 2019.07.17 | 2020.05.18-05.22 | | |
+- 16th International Conference of Pacific-Basin Societies (ISCOPS)
+- 71st International Astronautical Congress (IAC)
+
+## 2021
+- Name | Abstract Deadline | **Conference Date** | Location | Others |
+- 17th International Conference on Space Operations (SpaceOps)
 
 ## More
 
