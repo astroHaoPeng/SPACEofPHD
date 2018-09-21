@@ -8,7 +8,7 @@ tags:
   - Information
   - 会议 (Conference)
 date: 2018-01-20 17:16:10
-updated: 2018-06-21 11:22:36
+updated: 2018-09-20 10:11:03
 ---
 
 航天动力学方向的会议
@@ -16,31 +16,31 @@ updated: 2018-06-21 11:22:36
 # Open call-for-abstract
 
 Conference Date (Descending) | Name | Location | **Abstract Deadline** | Others
-- 20190113--17 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | Maui, HI | 20180914
+- 20190113-17 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | Maui, HI | 20180914
 
 # Closed call-for-abstract
 
-<!-- more -->
+<!- more ->
 
 Conference Date (Descending) | Name | Location | Abstract Deadline | Others |
-- 20181007--10 | 2018 IEEE International Conference on Systems, Man, and Cybernetics (SMC2018) | Miyazaki, Japan | 20180414
-- 20181001--05 | [69th International Astronautical Congress (IAC) 2018](https://www.iac2018.org/) | Bremen, Germany | 20180511 | *We have one paper.*
-- 20180917--19 | [AIAA SPACE Forum 2018](https://space.aiaa.org/) | Orlando, FL | 20180208 
-- 20180911--14 | [AMOS Conference 2018 (Advanced Maui Optical and Space Surveillance Technologies )](https://amostech.com/) | Wailea, Hawaii | 20180515 
-- 20180819--23 | [2018 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2018_summer/2018_summer.html) | Snowbird, UT | 20180409 | My [first]() presentation; [second]() presentation.
-- 20180108--12 | **28th AIAA/AAS Space Flight Mechanics Meeting (SciTech2018)** | Kissimmee, FL | 20170612 | [Final Program.](https://arc.aiaa.org/doi/book/10.2514/MSFM18) (*My presentation [here](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1966), Gaurav's [here.](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1454)*)
-- 20170619--21 | 9th International Workshop on Satellite Constellations and Formation Flying |  | ~~June 19-21, 2017~~ | University of Colorado Boulder | [Final Program](http://ccar.colorado.edu/iwscff2017/IWSCFF-Program-Final.pdf) (*My photo is [here.](http://ccar.colorado.edu/iwscff2017/img/Group_picture.jpg)*)
-- 20171113--15 | **1st IAA Conference on Space Situational Awareness** | Orlando, Florida | June 30, 2017 | [Final program](http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSAFINALProgram3.pdf) has many interesting papers.
+- 20181007-10 | 2018 IEEE International Conference on Systems, Man, and Cybernetics (SMC2018) | Miyazaki, Japan | 20180414
+- 20181001-05 | [69th International Astronautical Congress (IAC) 2018](https://www.iac2018.org/) | Bremen, Germany | 20180511 | *We have one paper.*
+- 20180917-19 | [AIAA SPACE Forum 2018](https://space.aiaa.org/) | Orlando, FL | 20180208 
+- 20180911-14 | [AMOS Conference 2018 (Advanced Maui Optical and Space Surveillance Technologies )](https://amostech.com/) | Wailea, Hawaii | 20180515 
+- 20180819-23 | [2018 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2018_summer/2018_summer.html) | Snowbird, UT | 20180409 | My [first]() presentation; [second]() presentation.
+- 20180108-12 | **28th AIAA/AAS Space Flight Mechanics Meeting (SciTech2018)** | Kissimmee, FL | 20170612 | [Final Program.](https://arc.aiaa.org/doi/book/10.2514/MSFM18) (*My presentation [here](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1966), Gaurav's [here.](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1454)*)
+- 20170619-21 | 9th International Workshop on Satellite Constellations and Formation Flying |  | ~~June 19-21, 2017~~ | University of Colorado Boulder | [Final Program](http://ccar.colorado.edu/iwscff2017/IWSCFF-Program-Final.pdf) (*My photo is [here.](http://ccar.colorado.edu/iwscff2017/img/Group_picture.jpg)*)
+- 20171113-15 | **1st IAA Conference on Space Situational Awareness** | Orlando, Florida | June 30, 2017 | [Final program](http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSAFINALProgram3.pdf) has many interesting papers.
 
 Leave a comment or send me email for further information.
 
 
 ## 部分信息来源
 
-<!-- 发布多个会议信息的网址 -->
+<!- 发布多个会议信息的网址 ->
 - http://www.space-flight.org/conferences.html
 - https://iaaweb.org/content/view/484/651/
-<!-- 会议网址 -->
+<!- 会议网址 ->
 - http://issfd.org/
 - https://trajectory.estec.esa.int/Astro/ICATT/ICATT_Home.html
 - https://conference.sdo.esoc.esa.int/
@@ -64,7 +64,7 @@ Leave a comment or send me email for further information.
 - [COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | ~~Feb 16~~ | Jul 14-22 | Pasadena, CA | |
 
 
-> * [1] WCCI -- World Congress on Computational Intelligence
+> * [1] WCCI - World Congress on Computational Intelligence
 > * [2] Topic of DYCOSS: *Dynamic and Control Make Space System Intelligent*
 
 ## 2019
@@ -82,10 +82,10 @@ Leave a comment or send me email for further information.
 - Name | Abstract Deadline | **Conference Date** | Location | Others |
 - International Conference on Astrodynamics Tools and Techniques - ICATT (about every 3 years) | | |  | 
 
-<!-- # 补充和反馈
+<!- # 补充和反馈
 [请使用issue补充和反馈最新会议信息，谢谢。](https://github.com/AstroH-Peng/SPACEofPHD/issues)
 - 需要注册GitHub账户。
-- 请按照对应格式添加或者反馈 -->
+- 请按照对应格式添加或者反馈 ->
 
 
 
@@ -94,7 +94,7 @@ Leave a comment or send me email for further information.
 ## ~~2017~~
 
 | Name                                     | AbstractDeadline  | ConferenceDate                  | Location               | Others |
-| ---------------------------------------- | ------------------ | ---------------------- | ---------------------- | ----------------- 
+| -------------------- | --------- | ----------- | ----------- | --------- 
 | **26th International Symposium on Space Flight Dynamics (ISSFD)** |  | ~~June 3-9, 2017~~ | Matsuyama, Japan | [Presentations & Papers](http://issfd2017.org/paperabstract.html)
 | ~~7th European Conference on Space Debris~~ | | ~~18-21 April 2017~~ | ESA/ESOC, Darmstadt/Germany |
 | ~~19th International Conference on Aerospace and Flight Software Engineering~~ | ~~September 25, 2017~~ | ~~November 23-24, 2017~~ | London, United Kingdom | |
