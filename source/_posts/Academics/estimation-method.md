@@ -6,6 +6,7 @@ updated: 2018-08-10 16:44:24
 categories: Academics
 tags:
   - 数学
+mathjax: true
 ---
 
 Estimation theory

@@ -123,9 +123,9 @@ $p(\bm{\omega} | \bm{X},\bm{Y}) = \frac{p(\bm{Y} | \bm{X},\bm{\omega}) p(\bm{\om
 使用这组最可能的参数，可以进行
 
 > *推理 inference*: 
-$p(\bm{y}^\*|\bm{x}^\*,\bm{X},\bm{Y}) = \int p(\bm{y}^\*|\bm{x}^\*,\bm{\omega})\, p(\bm{\omega}|\bm{X},\bm{Y})\, \rm{d}\bm{\omega}$ ...... (eq-1)
+$p(\bm{y}^*|\bm{x}^*,\bm{X},\bm{Y}) = \int p(\bm{y}^*|\bm{x}^*,\bm{\omega})\, p(\bm{\omega}|\bm{X},\bm{Y})\, \rm{d}\bm{\omega}$ ...... (eq-1)
 
-也就是预测新输入 $\bm{x}^\*$ 的输出 $\bm{y}^\*$ 的概率分布。
+也就是预测新输入 $\bm{x}^*$ 的输出 $\bm{y}^*$ 的概率分布。
 
 -----
 
@@ -182,7 +182,7 @@ $ \mathcal{L}_{\rm VI} = \int q_\theta(\bm{\omega})\, \log p(\bm{Y}|\bm{X},\bm{\
 >
 > 补充：根据[这里](http://jorbe.sinaapp.com/2017/09/23/variational_and_variational_bayes_methods/)，论文作者定义的 ELOB 是通常定义。
 
-最小化 KL divergence 可以得到 $p(\bm{\omega}|\bm{X},\bm{Y})$ 的近似 $q^\*_\theta(\bm{\omega})$, 然后就可以代入 (eq-1) 中进行近似推理。
+最小化 KL divergence 可以得到 $p(\bm{\omega}|\bm{X},\bm{Y})$ 的近似 $q^*_\theta(\bm{\omega})$, 然后就可以代入 (eq-1) 中进行近似推理。
 
 等价于 最大化 $\mathcal{L}_{\rm VI}$。
 
@@ -273,9 +273,9 @@ $$
 
 通常对 Variance 的估计，$\hat{I}_1 > \hat{I}_2 > \hat{I}_3$，作者提出一个条件可以判断什么时候 2，3 比 1 更优（没有仔细研究，感觉用处不大）。作者在后文中重点使用 $\hat{I}_2$。
 
-[comment]: # ( {% asset_img algorithm-1.png %} )
+（这里应该有两个图，但是pandoc的markdown语法不会插图，会导致编译失败，暂时注释掉了。）
 
-[comment]: # ( {% asset_img algorithm-2.png %} )
+<!-- algorithm-1.png  algorithm-2.png %} ) -->
 
 作者证明，当选择的 $p(\omega)$ 满足一定条件时，使用 dropout 训练得到的 NN 就是 BNN。
 
@@ -298,15 +298,15 @@ distribution empirically. The first moment can be estimated as follows:
 
 （证明过程在 pp47--48）
 
-一阶矩 / first moment: $ \hat{\mathbb{E}}[\bm{y}^\*] = \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^\*) $
+一阶矩 / first moment: $\hat{\mathbb{E}}[\bm{y}^*] = \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^*)$
 
-二阶矩 / second raw moment: $ \hat{\mathbb{E}}[(\bm{y}^\*)^T(\bm{y}^\*)] = \tau^{-1}\bm{I} + \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^\*)^T f^{\hat{\bm{\omega}}}(\bm{x}^\*) $
+二阶矩 / second raw moment: $\hat{\mathbb{E}}[(\bm{y}^*)^T(\bm{y}^*)] = \tau^{-1}\bm{I} + \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^*)^T f^{\hat{\bm{\omega}}}(\bm{x}^*)$
 
-预测方差 / predictive variance: $ \hat{\rm Var}[\bm{y}^\*] = \tau^{-1}\bm{I} + \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^\*)^T f^{\hat{\bm{\omega}}}(\bm{x}^\*) - \hat{\mathbb{E}}[y^\*]^T \hat{\mathbb{E}}[y^\*] $
+预测方差 / predictive variance:$\hat{\rm Var}[\bm{y}^*] = \tau^{-1}\bm{I} + \frac{1}{T} \sum f^{\hat{\bm{\omega}}}(\bm{x}^*)^T f^{\hat{\bm{\omega}}}(\bm{x}^*) - \hat{\mathbb{E}}[y^*]^T \hat{\mathbb{E}}[y^*]$
 
 （利用了 $\mathbb{E}[x^2] = \mathbb{E}(x)^2 + {\rm Var}(x)$，通过一、二阶矩来计算方差。）
 
-本论文中，实际计算中，$f^{\hat{\bm{\omega}}}(\bm{x}^\*)$ 为使用 $T=10000$ 次 Dropout 训练的输出。
+本论文中，实际计算中，$f^{\hat{\bm{\omega}}}(\bm{x}^*)$ 为使用 $T=10000$ 次 Dropout 训练的输出。
 
 其中 $tau$ 的模型精度，在 p18 给出定义 $p(\bm{y}|\bm{x},\bm{\omega}) = \mathcal{N}(\bm{y};f^\bm{\omega}(\bm{x}),\tau^{-1}\bm{I})$，可能理解为在输出中添加方差为 $\tau^{-1}$ 的噪声。
 

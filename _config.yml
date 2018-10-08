@@ -110,35 +110,30 @@ symbols_count_time:
   total_time: true
 
 
-math:
-  engine: 'mathjax' # or 'katex'
-  mathjax:
+math: 
+  engine: 'mathjax' # 'mathjax' # or 'katex'
+  mathjax: 
     src: custom_mathjax_source
-    config:
-      # MathJax config
-      TeX:
+    config: 
+      TeX: 
         Macros: 
           bm: "\\boldsymbol"
-  katex:
-    css: custom_css_source
-    js: custom_js_source # not used
-    config:
-      # KaTeX config
+  # katex:
+  #   css: custom_css_source
+  #   js: custom_js_source # not used
+  #   config:
+  #     # KaTeX config
 
-
-marked:
+kramed:
   gfm: true
   pedantic: false
   sanitize: false
   tables: true
-  breaks: false
+  breaks: true
   smartLists: true
   smartypants: true
-  modifyAnchors: ''
-  autolink: true
 
-
-
+  
 # Generate categories from directory-tree
 # Dependencies: https://github.com/xu-song/hexo-auto-category
 # depth: the depth of directory-tree you want to generate, should > 0
