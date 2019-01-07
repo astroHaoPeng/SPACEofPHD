@@ -118,8 +118,10 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  学术: categories/学术/ || newspaper-o
-  笔记: categories/笔记/  || sticky-note-o
+  My Contributions: Information/my-contributions-20180120/ || list
+  Conference Info.: Information/aerospace-conferences-20180120/ || users
+  Academics: categories/学术/ || newspaper-o
+  Notes: categories/笔记/  || sticky-note-o
   categories: categories/ || th-list
   #about: /about/ || user
   archives: archives/ || archive
@@ -127,8 +129,6 @@ menu:
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
-  我的文章: Information/my-contributions-20180120/ || list
-  会议信息: Information/aerospace-conferences-20180120/ || users
 
 # Enable/Disable menu icons / item badges.
 menu_settings:
@@ -463,7 +463,9 @@ math:
   # needed to full Katex support.
   katex:
     # Use 0.7.1 as default, jsdelivr as default CDN, works everywhere even in China
-    cdn: //cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css
+    # cdn: //cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css
+    # cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css
+    cdn: //cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css
     # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
     #cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
     # Bootcss, works great in China, but not so well in other region

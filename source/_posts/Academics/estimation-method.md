@@ -21,7 +21,7 @@ $$ \mathcal{L}(\theta \mid x) = f(x\mid\theta) $$
 
 **后验分布 / posterior distribution**
 
-$$ f(\theta \mid x)={\frac {f(x\mid \theta )\,g(\theta )}{\int _{\Theta }f(x\mid \vartheta )\,g(\vartheta )\,d\vartheta }} $$
+$$ f(\theta \mid x) = \frac{f(x\mid \theta )\,g(\theta )}{\int _{\Theta }f(x\mid \vartheta )\,g(\vartheta )\,d\vartheta} $$
 
 ------------
 
@@ -29,7 +29,9 @@ $$ f(\theta \mid x)={\frac {f(x\mid \theta )\,g(\theta )}{\int _{\Theta }f(x\mid
 
 $$\hat{\theta}_{\rm ML}(x) = \arg \max_{\theta} \mathcal{L}(\theta|x) = \arg \max_{\theta} f(x|\theta)$$
 
-$$ \hat{\theta}_{\rm MAP}(x) = \arg \max_{{\theta }}{\frac{f(x\mid\theta )\,g(\theta )}{\int_{{\Theta }}f(x\mid\theta ')\,g(\theta ')\,d\theta '}}=\arg \max_{{\theta }}f(x|\theta )\,g(\theta ) $$
+$$\hat{\theta}_{\rm MAP}(x) = \arg \max_{\theta}{\frac{f(x\mid\theta )\,g(\theta )}{\int_{\Theta}f(x\mid\theta ')\,g(\theta ')\,d\theta '}}=\arg \max_{\theta}f(x|\theta )\,g(\theta)$$
+
+<!-- $$\hat{\theta}_{\rm MAP}(x) = \arg \max_{{\theta }}{\frac{f(x\mid\theta )\,g(\theta )}{\int_{{\Theta }}f(x\mid\theta ')\,g(\theta ')\,d\theta '}}=\arg \max_{{\theta }}f(x|\theta )\,g(\theta)$$ -->
 
 
 **最大后验概率估计 / Maximum a posteriori (MAP) estimation**

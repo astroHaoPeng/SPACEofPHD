@@ -2,7 +2,7 @@
 title: bishop_pattern_2006
 comments: true
 date: 2018-09-26 16:15:43
-updated: 2018-10-05 15:19:55
+updated: 2018-10-10 17:35:14
 categories: 
 - 笔记
 tags:
@@ -13,7 +13,7 @@ mathjax: true
 
 bishop_pattern_2006
 
-> Pattern Recognition and Machine Learning
+> Pattern Recognition and Machine Learningv
 > > Bishop, Christopher M. 
 > > 
 > 2006
@@ -21,6 +21,19 @@ bishop_pattern_2006
 > Information Science and Statistics. New York: Springer.
 
 <!-- more -->
+
+# 1
+
+## 1.2 Probability Theory
+
+> The first term in (1.71) represents the uncertainty in the
+predicted value of t due to the noise on the target variables and was expressed already
+in the maximum likelihood predictive distribution (1.64) through β
+−1
+ML. However, the
+second term arises from the uncertainty in the parameters w and is a consequence
+of the Bayesian treatment.
+
 
 # 2.3 Gaussian Distribution
 Gaussian Distribution:
@@ -168,6 +181,14 @@ $$\bm{w}_\text{MAP} = \bm{m}_N$$
 [Or, solve $\partial \ln p(\bm{w}|\bm{t})/\partial \bm{w} = 0$ to get the MAP weights.]
 
 If $S_0$ is infinitely broad, $S_0^{-1}\rightarrow0$, then the mean $\bm{m}_N$ reduces to the maximum likelihood weights $\bm{w}_\text{ML}$ in Eq.3.15.
+
+> ([Wikipedia: Maximum a posteriori estimation](https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation)) In Bayesian statistics, a maximum a posteriori probability (MAP) estimate is an estimate of an unknown quantity, that equals the mode of the posterior distribution. The MAP can be used to obtain a point estimate of an unobserved quantity on the basis of empirical data. It is closely related to the method of maximum likelihood (ML) estimation, but employs an augmented optimization objective which incorporates a prior distribution (that quantifies the additional information available through prior knowledge of a related event) over the quantity one wants to estimate. MAP estimation can therefore be seen as a regularization of ML estimation.
+> 
+> While only mild conditions are required for MAP estimation to be a limiting case of Bayes estimation (under the 0-1 loss function),[1] it is not very representative of Bayesian methods in general. This is because MAP estimates are point estimates, whereas Bayesian methods are characterized by the use of distributions to summarize data and draw inferences: thus, Bayesian methods tend to report the posterior mean or median instead, together with credible intervals.
+> 
+> 一种点估计方法。
+
+> [另一个参考博客：MLE vs MAP](https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/)
 
 
 In the following book, usually takes:

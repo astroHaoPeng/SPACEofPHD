@@ -8,7 +8,7 @@ subtitle:
 description:
 keywords:
 author: Hao
-language: zh-CN
+language: en #zh-CN
 timezone: 
 
 # URL
@@ -118,13 +118,13 @@ math:
       TeX: 
         Macros: 
           bm: "\\boldsymbol"
-  # katex:
-  #   css: custom_css_source
-  #   js: custom_js_source # not used
-  #   config:
-  #     # KaTeX config
+  katex:
+    css: custom_css_source
+    js: custom_js_source # not used
+    config:
+      # KaTeX config
 
-kramed:
+kramed: # this is used with 'mathjax'
   gfm: true
   pedantic: false
   sanitize: false
@@ -133,7 +133,33 @@ kramed:
   smartLists: true
   smartypants: true
 
-  
+# markdown_it_plus: # this is used with 'katex'
+#   highlight: true
+#   html: true
+#   xhtmlOut: true
+#   breaks: true
+#   langPrefix:
+#   linkify: true
+#   typographer:
+#   quotes: “”‘’
+#   pre_class: highlight
+
+# markdown:
+#   render:
+#     html: true
+#     xhtmlOut: false
+#     breaks: true
+#     linkify: true
+#     typographer: true
+#     quotes: '“”‘’'
+#   plugins: 
+#     - markdown-it-abbr
+#     - markdown-it-footnote
+#     - markdown-it-ins
+#     - markdown-it-sub
+#     - markdown-it-sup
+#     - markdown-it-katex
+
 # Generate categories from directory-tree
 # Dependencies: https://github.com/xu-song/hexo-auto-category
 # depth: the depth of directory-tree you want to generate, should > 0
