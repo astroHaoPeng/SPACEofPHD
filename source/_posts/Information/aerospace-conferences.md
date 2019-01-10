@@ -15,7 +15,7 @@ updated: 2019-01-07 12:09:00
 # Open call-for-abstract
 
 Conference Date | Name | Location | **Abstract Deadline**
-- [ ] 20191021-25 | [70TH INTERNATIONAL ASTRONAUTICAL CONGRESS (IAC) 2019](https://www.iac2019.org/) | Washington D.C. | [**20190228**](http://www.iafastro.org/wp-content/uploads/2018/10/Call-for-Papers-IAC2019_2018-10-09_FINAL_updated_online.pdf)
+- [ ] 20191021-25 | [70th International Astronautical Congress (IAC) 2019](https://www.iac2019.org/) | Washington D.C. | [**20190228**](http://www.iafastro.org/wp-content/uploads/2018/10/Call-for-Papers-IAC2019_2018-10-09_FINAL_updated_online.pdf)
 - [ ] 20190811-15 | [2019 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2019_summer/2019_summer.html) | Portland, ME | [**20190405**](http://www.space-flight.org/docs/2019_summer/CallForPapers2019.pdf)
 - [ ] 20190506-10 | [12th IAA Symposium on Small Satellites for Earth Observation](http://smallsat.iaaweb.org) | Berlin, Germany | **20181031**
 - [ ] 20190429-0503 | [6th IAA Planetary Defense Conference (bi-annual)](http://pdc.iaaweb.org/) | Washington DC | **20181215**
@@ -30,6 +30,7 @@ Conference Date | Name | Location | **Abstract Deadline**
 <!-- [ ] more -->
 
 Conference Date | Name | Location | Abstract Deadline
+- [ ] 20190415-16 | [Sensors and Systems for Space Applications XII (20190414-18, SPIE Defense + Commercial Sensing)](https://spie.org/SI/conferencedetails/sensors-systems-space-applications) | Baltimore, MD | 20181003
 - [ ] 20190318-22 | [50th Lunar and Planetary Science Conference](https://www.hou.usra.edu/meetings/lpsc2019/) | Woodlands, Texas | 20190108
 - [ ] 20190224-28 | [27th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/) | Melbourne, Australia | 20180831
 - [ ] 20190113-17 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | Maui, HI | 20180914 | 
