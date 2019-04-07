@@ -15,11 +15,10 @@ updated: 2019-01-07 12:09:00
 # Open call-for-abstract
 
 Conference Date | Name | Location | **Abstract Deadline**
-- [ ] 20191021-25 | [70th International Astronautical Congress (IAC) 2019](https://www.iac2019.org/) | Washington D.C. | [**20190228**](http://www.iafastro.org/wp-content/uploads/2018/10/Call-for-Papers-IAC2019_2018-10-09_FINAL_updated_online.pdf)
-- [ ] 20190811-15 | [2019 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2019_summer/2019_summer.html) | Portland, ME | [**20190405**](http://www.space-flight.org/docs/2019_summer/CallForPapers2019.pdf)
-- [ ] 20190506-10 | [12th IAA Symposium on Small Satellites for Earth Observation](http://smallsat.iaaweb.org) | Berlin, Germany | **20181031**
-- [ ] 20190429-0503 | [6th IAA Planetary Defense Conference (bi-annual)](http://pdc.iaaweb.org/) | Washington DC | **20181215**
-- (open) d(^.^)p (not yet)
+- [ ] 20191104-08 | [The 4th COSPAR Symposium: Small satellites for sustainable Science And Development](http://www.cospar2019.org/) | Herzliya, Israel | [**20190430**](http://www.cospar2019.org/call-for-abstracts/)
+- [ ] .
+- [ ] (up: open) b(𝇇_𝇇)q (down: not yet)
+- [ ] .
 - [ ] 20200106-10 | [30th AIAA/AAS Space Flight Mechanics Meeting](http://www.space-flight.org/conferences.html) | Orlando, FL | future
 - [ ] future | [International Conference on Astrodynamics Tools and Techniques (ICATT)](https://trajectory.estec.esa.int/Astro/ICATT/ICATT_Home.html) | future
 
@@ -30,10 +29,17 @@ Conference Date | Name | Location | **Abstract Deadline**
 <!-- [ ] more -->
 
 Conference Date | Name | Location | Abstract Deadline
-- [ ] 20190415-16 | [Sensors and Systems for Space Applications XII (20190414-18, SPIE Defense + Commercial Sensing)](https://spie.org/SI/conferencedetails/sensors-systems-space-applications) | Baltimore, MD | 20181003
+
+- [ ] 20191209-12 | [The First International Orbital Debris Conference](https://www.hou.usra.edu/meetings/orbitaldebris2019/) | Sugar Land, TX | [20190308](https://www.hou.usra.edu/meetings/orbitaldebris2019/)
+- [ ] 20191021-25 | [70th International Astronautical Congress (IAC) 2019](https://www.iac2019.org/) | Washington D.C. | [20190228](http://www.iafastro.org/wp-content/uploads/2018/10/Call-for-Papers-IAC2019_2018-10-09_FINAL_updated_online.pdf) | one
+- [ ] 20190917-20 | [AMOS: Advanced Maui Optical and Space Surveillance Technologies Conference](https://amostech.com/) | Maui, HI | [20190301](https://amostech.com/amos-speakers/#papers)
+- [ ] 20190811-15 | [2019 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2019_summer/2019_summer.html) | Portland, ME | [20190405](http://www.space-flight.org/docs/2019_summer/CallForPapers2019.pdf) | one
+- [ ] 20190506-10 | [12th IAA Symposium on Small Satellites for Earth Observation](http://smallsat.iaaweb.org) | Berlin, Germany | 20181031
+- [ ] 20190429-0503 | [6th IAA Planetary Defense Conference (bi-annual)](http://pdc.iaaweb.org/) | Washington DC | 20181215
+- [ ] 20190415-16 | [Sensors and Systems for Space Applications XII](https://spie.org/SI/conferencedetails/sensors-systems-space-applications) | Baltimore, MD | 20181003
 - [ ] 20190318-22 | [50th Lunar and Planetary Science Conference](https://www.hou.usra.edu/meetings/lpsc2019/) | Woodlands, Texas | 20190108
 - [ ] 20190224-28 | [27th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/) | Melbourne, Australia | 20180831
-- [ ] 20190113-17 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | Maui, HI | 20180914 | 
+- [ ] 20190113-17 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | Maui, HI | 20180914
 - [x] 20190107-11 | [SciTech 2019](https://scitech.aiaa.org/?utm_source=Informz&utm_medium=Email&utm_campaign=SciTech2018) | San Diego, CA | 20180611
 - [x] 20181007-10 | 2018 IEEE International Conference on Systems, Man, and Cybernetics (SMC2018) | Miyazaki, Japan | 20180414
 - [x] 20181001-05 | [69th International Astronautical Congress (IAC) 2018](https://www.iac2018.org/) | Bremen, Germany | 20180511 | *We have one paper.*
@@ -54,6 +60,8 @@ Conference Date | Name | Location | Abstract Deadline
 - https://trajectory.estec.esa.int/Astro/ICATT/ICATT_Home.html
 - https://conference.sdo.esoc.esa.int/
 - https://www.hou.usra.edu/meetings/lpsc2018/
+
+## other conferences
 
 
 ## Add more
