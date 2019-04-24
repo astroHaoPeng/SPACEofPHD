@@ -1,6 +1,7 @@
 ---
 title: frames
 comments: true
+abbrlink: fe6e893a
 date: 2019-01-24 16:00:27
 updated: 2019-01-24 16:00:27
 categories:

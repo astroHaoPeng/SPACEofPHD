@@ -6,20 +6,21 @@ categories:
 tags:
   - Academic
   - Information
-  - 会议 (Conference)
+  - Conference
 date: 2018-01-20 17:16:10
 updated: 2019-01-07 12:09:00
-# mathjax: true
+abbrlink: info-aerospace-conferences
+mathjax: 
 ---
 
 # Open call-for-abstract
 
 Conference Date | Name | Location | **Abstract Deadline**
 - [ ] 20191104-08 | [The 4th COSPAR Symposium: Small satellites for sustainable Science And Development](http://www.cospar2019.org/) | Herzliya, Israel | [**20190430**](http://www.cospar2019.org/call-for-abstracts/)
+- [ ] 20200106-10 | [30th AIAA/AAS Space Flight Mechanics Meeting](http://www.space-flight.org/conferences.html) | Orlando, FL | [**20190611**](http://www.space-flight.org/docs/2020_winter/CallForPapers2020.pdf)
 - [ ] .
 - [ ] (up: open) b(𝇇_𝇇)q (down: not yet)
 - [ ] .
-- [ ] 20200106-10 | [30th AIAA/AAS Space Flight Mechanics Meeting](http://www.space-flight.org/conferences.html) | Orlando, FL | future
 - [ ] future | [International Conference on Astrodynamics Tools and Techniques (ICATT)](https://trajectory.estec.esa.int/Astro/ICATT/ICATT_Home.html) | future
 
 
@@ -36,10 +37,10 @@ Conference Date | Name | Location | Abstract Deadline
 - [ ] 20190811-15 | [2019 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2019_summer/2019_summer.html) | Portland, ME | [20190405](http://www.space-flight.org/docs/2019_summer/CallForPapers2019.pdf) | one
 - [ ] 20190506-10 | [12th IAA Symposium on Small Satellites for Earth Observation](http://smallsat.iaaweb.org) | Berlin, Germany | 20181031
 - [ ] 20190429-0503 | [6th IAA Planetary Defense Conference (bi-annual)](http://pdc.iaaweb.org/) | Washington DC | 20181215
-- [ ] 20190415-16 | [Sensors and Systems for Space Applications XII](https://spie.org/SI/conferencedetails/sensors-systems-space-applications) | Baltimore, MD | 20181003
-- [ ] 20190318-22 | [50th Lunar and Planetary Science Conference](https://www.hou.usra.edu/meetings/lpsc2019/) | Woodlands, Texas | 20190108
-- [ ] 20190224-28 | [27th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/) | Melbourne, Australia | 20180831
-- [ ] 20190113-17 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | Maui, HI | 20180914
+- [x] 20190415-16 | [Sensors and Systems for Space Applications XII](https://spie.org/SI/conferencedetails/sensors-systems-space-applications) | Baltimore, MD | 20181003
+- [x] 20190318-22 | [50th Lunar and Planetary Science Conference](https://www.hou.usra.edu/meetings/lpsc2019/) | Woodlands, Texas | 20190108
+- [x] 20190224-28 | [27th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/) | Melbourne, Australia | 20180831
+- [x] 20190113-17 | [29th AAS/AIAA Space Flight Mechanics Meeting](http://www.space-flight.org/docs/2019_winter/2019_winter.html) | Maui, HI | 20180914
 - [x] 20190107-11 | [SciTech 2019](https://scitech.aiaa.org/?utm_source=Informz&utm_medium=Email&utm_campaign=SciTech2018) | San Diego, CA | 20180611
 - [x] 20181007-10 | 2018 IEEE International Conference on Systems, Man, and Cybernetics (SMC2018) | Miyazaki, Japan | 20180414
 - [x] 20181001-05 | [69th International Astronautical Congress (IAC) 2018](https://www.iac2018.org/) | Bremen, Germany | 20180511 | *We have one paper.*

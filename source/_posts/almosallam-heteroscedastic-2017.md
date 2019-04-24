@@ -1,17 +1,18 @@
 ---
 title: 阅读笔记：Heteroscedastic Gaussian processes for uncertain and incomplete data
 comments: true
+categories:
+  - 笔记
+tags:
+  - thesis-phd
+  - machine learning
+  - bayesian
+  - gaussian process
+  - ANN
+mathjax: true
+abbrlink: 6ce106ea
 date: 2018-09-25 10:59:29
 updated: 2018-10-10 17:29:40
-categories:
-- 笔记
-tags:
-- thesis-phd
-- machine learning
-- bayesian
-- gaussian process
-- ANN
-mathjax: true
 ---
 
 almosallam_heteroscedastic_2017

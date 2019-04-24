@@ -1,12 +1,13 @@
 ---
 title: Some reading notes of space debris
-date: 2018-05-23 12:22:22 -05:00
 layout: post
 categories:
   - 文章
 tags:
   - Academic
   - Information
+abbrlink: e8fba5e
+date: 2018-05-23 17:22:22
 ---
 
 碎片组成

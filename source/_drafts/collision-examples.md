@@ -1,6 +1,5 @@
 ---
 title: Satellite Conjunction and Collision Examples
-date: 2018-02-23 12:13:14 -05:00
 layout: post
 categories:
   - Survey
@@ -9,6 +8,8 @@ tags:
   - Information
   - Space Debris
   - Satellite Collision
+abbrlink: c5b73f17
+date: 2018-02-23 17:13:14
 ---
 
 # (201104--201206) Landsat-5 Conjunctions with the A-Train (Afternoon Constellation)

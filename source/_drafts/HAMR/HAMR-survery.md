@@ -1,10 +1,12 @@
+---
 title: High Area-to-Mass Ratio (HAMR) 文献摘要
 categories:
- - 文献摘要
+  - 文献摘要
 tags:
- - 文献摘要
-data: 2017-06-05
-------
+  - 文献摘要
+abbrlink: f0398937
+data: 2017-06-05 00:00:00
+---
 
 ## brack_inorbit_2017
 

@@ -3,9 +3,10 @@ title: all-about-bayesian
 comments: true
 tags:
   - draft
+categories: Academics
+abbrlink: 6f957d2d
 date: 2018-06-22 08:56:53
 updated: 2018-06-27 17:49:51
-categories: Academics
 ---
 
 

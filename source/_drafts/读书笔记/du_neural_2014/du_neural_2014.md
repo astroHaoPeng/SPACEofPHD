@@ -1,12 +1,14 @@
+---
 title: Neural Networks and Statistical Learning 读书笔记
 categories:
- - 读书笔记
+  - 读书笔记
 tags:
- - 读书笔记
- - 机器学习
- - 神经网络
-data: 2017-06-05
-------
+  - 读书笔记
+  - 机器学习
+  - 神经网络
+abbrlink: f3acb1fd
+data: 2017-06-05 00:00:00
+---
 
 # Neural Networks and Statistical Learning
 [1] K.-L. Du and M. N. S. Swamy, Neural Networks and Statistical Learning. London: Springer London, 2014.

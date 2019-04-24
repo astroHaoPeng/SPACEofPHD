@@ -1,12 +1,13 @@
 ---
 title: estimation-method
 comments: true
-date: 2018-07-06 16:59:54
-updated: 2018-08-10 16:44:24
 categories: Academics
 tags:
   - 数学
 mathjax: true
+abbrlink: 88ca299d
+date: 2018-07-06 16:59:54
+updated: 2018-08-10 16:44:24
 ---
 
 Estimation theory

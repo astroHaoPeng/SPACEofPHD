@@ -1,13 +1,15 @@
+---
 title: Gaussian Processes for Machine Learning 读书笔记
 categories:
- - 读书笔记
+  - 读书笔记
 tags:
- - 读书笔记
- - 机器学习
- - 高斯过程
- - Gaussian Processes
-data: 2017-06-05
-------
+  - 读书笔记
+  - 机器学习
+  - 高斯过程
+  - Gaussian Processes
+abbrlink: 79506b93
+data: 2017-06-05 00:00:00
+---
 
 > Rasmussen, Carl Edward, and Christopher K. I. Williams. 2006. Gaussian Processes for Machine Learning. Adaptive Computation and Machine Learning. Cambridge, Mass: MIT Press. http://www.gaussianprocess.org/gpml/chapters/.
 

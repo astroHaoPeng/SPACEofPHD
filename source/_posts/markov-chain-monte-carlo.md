@@ -3,10 +3,11 @@ title: markov-chain-monte-carlo
 comments: true
 tags:
   - draft
-date: 2018-06-20 16:25:34
-updated: 2018-06-25 16:25:34
 categories: 学术
 mathjax: true
+abbrlink: 8715cba5
+date: 2018-06-20 16:25:34
+updated: 2018-06-25 16:25:34
 ---
 
 

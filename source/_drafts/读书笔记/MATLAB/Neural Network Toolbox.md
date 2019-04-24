@@ -1,12 +1,13 @@
 ---
 title: MATLAB神经网络工具箱学习摘要
-date: 2017-06-06
-updated: 2018-06-06 11:23:21
-catagories: 
- - 读书笔记
+catagories:
+  - 读书笔记
 tags:
- - MATLAB
- - 神经网络
+  - MATLAB
+  - 神经网络
+abbrlink: 4172978f
+date: 2017-06-06 00:00:00
+updated: 2018-06-06 11:23:21
 ---
 
 # 神经网络工具箱学习摘要

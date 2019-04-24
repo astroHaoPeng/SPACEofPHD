@@ -1,9 +1,8 @@
 ---
 title: moments-method
 comments: true
-tags:
-  - math
-  - statistics
+tags: [math, statistics]
+abbrlink: 552e2db4
 date: 2018-06-28 10:47:17
 updated: 2018-06-28 10:47:17
 categories:

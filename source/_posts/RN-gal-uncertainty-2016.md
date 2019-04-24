@@ -1,7 +1,5 @@
 ---
 title: 博士论文 "Uncertainty in Deep Learning" 阅读笔记
-date: 2018-06-16 15:09:29
-updated: 2018-06-27 17:47:51
 categories:
   - 笔记
 tags:
@@ -10,6 +8,9 @@ tags:
   - 神经网络
   - Deep Learning
 mathjax: true
+abbrlink: d121310c
+date: 2018-06-16 15:09:29
+updated: 2018-06-27 17:47:51
 ---
 
 

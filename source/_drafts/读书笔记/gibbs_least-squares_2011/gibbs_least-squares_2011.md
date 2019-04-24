@@ -1,12 +1,15 @@
 ---
-title: Least-squares estimation, kalman filtering, and modeling[:] a practical handbook
+title: >-
+  Least-squares estimation, kalman filtering, and modeling[:] a practical
+  handbook
 categories:
- - 读书笔记
+  - 读书笔记
 tags:
- - 读书笔记
- - 机器学习
- - 神经网络
-data: 2017-06-05
+  - 读书笔记
+  - 机器学习
+  - 神经网络
+abbrlink: e8aef91d
+data: 2017-06-05 00:00:00
 ---
 
 Least-squares estimation, kalman filtering, and modeling: a practical handbook

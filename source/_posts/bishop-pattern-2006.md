@@ -1,14 +1,15 @@
 ---
 title: bishop_pattern_2006
 comments: true
+categories:
+  - 笔记
+tags:
+  - book
+  - machine learning
+mathjax: true
+abbrlink: 97ae8555
 date: 2018-09-26 16:15:43
 updated: 2018-10-10 17:35:14
-categories: 
-- 笔记
-tags:
-- book
-- machine learning
-mathjax: true
 ---
 
 bishop_pattern_2006
