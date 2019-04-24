@@ -1,0 +1,343 @@
+# Neural Networks and Statistical Learning
+[1] K.-L. Du and M. N. S. Swamy, Neural Networks and Statistical Learning. London: Springer London, 2014.
+
+
+------------------------------
+# Hopfield Network 
+
+>The continuos Hopfield network has dominated the techniqeus for optimization problems, especially for combinatiorial problems. 
+
+>Hopfiled神经网络是一种递归神经网络，由约翰·霍普菲尔德在1982年发明。Hopfield网络是一种结合存储系统和二元系统的神经网络。它保证了向局部极小的收敛，但收敛到错误的局部极小值（local minimum），而非全局极小（global minimum）的情况也可能发生。Hopfiled网络也提供了模拟人类记忆的模型。[(WikiPedia)](https://zh.wikipedia.org/wiki/Hopfield%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+
+>联想记忆功能是离散Hopfield网络的一个重要应用范围。[(百度百科：Hopfield神经网络)](https://baike.baidu.com/item/HopField%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C)
+
+!! 可以用在组合优化
+
+**暂时用不到这个算法**
+
+
+
+
+
+------------------------------
+# SVM
+>SVM is based on the statistical learning theory and is particularly useful for classification with small sample sizes. SVM has been used for classification, regression, and clustering. Thanks to its successful application in the SVM, the kernel method has aroused wide interest. (p2)
+
+Kolmogorov定理保证：三层网络，足够多节点，可以任意精度近似连续函数。
+- \[71\] Hecht-Nielsen, R. (1987). Kolmogorov’s mapping neural network existence theorem. In Proceedings of the 1st IEEE International Conference on Neural Networks (Vol. 3, pp. 11–14). San Diego, CA.
+- \[81\] Kolmogorov, A. N. (1957). On the representation of continuous functions of several variables by superposition of continuous functions of one variable and addition. Doklady Akademii Nauk USSR, 114(5), 953–956.
+
+
+
+
+------------------------------
+## 2.10 Neural Networks as Universal Machines
+
+### 2.10.3
+>A three-layer feedforward network with a sufficient number of hidden units can approximate any continuous function to any degree of accuracy. This is guaranteed by Kolmogorov’s theorem [71, 81]. (p49)
+
+>Kolmogorov’s theorem is the famous solution to Hilbert’s 13th problem. According to olmogorov’s theorem, a continuous multivariate function on a compact set can be expressed using superpositions and compositions of a finite number of singlevariable functions. 
+
+Kolmogorov’s theorem --> Hecht-Nielsen theorem --> Stone–Weierstrass theorem (a generalization of the Weierstrass theorem)
+
+>The Stone–Weierstrass theorem [118] is a generalization of the Weierstrass theorem, and is usually **used for verifying a model’s approximation capability to dynamic systems**.
+
+
+### 2.11.3 LASSO
+
+一种选择模型、选择模型自变量的算法。
+
+>随着科技的进步，收集数据的技术也有了很大的发展。因此如何有效地从数据中挖掘出有用的信息也越来越受到人们的关注。统计建模无疑是目前处理这一问题的最有效的手段之一。在模型建立之初，为了尽量减小因缺少重要自变量而出现的模型偏差，人们通常会选择尽可能多的自变量。但实际建模过程中通常需要寻找对响应变量最具有解释性的自变量子集—即模型选择(或称变量选择、特征选择)，以提高模型的解释性和预测精度。所以模型选择在统计建模过程中是极其重要的问题。
+>
+>Lasso 的基本思想是在回归系数的绝对值之和小于一个常数的约束条件下，使残差平方和最小化，从而能够产生某些严格等于0 的回归系数，得到可以解释的模型。
+>
+>在分析这种模型的时候，人们根据问题本身的的专业理论及有关经验，常常把各种与因变量有关的自变量引进模型，其结果是把一些对因变量影响很小的，有些甚至没有影响的自变量也选入模型中。这样一来，不但计算量大，而且估计和预测的精度也会下降。此外，在一些情况下，某些自变量的观测数据获得代价昂贵，如果这些自变量本身对因变量的影响很小或根本没有影响，但我们不加选择都引到模型中，势必造成观测数据收集和模型应用费用不必要的加大。
+>
+>模型选择本质上是寻求模型稀疏表达的过程，而这种过程可以通过优化一个“损失”十“惩罚”的函数问题来完成。[(转载 - Lasso思想及算法)](http://blog.sciencenet.cn/blog-252888-711579.html)
+
+>Lasso回归，和岭回归非常类似。[来源](http://www.jianshu.com/p/b628c90e1c1c)
+
+
+
+
+
+
+------------------------------
+## 3.1 
+神经元的专业名称：
+McCulloch–Pitts neuron == linear threshold gate
+
+## 3.5
+>Parallel perceptrons trained with the p-delta rule provide results comparable to that of MLP, madaline, decision tree (C4.5) and SVM, despite its simplicity [4]. (p75)
+
+
+
+
+
+------------------------------
+## 4.3
+>BP with momentum.
+>
+>The momentum term can effectively magnify the descent in almost-flat steady downhill regions of the error surface by 1− 1τ. In regions with high fluctuations (due to high learning rates), the momentum has a stabilizing effect. The momentum term actually inserts secondorder information in the training process that performs like the CG method. The momentum term effectively smoothes the oscillations and accelerates the convergence. The role of the momentum term is shown in Fig. 4.2. BP with momentum is analyzed and the conditions for convergence are given in [128]. (p88)
+
+总的来说 momentum 项可以使收敛过程更平滑，避免震荡。
+
+
+## 4.4 Incremental Learning Versus Batch Learning
+
+Incremental learning 的训练通常比 Batch learning 快，但是通常效果不如 batch learning 快。
+
+后续的研究暂时用不上。
+
+
+## 4.6 Optimizing Network Structure 优化网络结构
+
+！！目前最需要的技术
+
+>- sensitiviey-based methods
+>- penalty-based methods
+
+
+### 4.7.3 Initializing Weights
+
+The initial weights of a network play a significant role in the convergence of a training method. Poor initial weight values may result in slow convergence or lead the network stuck at a local minimum. The objective of weight initialization is to find weights that are as close as possible to a global minimum before training, and to increase the convergence speed. By weight initialization, the outputs of the hidden neurons can be assigned in the nonsaturation region. (p108)
+
+
+
+# 5
+主要讲了各种先进的训练方法，暂时用不到，需要时可以查找参考。
+
+## 5.5 Extended Kalman Filtering Methods
+
+The EKF method belongs to second-order methods. EKF is an optimum filtering method for a linear system resulting from the linearization of a nonlinear system. It attempts to estimate the state of a system that can be modeled as a linear system driven by an additive white Gaussian noise. It always estimates the optimum step size, namely, the Kalman gain, for weight updating and thus the rate of convergence is significantly increased when compared to that of the gradient-descent method. The EKF approach is an incremental training method. It is a general method for training any feedforward network. (p141)
+
+
+
+
+
+------------------------------
+# 10 Radial Basis Function Networks
+
+>The RBF network is a universal approximator, and it is a popular alternative to the MLP, since it has a simpler structure and a much faster training process. 
+
+RBF 是 MLP 的有效替代！
+
+RBF 和 MLP 都普遍应用于 classification 和 function approximation。
+
+RBF 是与 n 个中心向量的误差的 Gaussian function 的值的加权平均，训练时需要选择中心，调节权重。
+
+？？SVM 是什么样的网络算法？
+猜测 SVM 是平均
+
+>在数学建模领域，径向基函数网络（Radial basis function network，缩写 RBF network）是一种使用径向基函数作为激活函数的人工神经网络。径向基函数网络的输出是输入的径向基函数和神经元参数的线性组合。径向基函数网络具有多种用途，包括包括函数近似法、时间序列预测、分类和系统控制。[(径向基函数网络)](https://zh.wikipedia.org/wiki/%E5%BE%84%E5%90%91%E5%9F%BA%E5%87%BD%E6%95%B0%E7%BD%91%E7%BB%9C)
+
+>RBF 拥有较小的支集。针对选定的样本点，它只对样本附近的输入有反应，如下图。
+>
+>![](src/RBF拥有较小的支集.png)
+>
+>光看模型，RBF Network 确实与 SVM with RBF kernel 无异。区别在于训练方式。
+>
+>RBF神经网络与BP神经网络都是非线性多层前向网络，它们都是通用逼近器。*！！对于任一个BP神经网络，总存在一个RBF神经网络可以代替它，反之亦然。*
+>
+>[RBF神经网络和BP神经网络有什么区别？](https://www.zhihu.com/question/44328472)
+
+SVM 和 RFB 的区别在于训练方式。
+
+
+### 10.1.2
+
+>The Gaussian RBF network can approximate, to any degree of accuracy, any continuous function by a sufficient number of centers ci, i = 1,..., J2, and a common standard deviation σ > 0 in Lp-norm, p ⊗ [1, ∀] [77]. A class of RBF networks can achieve universal approximation when the RBF is continuous andintegrable [77]. (p301) 
+
+
+### 10.6.4 Extreme Learning Machines
+
+？？这是什么模型和算法
+
+> The algorithm performs several orders of magnitude faster than MLP, SVM, and Gaussian process, but maintains an accuracy that is comparable to that of SVM. 
+>
+>ELM can be used to train neural networks with threshold functions directly instead of approximating them with sigmoidal functions for the ease of hardware implementation [39]. Also, ELM does not need manually tuned parameters and is much faster. Pruning of neurons in a network built using ELM has been proposed in [83] for classification purposes. (p317)
+
+？？貌似比 SVM 要好用，值得尝试学习
+
+
+## 10.7 ---> 看到这里 <---
+
+
+## 10.11 A Comparision of RBF Networks and MLPs
+
+|     | MLP | RBF | 
+| --- | --- | --- | 
+| | global | local | 
+| | generaliation 效果更好 | extrapolation 效果受限 | 
+| | 根据输入维度按多项式级数增加 | curse of dimensionality | 
+| | | 
+
+（表格总结不完全，只列了理解的）
+
+>In order to approximate a wide class of smooth functions, the number of hidden units required for the three-layer MLP is polynomial with respect to the input dimensions, while that for the localized RBF network is exponential [3]. (p327)
+
+
+
+
+
+
+------------------------------
+# 11 Recurrent Neural Networks
+
+>成功应用包括手写识别、语音识别、自然语言处理以及计算机视觉等一系列问题。
+>
+>递归神经网络（RNN）是目前最流行的几种深度学习网络结构之一，因其递归处理历史信息和建模历史记忆的功能特点而特别适用于处理时间、空间序列上有强关联的信息。
+>
+>其(成功)应用包括手写识别[Graves09]、语音识别[Graves13]、自然语言处理[Sutskever11][Sutskever14]以及计算机视觉等一系列问题。
+>[(【青年学者专栏】递归神经网络(Recurrent Neural Network)学习)](https://zhuanlan.zhihu.com/p/22191239)
+
+>RNNs的目的使用来处理序列数据。
+>
+>RNNs已经被在实践中证明对NLP是非常成功的。如词向量表达、语句合法性检查、词性标注等。
+>机器翻译(Machine Translation)，
+>语音识别(Speech Recognition)，
+>图像描述生成 (Generating Image Descriptions)，
+>[(循环神经网络(Recurrent Neural Networks, RNN)介绍)](http://www.cnblogs.com/wangduo/p/6773333.html)
+
+！！暂时不需要看，目前的研究用不上
+
+
+
+
+
+# 15 Discriminant Analysis
+
+>试图找到两类物体或事件的特征的一个线性组合，以能够特征化或区分它们。所得的组合可用来作为一个线性分类器，或者，更常见的是，为后续的分类做降维处理。
+>
+>LDA与方差分析（ANOVA）和回归分析紧密相关，这两种分析方法也试图通过一些特征或测量值的线性组合来表示一个因变量。
+>
+>LDA也与主成分分析（PCA）和因子分析紧密相关，它们都在寻找最佳解释数据的变量线性组合。
+>[(WikiPedia: 线性判别分析)](https://zh.wikipedia.org/wiki/%E7%B7%9A%E6%80%A7%E5%88%A4%E5%88%A5%E5%88%86%E6%9E%90#.E7.A0.B4.E4.BA.A7.E9.A2.84.E6.B5.8B)
+
+
+
+
+
+
+
+
+
+
+
+
+
+------------------------------
+# 16 SVM
+
+- *kernel machines*
+- non-parametric
+- optimal, minimize VC dimension
+- based on computational learning theory
+- three-layer feedforward network
+- generalization error 与 input dimensionality 无关
+- universal approximator for various kernels
+- L-1 SVM 通常给出更少的 support vector
+
+SVM 分为 L-1 SVM（绝对值的和）和 L-2 SVM（欧氏距离）。
+
+>![](src/neural-networks-support-vector-machines-22-638.jpg)
+>
+>[Neural Networks: Support Vector machines](https://www.slideshare.net/MostafaGMMostafa/neural-networks-support-vector-machines)
+
+## 16.1 Intro
+
+>SVM [12, 201] is one of the most popular nonparametric classification algorithms. It is optimal and is based on computational learning theory [200, 202]. The goal of SVM is to minimize the VC dimension by finding the optimal hyperplane between classes, with the maximal margin, where the margin is defined as the distance of the closest point in each class to the separating hyperplane. 
+>
+>SVM is a **three-layer feedforward network**. 
+>It implements the structural riskminimization (SRM) principle that **minimizes the upper bound of the generalization error**. This induction principle is based on the fact that **the generalization error is bounded** by the sum of a *training error* and a *confidence-interval term* that depends on the VC dimension. **Generalization errors of SVMs are not related to the input dimensionality, but to the margin with which it separates the data.** Instead of minimizing the training error, SVM purports to minimize an upper bound of the generalization error and maximizes the margin between a separating hyperplane and the training data. 
+>
+>SVM is a universal approximator for various kernels. 
+>One of the main features of SVM is the absence of local minima. SVM is defined in terms of a subset of the learning data, called support vectors. It is a sparse representation of the training data, and allows the extraction of a condensed dataset based on the support vectors. (p469)
+
+> The performance of every kernel-based method depends on the kernel type selected. However, there are no general theories for choosing a kernel in a datadependent way. (p470)
+>Nonlinear kernel functions are used to overcome the curse of dimensionality. 
+
+## 16.2 SVM Model
+
+>L1-SVMs are more popularly used than L2-SVMs because they usually yield classifiers with a much less number of support vectors, thus leading to better classification speed.
+>
+>The generalization ability of SVM depends on the geometrical concept of span of support vectors [203]. 
+>
+>The selection of hyperparameters is investigated by using k-fold crossvalidation and leave-one-out criteria [47]. 
+>The VC dimension of hyperplanes with margin ρ is less than D2/4ρ2, where D is the diameter of the smallest sphere containing the training points [201]. (p474)
+>
+>When both SVMs and feedforward networks use similar hidden-layer weights, accuracies are very similar [155]. Regarding the number of support vectors, sequential feedforward networks construct models with less hidden units than SVMs do and in the same range as sparse SVMs do. Computational time is lower for SVMs. (p474)
+
+## 16.8 Support Vector Regression
+
+>SVR is a robust method due to the introduction of the ε-insensitive loss function. Varying ε influences the number of support vectors and thus controls the complexity of the model. 
+>
+>The performance of SVR is sensitive to the hyperparameters, and appears in the underfitting and overfitting situations when the hyperparameters are not chosen properly. To overcome the difficulty of selecting ε, the ν-SVR model [19, 158] automatically adjusts the width of the tube so that at most a fractionν of the data points lie outside the tube. (p499)
+
+>SVR lacks the flexibility to capture the local trend of data. (p500)
+
+
+
+
+
+
+
+------------------------------
+# 17 Other Kernel Methods
+暂时用不到。
+
+------------------------------
+# 18 Reinforcement Learning
+
+------------------------------
+# 20 Combining Multiple Learners: Data Fusion and Emsemble Learning
+
+------------------------------
+# 25 Data Mining
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# \# Math \# 
+
+## Regularization
+通过添加正则化项来解决病态的优化问题
+
+>Regularization, in mathematics and statistics and particularly in the fields of machine learning and inverse problems, is a process of introducing additional information in order to solve an ill-posed problem or to prevent overfitting. 
+> 
+>A theoretical justification for regularization is that it attempts to impose Occam's razor on the solution, as depicted in the figure. From a Bayesian point of view, many regularization techniques correspond to imposing certain prior distributions on model parameters. [(Widipedia)](https://en.wikipedia.org/wiki/Regularization_(mathematics))
+
+Regularization can be motivated as a technique to improve the generalizability of a learned model. \[不太懂\]
+
+
+
+# \# Others \# 
+
+[原版：7 Types of Regression Techniques you should know](https://www.analyticsvidhya.com/blog/2015/08/comprehensive-guide-regression/)
+
+[翻译：回归系列之入门篇](http://www.jianshu.com/p/b628c90e1c1c)
+
+**目前不太适用的：**
+线性回归，Logistic回归，多项式回归，Stepwise回归，Ridge回归（岭回归），Lasso回归，ElasticNet回归（约等于Ridge回归+Lasso回归）
+
+都是通常的回归算法，应用不到。
+
+
+
+
