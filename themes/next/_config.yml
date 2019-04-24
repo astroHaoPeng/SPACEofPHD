@@ -118,22 +118,23 @@ index_with_subtitle: false
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
   home: / || home
-  My Contributions: Information/my-contributions-20180120/ || list
-  Conference Info.: Information/aerospace-conferences-20180120/ || users
-  Academics: categories/学术/ || newspaper-o
-  Notes: categories/笔记/  || sticky-note-o
-  categories: categories/ || th-list
-  #about: /about/ || user
-  archives: archives/ || archive
+  Dr. Hao Peng: posts/about-me/ || user  #list
+  Aerospace Conf.: posts/info-aerospace-conferences/ || users
+  #Posts: categories/学术/ || newspaper-o
+  Notes: categories/笔记/ || sticky-note-o
   tags: tags/ || tags
+  All Posts: archives/ || archive
+  #categories: categories/ || th-list  # hide this from readers 20190423
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
+  #about: /about/ || user
+  
 
 # Enable/Disable menu icons / item badges.
 menu_settings:
   icons: true
-  badges: false
+  badges: true
 
 # ---------------------------------------------------------------
 # Scheme Settings
@@ -160,8 +161,9 @@ site_state: true
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
   #GitHub: https://github.com/yourname || github
-  Email: mailto:astro.H.Peng@gmail.com || envelope
-  # Scholar: https://scholar.google.com/citations?user=kOEKfc0AAAAJ&hl=zh-CN || map-marker fa-rotate-270
+  GoogleScholar: https://scholar.google.com/citations?user=kOEKfc0AAAAJ&hl=zh-CN || ai-google-scholar
+  ResearchGate: https://www.researchgate.net/profile/Hao_Peng9 || ai-researchgate
+  #Email: mailto:astro.H.Peng@gmail.com || envelope
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
@@ -169,7 +171,6 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-  # ResearchGate: https://www.researchgate.net/profile/Hao_Peng9 || map-marker fa-rotate-270
 
 social_icons:
   enable: true
@@ -205,7 +206,7 @@ avatar:
   # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.
   opacity: 1
   # If true, the avatar would be rotated with the cursor.
-  rotated: true
+  rotated: false
 
 # Table Of Contents in the Sidebar
 toc:
@@ -256,7 +257,7 @@ sidebar:
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
-scroll_to_more: true
+scroll_to_more: false
 
 # Automatically saving scroll position on each post/page in cookies.
 save_scroll: true
@@ -267,7 +268,7 @@ excerpt_description: true
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: true
+  enable: false
   length: 250
 
 # Post meta display settings
@@ -297,15 +298,15 @@ codeblock:
   border_radius:
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Show text copy result
-    show_result: false
+    show_result: true
 
 # Wechat Subscriber
 wechat_subscriber:
   enabled: false
   qcode: /uploads/qrcode_for_gh_680cad214213_344.jpg
-  description: 扫描关注公众号SPACEofPHD
+  description: SPACEofPHD
 
 # Reward
 #reward_comment: Donate comment here
@@ -328,8 +329,8 @@ related_posts:
 
 # Declare license on posts
 post_copyright:
-  enable: false
-  license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 4.0</a>
+  enable: true
+  license: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow" target="_blank">"CC BY-NC-SA 4.0"</a>
 
 # Post edit
 # Dependencies: https://github.com/hexojs/hexo-deployer-git
@@ -364,17 +365,17 @@ custom_logo:
 highlight_theme: normal
 
 # Enable "cheers" for archive page.
-cheers_enabled: true
+cheers_enabled: false
 
 # Manual define the max content width
 # !!Only available for Gemini Scheme currently
 # Leave it empty for the default 75% (suggest not less than 1000px)
-#max_content_width: 1000px
+#max_content_width: 99%
 
 # Manual define the sidebar width
 # !!Only available for Gemini Scheme currently
 # Leave it empty for the default 240
-sidebar_width:
+#sidebar_width: 300
 
 # ---------------------------------------------------------------
 # Font Settings
@@ -577,21 +578,21 @@ needmoreshare2:
       iconStyle: default
       boxForm: horizontal
       position: Center
-      networks: Wechat
+      networks: Weibo,Wechat,Douban,
   float:
     enable: false
     options:
       iconStyle: box
-      boxForm: vertical
+      boxForm: horizontal
       position: top
       networks: Weibo,Wechat,Douban,QQZone,Twitter,Facebook
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
-#google_site_verification:
+google_site_verification: -57pSlFmDI7MN_2dcyrnQIi-rSbvfa2sYeBlbFsCHZE
 
 # Google Analytics
-#google_analytics:
+google_analytics: UA-138998986-1
 
 # Bing Webmaster tools verification setting
 # See: https://www.bing.com/webmaster/

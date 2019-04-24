@@ -102,12 +102,17 @@
                 <span class="links-of-author-item">
                   {% if theme.exturl && theme.social_icons.exturl %}
                     <span class="exturl" data-url="{{ link.split('||')[0] | trim }}" title="{{ name }}">{#
-                #}{% else %}{#
-                  #}<a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name }}"{% if theme.seo %} rel="external nofollow"{% endif %}>{#
-                #}{% endif %}{#
-                  #}{% if theme.social_icons.enable %}{#
-                    #}<i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('globe') }}"></i>{#
-                  #}{% endif %}{#
+                #}{% else %}
+                    <a href="{{ link.split('||')[0] | trim }}" target="bb_blank" title="{{ name }}"{% if theme.seo %} rel="external nofollow"{% endif %}>
+                  {% endif %}{#
+                  #}{% if theme.social_icons.enable %}
+                      {% if link.split('||')[1] | trim | first == 'a' %}
+                        <i class="ai {{ link.split('||')[1] | trim | default('user') }}"></i>
+                        {#<i class="{{ link.split('||')[1] | trim | first }}"></i>#}
+                      {% else %}
+                        <i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('user') }}"></i>
+                      {% endif %}
+                    {% endif %}{#
                   #}{% if not theme.social_icons.icons_only %}{#
                     #}{{ name }}{#
                   #}{% endif %}{#

@@ -4,18 +4,18 @@
 
 # Site
 title: SPACE.of.PHD
-subtitle:
-description:
-keywords:
-author: Hao
+subtitle: Do Space Research
+description: 
+keywords: #Astrodynamics, Space Research, Technology, 
+author: Hao Peng
 language: en #zh-CN
-timezone: 
+timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://45.63.5.49/SPACEofPHD
-root: /SPACEofPHD/
-permalink: :title-:year:month:day/
+url: https://space-research.top/blog #SPACEofPHD
+root: /blog/
+permalink: posts/:abbrlink/ #-:year:month:day/
 permalink_defaults:
 
 # Directory
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -98,8 +98,8 @@ search:
 deploy:
   type: git
   repo: 
-    vultr: git@45.63.5.49:/home/git/hexo.git/,master
     github: git@github.com:AstroH-Peng/SPACEofPHD.git,gh-pages
+    vultr: git@45.63.5.49:/home/git/hexo.git/,master
 
 
 # https://github.com/theme-next/hexo-symbols-count-time
@@ -113,7 +113,7 @@ symbols_count_time:
 math: 
   engine: 'mathjax' # 'mathjax' # or 'katex'
   mathjax: 
-    src: custom_mathjax_source
+    src: #custom_mathjax_source
     config: 
       TeX: 
         Macros: 
@@ -160,11 +160,8 @@ kramed: # this is used with 'mathjax'
 #     - markdown-it-sup
 #     - markdown-it-katex
 
-# Generate categories from directory-tree
-# Dependencies: https://github.com/xu-song/hexo-auto-category
-# depth: the depth of directory-tree you want to generate, should > 0
-# 这个插件会导致 hexo s 时文件不断被修改，很不完善
-# 暂时手动设置 category
-auto_category:
- enable: false
- depth: 1
+# abbrlink config
+abbrlink:
+  alg: crc32  #算法选项：crc16、crc32，区别见之前的文章，这里默认为crc16
+  rep: hex    #输出进制：十进制和十六进制，默认为10进制。
+  
