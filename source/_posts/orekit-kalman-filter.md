@@ -1,5 +1,5 @@
 ---
-title: orekit-kalman-filter
+title: Orekit 中 SequentialEstimator 的 Kalman Filter
 tags:
   - Software
   - Orekit
@@ -7,10 +7,10 @@ tags:
   - Estimation
 categories: Software
 comments: true
-mathjax: false
+mathjax: true
 abbrlink: 4de12de9
 date: 2019-04-23 15:03:16
-updated: 2019-04-23 15:03:16
+updated: 2019-04-25 10:52:29
 ---
 
 

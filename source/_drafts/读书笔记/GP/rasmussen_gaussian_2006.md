@@ -1,3 +1,6 @@
+---
+abbrlink: '0'
+---
 > Rasmussen, Carl Edward, and Christopher K. I. Williams. 2006. Gaussian Processes for Machine Learning. Adaptive Computation and Machine Learning. Cambridge, Mass: MIT Press. http://www.gaussianprocess.org/gpml/chapters/.
 
 

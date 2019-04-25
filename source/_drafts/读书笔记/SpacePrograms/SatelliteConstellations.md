@@ -1,3 +1,6 @@
+---
+abbrlink: '0'
+---
 # OneWeb 
 
 ~648 satellites

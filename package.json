@@ -21,6 +21,7 @@
     "hexo-renderer-njucks": "^1.0.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.0",
-    "hexo-symbols-count-time": "^0.4.4"
+    "hexo-symbols-count-time": "^0.4.4",
+    "moment-timezone": "^0.5.25"
   }
 }

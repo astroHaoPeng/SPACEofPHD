@@ -1,13 +1,13 @@
 ---
-title: Neural Networks and Statistical Learning 读书笔记
-categories:
-  - 读书笔记
+title: 读书笔记 | Neural Networks and Statistical Learning
+  - Notes
 tags:
-  - 读书笔记
-  - 机器学习
-  - 神经网络
-abbrlink: f3acb1fd
+  - Book Notes
+abbrlink: f0398937
+mathjax: true
+comments: true
 data: 2017-06-05 00:00:00
+updated: 2019-04-25 11:02:19
 ---
 
 # Neural Networks and Statistical Learning

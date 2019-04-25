@@ -274,9 +274,10 @@ $$
 
 通常对 Variance 的估计，$\hat{I}_1 > \hat{I}_2 > \hat{I}_3$，作者提出一个条件可以判断什么时候 2，3 比 1 更优（没有仔细研究，感觉用处不大）。作者在后文中重点使用 $\hat{I}_2$。
 
-（这里应该有两个图，但是pandoc的markdown语法不会插图，会导致编译失败，暂时注释掉了。）
+~~（这里应该有两个图，但是pandoc的markdown语法不会插图，会导致编译失败，暂时注释掉了。）~~
+<img src="{% asset_path algorithm-1.png%}" width="80%" title="algorithm-1">
 
-<!-- algorithm-1.png  algorithm-2.png %} ) -->
+<img src="{% asset_path algorithm-1.png%}" width="80%" title="algorithm-2">
 
 作者证明，当选择的 $p(\omega)$ 满足一定条件时，使用 dropout 训练得到的 NN 就是 BNN。
 
@@ -287,10 +288,8 @@ Model Uncertainty in BNN
 
 注意区分 预测方差 $q_\theta(\bm{y}|\bm{x})$ 和 后验方差 $q_\theta(\bm{\omega})$。
 
+> (Predictive variance and posterior variance). It is important to note the difference between the variance of the approximating distribution qθ(ω) and the variance of the predictive distribution qθ(y|x) (eq. (3.15)).
 
-(Predictive variance and posterior variance). It is important to note the
-difference between the variance of the approximating distribution qθ(ω) and the
-variance of the predictive distribution qθ(y|x) (eq. (3.15)).
 
 ### 对 regression 问题：
 

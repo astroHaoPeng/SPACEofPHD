@@ -9,7 +9,7 @@ description:
 keywords: #Astrodynamics, Space Research, Technology, 
 author: Hao Peng
 language: en #zh-CN
-timezone: America/New_York
+timezone: #America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -35,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -52,7 +52,7 @@ highlight:
 index_generator:
   path: ''
   per_page: 10
-  order_by: -updated
+  order_by: #-updated
 
 # Category & Tag
 default_category: uncategorized
@@ -165,3 +165,7 @@ abbrlink:
   alg: crc32  #算法选项：crc16、crc32，区别见之前的文章，这里默认为crc16
   rep: hex    #输出进制：十进制和十六进制，默认为10进制。
   
+# add caption for iamges
+image_caption:
+  enable: true #false to disable
+  class_name: #if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'

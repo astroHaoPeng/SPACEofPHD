@@ -1,11 +1,15 @@
 ---
 title: High Area-to-Mass Ratio (HAMR) 文献摘要
 categories:
-  - 文献摘要
+  - Notes
 tags:
-  - 文献摘要
+  - Paper Notes
+  - HAMR
+  - Fokker-Planck-Kolmogorov
+  - FPK equation
 abbrlink: f0398937
-data: 2017-06-05 00:00:00
+date: 2016-04-25 11:09:14
+updated: 2017-06-15 00:00:00
 ---
 
 ## brack_inorbit_2017
@@ -30,3 +34,5 @@ data: 2017-06-05 00:00:00
 **Fokker-Planck-Kolmogorov equation (FPKE)**
 
 > With sufficient number of Gaussian components, any pdf can be approximated as closely as desired.
+
+<img src="{% asset_path FPKE_history.png%}" width="80%" title="Fokker-Planck-Kolmogorov equation history, from (Singla, Puneet. 2016).">
