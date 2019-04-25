@@ -98,7 +98,7 @@ search:
 deploy:
   type: git
   repo: 
-    github: git@github.com:AstroH-Peng/SPACEofPHD.git,gh-pages
+    github: git@github.com:AstroH-Peng/blog.git,gh-pages
     vultr: git@45.63.5.49:/home/git/hexo.git/,master
 
 
