@@ -7,12 +7,12 @@ tags:
   - Academic
   - Information
 abbrlink: about-me
+mathjax: true
 date: 2018-01-20 17:16:10
 updated: 2018-11-14 10:57:57
 ---
 
 <!-- citation format: Elsevier - Harvard (with titles) -->
-
 
 ## Machine Learning in Aerospace
 

@@ -84,6 +84,7 @@
                   {% if hasTagsPage %}</a>{% endif %}
                 </div>
               {% endif %}
+
             </nav>
           {% endif %}
 
@@ -108,7 +109,6 @@
                   #}{% if theme.social_icons.enable %}
                       {% if link.split('||')[1] | trim | first == 'a' %}
                         <i class="ai {{ link.split('||')[1] | trim | default('user') }}"></i>
-                        {#<i class="{{ link.split('||')[1] | trim | first }}"></i>#}
                       {% else %}
                         <i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('user') }}"></i>
                       {% endif %}
@@ -124,6 +124,20 @@
                 </span>
               {% endfor %}
             </div>
+          {% endif %}
+
+          {# PH: add to use tag cloud #}
+          {% if site.tags.length > 1 %}
+            <script type="text/javascript" charset="utf-8" src="{{ url_for('/js/tagcloud.js') }}"></script>
+            <script type="text/javascript" charset="utf-8" src="{{ url_for('/js/tagcanvas.js') }}"></script>
+            <div class="widget-wrap">
+                {#<h3 class="widget-title">Tag Cloud</h3>#}
+                <div id="myCanvasContainer" class="widget tagcloud">
+                    <canvas width="240" height="180" id="resCanvas" style="width=100%">
+                        {{ list_tags() }}
+                    </canvas>
+                </div>
+            </div>  
           {% endif %}
 
           {% set cc = {'by': 1, 'by-nc': 1, 'by-nc-nd': 1, 'by-nc-sa': 1, 'by-nd': 1, 'by-sa': 1, 'zero': 1} %}

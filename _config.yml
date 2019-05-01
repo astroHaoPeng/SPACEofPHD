@@ -3,19 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: SPACE.of.PHD
-subtitle: Do Space Research
-description: 
+title: Space Research Blog
+subtitle: We Do Space Research.
+description: SPACE.of.PHD
 keywords: #Astrodynamics, Space Research, Technology, 
 author: Hao Peng
 language: en #zh-CN
-timezone: #America/New_York
+timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://space-research.top/blog #SPACEofPHD
+url: https://SpaceResearch.top/blog #SPACEofPHD
 root: /blog/
-permalink: posts/:abbrlink/ #-:year:month:day/
+permalink: :abbrlink/ #-:year:month:day/
 permalink_defaults:
 
 # Directory
@@ -53,6 +53,11 @@ index_generator:
   path: ''
   per_page: 10
   order_by: #-updated
+
+# archive_generator:
+#   per_page: 50
+#   yearly: true
+#   monthly: false
 
 # Category & Tag
 default_category: uncategorized
@@ -98,7 +103,7 @@ search:
 deploy:
   type: git
   repo: 
-    github: git@github.com:AstroH-Peng/blog.git,gh-pages
+    #github: git@github.com:AstroH-Peng/blog.git,gh-pages
     vultr: git@45.63.5.49:/home/git/hexo.git/,master
 
 
@@ -111,27 +116,25 @@ symbols_count_time:
 
 
 math: 
-  engine: 'mathjax' # 'mathjax' # or 'katex'
+  engine: 'katex' # 'mathjax' # or 'katex'
   mathjax: 
     src: #custom_mathjax_source
-    config: 
-      TeX: 
-        Macros: 
-          bm: "\\boldsymbol"
+    Macros: 
+      bm: "\\boldsymbol"
   katex:
     css: custom_css_source
     js: custom_js_source # not used
     config:
       # KaTeX config
 
-kramed: # this is used with 'mathjax'
-  gfm: true
-  pedantic: false
-  sanitize: false
-  tables: true
-  breaks: true
-  smartLists: true
-  smartypants: true
+# kramed: # this is used with 'mathjax'
+#   gfm: true
+#   pedantic: false
+#   sanitize: false
+#   tables: true
+#   breaks: true
+#   smartLists: true
+#   smartypants: true
 
 # markdown_it_plus: # this is used with 'katex'
 #   highlight: true
@@ -144,28 +147,48 @@ kramed: # this is used with 'mathjax'
 #   quotes: “”‘’
 #   pre_class: highlight
 
-# markdown:
-#   render:
-#     html: true
-#     xhtmlOut: false
-#     breaks: true
-#     linkify: true
-#     typographer: true
-#     quotes: '“”‘’'
-#   plugins: 
-#     - markdown-it-abbr
-#     - markdown-it-footnote
-#     - markdown-it-ins
-#     - markdown-it-sub
-#     - markdown-it-sup
-#     - markdown-it-katex
+# Markdown-it config
+## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: false
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  anchors:
+    # Minimum level for ID creation. (Ex. h2 to h6)
+    level: 3
+    # A suffix that is prepended to the number given if the ID is repeated.
+    collisionSuffix: 'v'           
+    # If `true`, creates an anchor tag with a permalink besides the heading.
+    permalink: false              
+    # Class used for the permalink anchor tag.
+    permalinkClass: header-anchor 
+    # The symbol used to make the permalink
+    permalinkSymbol: ¶
+  plugins:
+    - markdown-it-abbr
+    - markdown-it-footnote
+    - markdown-it-ins
+    - '@iktakahiro/markdown-it-katex'
+
 
 # abbrlink config
 abbrlink:
   alg: crc32  #算法选项：crc16、crc32，区别见之前的文章，这里默认为crc16
   rep: hex    #输出进制：十进制和十六进制，默认为10进制。
   
-# add caption for iamges
+# add caption for iamges # need fancybox
 image_caption:
   enable: true #false to disable
   class_name: #if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'
+
+# hexo-tag-cloud
+tag_cloud:
+    textFont: 'Trebuchet MS, Helvetica'
+    textColor: '#333'
+    textHeight: 12
+    outlineColor: '#FFFFFF'  #'#E2E1D1'
+    maxSpeed: 0.05 # range from [0.01 ~ 1]

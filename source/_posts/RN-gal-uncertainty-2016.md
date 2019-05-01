@@ -177,7 +177,9 @@ $ \mathcal{L}_{\rm VI} = \int q_\theta(\bm{\omega})\, \log p(\bm{Y}|\bm{X},\bm{\
 >
 > 这里作者定义的 $\mathcal{L}$ 看起来~~很奇怪~~，其它地方定义为 
 > $ \log p(\bm{Y}|\bm{X}) - {\rm KL}(q_\theta(\bm{\omega})||p(\bm{\omega}|\bm{X},\bm{Y})) $
+> 
 > 或者
+> 
 > $ \mathbb{E}\[\log p(\bm{\omega},\bm{Y}|\bm{X})\] + \mathbb{H}(\bm{\omega}) $
 > 经验证都是相等的（todo: 需要检查，待更深入理解后）
 >
@@ -259,10 +261,10 @@ $$
 - pathwise derivative estimator $\hat{I}_2$ (re-parametrisation trick, infinitesimal perturbation analysis, and stochastic backpropagation). 假设 $p_\theta(x)$ 可以改写为无参数的分布 $p(\epsilon)$，则 $ x = g(\theta,\epsilon) $ 是确定的可微的双参数变换。
 
 $$\begin{aligned} 
-\frac{\partial}{\partial \theta} \int f(x) p_\theta(x)\, {\rm d}x &= \frac{\partial}{\partial \theta} \int f(x) \left( \int p_\theta(x,\epsilon)\, {\rm d}\epsilon \right)\, {\rm d}x \\\\
- &= \frac{\partial}{\partial \theta} \iint f(x) p_\theta(x|\epsilon) p(\epsilon)\, {\rm d}\epsilon{\rm d}x \\\\
- &= \frac{\partial}{\partial \theta} \int \left( \int f(x) \sigma\left(x-g(\theta,\epsilon)\right)\, {\rm d}x \right) p(\epsilon)\, {\rm d}\epsilon \\\\
- &= \frac{\partial}{\partial \theta} \int f(g(\theta,\epsilon))p(\epsilon)\, {\rm d}\epsilon \\\\
+\frac{\partial}{\partial \theta} \int f(x) p_\theta(x)\, {\rm d}x &= \frac{\partial}{\partial \theta} \int f(x) \left( \int p_\theta(x,\epsilon)\, {\rm d}\epsilon \right)\, {\rm d}x \\
+ &= \frac{\partial}{\partial \theta} \iint f(x) p_\theta(x|\epsilon) p(\epsilon)\, {\rm d}\epsilon{\rm d}x \\
+ &= \frac{\partial}{\partial \theta} \int \left( \int f(x) \sigma\left(x-g(\theta,\epsilon)\right)\, {\rm d}x \right) p(\epsilon)\, {\rm d}\epsilon \\
+ &= \frac{\partial}{\partial \theta} \int f(g(\theta,\epsilon))p(\epsilon)\, {\rm d}\epsilon \\
  &= \int f'(g(\theta,\epsilon)) \frac{\partial}{\partial \theta} g(\theta,\epsilon) p(\epsilon)\, {\rm d}\epsilon
 \end{aligned}$$
 

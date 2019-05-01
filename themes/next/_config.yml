@@ -73,22 +73,22 @@ footer:
     color: "#ff0000"
 
   # If not defined, will be used `author` from Hexo main config.
-  copyright:
+  copyright: SpaceResearch.top
   # -------------------------------------------------------------
   powered:
     # Hexo link (Powered by Hexo).
-    enable: true
+    enable: false
     # Version info of Hexo after Hexo link (vX.X.X).
-    version: true
+    version: false
 
   theme:
     # Theme & scheme info link (Theme - NexT.scheme).
-    enable: true
+    enable: false
     # Version info of NexT after scheme info (vX.X.X).
-    version: true
+    version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  #custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://pages.coding.me"><b>Coding Pages</b></a>
+  # custom_text: Hosted by <a target="_blank" rel="external nofollow" href="https://spaceresearch.top/"><b>SpaceResearch.top</b></a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -345,7 +345,7 @@ post_edit:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
@@ -446,8 +446,8 @@ math:
   # If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.
   per_page: true
 
-  engine: mathjax
-  # engine: katex
+  # engine: mathjax
+  engine: katex
 
   # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
   mathjax:
@@ -466,7 +466,7 @@ math:
     # Use 0.7.1 as default, jsdelivr as default CDN, works everywhere even in China
     # cdn: //cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css
     # cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0-rc.1/katex.min.css
-    cdn: //cdn.jsdelivr.net/npm/katex@0.10.0-rc.1/dist/katex.min.css
+    cdn: //cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css
     # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
     #cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
     # Bootcss, works great in China, but not so well in other region
@@ -479,7 +479,7 @@ han: false
 # Pangu Support
 # Dependencies: https://github.com/theme-next/theme-next-pangu
 # For more information: https://github.com/vinta/pangu.js
-pangu: false
+pangu: true
 
 # Swiftype Search API Key
 #swiftype_key:
@@ -727,7 +727,7 @@ local_search:
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
   # show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
+  top_n_per_article: 3
   # unescape html strings to the readable one
   unescape: false
 
@@ -801,10 +801,10 @@ motion:
     # slideUpIn | slideUpOut | slideDownIn | slideDownOut | slideLeftIn | slideLeftOut | slideRightIn | slideRightOut
     # slideUpBigIn | slideUpBigOut | slideDownBigIn | slideDownBigOut | slideLeftBigIn | slideLeftBigOut | slideRightBigIn | slideRightBigOut
     # perspectiveUpIn | perspectiveUpOut | perspectiveDownIn | perspectiveDownOut | perspectiveLeftIn | perspectiveLeftOut | perspectiveRightIn | perspectiveRightOut
-    post_block: fadeIn
-    post_header: slideDownIn
-    post_body: slideDownIn
-    coll_header: slideLeftIn
+    post_block: #fadeIn
+    post_header: #slideDownIn
+    post_body: slideUpIn #slideDownIn
+    coll_header: #slideLeftIn
     # Only for Pisces | Gemini.
     sidebar: slideUpIn
 

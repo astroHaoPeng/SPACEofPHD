@@ -6,6 +6,7 @@
     "version": "3.8.0"
   },
   "dependencies": {
+    "@iktakahiro/markdown-it-katex": "^3.1.0",
     "hexo": "^3.8.0",
     "hexo-abbrlink": "^2.0.5",
     "hexo-deployer-git": "^0.3.1",
@@ -15,13 +16,17 @@
     "hexo-generator-search": "^2.4.0",
     "hexo-generator-tag": "^0.2.0",
     "hexo-inject": "^1.0.0",
-    "hexo-math": "^3.0.4",
     "hexo-renderer-ejs": "^0.3.0",
-    "hexo-renderer-kramed": "^0.1.4",
+    "hexo-renderer-markdown-it": "^3.4.1",
+    "hexo-renderer-mathjax": "^0.6.0",
     "hexo-renderer-njucks": "^1.0.0",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.2.0",
     "hexo-symbols-count-time": "^0.4.4",
+    "hexo-tag-cloud": "^2.1.1",
+    "markdown-it-abbr": "^1.0.4",
+    "markdown-it-footnote": "^3.0.1",
+    "markdown-it-ins": "^2.0.0",
     "moment-timezone": "^0.5.25"
   }
 }

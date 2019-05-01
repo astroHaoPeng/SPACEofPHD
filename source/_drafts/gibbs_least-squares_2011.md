@@ -1,20 +1,16 @@
 ---
-title: >-
-  Least-squares estimation, kalman filtering, and modeling[:] a practical
-  handbook
+title: Least-squares estimation, kalman filtering, and modeling[:] a practical handbook
 categories:
-  - 读书笔记
+  - Reading Note
 tags:
-  - 读书笔记
-  - 机器学习
-  - 神经网络
+  - Book Notes
+  - Kalman filter
+  - neural network
 abbrlink: e8aef91d
 data: 2017-06-05 00:00:00
 ---
 
 Least-squares estimation, kalman filtering, and modeling: a practical handbook
-
-大哥推荐
 
 
 所有的估计都可以理解为 inverse modeling 的过程。(P?)
