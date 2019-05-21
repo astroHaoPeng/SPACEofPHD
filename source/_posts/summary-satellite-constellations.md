@@ -1,13 +1,14 @@
 ---
 title: 整理Satellite Constellations的相关信息
 categories:
-  - Aerospace
+  - [Academics, Aerospace]
+  - Summary
 tags:
   - Information
   - Constellation
   - Business
-  - 未完成
-abbrlink: '43542759'
+  - draft
+abbrlink: 60b32216
 date: 2017-06-05 11:16:13
 updated: 2019-04-02 11:16:13
 ---

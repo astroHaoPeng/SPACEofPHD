@@ -14,11 +14,11 @@ data: 2017-06-05 00:00:00
 > Rasmussen, Carl Edward, and Christopher K. I. Williams. 2006. Gaussian Processes for Machine Learning. Adaptive Computation and Machine Learning. Cambridge, Mass: MIT Press. http://www.gaussianprocess.org/gpml/chapters/.
 
 
-我的 | 水平
-------- | ------
-数学基础 | 数学本科略高
-概率基础 | 弱
-计算机基础 | 一般 
+| 我的       | 水平         |
+| ---------- | ------------ |
+| 数学基础   | 数学本科略高 |
+| 概率基础   | 弱           |
+| 计算机基础 | 一般         |
 
 # 笔记
 

@@ -1,0 +1,30 @@
+Use only the hierarchies designed in this file.
+
+
+
+----------------------
+
+Information
+
+Academics
+    Aerospace
+    Math
+
+Notes
+    Paper Notes
+    Book Notes
+    Thesis Notes
+    Web Post Notes
+
+Techniques
+    Softwares
+    Hardwares
+
+Summary
+
+English-Learning
+    Writing
+
+Others
+
+----------------------

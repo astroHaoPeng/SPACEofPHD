@@ -198,29 +198,25 @@ math:
   enable: false
 
   # Default(true) will load mathjax/katex script on demand
-  # That is it only render those page who has 'mathjax: true' in Front Matter.
+  # That is it only render those page who has 'mathjax: true' in Front-matter.
   # If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.
   per_page: true
 
   engine: mathjax
   #engine: katex
 
-  # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
+  # hexo-renderer-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
   mathjax:
     # For newMathJax CDN (cdnjs.cloudflare.com) with fallback to oldMathJax (cdn.mathjax.org).
     cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     # For direct link to MathJax.js with CloudFlare CDN (cdnjs.cloudflare.com).
     #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
-    # For automatic detect latest version link to MathJax.js and get from Bootcdn.
-    #cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
   # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin)
   # needed to full Katex support.
   katex:
     # Use Katex 0.7.1 as default
     cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
-    # For whose visitors are mostly in China
-    #cdn: //cdn.bootcss.com/KaTeX/0.7.1/katex.min.css
     # If you want to try the latest version of Katex, use one below instead
     #cdn: //cdn.jsdelivr.net/katex/latest/katex.min.css
 ```
@@ -239,7 +235,7 @@ This option is to control whether to render Math Equations every page.
 
 The behavior of default (`true`) is to render Math Equations **on demand**.
 
-It will only render those posts which have `mathjax: true` in their Front Matter.
+It will only render those posts which have `mathjax: true` in their Front-matter.
 
 For example:
 
@@ -279,7 +275,7 @@ Firstly, both MathJax and Katex use the [jsDelivr](https://www.jsdelivr.com/) as
 
 The reason that jsDelivr is chosen is because it is fast everywhere, and jsDelivr has the valid ICP license issued by the Chinese government, it can be accessed in China pretty well.
 
-And we also provide other optional CDNs, including the famous [CDNJS](https://cdnjs.com/) and the [Bootcss](http://www.bootcdn.cn/) which has the quite high access speed in China.
+And we also provide other optional CDNs, including the famous [CDNJS](https://cdnjs.com/).
 
 For MathJax, we are currently using version 2.7.1.
 

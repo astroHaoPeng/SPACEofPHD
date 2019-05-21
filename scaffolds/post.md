@@ -1,10 +1,10 @@
 ---
 title: {{ title }}
 date: {{ date }}
-updated: {{ date }}
+updated: 
 abbrlink: 
-tags: [未完成]
-categories: 未分类
+categories: 
+tags: 
 comments: true
 mathjax: false
 ---

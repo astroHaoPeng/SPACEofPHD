@@ -50,14 +50,14 @@ highlight:
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
-  path: ''
+  path: '' # could change to '/new-updates' and add a custom index.md at /_posts/ 
   per_page: 10
-  order_by: #-updated
+  order_by: -updated
 
-# archive_generator:
-#   per_page: 50
-#   yearly: true
-#   monthly: false
+archive_generator:
+  per_page: 50
+  yearly: true
+  monthly: false
 
 # Category & Tag
 default_category: uncategorized
@@ -86,7 +86,8 @@ theme: next
 # Hexo localsearch
 search:
   path: search.xml
-  field: all
+  field: post
+  content: true
 
 # Hexo generator feed
 # feed:
@@ -109,8 +110,8 @@ deploy:
 
 # https://github.com/theme-next/hexo-symbols-count-time
 symbols_count_time:
-  symbols: true
-  time: true
+  symbols: false
+  time: false
   total_symbols: true
   total_time: true
 
@@ -159,7 +160,7 @@ markdown:
     quotes: '“”‘’'
   anchors:
     # Minimum level for ID creation. (Ex. h2 to h6)
-    level: 3
+    level: 2
     # A suffix that is prepended to the number given if the ID is repeated.
     collisionSuffix: 'v'           
     # If `true`, creates an anchor tag with a permalink besides the heading.
@@ -172,7 +173,9 @@ markdown:
     - markdown-it-abbr
     - markdown-it-footnote
     - markdown-it-ins
+    - markdown-it-emoji
     - '@iktakahiro/markdown-it-katex'
+    - markdown-it-task-checkbox
 
 
 # abbrlink config

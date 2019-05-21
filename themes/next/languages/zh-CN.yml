@@ -1,12 +1,12 @@
 ---
 title:
-  archive: 存档
+  archive: 归档
   category: 分类
   tag: 标签
   schedule: 日程表
 menu:
   home: 首页
-  archives: 存档
+  archives: 归档
   categories: 分类
   tags: 标签
   about: 关于

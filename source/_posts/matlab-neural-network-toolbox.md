@@ -1,13 +1,14 @@
 ---
-title: 神经网络工具箱学习摘要
-  - Scientific Computing
+title: Notes on MATLAB Neural Network Toolbox
+categories: 
+  - [Techniques, Software]
 tags:
   - MATLAB
 abbrlink: f0398937
 mathjax: true
 comments: true
 date: 2017-06-05 00:00:00
-updated: 2019-04-25 11:02:19
+updated: 2017-06-05 00:00:00
 ---
 
 # 神经网络工具箱学习摘要
@@ -27,7 +28,7 @@ For small training sets, you can quickly apply deep learning by performing trans
 支持 Amazon EC2 P2 GPU instances （是什么？）
 
 # 主要函数
-
+<!-- more -->
 ## `feedforwardnet(hiddenSizes,trainFcn)`
 
 每层与前一层相连

@@ -203,23 +203,19 @@ math:
   enable: false
 
   # Default(true) will load mathjax/katex script on demand
-  # That is it only render those page who has 'mathjax: true' in Front Matter.
+  # That is it only render those page who has 'mathjax: true' in Front-matter.
   # If you set it to false, it will load mathjax/katex srcipt EVERY PAGE.
   per_page: true
 
   engine: mathjax
   #engine: katex
 
-  # hexo-rendering-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
+  # hexo-renderer-pandoc (or hexo-renderer-kramed) needed to full MathJax support.
   mathjax:
     # Use 2.7.1 as default, jsdelivr as default CDN, works everywhere even in China
     cdn: //cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
-    # For newMathJax CDN (cdnjs.cloudflare.com) with fallback to oldMathJax (cdn.mathjax.org).
-    #cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
     # For direct link to MathJax.js with CloudFlare CDN (cdnjs.cloudflare.com).
     #cdn: //cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML
-    # For automatic detect latest version link to MathJax.js and get from Bootcss.
-    #cdn: //cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML
 
   # hexo-renderer-markdown-it-plus (or hexo-renderer-markdown-it with markdown-it-katex plugin)
   # needed to full Katex support.
@@ -228,8 +224,6 @@ math:
     cdn: //cdn.jsdelivr.net/npm/katex@0.7.1/dist/katex.min.css
     # CDNJS, provided by cloudflare, maybe the best CDN, but not works in China
     #cdn: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css
-    # Bootcss, works great in China, but not so well in other region
-    #cdn: //cdn.bootcss.com/KaTeX/0.7.1/katex.min.css
 ```
 
 ### enable
@@ -244,9 +238,9 @@ math:
 
 这个选项是控制是否在每篇文章都渲染数学公式；
 
-默认(`true`) 的行为是**只对 Front Matter 中含有 `mathjax: true` 的文章进行数学公式渲染**。
+默认(`true`) 的行为是**只对 Front-matter 中含有 `mathjax: true` 的文章进行数学公式渲染**。
 
-如果 Front Matter 中不含有 `mathjax: true`，或者 `mathjax: false`，那么 NexT 将不会对这些文章进行数学公式渲染。
+如果 Front-matter 中不含有 `mathjax: true`，或者 `mathjax: false`，那么 NexT 将不会对这些文章进行数学公式渲染。
 
 例如：
 
@@ -286,7 +280,7 @@ MathJax 和 Katex 都提供了 `cdn` 的配置，如果你不知道什么是 `cd
 
 之所以选择 jsDelivr 是因为它在全球各地都有比较不错的速度，而且具有中国官方颁布的 ICP 证书，在中国也能比较好地访问。
 
-同时，我们也提供了其他的 CDN 备选方案，包括著名的 [CDNJS](https://cdnjs.com/) 和在中国地区具有不错访问效果的 [Bootcss](http://www.bootcdn.cn/)。
+同时，我们也提供了其他的 CDN 备选方案，包括著名的 [CDNJS](https://cdnjs.com/)。
 
 对于 MathJax 来说，我们目前采用的版本为 2.7.1。
 
