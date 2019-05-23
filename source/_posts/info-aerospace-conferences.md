@@ -16,15 +16,18 @@ sticky: 1000
 
 # Call-for-abstract
 
-- Open | Conference Date | Name | Location | **Abstract Deadline (ordered)**
-- [x] | 20200106-10 | [SciTech 2020](https://www.aiaa.org/SciTech) | Orlando, FL | [**20190611**](https://www.aiaa.org/SciTech/presentations-papers/call-for-papers)
-- [x] | 20200106-10 | [30th AIAA/AAS Space Flight Mechanics Meeting](http://www.space-flight.org/conferences.html) | Orlando, FL | [**20190611**](http://www.space-flight.org/docs/2020_winter/CallForPapers2020.pdf)
-- [x] | 201908xx | [中国宇航学会深空探测技术专业委员会第十六届学术年会](https://mp.weixin.qq.com/s/MUOMuj-offzomaOpPGmZkw) | 青岛 | 20190630
+- Open | Conference Date | Name | Location | <mark>**Abstract Deadline (chronological order)**</mark>
+- [x] | 20200106-10 | [SciTech 2020](https://www.aiaa.org/SciTech) | Orlando, FL |<mark> [**20190611**](https://www.aiaa.org/SciTech/presentations-papers/call-for-papers)</mark>
+- [x] | 20200106-10 | [30th AIAA/AAS Space Flight Mechanics Meeting](http://www.space-flight.org/conferences.html) | Orlando, FL | <mark>[**20190611**](http://www.space-flight.org/docs/2020_winter/CallForPapers2020.pdf)</mark>
+- [x] | 201908 | [中国宇航学会深空探测技术专业委员会第十六届学术年会](https://mp.weixin.qq.com/s/MUOMuj-offzomaOpPGmZkw) | 山东青岛 | <mark>20190630</mark>
+- [x] | 20190920-23 | [第十一届全国多体动力学与控制暨第六届全国航天动力学与控制和第十四届全国分析力学联合学术会议](http://maadycc2019.csp.escience.cn/dct/page/1) | 湖南长沙 | <mark>[**20190701**](http://maadycc2019.csp.escience.cn/dct/page/70003)</mark>
 - [ ] | 20200316-20 | [51st Lunar and Planetary Science Conference](https://www.hou.usra.edu/meetings/lpsc2020/) | The Woodlands, Texas | null
 - [ ] | ??? | [International Conference on Astrodynamics Tools and Techniques (ICATT)](https://trajectory.estec.esa.int/Astro/ICATT/ICATT_Home.html) | future null
 
 <!-- more -->
-> NOTICE: Lists are scrollable horizontally.
+> NOTICE: 
+> Lists are scrollable horizontally.
+> 
 
 <style type="text/css" rel="stylesheet">
 ul, ol {
@@ -42,8 +45,13 @@ ul li, ol li {
 
 # Conferences
 
+## 2020
+- Done | <mark>**Conference Date (reverse order)**</mark> | Name | Location | Abstract Deadline | Others
+- null
+
 ## 2019
-- Done | **Conference Date (reverse ordered)** | Name | Location | Abstract Deadline
+- Done | <mark>**Conference Date (reverse order)**</mark> | Name | Location | Abstract Deadline | Others
+- [ ] | 20190524-28 | 第五届全国航天动力学与控制青年学者论坛 | 广西北海 | null
 - [ ] | 20191209-12 | [The First International Orbital Debris Conference](https://www.hou.usra.edu/meetings/orbitaldebris2019/) | Sugar Land, TX | [20190308](https://www.hou.usra.edu/meetings/orbitaldebris2019/)
 - [ ] | 20191104-08 | [The 4th COSPAR Symposium: Small satellites for sustainable Science And Development](http://www.cospar2019.org/) | Herzliya, Israel | [20190430](http://www.cospar2019.org/call-for-abstracts/)
 - [ ] | 20191028-29 | [Symposium: 2nd IAA Symposium STEAM for Space leaders of tomorrow](http://iaaweb.org/content/view/769/1013/) | Cambridge, USA | null
@@ -51,7 +59,7 @@ ul li, ol li {
 - [ ] | 20190917-20 | [AMOS: Advanced Maui Optical and Space Surveillance Technologies Conference](https://amostech.com/) | Maui, HI | [20190301](https://amostech.com/amos-speakers/#papers)
 - [ ] **| 20190811-15 | [2019 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2019_summer/2019_summer.html) | Portland, ME | [20190405](http://www.space-flight.org/docs/2019_summer/CallForPapers2019.pdf) | *We have two papers.***
 - [ ] | 20190603-05 | [2019 IAA Low-Cost Planetary Missions Conference](http://iaaweb.org/content/view/761/1001/) | Toulouse, France | 20190415
-- [ ] | 20190521-24 | [7th International Conference Space Technologies: Present and Future](http://iaaweb.org/content/view/762/1002/) | Dnepr, Ukraine | 20190330
+- [x] | 20190521-24 | [7th International Conference Space Technologies: Present and Future](http://iaaweb.org/content/view/762/1002/) | Dnepr, Ukraine | 20190330
 - [x] | 20190506-10 | [12th IAA Symposium on Small Satellites for Earth Observation](http://smallsat.iaaweb.org) | Berlin, Germany | 20181031
 - [x] | 20190429-0503 | [6th IAA Planetary Defense Conference (bi-annual)](http://pdc.iaaweb.org/) | Washington DC | 20181215
 - [x] | 20190415-16 | [Sensors and Systems for Space Applications XII](https://spie.org/SI/conferencedetails/sensors-systems-space-applications) | Baltimore, MD | 20181003
@@ -61,7 +69,7 @@ ul li, ol li {
 - [x] | 20190107-11 | [SciTech 2019](https://scitech.aiaa.org/?utm_source=Informz&utm_medium=Email&utm_campaign=SciTech2018) | San Diego, CA | 20180611
 
 ## 2018
-- Done | **Conference Date (sorted)** | Name | Location | Abstract Deadline
+- Done | <mark>**Conference Date (reverse order)**</mark> | Name | Location | Abstract Deadline | Others
 - [x] | 20181007-10 | 2018 IEEE International Conference on Systems, Man, and Cybernetics (SMC2018) | Miyazaki, Japan | 20180414
 - [x] **| 20181001-05 | [69th International Astronautical Congress (IAC) 2018](https://www.iac2018.org/) | Bremen, Germany | 20180511 | *We have one paper.***
 - [x] | 20180917-19 | [AIAA SPACE Forum 2018](https://space.aiaa.org/) | Orlando, FL | 20180208 
@@ -70,9 +78,11 @@ ul li, ol li {
 - [x] | **20180108-12 | 28th AIAA/AAS Space Flight Mechanics Meeting (SciTech2018) | Kissimmee, FL | 20170612 | [Final Program.](https://arc.aiaa.org/doi/book/10.2514/MSFM18) (*My presentation [here](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1966), Gaurav's presentation [here.](https://arc.aiaa.org/doi/abs/10.2514/6.2018-1454)*)**
 
 ## 2017
-- Done | **Conference Date (sorted)** | Name | Location | Abstract Deadline
-- [x] **| 20170619-21 | 9th International Workshop on Satellite Constellations and Formation Flying |  | ~~June 19-21, 2017~~ | University of Colorado Boulder | [Final Program](http://ccar.colorado.edu/iwscff2017/IWSCFF-Program-Final.pdf) (*My photo is [here.](http://ccar.colorado.edu/iwscff2017/img/Group_picture.jpg)*)**
-- [x] **| 20171113-15 | 1st IAA Conference on Space Situational Awareness | Orlando, Florida | June 30, 2017 | [Final program](http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSAFINALProgram3.pdf) has many interesting papers.**
+- Done | <mark>**Conference Date (reverse order)**</mark> | Name | Location | Abstract Deadline | Others
+- [x] **| 20170619-21 | 9th International Workshop on Satellite Constellations and Formation Flying | University of Colorado Boulder | null | [Final Program](http://ccar.colorado.edu/iwscff2017/IWSCFF-Program-Final.pdf) (*My photo is [here.](http://ccar.colorado.edu/iwscff2017/img/Group_picture.jpg)*)**
+- [x] **| 20171113-15 | 1st IAA Conference on Space Situational Awareness | Orlando, Florida | 20170630 | [Final program](http://reg.conferences.dce.ufl.edu/docs/ICSSA/ICSSAFINALProgram3.pdf) has many interesting papers.**
+- [x] | 20170603-09 | [26th International Symposium on Space Flight Dynamics (ISSFD)](http://issfd.org/ISSFD_2017/Program_2017.html) | Matsuyama, Japan | null 
+- [x] | 20170418-21 | 7th European Conference on Space Debris | ESA/ESOC, Darmstadt/Germany | null
 
 
 **Sources**:
@@ -82,47 +92,19 @@ ul li, ol li {
 - https://iaaweb.org/content/view/745/978/
 
 
-
-## Add more
-Leave a comment below or send me an email, if you have any suggestions.
+> Please leave a comment below to add your information.
 
 
 
-<!-- [ ] # (TO BE CLEAN UP)
 
-- [ ] Deep space gateway concept science workshop | | ~~Feb 27-Mar 1~~ | Denver, CO | |
-- [ ] Planetary Science Deep Space SmallSat Mission Concepts | | ~~Mar 18~~ | Woodlands, TX | |
+<!-- - [ ] Planetary Science Deep Space SmallSat Mission Concepts | | ~~Mar 18~~ | Woodlands, TX | |
 - [ ] 49th Lunar and Planetary Science Conference (LPSC) | ~~Jan 9~~ | ~~Mar 19–23~~ | Woodlands, TX | |
  39th IEEE Aerospace Conference | | ~~Mar 4-11~~ | Big Sky, Montana | |
 - [ ] [首届中国航天大会 暨第三届中国航天高峰论坛](http://www.csaspace.org.cn/CMS/Academic/ArticleShow.asp?ArticleID=1201) | ~~Mar 1 (全文)~~ | ~~Apr 23-24~~ | 哈尔滨，中国 | |
-- [ ] [4th IAA Conference on Dynamics and Control of Space Systems (DYCOSS)](http://www.dycoss2018.com/) [2] | ~~Feb 28~~ | ~~May 21-23~~ | Changsha, China | |
 - [ ] 15th International Conference on Space Operations (SpaceOps) | ~~Jul 17, 2017~~ | ~~May 28-Jun 1~~ | Marseille, France | |
 - [ ] International Symposium on Lunar and Planetary Science 2018 | ~~Apr 20~~ | ~~Jun 13-15, 2018~~ | Macau, China
 - [ ] 5 th European Workshop on Space Debris Modelling and Remediation | ~~May 7~~ | June 25-27, 2018 | Paris
 - [ ] Special Session on Computational Intelligence in Aerospace Science and Engineering WCCI [1] | ~~Jan 15~~ | Jul 8-13 | Rio, Brazil | |
-- [ ] [COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | ~~Feb 16~~ | Jul 14-22 | Pasadena, CA | |
+- [ ] [COSPAR (Committee on Space Research) 2018 Assembly (42nd)](http://cospar2018.org/) | ~~Feb 16~~ | Jul 14-22 | Pasadena, CA | | -->
 
 
-> * [1] WCCI - [ ] World Congress on Computational Intelligence
-> * [2] Topic of DYCOSS: *Dynamic and Control Make Space System Intelligent* -->
-
-<!-- [ ] <!- [ ] # 补充和反馈
-[请使用issue补充和反馈最新会议信息，谢谢。](https://github.com/AstroH-Peng/SPACEofPHD/issues)
-- [ ] 需要注册GitHub账户。
-- [ ] 请按照对应格式添加或者反馈 -> -->
-
-
-
-<!-- [ ] # 历史会议
-
-## ~~2017~~
-
-| Name                                     | AbstractDeadline  | ConferenceDate                  | Location               | Others |
-| -------------------- [ ] | --------- [ ] | ----------- [ ] | ----------- [ ] | --------- [ ] 
-| **26th International Symposium on Space Flight Dynamics (ISSFD)** |  | ~~June 3-9, 2017~~ | Matsuyama, Japan | [Presentations & Papers](http://issfd2017.org/paperabstract.html)
-| ~~7th European Conference on Space Debris~~ | | ~~18-21 April 2017~~ | ESA/ESOC, Darmstadt/Germany |
-| ~~19th International Conference on Aerospace and Flight Software Engineering~~ | ~~September 25, 2017~~ | ~~November 23-24, 2017~~ | London, United Kingdom | |
-| ~~7th CSA-IAA Conference on Advanced Space Technology~~ | ~~August 1st, 2017~~ | ~~November 23-24, 2017~~ | Shanghai, China | |
-| ~~(?) 4th IAA Conference on University Satellites Missions & CubeSat Workshop~~ | ~~(?) November 26, 2017~~ | ~~04-07 December 2017~~ | Roma, Italy |  | |
-
-> *(?) I'm not sure about this and it needs feedback.* -->

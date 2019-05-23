@@ -160,13 +160,13 @@ markdown:
     quotes: '“”‘’'
   anchors:
     # Minimum level for ID creation. (Ex. h2 to h6)
-    level: 2
+    level: 1
     # A suffix that is prepended to the number given if the ID is repeated.
     collisionSuffix: 'v'           
     # If `true`, creates an anchor tag with a permalink besides the heading.
-    permalink: false              
+    permalink: false
     # Class used for the permalink anchor tag.
-    permalinkClass: header-anchor 
+    permalinkClass: header-anchor
     # The symbol used to make the permalink
     permalinkSymbol: ¶
   plugins:

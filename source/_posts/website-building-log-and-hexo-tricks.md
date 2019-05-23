@@ -45,6 +45,16 @@ Use this line to include image:
 
 # log
 
+
+(2019-05-21 13:16:07)
+`npm i vsce -g`\
+`npm install -g webpack webpack-dev-server webpack-cli`\
+`npm run compile`\
+`vsce package`\
+修改`yzhang-gh/vscode-markdown`实现快捷键插入`<mark></mark>`。
+Create my first PR to the original author. 
+
+
 (2019-05-19 16:03:00)
 `hexo-generator-searchdb` 引起导致搜索页面失败，猜测与对公式的支持有关。\
 换用原始的 `hexo-generator-search` 可解决。

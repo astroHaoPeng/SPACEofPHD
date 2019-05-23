@@ -1,5 +1,5 @@
 ---
-title: bishop_pattern_2006
+title: Reading Notes of PRML (Bishop2016)
 comments: true
 categories:
   - [Notes, Book Notes]
@@ -12,14 +12,22 @@ date: 2018-09-26 16:15:43
 updated: 2018-10-10 17:35:14
 ---
 
-bishop_pattern_2006
+> Christopher M. Bishop, <mark>Pattern recognition and machine learning</mark>, New York: Springer, 2006.
 
-> Pattern Recognition and Machine Learningv
-> > Bishop, Christopher M. 
-> > 
-> 2006
-> 
-> Information Science and Statistics. New York: Springer.
+This reading note is served as <mark>a quick reference and short summary</mark> of the PRML book.
+Read the book first.
+It is *incorrect* to trying to understand the book through reading this post. 
+
+Basically, I was just trying to simplify the book by extracting only useful definitions, equations, formulas, and explanations. 
+So, to understand the context here, one should <mark>study the PRML book first</mark>. 
+
+# Relationship among Sections
+
+(TBD)
+
+<!-- {% mermaid sequenceDiagram %}
+{% endmermaid %} -->
+
 
 <!-- more -->
 
@@ -35,8 +43,9 @@ ML. However, the
 second term arises from the uncertainty in the parameters w and is a consequence
 of the Bayesian treatment.
 
+# 2
 
-# 2.3 Gaussian Distribution
+## 2.3 Gaussian Distribution
 Gaussian Distribution:
 $$
 \mathcal{N}(\bm{x}|\bm{\mu},\Sigma) = \frac{1}{(2\pi)^{D/2}} \frac{1}{|\Sigma|^{1/2}} \exp \left[ -\frac{1}{2}(\bm{x}-\bm{\mu})^T \Sigma^{-1} (\bm{x}-\bm{\mu}) \right]
@@ -46,16 +55,17 @@ $$
 
 These equations are used for ``completing the square''。
 $$
--\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}) = 
-\begin{array}{cc}
+\begin{aligned}
+-\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}) &= 
 -\frac{1}{2}(\bm{x}_a-\bm{\mu}_a)^T\Lambda_{aa}^{-1}(\bm{x}_a-\bm{\mu}_a) 
 -\frac{1}{2}(\bm{x}_a-\bm{\mu}_a)^T\Lambda_{ab}^{-1}(\bm{x}_b-\bm{\mu}_b) \\
--\frac{1}{2}(\bm{x}_b-\bm{\mu}_b)^T\Lambda_{ba}^{-1}(\bm{x}_a-\bm{\mu}_a) 
--\frac{1}{2}(\bm{x}_b-\bm{\mu}_b)^T\Lambda_{bb}^{-1}(\bm{x}_b-\bm{\mu}_b) \end{array}   \tag{2.70}$$
+&\phantom{=} -\frac{1}{2}(\bm{x}_b-\bm{\mu}_b)^T\Lambda_{ba}^{-1}(\bm{x}_a-\bm{\mu}_a) 
+-\frac{1}{2}(\bm{x}_b-\bm{\mu}_b)^T\Lambda_{bb}^{-1}(\bm{x}_b-\bm{\mu}_b)    \end{aligned}
+\tag{2.70}$$
 $$
 -\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}) = -\frac{1}{2} \bm{x}^T\Sigma^{-1}\bm{x} + \bm{x}^T\Sigma^{-1}\bm{\mu} + \text{terms independent of } \bm{x}    \tag{2.71}$$
 
-## Conditional Gaussian distributions
+### Conditional Gaussian distributions
 
 > Some properties of Gaussian distributions are most naturally expressed in terms of the covariance, whereas others take a simpler form when viewed in terms of the precision. (p.85)
 
@@ -78,7 +88,7 @@ $$\Sigma_{a|b} = \Lambda_{aa}^{-1}  =  \Sigma_{aa}-\Sigma_{ab}\Sigma_{bb}^{-1}\S
 
 $$p(\bm{x}_a|\bm{x}_b) = \mathcal{N}(\bm{\mu}_{a|b},\Lambda_{aa}^{-1})   \tag{2.96}$$
 
-## Marginal Gaussian distributions
+### Marginal Gaussian distributions
 
 > For a marginal distribution, the mean and covariance are most simply expressed
 in terms of the partitioned covariance matrix, in contrast to the conditional
@@ -101,7 +111,7 @@ $$p(\bm{x}_a) = \mathcal{N}(\bm{x}_a|\bm{\mu}_a,\Sigma_{aa})   \tag{2.98}$$
 
 
 
-## Bayes’ theorem for Gaussian variables
+### Bayes’ theorem for Gaussian variables
 GIVEN:
 - Gaussian marginal distribution $p(\bm{x}) = \mathcal{N}(\bm{x}|\bm{\mu},\Lambda^{-1})$
 - Gaussian conditional distribution $p(\bm{y}|\bm{x}) = \mathcal{N}(\bm{y}|A\bm{x}+\bm{b},L^{-1})$
@@ -114,16 +124,16 @@ $$p(\bm{y}) = \mathcal{N}(\bm{y}|A\bm{\mu}+\bm{b},L^{-1}+A\Lambda^{-1}A^T) \tag{
 $$p(\bm{x}|\bm{y}) = \mathcal{N}(\Sigma[A^TL(\bm{y}-\bm{b})+A\bm{\mu}],\Sigma))\tag{2.112 or 2.116}$$
 $$\Sigma = (\Lambda+A^TLA)^{-1}$$
 
-## Bayesian inference for the Gaussian (p.97)
+### Bayesian inference for the Gaussian (p.97)
 Did not finish this part of reading.
 
 
-# 2.4. The Exponential Family 
+## 2.4. The Exponential Family 
 > The probability distributions that we have studied so far in this chapter (with the exception of the Gaussian mixture) are specific examples of a broad class of distributions called the exponential family (Duda and Hart, 1973; Bernardo and Smith, 1994). 
 
 > Members of the exponential family have many important properties in common, and it is illuminating to discuss these properties in some generality.
 
-# 2.5. Nonparametric Methods (p.120)
+## 2.5. Nonparametric Methods (p.120)
 
 > Throughout this chapter, we have focussed on the use of probability distributions
 having specific functional forms governed by a small number of parameters whose
@@ -131,7 +141,7 @@ values are to be determined from a data set. This is called the parametric appro
 to density modelling.
 
 
-# 3.1 Linear Basis Function Model
+## 3.1 Linear Basis Function Model
 
 $$y=\bm{w}^T\bm{\phi}(\bm{x})$$
 
@@ -163,7 +173,7 @@ Having written down the likelihood function, we can use *maximum likelihood* to 
 MAX LIKELIHOOD weights $\bm{w}_\text{ML}$:
 $$\bm{w}_\text{ML}=(\Phi^T\Phi)^{-1}\Phi^T\bm{t}    \tag{3.15}$$
 
-# 3.3 Bayesian Linear Regression
+## 3.3 Bayesian Linear Regression
 
 > We therefore turn to a Bayesian treatment of linear regression, which will
 avoid the over-fitting problem of maximum likelihood, and which will also lead to
@@ -275,7 +285,7 @@ $$\ln p(\bm{t}|\alpha,\beta) = \frac{M}{2}\ln\alpha + \frac{N}{2}\ln\beta - E(\b
 ## 3.6 Limitations of Fixed Basis Functions
 
 
-
+# 7
 
 ## 7.2 Relevance Vector Machines
 
@@ -301,8 +311,12 @@ $$C = \beta^{-1}I + \Phi A^{-1} \Phi^T     \tag{7.86}$$
 > （稀疏性来自于应用automatic relevance determination, ARD算法；与SVM类似）
 
 PREDICTIVE distribution: (after finding optimum $\bm{\alpha}^*$ and $\beta^*$)
-$$p(t|\bm{x},X,\bm{t},\bm{\alpha}^*,\beta^*) = \int p(t|\bm{x},\bm{w},\beta^*) p(\bm{w}|X,\bm{t},\bm{\alpha}^*,\beta^*) \cdot {\rm d}\bm{w}$$
-$$ = \mathcal{N}(\bm{m}^T\bm{\phi}(\bm{x})),\sigma^2(\bm{x})    \tag{7.90}$$
+$$
+\begin{aligned}
+p(t|\bm{x},X,\bm{t},\bm{\alpha}^*,\beta^*) &= \int p(t|\bm{x},\bm{w},\beta^*) p(\bm{w}|X,\bm{t},\bm{\alpha}^*,\beta^*) \cdot {\rm d}\bm{w}\\
+ &= \mathcal{N}(\bm{m}^T\bm{\phi}(\bm{x})),\sigma^2(\bm{x})    \tag{7.90}
+\end{aligned}
+$$
 where
 $$\sigma^2(\bm{x})=(\beta^{*})^{-1} + \bm{\phi}(\bm{x})^T\Sigma\bm{\phi}(\bm{x})    \tag{7.91}$$
 
@@ -336,7 +350,7 @@ $$\ln p(\bm{X}|\bm{\theta}) = \mathcal{L}(q,\bm{\theta}) + {\rm KL}(q\|p)   \tag
 where
 $$\mathcal{L}(q,\bm{\theta}) = \sum_{\rm Z} q(\bm{Z}) \ln\left\{ \frac{p(\bm{X},\bm{Z}|\bm{\theta})}{q(\bm{Z})} \right\}   \tag{9.71}$$
 $${\rm KL}(q\|p) = -\sum_{\bm{Z}} q(\bm{Z})\ln \left\{ \frac{p(\bm{Z}|\bm{X},\bm{\theta})}{q(\bm{Z})} \right\}    \tag{9.72}$$
-where KL is the Kullback-Leibler divergence between
+where KL is the <mark>Kullback-Leibler divergence</mark> between
 $q(\bm{Z})$ and the *posterior distribution* $p(\bm{Z}|\bm{X}, \bm{\theta})$. 
 
 > The EM algorithm is a two-stage iterative optimization technique for finding maximum likelihood solutions. (p.451)
@@ -350,4 +364,64 @@ M step.
 partial, rather than complete, optimization of L(q, θ) with respect to q(Z) (Neal and
 Hinton, 1999).
 
-在需要使用 EM 时，还需要仔细研究这部分内容，理解不够深刻，还没有掌握到精髓所在。
+在需要使用 EM 时，还需要仔细研究这部分内容，理解不够深刻，还没有掌握到精髓所在。
+
+
+
+# 10. Approximate Inference
+
+Tasks:
+- Evaluation of the posterior distribution $p(\bm{X}|\bm{X})$ given the observed data $\bm{X}$.
+- Evaluation of the expectations with respect to $p(\bm{X}|\bm{Z})$.
+
+Difficulties:
+- The dimensionality of the latent space is too high.
+- The posterior distribution is very complex such that expectations are not analytically tractable.
+
+Approximateion schemes:
+- (Sec. 10) Deterministic (never exact results; some scale well to large applications)
+  - Laplace approximateion in Sec. 4.4
+  - Variational Bayes (or, variational inference): minimize $KL(q||p)$
+  - Expectation propagation: minimize $KL(p||q)$
+- (Sec. 11) Stochastic (exact results given infinite computational resources; computationally demanding, small-scale problem.)
+  - MCMC
+  - ...
+
+
+
+## 10.1. Variational Inference
+
+Entropy $H[p] = \int p(x)\ln p(x)\, dt$ is a functional.
+
+The approximation l
+Restricting the range of functions over which the optimization of the functional is performed.
+
+
+$$
+\mathcal{L}(q) = \int q(\bm{Z}) \ln\left\{ \frac{p(\bm{X},\bm{Z})}{q(\bm{Z})} \right\}   \tag{10.3}
+$$
+
+$$
+q(\bm{Z}) = \prod_{i=1}^M q_i(\bm{Z}_i)   \tag{10.5}
+$$
+
+Substitute (10.5) into (10.3) and then dissect out the dependence on one of the fastors $q_j(\bm{Z}_j)$,
+
+
+
+
+# 11. Sampling Methods
+
+<mark>Approximate inference methods based on numerical sampling</mark> is also known as <mark>Monte Carlo techniques</mark>.
+
+For most situations, posterior (/pɑ'stɪrɪɚ/) distribution is required primarily for the purpose of evaluating expectations, for example, in order to make predictions. 
+
+## 11.1 Basic Sampling Algorithms
+
+- transform using the inverse accumulative distribution function
+- rejection sampling
+- adaptive rejection sampling
+  - adaptive rejection Metropolis sampling
+- importance sampling 
+ 
+> (stopped here last time)

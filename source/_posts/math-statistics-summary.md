@@ -2,7 +2,7 @@
 title: Summary of Some Statistics Knowledge
 categories:
   - [Academics, Math]
-  - Summary
+  - Summaries
 tags: [math, statistics, summary]
 mathjax: true
 comments: true
@@ -11,6 +11,8 @@ date: 2019-04-15 14:43:39
 updated: 2019-04-23 15:01:35
 sticky: 100
 ---
+
+
 
 # TODO
 

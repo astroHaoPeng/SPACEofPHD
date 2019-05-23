@@ -2,7 +2,7 @@
 title: 整理Satellite Constellations的相关信息
 categories:
   - [Academics, Aerospace]
-  - Summary
+  - Summaries
 tags:
   - Information
   - Constellation

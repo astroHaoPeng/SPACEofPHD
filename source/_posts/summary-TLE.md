@@ -2,7 +2,7 @@
 title: 关于 Two-Line Elements 的整理
 comments: true
 categories:
-  - Summary
+  - Summaries
   - [Academics, Aerospace]
 tags:
   - TLE

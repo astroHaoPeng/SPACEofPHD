@@ -3,7 +3,7 @@ title: Satellite Conjunction and Collision Examples
 layout: post
 categories:
   - [Academics, Aerospace]
-  - Summary
+  - Summaries
 tags:
   - Academic
   - Information

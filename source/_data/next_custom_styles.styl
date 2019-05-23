@@ -14,8 +14,15 @@ body {
 // // expand toc on all post
 // .post-toc .nav .nav-child { display: block; }
 
+
+
+// Katex-related
+.katex {
+  font-size: 1.05em !important; // change all font-sizes
+}
 // allow katex equations scrolling horizontally, without vertical scrollbar
 .katex-display > .katex {
+    font-size: 1.1em !important; // only reset display font-size
     height: auto;
     overflow: hidden;
     overflow-x: auto;
@@ -61,7 +68,7 @@ ul, ol {
 
 .post-body {
   h1 {
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0 0 5px 0;
   }
   h2 {
@@ -69,7 +76,18 @@ ul, ol {
     margin: 0 0 5px 10px;
   }
   h3 {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 0 0 5px 20px;
   }
+}
+
+// background color when using <mark></mark>
+mark {
+  background-color: #daffb7;
+}
+
+//
+.site-meta {
+  background: #05377b;
+  opacity: 0.8;
 }

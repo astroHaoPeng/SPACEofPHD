@@ -2,8 +2,11 @@
 title: Notes on MATLAB Neural Network Toolbox
 categories: 
   - [Techniques, Software]
+  - [Notes, Others]
 tags:
   - MATLAB
+  - neural network
+  - ANN
 abbrlink: f0398937
 mathjax: true
 comments: true
