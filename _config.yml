@@ -105,7 +105,7 @@ deploy:
   type: git
   repo: 
     #github: git@github.com:AstroH-Peng/blog.git,gh-pages
-    vultr: git@45.63.5.49:/home/git/hexo.git/,master
+    vultr: git@45.63.5.49:/home/git/hexo.git,master
 
 
 # https://github.com/theme-next/hexo-symbols-count-time

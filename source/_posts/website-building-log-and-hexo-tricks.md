@@ -45,6 +45,18 @@ Use this line to include image:
 
 # log
 
+(2019-05-23 20:50:40)
+Hexo平台迁移到笔记本：\
+安装Node.js；\
+安装Hexo `npm install -g hexo-cli`；\
+安装Git；\
+clone repo;\
+`npm install`;\
+安装theme-next的插件：[fancybox, pangu, han（否则白屏）](https://theme-next.org/docs/third-party-services/external-libraries#Pangu-Autospace-Support)；\
+安装 `npm install -g browser-sync` 实现同步；\
+运行 `Hexo s` 完成；\
+配置putty的ssh的public key，使用git bash的必须转换为putty的key才可以。
+
 
 (2019-05-21 13:16:07)
 `npm i vsce -g`\
