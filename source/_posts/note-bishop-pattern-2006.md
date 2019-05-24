@@ -335,7 +335,7 @@ automatically from a single training run
 
 ## 9.4. The EM Algorithm in General
 
-> The expectation maximization algorithm, or EM algorithm, is a general technique for finding maximum likelihood solutions for probabilistic models having latent variables (Dempster et al., 1977; McLachlan and Krishnan, 1997). (p.450)
+> The expectation maximization algorithm, or EM algorithm, is a general technique for <mark>finding maximum likelihood solutions</mark> for probabilistic models having latent variables (Dempster et al., 1977; McLachlan and Krishnan, 1997). (p.450)
 
 denote all of the observed variables by $\bm{X}$ 
 and all of the hidden variables by $\bm{Z}$ (also referred to as *latent variables*). 
@@ -354,8 +354,8 @@ where KL is the <mark>Kullback-Leibler divergence</mark> between
 $q(\bm{Z})$ and the *posterior distribution* $p(\bm{Z}|\bm{X}, \bm{\theta})$. 
 
 > The EM algorithm is a two-stage iterative optimization technique for finding maximum likelihood solutions. (p.451)
-> - In the E step, the lower bound $\mathcal{L}(q, \bm{\theta}^{\rm old})$ is maximized with respect to $q(\bm{Z})$ while holding $\bm{\theta}^{\rm old}$ fixed.
-> - In the M step, the distribution $q(\bm{Z})$ is held fixed and the lower bound $\mathcal{L}(q, \bm{\theta})$ is maximized with respect to $\bm{\theta}$ to give some new value $\bm{\theta}^{\rm new}$.
+> - In the <mark>E step</mark>, the lower bound $\mathcal{L}(q, \bm{\theta}^{\rm old})$ is maximized with respect to $q(\bm{Z})$ while holding $\bm{\theta}^{\rm old}$ fixed.
+> - In the <mark>M step</mark>, the distribution $q(\bm{Z})$ is held fixed and the lower bound $\mathcal{L}(q, \bm{\theta})$ is maximized with respect to $\bm{\theta}$ to give some new value $\bm{\theta}^{\rm new}$.
 
 > The EM algorithm breaks down the potentially difficult problem of maximizing the likelihood function into two stages, the E step and the M step, each of which will often prove simpler to implement. (p.454)
 > - The generalized EM, or GEM, algorithm addresses the problem of an intractable
@@ -410,18 +410,95 @@ Substitute (10.5) into (10.3) and then dissect out the dependence on one of the 
 
 
 
-# 11. Sampling Methods
+# 11 Sampling Methods
 
 <mark>Approximate inference methods based on numerical sampling</mark> is also known as <mark>Monte Carlo techniques</mark>.
 
 For most situations, posterior (/pɑ'stɪrɪɚ/) distribution is required primarily for the purpose of evaluating expectations, for example, in order to make predictions. 
 
+$$
+\mathbb{E}[f] = \int f(\bm{z}) p(\bm{z})\, \rm{d}\bm{z} \tag{11.1}
+$$
+
 ## 11.1 Basic Sampling Algorithms
 
-- transform using the inverse accumulative distribution function
-- rejection sampling
-- adaptive rejection sampling
-  - adaptive rejection Metropolis sampling
-- importance sampling 
- 
+### 11.1.1 transform using the inverse accumulative distribution function
+
+### 11.1.2 rejection sampling
+
+### 11.1.3 adaptive rejection sampling
+
+adaptive rejection Metropolis sampling
+
+
+Rejection sampling\
+\- exponential decrease of acceptance rate with dimensionality\
+\- play a role as a subroutine in more sophisticated algorithms for sampling in high dimensional spaces\
+
+### 11.1.4 importance sampling 
+
+Use a proposal distribution $q(\bm{z})$, easy to draw samples, to calculate Eq. 11.1:
+$$
+\begin{aligned}
+\mathbb{E}[f] = \int f(\bm{z}) p(\bm{z})\, {\rm d}\bm{z} 
+= \int f(\bm{z}) \frac{p(\bm{z})}{q(\bm{z})} q(\bm{z})\, {\rm d}\bm{z} 
+\approx \frac{1}{L}\sum_{l=1}^L \frac{p(\bm{z}^{(l)})}{q(\bm{z}^{(l)})} f(\bm{z}^{(l)})
+\end{aligned}
+\tag{11.19}
+$$
+where $r_l=p(\bm{z}^{(l)})/q(\bm{z}^{(l)})$ is the <mark>importance weights</mark>.
+
+When $p(\bm{z})$ can only be evaluated up to a normalized constant, $p(\bm{z})=\tilde{p}(\bm{z})/Z_p$, using a similar proposal distribuion $q(\bm{z})=\tilde{q}(\bm{z})/Z_q$, then we have,
+$$
+\mathbb{E}[f] = \int f(\bm{z}) p(\bm{z})\, {\rm d}\bm{z} 
+= \frac{Z_q}{Z_p} \int f(\bm{z}) \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \tilde{q}(\bm{z})\, {\rm d}\bm{z} 
+\approx \frac{Z_q}{Z_p} \frac{1}{L}\sum_{l=1}^L \tilde{r}_l f(\bm{z}^{(l)}).
+\tag{11.20}
+$$
+And because 
+$$
+\frac{Z_p}{Z_q} = \frac{1}{Z_q} \int \tilde{p}(\bm{z}){\rm d}\bm{z} 
+= \frac{1}{\textcolor{red}{Z_q}} \int \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \textcolor{red}{\tilde{q}(\bm{z})}\, {\rm d}\bm{z} 
+= \int \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \textcolor{red}{q(\bm{z})}\, {\rm d}\bm{z} 
+\approx \frac{1}{L}\sum_{l=1}^L \tilde{r}_l
+\tag{11.21}
+$$
+we then have
+$$
+\mathbb{E}[f] = \sum_{l=1}^L \omega_l f(\bm{z}^{(l)})   \tag{11.22}
+$$
+with
+$$
+\omega_l = \frac{\tilde{r}_l}{\sum_m \tilde{r}_m}   \tag{11.23}
+$$
+
+Other improvements:\
+\- likelihood weighted sampling
+\- self-importance sampling
+
+### 11.1.5 Sampling-importance-resampling
+
+### 11.1.6 Sampling and the EM algorithm
+
+[Forget EM algorithm? See here.](#94-The-EM-Algorithm-in-General)
+
+## 11.2 Markov Chain Monte Carlo
+
+## 11.5 The Hybrid Monte Carlo Algorithm
+
+Key points:\
+\- Hamiltonian dynamics\
+\- leapfrog integration\
+\- Metropolis algorithm
+
+<mark>这章与很多文献中的 Hamiltonian Monte Carlo 的关系是什么？</mark>
+感觉是一样的。
+
+### 11.5.1 Dynamical systems
+
+
+### 11.5.2 Hybrid Monte Carlo
+
+
 > (stopped here last time)
+
