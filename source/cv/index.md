@@ -30,7 +30,7 @@ Most of the content in the thesis have been published in English in top-ranking 
 
 # Research Interests
 
-I have experiences on various of topics.
+I have experience on various of topics.
 
 {% tabs Research Interest %}
 
@@ -67,7 +67,7 @@ I have experiences on various of topics.
 {% mermaid gantt %}
 dateFormat  YYYY-MM-DD
 axisFormat  %d/%m
-title Hao's Study Experiences
+title Hao's Study Experience
 
 section Beihang University
 Undergraduate Study    : done,    des1, 2007-09-01, 2011-07-01
@@ -99,7 +99,7 @@ In my opinion, this is a friendly behavior meaning they are being serious to me.
 {% endtabs %} -->
 
 
-# Researching Experiences
+# Research Experience
 
 Curiosity and perfectionism are the driving force of my dream of a research career. 
 
@@ -114,7 +114,7 @@ Most of my publications with my supervisor of the time were done through a colla
 The major direction is pointed out by the supervisor.
 I was responsible for all the rest detailed works including implementations and analysis.
 I'm really enjoying this working flow because I can both learn the big vision of all my supervisors and practice organizing time and materials to accomplish a research project. 
-These experiences help me preparing for a future leading role, for example, either a PI (Principle Investigator) or a industrial manager.
+These experience help me preparing for a future leading role, for example, either a PI (Principle Investigator) or a industrial manager.
 
 
 # Programming Skills
@@ -180,7 +180,7 @@ I'm not an expert in any of these, but I can learn to make use of them if necess
 
 
 
-# Teaching Experiences
+# Teaching Experience
 
 I am enthusiastic for teaching.
 I deeply believe that knowledge belongs to all the human beings and everyone should have access to the best education.
