@@ -66,7 +66,7 @@ I have experience on various of topics.
 
 {% mermaid gantt %}
 dateFormat  YYYY-MM-DD
-axisFormat  %d/%m
+axisFormat  %B %Y
 title Hao's Study Experience
 
 section Beihang University
