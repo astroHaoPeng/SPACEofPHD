@@ -120,19 +120,62 @@ In Sec. 3.4, a fully Bayesian approach lead to that complexity penalties arise i
 
 # 1.5 Decision Theory
 
+From 1.5.1 to 1.5.4 discuss decision theory in the context of calssification problem.
 ## 1.5.1 Minimizing the misclassification rate
 ## 1.5.2 Minimizing the expected loss
 ## 1.5.3 The reject option
 ## 1.5.4 Inference and decision
+
+
 ## 1.5.5 Loss functions for regression
 
 
 # 1.6 Information Theory
 
+Suppose that a sender wishes to transmit the value of a random variable to a receiver.
+The average amount of information that they transmit in the process is obtained by taking the expectation of (1.92) with respect to the distribution $p(x)$ and is given by 
+$$ H[x] = -\sum p(x) \log_2 p(x).  \tag{1.93}$$
+This important quantity is called the entropy of the random variable $x$.
+
+This relation between entropy and shortest coding length is a general one.T
+he *noiseless coding theorem* (Shannon, 1948) states that the entropy is a lower bound on the number of bits needed to transmit the state of a random variable. 
+
+$$ H = \frac{1}{N}\ln W = \frac{1}{N}\ln N! - \frac{1}{N}\sum_i\ln n_i !  \tag{1.95} $$
+$$ 
+\begin{aligned}
+H &= \lim_{N\rightarrow\infin} \frac{1}{N} (N\ln N - N) - \frac{1}{N}\sum_i (n_i \ln n_i - n_i) \\
+  &= \lim_{N\rightarrow\infin} \ln N - \frac{1}{N} \sum_i n_i \ln n_i\\
+  &= - \lim_{N\rightarrow\infin} \sum_i \frac{n_i}{N} \ln\frac{n_i}{N} = -\sum_i p_i\ln p_i
+\end{aligned}
+\tag{1.97}
+$$
+
+The entropy of the random variable $X$ is defined as 
+$$ H[p] = - \sum_i p(x_i) \ln p(x_i)  \tag{1.98}$$
+
+For a density defined over multiple continuous variables, denoted collectively by the vector $x$, the <mark>differential entropy</mark> is given by 
+$$ H[\bm{x}] = - \int p(\bm{x}) \ln p(\bm{x]}) {\rm d}x   \tag{1.104}$$
+
+*Conditional entropy* of $\bm{y}$ given $\bm{x}$:
+$$ H[\bm{x}|\bm{y}] = H[\bm{y}|\bm{x}] + H[\bm{x}] $$
+
+
 ## 1.6.1 RElative entropy and mutual information
-## 
 
+Relate the ideas of information theory to pattern recognition.
 
+Unknown $p(\bm{x})$, modelled using an approximation $q(\bm{x})$.\
+If construct a coding scheme for the purpose of transmitting values of $\bm{x}$ to a receiver, then the average additional amount of information required to specify the value of $\bm{x}$ as a result of using $q(\bm{x})$ instead of $p(\bm{x})$ is given by\
+<mark>relative entropy</mark>, or <mark>Kullback-Leibler divergence, KL divergence</mark>:
+$$ {\rm KL}(p||q) = - \int p(\bm{x}) \ln \left\{\frac{q(\bm{x})}{p(\bm{x})}\right\} {\rm d}\bm{x}  \tag{1.113}$$
+- KL divergence is **not symmetric**.
+
+Approximate the unknown $p(\bm{x})$ with some parametric $q(\bm{x}|\bm{\theta})$.\
+Minimize the KL divergence between $p$ and $q$ with respect to $\bm{\theta}$ to determine $\bm{\theta}$.\
+Observed a finite set of $\bm{x}_n$, for $1,\dots,N$, drawn from $p(\bm{x})$, then the expectation with respect to $p$ can be approximated by a finite sum over $\bm{x}_n$, so that
+$$ {\rm KL}(p||q) \approx \sum_{n=1}^N \left\{-\ln q(\bm{x}_n|\bm{\theta})+\ln p(\bm{x}_n)\right\}  \tag{1.119}$$
+
+> Minimizing this Kullback-Leibler divergence is equivalent to maximizing the likelihood function.
 
 # 2
 
