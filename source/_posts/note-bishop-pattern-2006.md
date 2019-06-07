@@ -9,10 +9,10 @@ tags:
 mathjax: true
 abbrlink: 97ae8555
 date: 2018-09-26 16:15:43
-updated: 2019-06-06 17:35:14
+updated: 2019-06-07 12:09:43
 ---
 
-{% note %}
+{% note info %}
 Christopher M. Bishop, <mark>Pattern recognition and machine learning</mark>, New York: Springer, 2006.
 {% endnote %}
 
@@ -24,12 +24,17 @@ Basically, I was just trying to simplify the book by extracting only useful defi
 So, to understand the context here, one should <mark>study the PRML book first</mark>.
 
 <mark>TODO:</mark>
+- see (#15-decision-theory), something about loss functions
 - see (#23-gaussian-distribution)
-- see (#35-evidence-apparoximation)
+- see (#35-evidence-approximation)
 - see (#57-bayesian-neural-networks)
 - see (#64-gaussian-processes)
 - see (#9-mixture-models-and-em-expectation-maximization)
 
+
+{% note success %}
+(p23) This book places a strong emphasis on the Bayesian viewpoint, reflecting the huge growth in the practical importance of Bayesian methods in the past few years, while also discussing useful frequentist concepts as required.
+{% endnote %}
 
 
 <!--# Relationship among Sections-->
@@ -40,13 +45,94 @@ So, to understand the context here, one should <mark>study the PRML book first</
 
 ## 1.2 Probability Theory
 
-> The first term in (1.71) represents the uncertainty in the
-predicted value of t due to the noise on the target variables and was expressed already
-in the maximum likelihood predictive distribution (1.64) through β
-−1
-ML. However, the
-second term arises from the uncertainty in the parameters w and is a consequence
-of the Bayesian treatment.
+Bayes' theorem
+$$ p(Y|X) = \frac{p(X|Y)p(Y)}{p(X)}. $$
+The denominator can be expanded as a summation 
+$$ p(X) = \sum_Y p(X|Y) p(Y), $$
+which can be viewed as the normalization constant required to ensure that the sum of the conditional probability $p(Y|X)$ over all values of $Y$ equals one. 
+
+Define $p(\mathcal{D}|w)$ as *likelihood function*, Bayes' theorem is stated in words
+$$ posterior \propto likelihood \times prior,   \tag{1.44}$$
+where all of these quantities are viewed as functions of $\bm{w}$.
+
+In both the **Bayesian** and **frequentist** paradigms, the **likelihood function** $p(\mathcal{D}|\bm{w})$ plays a central role. However, the manner in which it is used is **fundamentally different** in the two approaches:
+- Frequentist setting, $\bm{w}$ is considered to be a fixed parameter; its value is determined by an 'estimator', and error bars on this estimate are obtained by considering the distribution of possible data sets $\mathcal{D}$.
+  - a widely used frequentist estimator, <mark>maximum likelihood</mark>: $\bm{w}$ is set to maximize the likelihood function $p(\mathcal{D}|\bm{w})$.
+  - one approach to determine frequentist error bars is the <mark>bootstrap</mark>: resampling $L$ times from the original $N$ data points with replacement.
+- Bayesian viewpoint, there is only a single data set $\mathcal{D}$ (the one observed), the uncertainty is expressed through a probability distribution over $\bm{w}$.
+> Not quite understand yet... (as of 2019/06/07)
+
+{% note warning %}
+(p23) There has been much controversy and debate associated with the relative merits of the frequentist and Bayesian paradigms, which have not been helped by the fact that there is no unique frequentist, or even Bayesian, viewpoint.
+
+This book places a strong emphasis on the Bayesian viewpoint, reflecting the huge growth in the practical importance of Bayesian methods in the past few years, while also discussing useful frequentist concepts as required.
+{% endnote %}
+
+### 1.2.4 The Gaussian ditribution
+
+The maximum likelihood approach systematically underestimates the variance of the ditribution.
+This is an example of a phenomenon called bias and is related to the problem of over-fitting encountered in the context of polynomial curve fitting.
+
+Note that the bias of the maximum likelihood solution becomes less significant as the number $N$ of data points increases, and in the limit $N\lim\inf$ the maximum likelihood solution for the variance equals the true variance of the distribution that generated the data.
+
+Adopting a Bayesian approach will automatically lead to an unbiased estimation of the variance.
+
+### 1.2.5 Curve fitting re-visited
+
+The sum-of-squares error function has arisen as a consequence of maximizing likelihood under the assumption of a Gaussian noise distribution.
+
+Introduce a prior distribution over the polynomial coefficients $\bm{w}$, for simplicity, a Gaussian distritution
+$$ p(\bm{w}|\alpha) = \mathcal{N}(\bm{w}|0,\alpha^{-1}\bm{I})   \tag{1.65}$$
+<mark>Variables such as $\alpha$, which controls the distribution of model parameters, are called *hyperparameters*.</mark>
+Then, using Bayes' theorem, the posterior distribution is
+$$ p(\bm{w}|\bm{x},\bm{t},\alpha,\beta) \propto p(\bm{t}|\bm{x},\bm{w},\beta) p(\bm{w}|\alpha)  \tag{1.66} $$
+Finding the most probable value of $\bm{w}$ given the data by maximing the posterior distribution is called *maximum posterior, MAP*.
+
+
+### 1.2.6 Bayesian curve fitting
+
+Discuss about how to make prediction using the Bayesian fitting in Sec. 1.2.5.
+
+> The first term in (1.71) represents the uncertainty in the predicted value of $\bm{t}$ due to the noise on the target variables and was expressed already in the maximum likelihood predictive distribution (1.64) through $\beta^{-1}_ML$. 
+> However, the second term arises from the uncertainty in the parameters $\bm{w}$ and is a consequence of the Bayesian treatment.
+
+## 1.3 Model Selection
+
+One major drawback of cross-validation is that the number of training runs that must be performed is increased by a factor of $S$, and this can prove problematic for models in which the training is itself computationally expensive.
+
+We need a better approach. Ideally, this should rely only on the training data and should allow multiple hyperparameters and model types to be compared in a single training run.
+We therefore need to find a measure of performance which depends only on the training data and 
+which does not suffer from bias due to over-fitting.
+
+Historically various 'information criteria' have been proposed:
+- Akaike information criterion, AIC, $\ln p(\mathcal{D}|\bm{w}_{\rm ML}) - M$
+- Bayesian information criterion, BIC (see Sec.4.4.1)
+- ...
+Such criteria do not take account of the uncertainty in the mdoel parameters; tend to favour overly simple models.
+
+In Sec. 3.4, a fully Bayesian approach lead to that complexity penalties arise in a natural and principled way.
+
+<span style="color:red">
+[THIS IS EXACTLY THE TECHNIQUE WE NEED FOR THE MACHINE LEARNING APPROACH STUDY.]
+</span>
+
+# 1.4 The Curse of Dimensionality
+
+# 1.5 Decision Theory
+
+## 1.5.1 Minimizing the misclassification rate
+## 1.5.2 Minimizing the expected loss
+## 1.5.3 The reject option
+## 1.5.4 Inference and decision
+## 1.5.5 Loss functions for regression
+
+
+# 1.6 Information Theory
+
+## 1.6.1 RElative entropy and mutual information
+## 
+
+
 
 # 2
 
@@ -383,6 +469,8 @@ Hinton, 1999).
 
 # 10. Approximate Inference
 
+> (p24) More recently, highly efficient deterministic approximation schemes ouch as variational Bayes and expectation propagation have been developed. These offer a complementary alternative to sampling methods and have allowed Bayesian techniques to be used in large-scale applications.
+
 Tasks:
 - Evaluation of the posterior distribution $p(\bm{X}|\bm{X})$ given the observed data $\bm{X}$.
 - Evaluation of the expectations with respect to $p(\bm{X}|\bm{Z})$.
@@ -502,6 +590,8 @@ IP algorithm
 
 ## 11.2 Markov Chain Monte Carlo
 
+(p24) Monte Carlo methods are very flexible and can be applied to a wide range of models. However, they are computationally intensive and have mainly been used for small-scale problems.
+
 MCMC is a big framework: sample from many classes of distributions; scales well with the space dimension.
 
 A central goal in designing MCMC methods is to avoid random walk behaviour.
@@ -514,6 +604,7 @@ at each step $\tau$, if the candiate $\bm{z}^*$ is acceptable, $\bm{z}^{(\tau+1)
 ### 11.2.1 Markov chains
 
 ### 11.2.2 The Metropolis-Hastings algorithm
+
 
 
 ## 11.3 Gibbs Sampling
@@ -550,6 +641,16 @@ nowledge of the value of $Z_E$ can be useful for Bayesian model comparison since
 > (stopped here last time)
 
 
+
+# Some Terms
+
+(p25) The maximum of a distribution is known as its <mark>mode</mark>.
+
+(p28) for consistency with the notation in later chapters, we define a <mark>precision parameter</mark> parameter $\beta$ corresponding to the inverse variance of the distribution. 
+
+(p30) Variables such as $\alpha$, which controls the distribution of model parameters, are called <mark>hyperparameters</mark>.
+
+(p30) Finding the most probable value of $\bm{w}$ given the data by maximing the posterior distribution is called <mark>maximum posterior, MAP</mark>.
 
 
 # 疑问
