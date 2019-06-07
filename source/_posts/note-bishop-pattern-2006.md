@@ -1,5 +1,5 @@
 ---
-title: Reading Notes of PRML (Bishop2016)
+title: Reading Notes | PRML (Bishop 2006)
 comments: true
 categories:
   - [Notes, Book Notes]
@@ -9,10 +9,12 @@ tags:
 mathjax: true
 abbrlink: 97ae8555
 date: 2018-09-26 16:15:43
-updated: 2018-10-10 17:35:14
+updated: 2019-06-06 17:35:14
 ---
 
-> Christopher M. Bishop, <mark>Pattern recognition and machine learning</mark>, New York: Springer, 2006.
+{% note %}
+Christopher M. Bishop, <mark>Pattern recognition and machine learning</mark>, New York: Springer, 2006.
+{% endnote %}
 
 This reading note is served as <mark>a quick reference and short summary</mark> of the PRML book.
 Read the book first.
@@ -21,13 +23,13 @@ It is *incorrect* to trying to understand the book through reading this post.
 Basically, I was just trying to simplify the book by extracting only useful definitions, equations, formulas, and explanations.
 So, to understand the context here, one should <mark>study the PRML book first</mark>.
 
-# Relationship among Sections
+TODO:
+- see  (#57-bayesian-neural-networks)
+- see (#64-gaussian-processes)
+- see (#9-mixture-models-and-em-expectation-maximization)
+- 
 
-(TBD)
-
-<!-- {% mermaid sequenceDiagram %}
-{% endmermaid %} -->
-
+<!--# Relationship among Sections-->
 
 <!-- more -->
 
@@ -133,13 +135,12 @@ Did not finish this part of reading.
 
 > Members of the exponential family have many important properties in common, and it is illuminating to discuss these properties in some generality.
 
-## 2.5. Nonparametric Methods (p.120)
+## 2.5 Nonparametric Methods (p.120)
 
-> Throughout this chapter, we have focussed on the use of probability distributions
-having specific functional forms governed by a small number of parameters whose
-values are to be determined from a data set. This is called the parametric approach
-to density modelling.
+> Throughout this chapter, we have focussed on the use of probability distributions having specific functional forms governed by a small number of parameters whose values are to be determined from a data set. This is called the parametric approach to density modelling.
 
+
+# 3 Linear modelModels for Regression
 
 ## 3.1 Linear Basis Function Model
 
@@ -283,6 +284,15 @@ $$\ln p(\bm{t}|\alpha,\beta) = \frac{M}{2}\ln\alpha + \frac{N}{2}\ln\beta - E(\b
 
 
 ## 3.6 Limitations of Fixed Basis Functions
+
+
+# 5 Neural Network
+
+## 5.7 Bayesian Neural Networks
+
+# 6 Kernel Methods
+
+## 6.4 Gaussian Processes
 
 
 # 7
@@ -482,7 +492,33 @@ Other improvements:\
 
 [Forget EM algorithm? See here.](#94-The-EM-Algorithm-in-General)
 
+*Monte Carlo EM algorithm*: *stochastic EM*
+
+IP algorithm
+
+
 ## 11.2 Markov Chain Monte Carlo
+
+MCMC is a big framework: sample from many classes of distributions; scales well with the space dimension.
+
+A central goal in designing MCMC methods is to avoid random walk behaviour.
+
+*basic Metropolis algorithm*:\
+assume proposal distribution is symmetric, $q(\bm{z}_A|\bm{z}_B) = q(\bm{z}_B|\bm{z}_A)$,\
+candidate sample is accepted with probability $A(\bm{z}^*)=\min \left( 1,\frac{\tilde{p}(\bm{z}^*)}{\tilde{p}(\bm{z}^{(\tau)}} \right)$\
+at each step $\tau$, if the candiate $\bm{z}^*$ is acceptable, $\bm{z}^{(\tau+1)}=\bm{z}^*$, otherwise, $\bm{z}^{(\tau+1)}=\bm{z}^{(\tau)}$.
+
+### 11.2.1 Markov chains
+
+### 11.2.2 The Metropolis-Hastings algorithm
+
+
+## 11.3 Gibbs Sampling
+
+Gibbs sampling is a MCMC algorithm; a special case of the Metropolis-Hasting algorithm.
+
+
+## 11.4 Slice Sampling
 
 ## 11.5 The Hybrid Monte Carlo Algorithm
 
@@ -499,6 +535,21 @@ Key points:\
 
 ### 11.5.2 Hybrid Monte Carlo
 
+## 11.6 Estimating the Partition Function
+If we write 
+$$ p_E(\bm{z}) = \frac{1}{Z_E} \exp(-E(\bm{z})) $$
+then the normalization constant $Z_E$ is known as the partition function. 
+K
+nowledge of the value of $Z_E$ can be useful for Bayesian model comparison since it represents the <mark>model evidence</mark> (the probability of the observed data given the model). 
+
+
 
 > (stopped here last time)
 
+
+
+
+# 疑问
+
+1. complete-data log likelihood, p536
+2. complete-data parameter posterior $p(\bm{\theta}|\bm{Z},\bm{X})$, p537
