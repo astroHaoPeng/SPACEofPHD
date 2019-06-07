@@ -23,11 +23,14 @@ It is *incorrect* to trying to understand the book through reading this post.
 Basically, I was just trying to simplify the book by extracting only useful definitions, equations, formulas, and explanations.
 So, to understand the context here, one should <mark>study the PRML book first</mark>.
 
-TODO:
-- see  (#57-bayesian-neural-networks)
+<mark>TODO:</mark>
+- see (#23-gaussian-distribution)
+- see (#35-evidence-apparoximation)
+- see (#57-bayesian-neural-networks)
 - see (#64-gaussian-processes)
 - see (#9-mixture-models-and-em-expectation-maximization)
-- 
+
+
 
 <!--# Relationship among Sections-->
 
@@ -55,7 +58,7 @@ $$
 $$
 - $D$ is dimension of $\bm{x}$.
 
-These equations are used for ``completing the square''。
+These equations are used for <mark>``completing the square''</mark>:
 $$
 \begin{aligned}
 -\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}) &=
@@ -251,10 +254,10 @@ The model evidence $p(\mathcal{D}|\mathcal{M}_i)$ expresses the preference shown
 >
 > 通过最大化把权重积分掉的marginal likelihood设置所有的超参数（学习过程），最终预测时对权重进行积分。
 
-Empirical Bayes (statistics literature)
-== type 2 maximum likelihood (statistics)
-== generalized maximum likelihood (statistics)
-== evidence approximation (machine learning literature)
+<mark>Empirical Bayes</mark> (**statistics literature**)
+== <mark>type 2 maximum likelihood</mark> (**statistics**)
+== <mark>generalized maximum likelihood</mark> (**statistics**)
+== <mark>evidence approximation</mark> (**machine learning literature**)
 
 There are two approaches to the maximization of the log marginal likelihood (log evidence): (p.166)
 **(These two approaches converge to the same solution.)**
