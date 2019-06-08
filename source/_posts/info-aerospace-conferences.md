@@ -58,7 +58,7 @@ ul li, ol li {
 - [ ] | 20191021-25 | [70th International Astronautical Congress (IAC) 2019](https://www.iac2019.org/) | Washington D.C. | [20190228](http://www.iafastro.org/wp-content/uploads/2018/10/Call-for-Papers-IAC2019_2018-10-09_FINAL_updated_online.pdf) | *We have one paper.*
 - [ ] | 20190917-20 | [AMOS: Advanced Maui Optical and Space Surveillance Technologies Conference](https://amostech.com/) | Maui, HI | [20190301](https://amostech.com/amos-speakers/#papers)
 - [ ] **| 20190811-15 | [2019 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2019_summer/2019_summer.html) | Portland, ME | [20190405](http://www.space-flight.org/docs/2019_summer/CallForPapers2019.pdf) | *We have two papers.***
-- [ ] | 20190603-05 | [2019 IAA Low-Cost Planetary Missions Conference](http://iaaweb.org/content/view/761/1001/) | Toulouse, France | 20190415
+- [x] | 20190603-05 | [2019 IAA Low-Cost Planetary Missions Conference](http://iaaweb.org/content/view/761/1001/) | Toulouse, France | 20190415
 - [x] | 20190521-24 | [7th International Conference Space Technologies: Present and Future](http://iaaweb.org/content/view/762/1002/) | Dnepr, Ukraine | 20190330
 - [x] | 20190506-10 | [12th IAA Symposium on Small Satellites for Earth Observation](http://smallsat.iaaweb.org) | Berlin, Germany | 20181031
 - [x] | 20190429-0503 | [6th IAA Planetary Defense Conference (bi-annual)](http://pdc.iaaweb.org/) | Washington DC | 20181215

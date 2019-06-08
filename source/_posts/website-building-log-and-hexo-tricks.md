@@ -1,7 +1,8 @@
 ---
 title: Website Building Log and Hexo Tricks
-date: 2018-06-16 17:11:24
-updated: 2018-06-16 17:11:24
+date: 2017-01-01 00:00:00
+updated: 2017-01-01 00:00:00
+updated-true: 2019-06-08 19:06:34
 abbrlink: a9f2141
 comments: true
 categories:
@@ -25,6 +26,7 @@ hide: true # Add a hide parameter to the the post's Front-matter to hide the pos
 - [ ] 调整行距
 - [ ] 添加相册，学习资源
   - https://dlovexj.cn/gallery/
+  - https://zhengmengping.github.io/2018/06/07/Hexo-NexT%E4%B8%BB%E9%A2%98%E4%B8%8B%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%86%8C%E6%A8%A1%E5%9D%97/Hexo-NexT%E4%B8%BB%E9%A2%98%E4%B8%8B%E6%B7%BB%E5%8A%A0%E7%9B%B8%E5%86%8C%E6%A8%A1%E5%9D%97/
 - 不错的主题
   - https://blog.zhangruipeng.me/hexo-theme-icarus/
   - https://github.com/Mrminfive/hexo-theme-skapp 支持多作者

@@ -664,13 +664,18 @@ Key points:\
 \- leapfrog integration\
 \- Metropolis algorithm
 
-<mark>这章与很多文献中的 Hamiltonian Monte Carlo 的关系是什么？</mark>
-感觉是一样的。
+~~这章与很多文献中的 Hamiltonian Monte Carlo 的关系是什么？~~
+感觉是一样的。\
+是同样的东西，see [MCMC: <mark>Hamiltonian Monte Carlo (a.k.a. Hybrid Monte Carlo</mark>)
+](https://theclevermachine.wordpress.com/2012/11/18/mcmc-hamiltonian-monte-carlo-a-k-a-hybrid-monte-carlo/).
 
 ### 11.5.1 Dynamical systems
 
 
 ### 11.5.2 Hybrid Monte Carlo
+
+see [MCMC: Hamiltonian Monte Carlo (a.k.a. Hybrid Monte Carlo)
+](https://theclevermachine.wordpress.com/2012/11/18/mcmc-hamiltonian-monte-carlo-a-k-a-hybrid-monte-carlo/)
 
 ## 11.6 Estimating the Partition Function
 If we write 
