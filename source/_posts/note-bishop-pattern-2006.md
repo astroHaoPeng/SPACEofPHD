@@ -1,5 +1,5 @@
 ---
-title: Reading Notes of PRML (Bishop2016)
+title: Reading Notes | PRML (Bishop 2006)
 comments: true
 categories:
   - [Notes, Book Notes]
@@ -9,25 +9,35 @@ tags:
 mathjax: true
 abbrlink: 97ae8555
 date: 2018-09-26 16:15:43
-updated: 2018-10-10 17:35:14
+updated: 2019-06-07 12:09:43
 ---
 
-> Christopher M. Bishop, <mark>Pattern recognition and machine learning</mark>, New York: Springer, 2006.
+{% note info %}
+Christopher M. Bishop, <mark>Pattern recognition and machine learning</mark>, New York: Springer, 2006.
+{% endnote %}
 
 This reading note is served as <mark>a quick reference and short summary</mark> of the PRML book.
 Read the book first.
-It is *incorrect* to trying to understand the book through reading this post. 
+It is *incorrect* to trying to understand the book through reading this post.
 
-Basically, I was just trying to simplify the book by extracting only useful definitions, equations, formulas, and explanations. 
-So, to understand the context here, one should <mark>study the PRML book first</mark>. 
+Basically, I was just trying to simplify the book by extracting only useful definitions, equations, formulas, and explanations.
+So, to understand the context here, one should <mark>study the PRML book first</mark>.
 
-# Relationship among Sections
+<mark>TODO:</mark>
+- see (#15-decision-theory), something about loss functions
+- see (#23-gaussian-distribution)
+- see (#35-evidence-approximation)
+- see (#57-bayesian-neural-networks)
+- see (#64-gaussian-processes)
+- see (#9-mixture-models-and-em-expectation-maximization)
 
-(TBD)
 
-<!-- {% mermaid sequenceDiagram %}
-{% endmermaid %} -->
+{% note success %}
+(p23) This book places a strong emphasis on the Bayesian viewpoint, reflecting the huge growth in the practical importance of Bayesian methods in the past few years, while also discussing useful frequentist concepts as required.
+{% endnote %}
 
+
+<!--# Relationship among Sections-->
 
 <!-- more -->
 
@@ -35,13 +45,137 @@ So, to understand the context here, one should <mark>study the PRML book first</
 
 ## 1.2 Probability Theory
 
-> The first term in (1.71) represents the uncertainty in the
-predicted value of t due to the noise on the target variables and was expressed already
-in the maximum likelihood predictive distribution (1.64) through β
-−1
-ML. However, the
-second term arises from the uncertainty in the parameters w and is a consequence
-of the Bayesian treatment.
+Bayes' theorem
+$$ p(Y|X) = \frac{p(X|Y)p(Y)}{p(X)}. $$
+The denominator can be expanded as a summation 
+$$ p(X) = \sum_Y p(X|Y) p(Y), $$
+which can be viewed as the normalization constant required to ensure that the sum of the conditional probability $p(Y|X)$ over all values of $Y$ equals one. 
+
+Define $p(\mathcal{D}|w)$ as *likelihood function*, Bayes' theorem is stated in words
+$$ posterior \propto likelihood \times prior,   \tag{1.44}$$
+where all of these quantities are viewed as functions of $\bm{w}$.
+
+In both the **Bayesian** and **frequentist** paradigms, the **likelihood function** $p(\mathcal{D}|\bm{w})$ plays a central role. However, the manner in which it is used is **fundamentally different** in the two approaches:
+- Frequentist setting, $\bm{w}$ is considered to be a fixed parameter; its value is determined by an 'estimator', and error bars on this estimate are obtained by considering the distribution of possible data sets $\mathcal{D}$.
+  - a widely used frequentist estimator, <mark>maximum likelihood</mark>: $\bm{w}$ is set to maximize the likelihood function $p(\mathcal{D}|\bm{w})$.
+  - one approach to determine frequentist error bars is the <mark>bootstrap</mark>: resampling $L$ times from the original $N$ data points with replacement.
+- Bayesian viewpoint, there is only a single data set $\mathcal{D}$ (the one observed), the uncertainty is expressed through a probability distribution over $\bm{w}$.
+> Not quite understand yet... (as of 2019/06/07)
+
+{% note warning %}
+(p23) There has been much controversy and debate associated with the relative merits of the frequentist and Bayesian paradigms, which have not been helped by the fact that there is no unique frequentist, or even Bayesian, viewpoint.
+
+This book places a strong emphasis on the Bayesian viewpoint, reflecting the huge growth in the practical importance of Bayesian methods in the past few years, while also discussing useful frequentist concepts as required.
+{% endnote %}
+
+### 1.2.4 The Gaussian ditribution
+
+The maximum likelihood approach systematically underestimates the variance of the ditribution.
+This is an example of a phenomenon called bias and is related to the problem of over-fitting encountered in the context of polynomial curve fitting.
+
+Note that the bias of the maximum likelihood solution becomes less significant as the number $N$ of data points increases, and in the limit $N\lim\inf$ the maximum likelihood solution for the variance equals the true variance of the distribution that generated the data.
+
+Adopting a Bayesian approach will automatically lead to an unbiased estimation of the variance.
+
+### 1.2.5 Curve fitting re-visited
+
+The sum-of-squares error function has arisen as a consequence of maximizing likelihood under the assumption of a Gaussian noise distribution.
+
+Introduce a prior distribution over the polynomial coefficients $\bm{w}$, for simplicity, a Gaussian distritution
+$$ p(\bm{w}|\alpha) = \mathcal{N}(\bm{w}|0,\alpha^{-1}\bm{I})   \tag{1.65}$$
+<mark>Variables such as $\alpha$, which controls the distribution of model parameters, are called *hyperparameters*.</mark>
+Then, using Bayes' theorem, the posterior distribution is
+$$ p(\bm{w}|\bm{x},\bm{t},\alpha,\beta) \propto p(\bm{t}|\bm{x},\bm{w},\beta) p(\bm{w}|\alpha)  \tag{1.66} $$
+Finding the most probable value of $\bm{w}$ given the data by maximing the posterior distribution is called *maximum posterior, MAP*.
+
+
+### 1.2.6 Bayesian curve fitting
+
+Discuss about how to make prediction using the Bayesian fitting in Sec. 1.2.5.
+
+> The first term in (1.71) represents the uncertainty in the predicted value of $\bm{t}$ due to the noise on the target variables and was expressed already in the maximum likelihood predictive distribution (1.64) through $\beta^{-1}_ML$. 
+> However, the second term arises from the uncertainty in the parameters $\bm{w}$ and is a consequence of the Bayesian treatment.
+
+## 1.3 Model Selection
+
+One major drawback of cross-validation is that the number of training runs that must be performed is increased by a factor of $S$, and this can prove problematic for models in which the training is itself computationally expensive.
+
+We need a better approach. Ideally, this should rely only on the training data and should allow multiple hyperparameters and model types to be compared in a single training run.
+We therefore need to find a measure of performance which depends only on the training data and 
+which does not suffer from bias due to over-fitting.
+
+Historically various 'information criteria' have been proposed:
+- Akaike information criterion, AIC, $\ln p(\mathcal{D}|\bm{w}_{\rm ML}) - M$
+- Bayesian information criterion, BIC (see Sec.4.4.1)
+- ...
+Such criteria do not take account of the uncertainty in the mdoel parameters; tend to favour overly simple models.
+
+In Sec. 3.4, a fully Bayesian approach lead to that complexity penalties arise in a natural and principled way.
+
+<span style="color:red">
+[THIS IS EXACTLY THE TECHNIQUE WE NEED FOR THE MACHINE LEARNING APPROACH STUDY.]
+</span>
+
+# 1.4 The Curse of Dimensionality
+
+# 1.5 Decision Theory
+
+From 1.5.1 to 1.5.4 discuss decision theory in the context of calssification problem.
+## 1.5.1 Minimizing the misclassification rate
+## 1.5.2 Minimizing the expected loss
+## 1.5.3 The reject option
+## 1.5.4 Inference and decision
+
+
+## 1.5.5 Loss functions for regression
+
+
+# 1.6 Information Theory
+
+Suppose that a sender wishes to transmit the value of a random variable to a receiver.
+The average amount of information that they transmit in the process is obtained by taking the expectation of (1.92) with respect to the distribution $p(x)$ and is given by 
+$$ H[x] = -\sum p(x) \log_2 p(x).  \tag{1.93}$$
+This important quantity is called the entropy of the random variable $x$.
+
+This relation between entropy and shortest coding length is a general one.T
+he *noiseless coding theorem* (Shannon, 1948) states that the entropy is a lower bound on the number of bits needed to transmit the state of a random variable. 
+
+$$ H = \frac{1}{N}\ln W = \frac{1}{N}\ln N! - \frac{1}{N}\sum_i\ln n_i !  \tag{1.95} $$
+$$ 
+\begin{aligned}
+H &= \lim_{N\rightarrow\infin} \frac{1}{N} (N\ln N - N) - \frac{1}{N}\sum_i (n_i \ln n_i - n_i) \\
+  &= \lim_{N\rightarrow\infin} \ln N - \frac{1}{N} \sum_i n_i \ln n_i\\
+  &= - \lim_{N\rightarrow\infin} \sum_i \frac{n_i}{N} \ln\frac{n_i}{N} = -\sum_i p_i\ln p_i
+\end{aligned}
+\tag{1.97}
+$$
+
+The entropy of the random variable $X$ is defined as 
+$$ H[p] = - \sum_i p(x_i) \ln p(x_i)  \tag{1.98}$$
+
+For a density defined over multiple continuous variables, denoted collectively by the vector $x$, the <mark>differential entropy</mark> is given by 
+$$ H[\bm{x}] = - \int p(\bm{x}) \ln p(\bm{x]}) {\rm d}x   \tag{1.104}$$
+
+*Conditional entropy* of $\bm{y}$ given $\bm{x}$:
+$$ H[\bm{x}|\bm{y}] = H[\bm{y}|\bm{x}] + H[\bm{x}] $$
+
+
+## 1.6.1 RElative entropy and mutual information
+
+Relate the ideas of information theory to pattern recognition.
+
+Unknown $p(\bm{x})$, modelled using an approximation $q(\bm{x})$.\
+If construct a coding scheme for the purpose of transmitting values of $\bm{x}$ to a receiver, then the average additional amount of information required to specify the value of $\bm{x}$ as a result of using $q(\bm{x})$ instead of $p(\bm{x})$ is given by\
+<mark>relative entropy</mark>, or <mark>Kullback-Leibler divergence, KL divergence</mark>:
+$$ {\rm KL}(p||q) = - \int p(\bm{x}) \ln \left\{\frac{q(\bm{x})}{p(\bm{x})}\right\} {\rm d}\bm{x}  \tag{1.113}$$
+- KL divergence is **not symmetric**.
+
+Approximate the unknown $p(\bm{x})$ with some parametric $q(\bm{x}|\bm{\theta})$.\
+Minimize the KL divergence between $p$ and $q$ with respect to $\bm{\theta}$ to determine $\bm{\theta}$.\
+Observed a finite set of $\bm{x}_n$, for $1,\dots,N$, drawn from $p(\bm{x})$, then the expectation with respect to $p$ can be approximated by a finite sum over $\bm{x}_n$, so that
+$$ {\rm KL}(p||q) \approx \sum_{n=1}^N \left\{-\ln q(\bm{x}_n|\bm{\theta})+\ln p(\bm{x}_n)\right\}  \tag{1.119}$$
+
+> Minimizing this Kullback-Leibler divergence is equivalent to maximizing the likelihood function.
 
 # 2
 
@@ -53,13 +187,13 @@ $$
 $$
 - $D$ is dimension of $\bm{x}$.
 
-These equations are used for ``completing the square''。
+These equations are used for <mark>``completing the square''</mark>:
 $$
 \begin{aligned}
--\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}) &= 
--\frac{1}{2}(\bm{x}_a-\bm{\mu}_a)^T\Lambda_{aa}^{-1}(\bm{x}_a-\bm{\mu}_a) 
+-\frac{1}{2}(\bm{x}-\bm{\mu})^T\Sigma^{-1}(\bm{x}-\bm{\mu}) &=
+-\frac{1}{2}(\bm{x}_a-\bm{\mu}_a)^T\Lambda_{aa}^{-1}(\bm{x}_a-\bm{\mu}_a)
 -\frac{1}{2}(\bm{x}_a-\bm{\mu}_a)^T\Lambda_{ab}^{-1}(\bm{x}_b-\bm{\mu}_b) \\
-&\phantom{=} -\frac{1}{2}(\bm{x}_b-\bm{\mu}_b)^T\Lambda_{ba}^{-1}(\bm{x}_a-\bm{\mu}_a) 
+&\phantom{=} -\frac{1}{2}(\bm{x}_b-\bm{\mu}_b)^T\Lambda_{ba}^{-1}(\bm{x}_a-\bm{\mu}_a)
 -\frac{1}{2}(\bm{x}_b-\bm{\mu}_b)^T\Lambda_{bb}^{-1}(\bm{x}_b-\bm{\mu}_b)    \end{aligned}
 \tag{2.70}$$
 $$
@@ -79,8 +213,8 @@ Conversion between covariance and precision matrixes.
 $$\left[\begin{matrix} A&B \\ C&D \end{matrix}\right]^{-1} = \left[\begin{matrix} M & -MBD^{-1} \\ -D^{-1}CM & D^{-1}+D^{-1}CMBD^{-1} \end{matrix}\right]$$
 - $M = (A-BD^{-1}C)^{-1}$
 
-Consider the functional dependence of (2.70) on $\bm{x}_a$ in which $\bm{x}_b$ is regarded as a constant: 
-- pick out all terms that are second order in $\bm{x}_a$ 
+Consider the functional dependence of (2.70) on $\bm{x}_a$ in which $\bm{x}_b$ is regarded as a constant:
+- pick out all terms that are second order in $\bm{x}_a$
 - consider all of the terms that are linear in $\bm{x}_a$
 
 $$\bm{\mu}_{a|b} = \bm{\mu}_a-\Lambda_{aa}^{-1}\Lambda_{ab}(\bm{x}_b-\bm{\mu}_b)  =  \bm{\mu}_a + \Sigma_{ab}\Sigma_{bb}^{-1}(\bm{x}_b-\bm{\mu}_b)  \tag{2.81}$$
@@ -100,7 +234,7 @@ $$p(\bm{x}_a) = \int p(\bm{x}_a,\bm{x}_b) \cdot \rm{d}\bm{x}_b$$
 Procedure:
 - Pick out terms in (2.70) that involves $\bm{x}_b$: $-\frac{1}{2}\bm{x}_b^T\Lambda_{bb}\bm{x}_b + \bm{x}_b^T\bm{m}$, where $\bm{m}=\Lambda_{bb}\bm{\mu}_b-\Lambda_{ba}(\bm{x}_a-\bm{\mu}_a)$.
 - Completing the square:$-\frac{1}{2}(\bm{x}_b-\Lambda_{bb}^{-1}\bm{\mu}_b)\Lambda_{bb}(\bm{x}_b-\Lambda_{bb}^{-1}\bm{\mu}_b) + \frac{1}{2}\bm{m}^T\Lambda_{bb}^{-1}\bm{m}$
-- Integrating exponential of this quadratic form over $\bm{x}_b$: 
+- Integrating exponential of this quadratic form over $\bm{x}_b$:
     - first term is an unnormalized Gaussian, results is reciprocal of the normalization coefficient
     - second term goes into $p(\bm{x}_a)$ as following
 - Combining the second term with the terms from (2.70) that depend on $\bm{x}_a$, then complete the square.
@@ -120,7 +254,7 @@ GIVEN:
 WANT:
 - Marginal distribution
 $$p(\bm{y}) = \mathcal{N}(\bm{y}|A\bm{\mu}+\bm{b},L^{-1}+A\Lambda^{-1}A^T) \tag{2.111 or 2.115}$$
-- Conditional distribution 
+- Conditional distribution
 $$p(\bm{x}|\bm{y}) = \mathcal{N}(\Sigma[A^TL(\bm{y}-\bm{b})+A\bm{\mu}],\Sigma))\tag{2.112 or 2.116}$$
 $$\Sigma = (\Lambda+A^TLA)^{-1}$$
 
@@ -128,18 +262,17 @@ $$\Sigma = (\Lambda+A^TLA)^{-1}$$
 Did not finish this part of reading.
 
 
-## 2.4. The Exponential Family 
-> The probability distributions that we have studied so far in this chapter (with the exception of the Gaussian mixture) are specific examples of a broad class of distributions called the exponential family (Duda and Hart, 1973; Bernardo and Smith, 1994). 
+## 2.4. The Exponential Family
+> The probability distributions that we have studied so far in this chapter (with the exception of the Gaussian mixture) are specific examples of a broad class of distributions called the exponential family (Duda and Hart, 1973; Bernardo and Smith, 1994).
 
 > Members of the exponential family have many important properties in common, and it is illuminating to discuss these properties in some generality.
 
-## 2.5. Nonparametric Methods (p.120)
+## 2.5 Nonparametric Methods (p.120)
 
-> Throughout this chapter, we have focussed on the use of probability distributions
-having specific functional forms governed by a small number of parameters whose
-values are to be determined from a data set. This is called the parametric approach
-to density modelling.
+> Throughout this chapter, we have focussed on the use of probability distributions having specific functional forms governed by a small number of parameters whose values are to be determined from a data set. This is called the parametric approach to density modelling.
 
+
+# 3 Linear modelModels for Regression
 
 ## 3.1 Linear Basis Function Model
 
@@ -187,16 +320,16 @@ $$p(\bm{w}|\bm{t}) = \mathcal{N}(\bm{w}|\bm{m}_N,S_N)   \tag{3.49}$$
 $$\bm{m}_N = S_N(S_0^{-1}\bm{m}_0+\beta\Phi^T\bm{t})$$
 $$S_N^{-1}=S_0^{-1}+\beta\Phi^T\Phi$$
 
-MAXIMUM POSTERIOR WEIGHT: (The posterior distribution is Gaussian, its mode coincides with its mean.) 
+MAXIMUM POSTERIOR WEIGHT: (The posterior distribution is Gaussian, its mode coincides with its mean.)
 $$\bm{w}_\text{MAP} = \bm{m}_N$$
 [Or, solve $\partial \ln p(\bm{w}|\bm{t})/\partial \bm{w} = 0$ to get the MAP weights.]
 
 If $S_0$ is infinitely broad, $S_0^{-1}\rightarrow0$, then the mean $\bm{m}_N$ reduces to the maximum likelihood weights $\bm{w}_\text{ML}$ in Eq.3.15.
 
 > ([Wikipedia: Maximum a posteriori estimation](https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation)) In Bayesian statistics, a maximum a posteriori probability (MAP) estimate is an estimate of an unknown quantity, that equals the mode of the posterior distribution. The MAP can be used to obtain a point estimate of an unobserved quantity on the basis of empirical data. It is closely related to the method of maximum likelihood (ML) estimation, but employs an augmented optimization objective which incorporates a prior distribution (that quantifies the additional information available through prior knowledge of a related event) over the quantity one wants to estimate. MAP estimation can therefore be seen as a regularization of ML estimation.
-> 
+>
 > While only mild conditions are required for MAP estimation to be a limiting case of Bayes estimation (under the 0-1 loss function),[1] it is not very representative of Bayesian methods in general. This is because MAP estimates are point estimates, whereas Bayesian methods are characterized by the use of distributions to summarize data and draw inferences: thus, Bayesian methods tend to report the posterior mean or median instead, together with credible intervals.
-> 
+>
 > 一种点估计方法。
 
 > [另一个参考博客：MLE vs MAP](https://wiseodd.github.io/techblog/2017/01/01/mle-vs-map/)
@@ -207,7 +340,7 @@ $$p(\bm{w}|\alpha) = \mathcal{N}(\bm{w}|\bm{0},\alpha^{-1}\bm{I})   \tag{3.52}$$
 
 LOG POSTERIOR of $\bm{w}$:
 $$\ln p(\bm{w}|\bm{t})=-\frac{\beta}{2}\sum_{n=1}^N \{t_n-\bm{w}^T\bm{\phi}(\bm{x}_n)\}^2 - \frac{\alpha}{2}\bm{w}^T\bm{w} + \text{const w.r.t. } \bm{w},    \tag{3.55}$$
-which is equivalent to add a quadratic regularization term with coefficient $\lambda=\alpha/\beta$. 
+which is equivalent to add a quadratic regularization term with coefficient $\lambda=\alpha/\beta$.
 > Maximization of this posterior distribution with respect to w is therefore equivalent
 to the minimization of the sum-of-squares error function with the addition of a
 quadratic regularization term, corresponding to ~~Eq.3.27~~ with $\lambda=\alpha/\beta$.
@@ -223,10 +356,10 @@ $$= \mathcal{N}(t|\bm{m}_N^T\bm{\phi}(\bm{x}),\sigma_N^2(\bm{x}))   \tag{3.58}$$
 where
 $$\sigma_N^2(\bm{x}) = \beta^{-1} + \bm{\phi}(\bm{x})^T S_N \bm{\phi}(\bm{x})       \tag{3.59}$$
 
-> The first term in (3.59) represents the noise on the data. 
-> 
+> The first term in (3.59) represents the noise on the data.
+>
 > The second term reflects the uncertainty associated with the parameters $\bm{w}$.
-> 
+>
 > Because the noise process and the distribution of $\bm{w}$ are independent Gaussians, their variances are additive.
 
 
@@ -244,21 +377,21 @@ The model evidence $p(\mathcal{D}|\mathcal{M}_i)$ expresses the preference shown
 
 [$\bm{w}_{\rm MAP}$ 是可以解析得到的，但是 $\alpha$ 和 $\beta$ 需要用某种参数估计的方法得到 point estimation，便是这一章节要解决的问题。]
 
-> Full Bayesian treatment of the linear basis function model, we introduce prior distributions over the hyperparameters $\alpha$ and $\beta$ and make predictions by marginalizing with respect to these hyperparameters as well as with respect to the parameters $\bm{w}$. 
+> Full Bayesian treatment of the linear basis function model, we introduce prior distributions over the hyperparameters $\alpha$ and $\beta$ and make predictions by marginalizing with respect to these hyperparameters as well as with respect to the parameters $\bm{w}$.
 >
 > However, although we can integrate analytically over either $\bm{w}$ or over the hyperparameters, the complete marginalization over all of these variables is analytically intractable. Here we discuss an approximation in which we set the hyperparameters to specific values determined by maximizing the marginal likelihood function obtained by first integrating over the parameters $\bm{w}$.
-> 
+>
 > 通过最大化把权重积分掉的marginal likelihood设置所有的超参数（学习过程），最终预测时对权重进行积分。
 
-Empirical Bayes (statistics literature) 
-== type 2 maximum likelihood (statistics) 
-== generalized maximum likelihood (statistics) 
-== evidence approximation (machine learning literature)
+<mark>Empirical Bayes</mark> (**statistics literature**)
+== <mark>type 2 maximum likelihood</mark> (**statistics**)
+== <mark>generalized maximum likelihood</mark> (**statistics**)
+== <mark>evidence approximation</mark> (**machine learning literature**)
 
-There are two approaches to the maximization of the log marginal likelihood (log evidence): (p.166) 
+There are two approaches to the maximization of the log marginal likelihood (log evidence): (p.166)
 **(These two approaches converge to the same solution.)**
-1. Evaluate the evidence function analytically and then set its derivative equal to zero to obtain re-estimation equations for $\alpha$ and $\beta$ (in Section 3.5.2). 
-2. Use a technique called the expectation maximization (EM) algorithm (in Section 9.3.4). 
+1. Evaluate the evidence function analytically and then set its derivative equal to zero to obtain re-estimation equations for $\alpha$ and $\beta$ (in Section 3.5.2).
+2. Use a technique called the expectation maximization (EM) algorithm (in Section 9.3.4).
 
 ### 3.5.1 Evaluation of the evidence function
 
@@ -269,11 +402,11 @@ where
 $$E(\bm{w}) = \beta E_D(\bm{w}) + \alpha E_W(\bm{w}) = \frac{\beta}{2}\|\bm{t}-\Phi\bm{w}\|^2 + \frac{\alpha}{2}\bm{w}^T\bm{w}  \tag{3.79}$$
 completing the square
 $$E(\bm{w}) = E(\bm{m_N}) + \frac{1}{2}(\bm{w}-\bm{m}_N)^T A (\bm{w}-\bm{m}_N)  \tag{3.80}$$
-where 
+where
 $$A = \alpha\bm{I} + \beta\Phi^T\Phi    \tag{3.81}$$
 $$E(m_N)=\frac{\beta}{2}\|\bm{t}-\Phi\bm{w}\|^2+\frac{\alpha}{2}\bm{m}_N^T\bm{m}_N  \tag{3.82}$$
 $$\bm{m}_N=\beta A^{-1}\Phi^T\bm{t} \tag{3.84}$$
-Seeing $A=S_N^{-1}$ in Eq.(3.54), Eq.(3.84) is equivalent to Eq.(3.53). 
+Seeing $A=S_N^{-1}$ in Eq.(3.54), Eq.(3.84) is equivalent to Eq.(3.53).
 
 Then,
 $$\int \exp\{-E(\bm{w})\} \cdot{\rm d}\bm{w} = \exp\{-E(\bm{m}_N)\}(2\pi)^{M/2}|A|^{-1/2}   \tag{3.85}$$
@@ -283,6 +416,15 @@ $$\ln p(\bm{t}|\alpha,\beta) = \frac{M}{2}\ln\alpha + \frac{N}{2}\ln\beta - E(\b
 
 
 ## 3.6 Limitations of Fixed Basis Functions
+
+
+# 5 Neural Network
+
+## 5.7 Bayesian Neural Networks
+
+# 6 Kernel Methods
+
+## 6.4 Gaussian Processes
 
 
 # 7
@@ -301,13 +443,13 @@ $$\Sigma = (A+\beta\Phi^T\Phi)^{-1}     \tag{7.83}$$
 and they are determined by maximizing the marginal likelihood function
 $$p(\bm{t}|X,\bm{\alpha},\beta) = \int p(\bm{t}|X,\bm{\beta},\bm{w})p(\bm{w}|\bm{\alpha}) \cdot {\rm d}\bm{w}    \tag{7.84}$$
 $$\log p(\bm{t}|X,\bm{\alpha},\beta) = \ln \mathcal{N}(\bm{t}|0,C) = \frac{1}{2} \left[ N\ln(2\pi) + \ln|C| + \bm{t}^TC^{-1}\bm{t} \right]   \tag{7.85}$$
-where 
+where
 $$C = \beta^{-1}I + \Phi A^{-1} \Phi^T     \tag{7.86}$$
 
 > The values of $\bm{\alpha}$ and $\beta$ are determined using type-2 maximum likelihood, also known as the evidence approximation, in which we maximize the marginal likelihood function obtained by integrating out the weight parameters. (p.347)
 
 > It is worth emphasizing, however, that this mechanism (of automatic relevance determination) for achieving sparsity in probabilistic models through automatic relevance determination is quite general and can be applied to any model expressed as an adaptive linear combination of basis functions.
-> 
+>
 > （稀疏性来自于应用automatic relevance determination, ARD算法；与SVM类似）
 
 PREDICTIVE distribution: (after finding optimum $\bm{\alpha}^*$ and $\beta^*$)
@@ -337,13 +479,13 @@ automatically from a single training run
 
 > The expectation maximization algorithm, or EM algorithm, is a general technique for <mark>finding maximum likelihood solutions</mark> for probabilistic models having latent variables (Dempster et al., 1977; McLachlan and Krishnan, 1997). (p.450)
 
-denote all of the observed variables by $\bm{X}$ 
-and all of the hidden variables by $\bm{Z}$ (also referred to as *latent variables*). 
-The joint distribution $p(\bm{X},\bm{Z}|\bm{\theta})$ is governed by a set of parameters denoted $\bm{\theta}$. 
+denote all of the observed variables by $\bm{X}$
+and all of the hidden variables by $\bm{Z}$ (also referred to as *latent variables*).
+The joint distribution $p(\bm{X},\bm{Z}|\bm{\theta})$ is governed by a set of parameters denoted $\bm{\theta}$.
 The likelihood function is
 $$p(\bm{X}|\bm{\theta}) = \sum_{\bm{Z}} p(\bm{X},\bm{Z}|\bm{\theta})    \tag{9.69}$$
 where we suppose that direct optimization of $p(\bm{X}|\bm{\theta})$ is difficult, but the optimization
-of the complete-data likelihood function $p(\bm{X},\bm{Z}|\bm{\theta})$ is significantly easier. 
+of the complete-data likelihood function $p(\bm{X},\bm{Z}|\bm{\theta})$ is significantly easier.
 
 Introduce a distribution $q(\bm{Z})$ defined over the latent variables, the following decomposition hold
 $$\ln p(\bm{X}|\bm{\theta}) = \mathcal{L}(q,\bm{\theta}) + {\rm KL}(q\|p)   \tag{9.70}$$
@@ -351,7 +493,7 @@ where
 $$\mathcal{L}(q,\bm{\theta}) = \sum_{\rm Z} q(\bm{Z}) \ln\left\{ \frac{p(\bm{X},\bm{Z}|\bm{\theta})}{q(\bm{Z})} \right\}   \tag{9.71}$$
 $${\rm KL}(q\|p) = -\sum_{\bm{Z}} q(\bm{Z})\ln \left\{ \frac{p(\bm{Z}|\bm{X},\bm{\theta})}{q(\bm{Z})} \right\}    \tag{9.72}$$
 where KL is the <mark>Kullback-Leibler divergence</mark> between
-$q(\bm{Z})$ and the *posterior distribution* $p(\bm{Z}|\bm{X}, \bm{\theta})$. 
+$q(\bm{Z})$ and the *posterior distribution* $p(\bm{Z}|\bm{X}, \bm{\theta})$.
 
 > The EM algorithm is a two-stage iterative optimization technique for finding maximum likelihood solutions. (p.451)
 > - In the <mark>E step</mark>, the lower bound $\mathcal{L}(q, \bm{\theta}^{\rm old})$ is maximized with respect to $q(\bm{Z})$ while holding $\bm{\theta}^{\rm old}$ fixed.
@@ -369,6 +511,8 @@ Hinton, 1999).
 
 
 # 10. Approximate Inference
+
+> (p24) More recently, highly efficient deterministic approximation schemes ouch as variational Bayes and expectation propagation have been developed. These offer a complementary alternative to sampling methods and have allowed Bayesian techniques to be used in large-scale applications.
 
 Tasks:
 - Evaluation of the posterior distribution $p(\bm{X}|\bm{X})$ given the observed data $\bm{X}$.
@@ -414,7 +558,7 @@ Substitute (10.5) into (10.3) and then dissect out the dependence on one of the 
 
 <mark>Approximate inference methods based on numerical sampling</mark> is also known as <mark>Monte Carlo techniques</mark>.
 
-For most situations, posterior (/pɑ'stɪrɪɚ/) distribution is required primarily for the purpose of evaluating expectations, for example, in order to make predictions. 
+For most situations, posterior (/pɑ'stɪrɪɚ/) distribution is required primarily for the purpose of evaluating expectations, for example, in order to make predictions.
 
 $$
 \mathbb{E}[f] = \int f(\bm{z}) p(\bm{z})\, \rm{d}\bm{z} \tag{11.1}
@@ -435,13 +579,13 @@ Rejection sampling\
 \- exponential decrease of acceptance rate with dimensionality\
 \- play a role as a subroutine in more sophisticated algorithms for sampling in high dimensional spaces\
 
-### 11.1.4 importance sampling 
+### 11.1.4 importance sampling
 
 Use a proposal distribution $q(\bm{z})$, easy to draw samples, to calculate Eq. 11.1:
 $$
 \begin{aligned}
-\mathbb{E}[f] = \int f(\bm{z}) p(\bm{z})\, {\rm d}\bm{z} 
-= \int f(\bm{z}) \frac{p(\bm{z})}{q(\bm{z})} q(\bm{z})\, {\rm d}\bm{z} 
+\mathbb{E}[f] = \int f(\bm{z}) p(\bm{z})\, {\rm d}\bm{z}
+= \int f(\bm{z}) \frac{p(\bm{z})}{q(\bm{z})} q(\bm{z})\, {\rm d}\bm{z}
 \approx \frac{1}{L}\sum_{l=1}^L \frac{p(\bm{z}^{(l)})}{q(\bm{z}^{(l)})} f(\bm{z}^{(l)})
 \end{aligned}
 \tag{11.19}
@@ -450,16 +594,16 @@ where $r_l=p(\bm{z}^{(l)})/q(\bm{z}^{(l)})$ is the <mark>importance weights</mar
 
 When $p(\bm{z})$ can only be evaluated up to a normalized constant, $p(\bm{z})=\tilde{p}(\bm{z})/Z_p$, using a similar proposal distribuion $q(\bm{z})=\tilde{q}(\bm{z})/Z_q$, then we have,
 $$
-\mathbb{E}[f] = \int f(\bm{z}) p(\bm{z})\, {\rm d}\bm{z} 
-= \frac{Z_q}{Z_p} \int f(\bm{z}) \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \tilde{q}(\bm{z})\, {\rm d}\bm{z} 
+\mathbb{E}[f] = \int f(\bm{z}) p(\bm{z})\, {\rm d}\bm{z}
+= \frac{Z_q}{Z_p} \int f(\bm{z}) \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \tilde{q}(\bm{z})\, {\rm d}\bm{z}
 \approx \frac{Z_q}{Z_p} \frac{1}{L}\sum_{l=1}^L \tilde{r}_l f(\bm{z}^{(l)}).
 \tag{11.20}
 $$
-And because 
+And because
 $$
-\frac{Z_p}{Z_q} = \frac{1}{Z_q} \int \tilde{p}(\bm{z}){\rm d}\bm{z} 
-= \frac{1}{\textcolor{red}{Z_q}} \int \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \textcolor{red}{\tilde{q}(\bm{z})}\, {\rm d}\bm{z} 
-= \int \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \textcolor{red}{q(\bm{z})}\, {\rm d}\bm{z} 
+\frac{Z_p}{Z_q} = \frac{1}{Z_q} \int \tilde{p}(\bm{z}){\rm d}\bm{z}
+= \frac{1}{\textcolor{red}{Z_q}} \int \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \textcolor{red}{\tilde{q}(\bm{z})}\, {\rm d}\bm{z}
+= \int \frac{\tilde{p}(\bm{z})}{\tilde{q}(\bm{z})} \textcolor{red}{q(\bm{z})}\, {\rm d}\bm{z}
 \approx \frac{1}{L}\sum_{l=1}^L \tilde{r}_l
 \tag{11.21}
 $$
@@ -482,7 +626,36 @@ Other improvements:\
 
 [Forget EM algorithm? See here.](#94-The-EM-Algorithm-in-General)
 
+*Monte Carlo EM algorithm*: *stochastic EM*
+
+IP algorithm
+
+
 ## 11.2 Markov Chain Monte Carlo
+
+(p24) Monte Carlo methods are very flexible and can be applied to a wide range of models. However, they are computationally intensive and have mainly been used for small-scale problems.
+
+MCMC is a big framework: sample from many classes of distributions; scales well with the space dimension.
+
+A central goal in designing MCMC methods is to avoid random walk behaviour.
+
+*basic Metropolis algorithm*:\
+assume proposal distribution is symmetric, $q(\bm{z}_A|\bm{z}_B) = q(\bm{z}_B|\bm{z}_A)$,\
+candidate sample is accepted with probability $A(\bm{z}^*)=\min \left( 1,\frac{\tilde{p}(\bm{z}^*)}{\tilde{p}(\bm{z}^{(\tau)}} \right)$\
+at each step $\tau$, if the candiate $\bm{z}^*$ is acceptable, $\bm{z}^{(\tau+1)}=\bm{z}^*$, otherwise, $\bm{z}^{(\tau+1)}=\bm{z}^{(\tau)}$.
+
+### 11.2.1 Markov chains
+
+### 11.2.2 The Metropolis-Hastings algorithm
+
+
+
+## 11.3 Gibbs Sampling
+
+Gibbs sampling is a MCMC algorithm; a special case of the Metropolis-Hasting algorithm.
+
+
+## 11.4 Slice Sampling
 
 ## 11.5 The Hybrid Monte Carlo Algorithm
 
@@ -491,14 +664,44 @@ Key points:\
 \- leapfrog integration\
 \- Metropolis algorithm
 
-<mark>这章与很多文献中的 Hamiltonian Monte Carlo 的关系是什么？</mark>
-感觉是一样的。
+~~这章与很多文献中的 Hamiltonian Monte Carlo 的关系是什么？~~
+感觉是一样的。\
+是同样的东西，see [MCMC: <mark>Hamiltonian Monte Carlo (a.k.a. Hybrid Monte Carlo</mark>)
+](https://theclevermachine.wordpress.com/2012/11/18/mcmc-hamiltonian-monte-carlo-a-k-a-hybrid-monte-carlo/).
 
 ### 11.5.1 Dynamical systems
 
 
 ### 11.5.2 Hybrid Monte Carlo
 
+see [MCMC: Hamiltonian Monte Carlo (a.k.a. Hybrid Monte Carlo)
+](https://theclevermachine.wordpress.com/2012/11/18/mcmc-hamiltonian-monte-carlo-a-k-a-hybrid-monte-carlo/)
+
+## 11.6 Estimating the Partition Function
+If we write 
+$$ p_E(\bm{z}) = \frac{1}{Z_E} \exp(-E(\bm{z})) $$
+then the normalization constant $Z_E$ is known as the partition function. 
+K
+nowledge of the value of $Z_E$ can be useful for Bayesian model comparison since it represents the <mark>model evidence</mark> (the probability of the observed data given the model). 
+
+
 
 > (stopped here last time)
 
+
+
+# Some Terms
+
+(p25) The maximum of a distribution is known as its <mark>mode</mark>.
+
+(p28) for consistency with the notation in later chapters, we define a <mark>precision parameter</mark> parameter $\beta$ corresponding to the inverse variance of the distribution. 
+
+(p30) Variables such as $\alpha$, which controls the distribution of model parameters, are called <mark>hyperparameters</mark>.
+
+(p30) Finding the most probable value of $\bm{w}$ given the data by maximing the posterior distribution is called <mark>maximum posterior, MAP</mark>.
+
+
+# 疑问
+
+1. complete-data log likelihood, p536
+2. complete-data parameter posterior $p(\bm{\theta}|\bm{Z},\bm{X})$, p537
