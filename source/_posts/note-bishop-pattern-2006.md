@@ -6,6 +6,7 @@ categories:
 tags:
   - book
   - machine learning
+  - Bayesian inference
 mathjax: true
 abbrlink: 97ae8555
 date: 2018-09-26 16:15:43
@@ -245,7 +246,7 @@ $$p(\bm{x}_a) = \mathcal{N}(\bm{x}_a|\bm{\mu}_a,\Sigma_{aa})   \tag{2.98}$$
 
 
 
-### Bayes’ theorem for Gaussian variables
+### 2.3.3 Bayes’ theorem for Gaussian variables
 GIVEN:
 - Gaussian marginal distribution $p(\bm{x}) = \mathcal{N}(\bm{x}|\bm{\mu},\Lambda^{-1})$
 - Gaussian conditional distribution $p(\bm{y}|\bm{x}) = \mathcal{N}(\bm{y}|A\bm{x}+\bm{b},L^{-1})$
