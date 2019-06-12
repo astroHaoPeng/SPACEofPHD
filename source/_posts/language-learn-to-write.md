@@ -17,6 +17,9 @@ updated:
 comb through, 梳理，/kom/
 > While recovery teams continue <mark>combing through</mark> the test site at Cape Canaveral where SpaceX's first space-worthy Crew Dragon capsule was destroyed in an explosive accident last month, ... 
 
+$[\times]$ ~~compare A with B~~ \
+$[\checkmark]$ compare A to B
+
 
 
 # Math-related
