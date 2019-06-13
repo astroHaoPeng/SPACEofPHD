@@ -47,6 +47,10 @@ Use this line to include image:
 
 # log
 
+(2019-06-13 20:19:29)
+从这里 https://www.jianshu.com/p/70bf58c48010 看到新的一种 post-receive 的方法，不需要设置 git 用户为 root 权限。\
+学习总结 Linux 下的用户权限和用户组概念。
+
 (2019-05-23 20:50:40)
 Hexo平台迁移到笔记本：\
 安装Node.js；\
@@ -60,7 +64,7 @@ clone repo;\
 配置putty的ssh的public key，使用git bash的必须转换为putty的key才可以。
 
 
-(2019-05-21 13:16:07)
+(2019-05-21 20:16:07)
 `npm i vsce -g`\
 `npm install -g webpack webpack-dev-server webpack-cli`\
 `npm run compile`\
@@ -69,12 +73,12 @@ clone repo;\
 Create my first PR to the original author. 
 
 
-(2019-05-19 16:03:00)
+(2019-05-19 20:03:00)
 `hexo-generator-searchdb` 引起导致搜索页面失败，猜测与对公式的支持有关。\
 换用原始的 `hexo-generator-search` 可解决。
 
 
-(2019-05-17 12:27:40)
+(2019-05-17 20:27:40)
 用这一段代码实现Katex公式在窄屏幕上的自动横向滚动。如果不加`overflow: hidden`的话，会出现竖直方向的滚动条。
 ```css
 .katex-display > .katex {
@@ -101,18 +105,18 @@ ul li, ol li {
 ```
 使用 `192.168.2.1:4000/blog/` 可以在本地用其它设备调用 `hexo s` 的页面进行调试。
 
-(2019-05-08 13:05:55)
+(2019-05-08 20:05:55)
 配置 `.ssh/config` 来实现登录不同的 github 账户，主要原理是理解 `Host` 代表的是在 push 时 `git@Host:username/repository.git` 中的位置。
 参考了[这篇文章](https://www.sail.name/2017/10/02/Multiple-github-count-in-one-system/)的设置，但是文章中有一个小错误，没有强调`git@Host...`。
 SSH帐户的讲解参见[这里](https://git-scm.com/book/zh/v1/%E8%B5%B7%E6%AD%A5-%E5%88%9D%E6%AC%A1%E8%BF%90%E8%A1%8C-Git-%E5%89%8D%E7%9A%84%E9%85%8D%E7%BD%AE)的官方文档。
 
 
-(2019-05-03 11:54:56)
+(2019-05-03 21:54:56)
 使用firebase的数据库来计算views，NexT原生支持。
 生成数据库时需要设置规则，参考了[这里](https://blog.maple3142.net/2017/11/04/hexo-next-readcount/)。\
 同一地址的多次访问会被计为一次，重复刷新不会有影响。
 
-(2019-05-02 17:42:41)
+(2019-05-02 21:42:41)
 `markdown-it-task-checkbox`选择使用这个，目前完美，有空格，不可点击。（~~`markdown-it-checkbox`~~生成的checkbox与后面的文字没有空格；~~`markdown-it-task-lists`~~生成的可点击）\
 `hexo-generator-indexed`使用这个来生成主页，支持设置sticky实现置顶。（~~`hexo-generator-index-sticky`~~和~~`hexo-generator-index-top`~~都有不同程度的问题，或者不再更新）
     
