@@ -178,9 +178,13 @@ $$ {\rm KL}(p||q) \approx \sum_{n=1}^N \left\{-\ln q(\bm{x}_n|\bm{\theta})+\ln p
 
 > Minimizing this Kullback-Leibler divergence is equivalent to maximizing the likelihood function.
 
-# 2
+# 2 PROBABILITY DISTRIBUTIONS
 
 ## 2.3 Gaussian Distribution
+
+> (p79) This section will be rather more technically involved than some of the earlier sections, and will require familiarity with various matrix identities.
+> However, we strongly encourage the reader to become proficient in manipulating Gaussian distributions using the techniques presented here as this will prove invaluable in understanding the more complex models presented in later chapters.
+
 Gaussian Distribution:
 $$
 \mathcal{N}(\bm{x}|\bm{\mu},\Sigma) = \frac{1}{(2\pi)^{D/2}} \frac{1}{|\Sigma|^{1/2}} \exp \left[ -\frac{1}{2}(\bm{x}-\bm{\mu})^T \Sigma^{-1} (\bm{x}-\bm{\mu}) \right]
@@ -259,8 +263,66 @@ $$p(\bm{y}) = \mathcal{N}(\bm{y}|A\bm{\mu}+\bm{b},L^{-1}+A\Lambda^{-1}A^T) \tag{
 $$p(\bm{x}|\bm{y}) = \mathcal{N}(\Sigma[A^TL(\bm{y}-\bm{b})+A\bm{\mu}],\Sigma))\tag{2.112 or 2.116}$$
 $$\Sigma = (\Lambda+A^TLA)^{-1}$$
 
-### Bayesian inference for the Gaussian (p.97)
+### 2.3.4 Maximum likelihood for the Gaussian
+
+Given a dataset $\bm{X}=\{\bm{x}_1,\dots,\bm{x}_N\}^T$ drawn independently from a multivariate Gaussian distribution.
+
+Likelihood:
+$$ \ln p(\bm{X}|\bm{\mu},\Sigma)   \tag{2.118 left}$$
+
+Maximum likelihood estimations:
+$$ \bm{\mu}_{\rm ML} = \frac{1}{N} \sum_{n=1}^N \bm{x}_n   \tag{2.121}$$
+$$ \Sigma_{\rm ML} = \frac{1}{N} \sum_{n=1}^N (\bm{x}_n-\bm{\mu}_{\rm ML}) (\bm{x}_n-\bm{\mu}_{\rm ML})^T $$
+
+Expectation of the maximum likelihood estimate:
+$$ \mathbb{E}[\bm{\mu}_{\rm ML}] = \frac{1}{N} \sum \mathbb{E}[\bm{x}_n] = \mathbb{E}[\bm{x}_n]   \tag{2.123}$$
+$$ 
+\begin{aligned}
+\mathbb{E}[\Sigma_{\rm ML}] 
+&= \mathbb{E}\left[ \frac{1}{N} \sum_n \left( \bm{x}_n^2 - 2\bm{\mu}_{\rm ML}\bm{x}_n + \bm{\mu}_{\rm ML}^2 \right) \right]\\
+&= \frac{1}{N} \mathbb{E}\left[ \sum_n \bm{x}_n^2 - 2N\bm{\mu}_{\rm ML}^2 + N\bm{\mu}_{\rm ML}^2 \right]\\
+&= \frac{1}{N} \mathbb{E}\left[ \sum_n \bm{x}_n^2 - N\bm{\mu}_{\rm ML}^2 \right]\\
+&= \mathbb{E}[\bm{x}_n^2] - \mathbb{E}[\bm{\mu}_{\rm ML}^2] \\
+&= \mathbb{E}[\bm{x}_n^2] - \frac{1}{N^2}\sum_{n,m}\mathbb{E}\left[\bm{x}_n\bm{x}_m\right] \\
+&= \mathbb{E}[\bm{x}_n^2] - \frac{1}{N^2}N\mathbb{E}[\bm{x}_n^2]\\
+&= \frac{N-1}{N} \mathbb{E}[\bm{x}_n^2] = \frac{N-1}{N} \Sigma
+\end{aligned}
+\tag{2.124 + derivation}
+$$
+Correct the biased estimate in Eq. (2.124) as:
+$$ \tilde{\Sigma} = \frac{1}{N-1} \sum_n (\bm{x}_n-\bm{\mu}_{\rm ML}) (\bm{x}_n-\bm{\mu}_{\rm ML})^T $$
+
+> (p97) Maximum likelihood framework gave point estimates for the parameters $\bm{\mu}$ and $\Sigma$.
+
+### 2.3.5 Sequential estimation
+
+### 2.3.6 Bayesian inference for the Gaussian (p.97)
 Did not finish this part of reading.
+
+### 2.3.7 Student's t-distribution
+
+Student's t-distribution is obtained by adding up an infinite number of Gaussian distributions having the same means but different precisions.\
+This can be interpreted as an infinite mixture of Gaussians.\
+This gives the t-distribution an important property called *robustness*, which means that it is much less sensitive than the Gaussian to the presence of a few data points which are *outliers*.
+
+### 2.3.8 Periodic variables
+
+### 2.3.9 Mixtures of Gaussians
+
+> By using a sufficient number of Gaussians and by adjusting their means and covariances as well as the coefficients in the linear combination, almost any continuous density can be approximated to arbitrary accuracy. <span style="color:red">(Why it is "almost"? An counterexample?)</span>
+
+$$ \ln p(\bm{X}|\bm{\pi},\bm{\mu},\bm{\Sigma}) = \dots \tag{2.193} $$
+
+The likelihood function is now much more complex than with a single Gaussian, due to the presence of the summation over $k$ inside the logarithm.
+
+The maximum likelihood solution for the parameters no longer has a closed-form analytical solution. Alternatively,
+- to sue iterative numerical optimization techniques
+- <mark>expectation maximization</mark> (see [Chapter 6](#94-the-em-algorithm-in-general)).
+
+
+{% note info %}
+All the probatility distributions above are specific examples of a broad class of distributions called the <mark>exponential family</mark>.
+{% endnote %}
 
 
 ## 2.4. The Exponential Family
@@ -273,7 +335,7 @@ Did not finish this part of reading.
 > Throughout this chapter, we have focussed on the use of probability distributions having specific functional forms governed by a small number of parameters whose values are to be determined from a data set. This is called the parametric approach to density modelling.
 
 
-# 3 Linear modelModels for Regression
+# 3 Linear Models for Regression
 
 ## 3.1 Linear Basis Function Model
 

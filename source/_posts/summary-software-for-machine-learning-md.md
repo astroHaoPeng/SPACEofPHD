@@ -2,15 +2,15 @@
 title: summary_software_for_machine_learning.md
 comments: true
 mathjax: false
-date: 2019-06-09 23:05:57
-updated:
-abbrlink:
+abbrlink: 654cf420
 categories:
   - Summaries
-  - Techniques, Softwares
+  - 'Techniques, Softwares'
 tags:
   - machine learning
   - MATLAB
+date: 2019-06-09 23:05:57
+updated:
 ---
 
 One day I run across this web page of [Software for machine learning](https://www.cs.ubc.ca/~murphyk/Teaching/CS540_Fall05/software.html) but sadly find that most links are not available anymore. 

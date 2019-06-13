@@ -1,12 +1,14 @@
 ---
 title: MATLAB Tricks and Functions
-categories: 
-  - [Techniques, Software]
-  - [Notes, Others]
+categories:
+  - - Techniques
+    - Software
+  - - Notes
+    - Others
 tags:
   - MATLAB
   - tricks
-abbrlink: 
+abbrlink: b5ad18d4
 mathjax: false
 comments: true
 date: 2017-06-05 00:00:00

@@ -9,15 +9,15 @@ tags:
   - markdown
   - tricks
 date: 2019-06-07 12:18:07
-updated:
+updated: 2019-06-13 18:10:46
 ---
 
 Add color to text
 ```html
-<span style="color:red">PUT TEXT HERE</span>
+<span style="color:red">TEXT_COLORFUL</span>
 ```
 
 Add background color to text
 ```html
-<span style="background-color:green">PUT TEXT HERE</span>
+<span style="background-color:green">BACKGROUND_COLORFUL</span>
 ```
