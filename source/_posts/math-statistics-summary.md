@@ -9,7 +9,7 @@ comments: true
 abbrlink: de0c06bd
 date: 2019-04-15 14:43:39
 updated: 2019-04-23 15:01:35
-sticky: 100
+# sticky: 100
 ---
 
 
@@ -22,6 +22,12 @@ sticky: 100
 - {% post_link math-markov-chain-monte-carlo %}
 
 - {% post_link math-all-about-bayesian%}
+
+
+PUT THE FOLLOWING NOTES INTO CORRECT POSTS:
+- "evidence framework" and "expectation maximization (EM) algorithm" sole the same problem: maximize marginal (over $\bm{w}$) likelihood function $p(\bm{t}|\bm{X},\alpha,\beta)$. (Bishop, 2006, p166)
+- 
+
 
 ## notes
 
