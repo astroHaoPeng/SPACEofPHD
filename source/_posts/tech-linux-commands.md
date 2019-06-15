@@ -45,12 +45,47 @@ chgrp # 改变所属用户组
 
 参考资料：https://blog.csdn.net/yuexiaxiaoxi27172319/article/details/45390501
 
+# Firewall
+see: https://www.centos.bz/2017/12/%E5%BC%80%E5%90%AFufw%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E4%B8%80%E4%BA%9B%E5%91%BD%E4%BB%A4/
+
+```
+sudo ufw status verbose
+```
+```
+sudo ufw enable
+```
+```
+sudo ufw disable
+```
+
 
 # nginx
 
 ```
 sudo nginx -s reload
 ```
+
+# V2ray
+
+```
+/usr/bin/v2ray/v2ray # V2Ray 程序；
+/usr/bin/v2ray/v2ctl # V2Ray 工具；
+/etc/v2ray/config.json #配置文件；
+```
+
+```
+service v2ray start
+```
+```
+service v2ray reload
+```
+```
+service v2ray force-reload
+```
+```
+service v2ray start|stop|status|reload|restart|force-reload # all commends
+```
+
 
 # SS
 
