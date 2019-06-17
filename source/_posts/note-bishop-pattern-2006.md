@@ -10,7 +10,7 @@ tags:
 mathjax: true
 abbrlink: 97ae8555
 date: 2018-09-26 16:15:43
-updated: 2019-06-07 12:09:43
+updated: 2019-06-15 17:54:17
 ---
 
 {% note info %}
@@ -584,7 +584,43 @@ SVM and NN both use some good properties to alleviate this problem.
 
 # 6. Kernel Methods (not read)
 
+> For recent btetbooks on kernel methods, see Scholkopf and Smola (2002), Herbrich (2002), and Shawe-Taylor and Cristianini (2004).
+
+## 6.1. Dual Representations
+
+The advantage of the dual formulation is that it is expressed entirely in terms of the kernel function $k(\bm{x},\bm{x}')$. We can therefore work directly in terms of kernels and avoid the explicit introduction of the feature vector $\phi(\bm{x})$, which allows us implicitly to use feature spaces of high, even infinite, dimensionality. 
+
+## 6.2. Constructing Kernels
+
+## 6.3. Radial Basis Function Networks
+
+
+
+
+
 ## 6.4 Gaussian Processes (to read)
+
+Here we extend the role of kernels to probabilistic discriminative models, leading to the framework of Gaussian processes.
+
+For a linear regression models of the form $y(\bm{x},\bm{w}) = \bm{w}^T\phi(\bm{x})$, 
+a prior distribution over $\bm{w}$ induced a corresponding **prior distribution over functions** $y(\bm{x},\bm{w})$.\
+Evaluating the posterior distribution over $\bm{w}$ obtains the corresponding **posterior distribution over regression functions**.
+
+In the Gaussian process viewpoint, we dispense with the parametric model and instead define a prior probability distribution over functions directly.
+
+Models equivalent to Gaussian processes in different fields:
+- kriging in geostatistics literature
+- ARMA models
+- Kalman filters
+- radial basis function networks
+
+
+
+
+### 6.4.1. Linear regression revisited
+### 6.4.2. Gaussian processes for regression
+### 6.4.3. Learning the hyperparameters
+
 
 
 # 7. Sparse Kernel Mathod (not read)
