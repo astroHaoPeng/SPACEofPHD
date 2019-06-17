@@ -602,11 +602,13 @@ The advantage of the dual formulation is that it is expressed entirely in terms 
 
 Here we extend the role of kernels to probabilistic discriminative models, leading to the framework of Gaussian processes.
 
-For a linear regression models of the form $y(\bm{x},\bm{w}) = \bm{w}^T\phi(\bm{x})$, 
+{% note success %}
+For a <mark>linear regression models</mark> of the form $y(\bm{x},\bm{w}) = \bm{w}^T\phi(\bm{x})$, 
 a prior distribution over $\bm{w}$ induced a corresponding **prior distribution over functions** $y(\bm{x},\bm{w})$.\
 Evaluating the posterior distribution over $\bm{w}$ obtains the corresponding **posterior distribution over regression functions**.
 
-In the Gaussian process viewpoint, we dispense with the parametric model and instead define a prior probability distribution over functions directly.
+In the <mark>Gaussian process viewpoint</mark>, we dispense with the parametric model and instead define a prior probability distribution over functions directly.
+{% endnote %}
 
 Models equivalent to Gaussian processes in different fields:
 - kriging in geostatistics literature
