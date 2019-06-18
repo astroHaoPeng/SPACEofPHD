@@ -4,13 +4,14 @@ tags:
   - Software
   - Orekit
   - Astrodynamics
-categories: 
-  - [Techniques, Software]
+categories:
+  - - Techniques
+    - Software
 comments: true
 mathjax: true
-abbrlink: 4de12de9
+abbrlink: 50f9c78e
 date: 2019-06-04 17:25:34
-updated: 
+updated: 2019-06-04 17:25:34
 ---
 
 

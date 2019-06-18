@@ -9,6 +9,7 @@ categories:
   - [Techniques, Softwares]
 tags:
   - LaTeX
+  - tricks
 ---
 
 > Write $\LaTeX$ is entertaining.

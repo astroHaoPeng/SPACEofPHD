@@ -1,5 +1,5 @@
 ---
-title: tech-markdown-tricks
+title: My MarkDown Tricks
 comments: true
 mathjax: false
 abbrlink: 1e880d79

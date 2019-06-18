@@ -2,7 +2,7 @@
 title: Website Building Log and Hexo Tricks
 date: 2017-01-01 00:00:00
 updated: 2017-01-01 00:00:00
-updated-true: 2019-06-08 19:06:34
+updated-true: 2019-06-17 18:42:52
 abbrlink: a9f2141
 comments: true
 categories:
@@ -10,6 +10,7 @@ categories:
   - Others
 tags:
   - tech
+  - tricks
   - log
   - website
 hide: true # Add a hide parameter to the the post's Front-matter to hide the post from home page.
@@ -46,6 +47,10 @@ Use this line to include image:
 
 
 # log
+
+(2019-06-17 19:36:53)
+反馈给`hexo-generator-indexed`作者关于sticky排序打乱`-updated`排序的问题，作者及时更正。\
+重新安装支持`sticky`的generator。
 
 (2019-06-13 20:19:29)
 从这里 https://www.jianshu.com/p/70bf58c48010 看到新的一种 post-receive 的方法，不需要设置 git 用户为 root 权限。\

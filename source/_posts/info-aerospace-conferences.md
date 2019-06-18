@@ -11,7 +11,7 @@ date: 2018-01-20 17:16:10
 updated: 2019-05-02 17:05:53
 abbrlink: info-aerospace-conferences
 mathjax: 
-# sticky: 1000
+sticky: 100
 ---
 
 # Call-for-abstract

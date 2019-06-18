@@ -1,5 +1,5 @@
 ---
-title: MATLAB Tricks and Functions
+title: My MATLAB Tricks and Functions
 categories:
   - - Techniques
     - Software

@@ -301,7 +301,7 @@ auto_excerpt:
 # Post meta display settings
 post_meta:
   item_text: true
-  created_at: true
+  created_at: false
   updated_at:
     enabled: true
     # If true, show updated date label only if `updated date` different from 'created date' (post edited in another day than was created).

@@ -617,11 +617,19 @@ Models equivalent to Gaussian processes in different fields:
 - radial basis function networks
 
 
-
-
 ### 6.4.1. Linear regression revisited
+
+A linear combination of $M$ basis functions $\phi = \{\phi_i\}$
+$$ y(\bm{x}) = \bm{w}^T \phi(\bm{x})    \tag{6.49}$$
+
+Set a prior distribution over $\bm{w}$
+$$ p(\bm{w}) = \mathcal{N}(\bm{w}|\bm{0},\alpha^{-1}\bm{I})    \tag{6.50}$$
+
 ### 6.4.2. Gaussian processes for regression
+
+
 ### 6.4.3. Learning the hyperparameters
+
 
 
 
