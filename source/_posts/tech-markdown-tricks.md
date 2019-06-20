@@ -12,6 +12,12 @@ date: 2019-06-07 12:18:07
 updated: 2019-06-13 18:10:46
 ---
 
+
+Use this line to include image: 
+```html
+<img src="{% asset_path FPKE_history.png%}" width="400px" title="caption ok?">
+```
+
 Add color to text
 ```html
 <span style="color:red">TEXT_COLORFUL</span>

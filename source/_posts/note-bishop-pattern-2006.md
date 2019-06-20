@@ -575,14 +575,14 @@ SVM and NN both use some good properties to alleviate this problem.
   - neural netowok uses this one
 
 
-# 4. Linear Models for classification (not read)
+# 4. Linear Models for classification (not read yet)
 
 
-# 5. Neural Network (not read)
+# 5. Neural Network (not read yet)
 
 ## 5.7 Bayesian Neural Networks (to read)
 
-# 6. Kernel Methods (not read)
+# 6. Kernel Methods (not read yet)
 
 > For recent btetbooks on kernel methods, see Scholkopf and Smola (2002), Herbrich (2002), and Shawe-Taylor and Cristianini (2004).
 
@@ -633,7 +633,7 @@ $$ p(\bm{w}) = \mathcal{N}(\bm{w}|\bm{0},\alpha^{-1}\bm{I})    \tag{6.50}$$
 
 
 
-# 7. Sparse Kernel Mathod (not read)
+# 7. Sparse Kernel Mathod (not read yet)
 
 ## 7.2 Relevance Vector Machines
 

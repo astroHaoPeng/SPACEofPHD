@@ -89,6 +89,8 @@ service v2ray start|stop|status|reload|restart|force-reload # all commends
 
 # SS
 
+Update to 3.0.0: https://www.igray.cc/614.html
+
 ```
 /etc/shadowsocks.json # 配置文件地址
 ```

@@ -37,11 +37,6 @@ hide: true # Add a hide parameter to the the post's Front-matter to hide the pos
 
 # Attention
 
-Use this line to include image: 
-```html
-<img src="{% asset_path FPKE_history.png%}" width="400px" title="caption ok?">
-```
-
 `abbrlink` is based on `title` but not ~~`date`~~, so, try to keep title fixed.
 
 
