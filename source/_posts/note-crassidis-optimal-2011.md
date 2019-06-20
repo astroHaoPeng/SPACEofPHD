@@ -1,8 +1,10 @@
 ---
-title: Reading Notes | Optimal Estimation of Dynamic Systems (Crassidis, 2011)
+title: 'Reading Notes | Optimal Estimation of Dynamic Systems (Crassidis, 2011)'
 categories:
-  - [Notes, Book Notes]
-  - [Academics, Aerospace]
+  - - Notes
+    - Book Notes
+  - - Academics
+    - Aerospace
 tags:
   - math
   - statistics
@@ -10,7 +12,7 @@ tags:
   - aerospace
 comments: true
 mathjax: true
-abbrlink:
+abbrlink: 7eefaeb9
 date: 2019-06-18 10:05:00
 updated:
 ---
