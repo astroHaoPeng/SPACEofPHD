@@ -1,5 +1,5 @@
 ---
-title: steinwart_support_2008
+title: Steinwart, Support, 2008
 comments: true
 categories:
   - [Notes, Paper Notes]
@@ -9,6 +9,9 @@ updated: 2018-06-20 13:12:42
 tags: [draft]
 ---
 
+{% note info %}
+steinwart_support_2008
+{% endnote %}
 
 Statistical Learning Theory 的本质
 ---------------------------------

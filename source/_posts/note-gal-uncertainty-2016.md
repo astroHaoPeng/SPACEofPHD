@@ -111,7 +111,7 @@ $p(\bm{y}|\bm{x},\bm{\omega})$
 <!-- more -->
 ------
 
-获得一个观测集合 $\bm{X} = \\{\dots,\bm{x}_i,\dots\\}$ 和 $\bm{Y} = \\{\dots,\bm{y}_i,\dots\\}$ 后，
+获得一个观测集合 $\bm{X} = \{\dots,\bm{x}_i,\dots\}$ 和 $\bm{Y} = \{\dots,\bm{y}_i,\dots\}$ 后，
 使用 Bayes's theorem 定理可以得到
 
 > *后验分布 posterior distribution*: 

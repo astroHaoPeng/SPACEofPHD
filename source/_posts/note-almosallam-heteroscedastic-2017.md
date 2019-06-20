@@ -168,10 +168,10 @@ LIKELIHOOD: （应该是通过配方法得到的）
 $$ p(\bm{y}|\bm{X},\bm{\theta},\bm{w}) = \int p(\bm{y}|\bm{f}_\bm{x},\bm{\theta}) \cdot p(\bm{f}_\bm{x}|\bm{X},\bm{\theta},\bm{w}) \cdot \rm{d}\bm{f}_\bm{x} $$
 $$ = \int \mathcal{N}(\bm{y}|\bm{f}_\bm{x},\sigma^2 I_n) \cdot \mathcal{N}(\bm{f}_\bm{x}|\bm{\Phi}_\bm{x}^T\bm{w},0) \cdot \rm{d}\bm{f}_\bm{x} $$
 $$ = \mathcal{N}(\bm{y}|\bm{\Phi}_\bm{x}^T\bm{w},\sigma^2 I_n)     \tag{2.47} $$
-> $\bm{\Phi}_\bm{x} = \left[ \begin{matrix} 
->                  \phi_1(\bm{x}_1) & \cdots & \phi_1(\bm{x}_n) \\
->                  \vdots & \ddots & \vdots \\
->                  \phi_m(\bm{x}_1) & \cdots & \phi_m(\bm{x}_n) \end{matrix} \right]$
+$$\bm{\Phi}_\bm{x} = \left[ \begin{matrix} 
+                  \phi_1(\bm{x}_1) & \cdots & \phi_1(\bm{x}_n) \\
+                  \vdots & \ddots & \vdots \\
+                  \phi_m(\bm{x}_1) & \cdots & \phi_m(\bm{x}_n) \end{matrix} \right]$$
 
 PRIOR: (assumed to be smooth)
 $$ p(\bm{w}|\alpha) = \mathcal{N}(\bm{w}|0,\bm{A}^{-1}) $$

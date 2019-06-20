@@ -1,5 +1,5 @@
 ---
-title: summary_software_for_machine_learning.md
+title: summary software for machine learning
 comments: true
 mathjax: false
 abbrlink: 654cf420
@@ -9,6 +9,7 @@ categories:
 tags:
   - machine learning
   - MATLAB
+  - draft
 date: 2019-06-09 23:05:57
 updated:
 ---
