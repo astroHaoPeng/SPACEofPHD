@@ -41,7 +41,18 @@ hide: true # Add a hide parameter to the the post's Front-matter to hide the pos
 
 
 
-# log
+# Logs
+
+(2019-06-19 19:54:45)
+根据这里的一系列教程\
+https://eveaz.com/1093.html\
+https://eveaz.com/1076.html\
+https://eveaz.com/1094.html\
+判断出是IP被封，升级v2ray的服务器端配置\
+在cloudflare.com添加v2二级域名的A解析；
+回忆`Let's encrypt`的使用，为二级域名生成证书；
+使用233boy的一键安装脚本；
+按照官方教程在Nginx中添加新的server转发v2ray的流量。
 
 (2019-06-17 19:36:53)
 反馈给`hexo-generator-indexed`作者关于sticky排序打乱`-updated`排序的问题，作者及时更正。\
