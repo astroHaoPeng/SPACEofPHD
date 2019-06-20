@@ -1,8 +1,10 @@
 ---
-title: Reading Notes | Optimal Estimation of Dynamic Systems (Crassidis, 2011)
+title: 'Reading Notes | Optimal Estimation of Dynamic Systems (Crassidis, 2011)'
 categories:
-  - [Notes, Book Notes]
-  - [Academics, Aerospace]
+  - - Notes
+    - Book Notes
+  - - Academics
+    - Aerospace
 tags:
   - math
   - statistics
@@ -10,7 +12,7 @@ tags:
   - aerospace
 comments: true
 mathjax: true
-abbrlink:
+abbrlink: 7eefaeb9
 date: 2019-06-18 10:05:00
 updated:
 ---
@@ -18,7 +20,7 @@ updated:
 {% note info %}
 John L. Crassidis, and John L. Junkins, Optimal Estimation of Dynamic Systems, CRC Press, 2011.
 
-Corrections to the book can be found at: http://ancs.eng.buffalo.edu/index.php/Optimal_Estimation_of_Dynamic_Systems_2nd_Edition
+Corrections **to** the book can be found at: http://ancs.eng.buffalo.edu/index.php/Optimal_Estimation_of_Dynamic_Systems_2nd_Edition
 {% endnote %}
 
 
@@ -241,9 +243,9 @@ The reference trajectory over $[t_{k-1],t_k)$ can also be improved once the meas
 
 
 
-## 3.7. Unscented Filtering (not read yet)
+## 3.7. Unscented Filtering (not needed for now)
 
-## 3.8. Constrained Filtering (not read yet)
+## 3.8. Constrained Filtering (not needed for now)
 
 ## 3.9. Summary
 
@@ -256,13 +258,12 @@ All important formulas are summarized here.
 
 Smoothing ??
 
+### 5.1.3. (utilized in Sec. 7.4., to read)
 
 
-# 6. Parameter Estimation (to read now)
+# 6. Parameter Estimation: Applications (to read now)
 
 ## 6.2. Global positioning System Navigation
-
-## 6.4. Orbit Determination
 
 
 
@@ -270,9 +271,31 @@ Smoothing ??
 
 ## 7.3. Orbit EStimation
 
+
+
+## 6.4. Orbit Determination
+
+Gaussian Least Squares Differential Correction (GLSDC)
+
+$$
+\tag{6.53}
+$$
+
+$$
+\tag{6.54}
+$$
+
+$$ F \equiv \frac{\partial\bm{f}}{\partial\bm{x}} = \begin{bmatrix}0_{3\times3}&I_{3\times3}\\F_{21}&0_{3\times3}\end{bmatrix}    \tag{6.57}$$
+$$ \frac{\partial \bm{h}}{\partial\bm{x}} = \begin{bmatrix}H_{11}&0_{3\times3}\end{bmatrix} $$
+
+
+
 ## 7.4. Target Tracking of Aircraft
 
+The algorithm for orbit determination is essentially equivalent to the nonlinear fixed-point smoother in Sec. 5.1.3 with a covariance reset.
+[CHECK THIS!!!]
 
+only need to analytically compute Eqs. 6.53, 6.54, 6.57, 6.67.
 
 
 # Appendix B. Matrix Properties
