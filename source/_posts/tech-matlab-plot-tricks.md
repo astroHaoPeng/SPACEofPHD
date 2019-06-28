@@ -4,14 +4,22 @@ categories:
   - [Techniques, Software]
 tags:
   - MATLAB
+  - visualize
 comments: true
 mathjax: false
 abbrlink: 95aded09
 date: 2019-05-01 18:09:30
-updated: 2019-05-02 17:07:03
+updated: 2019-06-28 17:59:11
 ---
 
-------
+
+# 用线条填充图
+
+使用 [Hatchfill2](https://www.mathworks.com/matlabcentral/fileexchange/53593-hatchfill2)\
+配合 [legendflex](https://github.com/kakearney/legendflex-pkg) 对 lagend 进行控制
+
+
+# SPACEofPHD 上的推送v
 
 [优雅地作图——用Matlab画出比较漂亮的图](优雅地作图——用Matlab画出比较漂亮的图)
 
