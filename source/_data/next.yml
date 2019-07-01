@@ -803,7 +803,7 @@ label: true
 tabs:
   enable: true
   transition:
-    tabs: true
+    tabs: false
     labels: true
   border_radius: 0
 

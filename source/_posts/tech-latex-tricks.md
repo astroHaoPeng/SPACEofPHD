@@ -140,3 +140,12 @@ Notice the alignment at the beginning of the second line.
 % [not needed]
 %\usepackage[utf8]{inputenc}  % allow input utf8 chars.
 ```
+
+
+# Workflows
+
+When | Then
+:----- | :--------------
+Prepare a single equation. | `codecogs` is best.
+Write one paragraph including both inline and display equations. | `vscode + markdown plugin` is better, then copy-paste to texstudio.
+Revise context and equations. | `texsutio inline preview` is more convenient.
