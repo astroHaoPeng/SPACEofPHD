@@ -43,6 +43,19 @@ hide: true # Add a hide parameter to the the post's Front-matter to hide the pos
 
 # Logs
 
+(2019-07-02 18:38:31)
+尝试使用vscode的keybinding来实现插入自定义标签，参考[这里](https://github.com/yzhang-gh/vscode-markdown/pull/454#issuecomment-494546378)。第一次接触这么专业的工具，很有新鲜感，但是不能浪费太多时间，术业有专攻。
+```json
+{
+  "command": "editor.action.insertSnippet",
+  "args": {
+      "snippet": "{% note info %}\n$TM_SELECTED_TEXT\n{% endnote %}"
+  },
+  "key": "cmd+shift+n i",
+  "when": "editorTextFocus && editorLangId == 'markdown'"
+}
+```
+
 (2019-06-20 19:04:50)
 Remove redundant `\\` in inline equations;
 Remove `_` in post titles;

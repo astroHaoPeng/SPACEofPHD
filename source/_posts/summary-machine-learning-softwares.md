@@ -10,14 +10,16 @@ tags:
   - machine learning
   - MATLAB
   - draft
+hide: true
 date: 2019-06-09 23:05:57
 updated:
 ---
 
 One day I run across this web page of [Software for machine learning](https://www.cs.ubc.ca/~murphyk/Teaching/CS540_Fall05/software.html) but sadly find that most links are not available anymore. 
 So, I decided to make a copy and try my best to maintain the sources.
-The machine learning is a big area, so this page may be only useful to researchers in my area (aerospace engineering), who usually have limited computer science knowledge than a CS professional reseacher.
+The machine learning is a big area, so this page may be only useful to researchers in my area (aerospace engineering), who usually have limited computer science knowledge than a CS professional researcher.
 
+<!-- more -->
 
 # Checked
 
