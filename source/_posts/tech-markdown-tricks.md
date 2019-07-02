@@ -4,7 +4,7 @@ comments: true
 mathjax: false
 abbrlink: 1e880d79
 categories:
-  - 'Techniques, Softwares'
+  - [Techniques, Softwares]
 tags:
   - markdown
   - tricks

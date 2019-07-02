@@ -164,11 +164,11 @@ markdown:
     # A suffix that is prepended to the number given if the ID is repeated.
     collisionSuffix: 'v'           
     # If `true`, creates an anchor tag with a permalink besides the heading.
-    permalink: false
+    permalink: true
     # Class used for the permalink anchor tag.
     permalinkClass: header-anchor
     # The symbol used to make the permalink
-    permalinkSymbol: ¶
+    permalinkSymbol: ''
   plugins:
     - markdown-it-abbr
     - markdown-it-footnote

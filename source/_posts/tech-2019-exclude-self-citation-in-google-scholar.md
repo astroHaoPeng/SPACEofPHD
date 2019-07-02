@@ -2,14 +2,15 @@
 title: (2019 version) Excluding self-citation in Google Scholar
 comments: true
 mathjax: false
-abbrlink: 
-date: 2019-06-29 17:32:53
-updated: 2019-06-29 17:32:57
-categories: 
-  - [Techniques, Softwares]
+abbrlink: efaf52e4
+categories:
+  - - Techniques
+    - Softwares
 tags:
   - LaTeX
   - tricks
+date: 2019-06-29 17:32:53
+updated: 2019-06-29 17:32:57
 ---
 
 When you search "Excluding self-citation in Google Scholar" on Google, the first item is [[By Brinxmat]](https://infonatives.wordpress.com/2009/12/05/excluding-self-citation-in-google-scholar/).
