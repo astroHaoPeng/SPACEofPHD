@@ -31,40 +31,102 @@ Most of the content in the thesis have been published in English in top-ranking 
 # 1. Educational Background
 
 {% mermaid gantt %}
+title Dr. Hao Peng's Study Experience
 dateFormat  YYYY-MM-DD
-axisFormat  %B %Y
-title Hao's Study Experience
+axisFormat  %Y/%m
 
-section Beihang University
-Undergraduate Study    : done,    des1, 2007-09-01, 2011-07-01
-Ph.D. study            : done,    des2, after des1, 2016-06-12
-Dynamical System Summer School : done, 2009-08-01, 2009-08-20
+section Beijing, China
+Undergraduate Study at Beihang University : crit, active,    des1, 2007-09-01, 2011-07-01
+Ph.D. study at Beihang University : crit, active,    des2, after des1, 2016-06-12
+Dynamical System Summer School at Beihang University: crit, active, 2009-08-01, 2009-08-20
 
 section Barcelona, Spain
-Visiting Student to UPC : done, 2015-09-15, 2015-12-15
+Visiting Student at UPC : crit, active, 2015-09-15, 2015-12-15
 
 section Haifa, Israel
-Satellite Formation Flying Summer School : done, 2012-07-20, 2012-08-20
+Satellite Formation Flying Summer School at Technion : crit, active, 2012-07-20, 2012-08-20
 {% endmermaid %}
 
-During the undergraduate studies and 
-I have taken a lot of courses to solid my research background:
+**2011/09 -- 2016/06**: <mark>Ph.D of Engineering</mark>, Spacecraft Design
+- [Honors College of Beihang University](http://hc.buaa.edu.cn/) and School of Astronautics, Beihang University
+- Dissertation: Orbital Dynamics in the Elliptic Restricted Three-Body Problem for Deep Space Exploration (in Chinese, most chapters published in English)
+- Supervisor: Prof. Shijie Xu
 
-{% tabs Cources %}
+**2007/09 -- 2011/07**: <mark>Bachelor of Engineering</mark>, Spacecraft Design
+- [Honors College of Beihang University](http://hc.buaa.edu.cn/) and School of Astronautics, Beihang University
+- Dissertation: Venus Exploring Trajectory Optimal Design using Variable-Specific-Impulse Magnetoplasma Rocket (in Chinese)
+- Supervisor: Prof. Shijie Xu
+
+**2015.09 -- 2015.12**: Visiting Ph.D. student
+- Departament de Matemàtica Aplicada I, Universitat Politècnica de Catalunya (UPC), Barcelona, Spain
+- Supervisor: Prof. Josep J. Masdemont
+
+**2013.08 -- 2013.08**: Visiting Ph.D. student
+- Aerospace Engineering, Israel Institute of Technology (Technion), Haifa, Israel
+- Program: Satellite Formation Flying Summer School
+- Supervisor: Prof. Pini Gurfil 
+
+
+
+
+I am a man of vision. I have determined to conduct scientific research since high school.
+So, during my undergraduate and graduate studies, I have taken a lot of courses to solid my research background as much as I could.
+Compared with mastering various kinds of knowledge and skills, I always pay more attention to visionary, critical thinking and a broad vision.
+
+{% tabs Courses, 4 %}
 <!-- tab Mathematics -->
+Higher level:
+- Dynamical system theory,
+- Linear algebra, 
+- Matrix theory, 
+- Mathematical modeling,
+- Optimal control, 
+- Optimization theory and algorithm, 
+- Stochastic process, 
+
+Undergraduate level:
+- Abstract algebra, 
+- Differential geometry, 
+- Functional analysis, 
+- Partial differential equation, 
+- Wavelet analysis, 
+- Topology, 
+<!-- endtab -->
+
+<!-- tab Computer Sciences -->
+- Discrete mathematics
+- Parallel computing
+- Network Population Analysis
 <!-- endtab -->
 
 <!-- tab Physics -->
+- Celestial dynamics, 
+- Quantum mechanics, 
+- Mathematical physics
 <!-- endtab -->
 
 <!-- tab Aerospace Engineering -->
+- Attitude and Orbit Dynamics, 
+- Modern Control Theory, 
+- Robust Control Theory and Applications, 
+- Space Mission Analysis and System Design, 
 <!-- endtab -->
 
+<!-- tab Self-learned Books -->
+Only list some books that I have seriously spent a lot of time studying carefully.
+1. VI Arnol’d, Mathematical methods of classical mechanics, 1989. [[Link]](http://books.google.com/books?hl=en&lr=&id=Pd8-s6rOt_cC&oi=fnd&pg=IA2&dq=Mathematical+Methods+Of+Classical+Mechanics&ots=uKrcvJJKJt&sig=Jkk8u3TKSZfWjzrROe1u3zophv8).
+2. Wang Sang Koon, Martin W. Lo, Jerrold E. Marsden, and Shane D. Ross, Dynamical Systems, the Three-Body Problem and Space Mission Design, 2005. [[Link]](http://www2.esm.vt.edu/~sdross/books/index.html#space_book).
+3. Stephen Wiggins, Introduction to Applied Nonlinear Dynamical Systems and Chaos, New York: Springer-Verlag, 2003. [[Link]](http://link.springer.com/10.1007/b97481).
+4. Kenneth R. Meyer, Glen R. Hall, and Dan Offin, Introduction to Hamiltonian Dynamical Systems and the N-Body Problem, New York, NY: Springer New York, 2009. [[Link]](http://www.springerlink.com/index/10.1007/978-0-387-09724-4).
+5. Jeffrey S. Parker, and Rodney L. Anderson, Low-Energy Lunar Trajectory Design, Wiley, 2014. [[Link]](https://descanso.jpl.nasa.gov/monograph/series12/LunarTraj--Overall.pdf).
+6. Kyle T. Alfriend, Srinivas R. Vadali, Pini Gurfil, Jonathan P. How, and Louis S. Breger, Spacecraft Formation Flying, 2010.
+7. Victor G. Szebehely, Theory of Orbits - The Restricted Problem of Three Bodies, New York and London: Academic Press, 1967.
+8. David A. Vallado, Fundamentals of Astrodynamics and Applications, New York, NY: The McGraw-Hill Companies, Inc., 1997. [[Link]](http://www.springer.com/us/book/9780070668348).
 
+
+Find more books at my [book reading notes](../categories/Notes/Book-Notes/).
+<!-- endtab -->
 {% endtabs %}
-
-in `Math` and `Aerospace`.
-
 
 # 2. Research Interests
 
@@ -246,7 +308,7 @@ You are always welcomed to leave comments at the bottom of the page or get conta
 {% note info %}
 `(J)` indicates a peer-reviewed journal paper.\
 `(C)` indicates a conference paper.\
-Papers are listed in a recommended reading order (A chronological list of publications is [available here with download sources](http://localhost:4000/blog/cv/info-publication-list/)).
+Papers are listed in a recommended reading order on this page. ([The chronological list is here.](./publication-list))
 {% endnote %}
 <!-- citation format: Elsevier - Harvard (with titles) -->
 
@@ -424,7 +486,7 @@ This opens the opportunity to utilize such escaping feature of the trajectory to
 ## 6.3. Symmetric Four-Body Problem
 
 {% note info %}
-`(J)` Hao Peng, Duokui Yan, Shijie Xu, and Tiancheng Ouyang, “Linear stability of double–double orbits in the parallelogram four-body problem,” Journal of Mathematical Analysis and Applications, vol. 433, Jan. 2016, pp. 785–802. [[Link]](http://linkinghub.elsevier.com/retrieve/pii/S0022247X15007416).
+`(J)` Hao Peng, Duokui Yan, Shijie Xu, and Tiancheng Ouyang, “<mark>Linear stability of double–double orbits in the parallelogram four-body problem</mark>,” Journal of Mathematical Analysis and Applications, vol. 433, Jan. 2016, pp. 785–802. [[Link]](http://linkinghub.elsevier.com/retrieve/pii/S0022247X15007416).
 
 By using a variational method to discover periodic orbits with special symmetries, we are able to determine several groups of new periodic orbits in a specialized four-body problem. 
 More related studies are referred to [Prof. Duokui Yan's Google Scholar profile](https://scholar.google.com/citations?user=yxL7sJAAAAAJ&hl=en).
@@ -439,7 +501,7 @@ Most of my works are maintained in private repositories, but you are welcomed to
 
 # 7. Honors
 
-## Awards
+## 7.1. Awards
 2017 -- Beihang University Excellent Doctoral Thesis Award\
 2015 -- (China) National Scholarship Award for Graduate Students\
 2014 -- Ranked 22nd in 7th Global Trajectory Optimization Competition (GTOC) in 2014\
@@ -448,15 +510,15 @@ Most of my works are maintained in private repositories, but you are welcomed to
 2009 -- First Prize in China Undergraduate Mathematical Contest in Modeling\
 2009 -- Third Prize in Chinese Zhou Pei-Yuan Mechanics Contest
 
-## Other Scholarships
+## 7.2. Other Scholarships
 Win multiple university, college, and industrial study scholarships;\
 Win Beihang university outstanding undergraduate student scholarships;\
 Excellent undergraduate’s dissertation scholarship
 
-## Nominations
+## 7.3. Nominations
 2019 -- Regional postdoctoral competition of the Blavatnik Award for Young Scientists (see [News January, 2019](http://x-bai.rutgers.edu/news.html))
 
-# X. More About Me
+# 8. More About Me
 
 Find me at:
 
@@ -465,3 +527,8 @@ Find me at:
 [Google Scholar: https://scholar.google.com/citations?user=kOEKfc0AAAAJ&hl=zh-CN](https://scholar.google.com/citations?user=kOEKfc0AAAAJ&hl=zh-CN)
 
 [LinkedIn: https://www.linkedin.com/in/hao-peng-5499727b/](https://www.linkedin.com/in/hao-peng-5499727b/)
+
+## 8.1 Hobbies
+Photography, ...\
+Swimming, Soccer, Badminton, Ping-Pong, ...
+

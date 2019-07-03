@@ -22,33 +22,33 @@ tags:
 
 Some commands that are not easy to search for. 
 
+<!-- more -->
+
 ## \phantom
 Use `\phantom{}` (/'fæntəm/) to generate a empty space with desired horizontal length. 
 [Google results of "latex phantom".](https://www.google.com/search?q=latex+phantom&rlz=1C5CHFA_enUS803US807&oq=latex+phantom&aqs=chrome..69i57.233j0j1&sourceid=chrome&ie=UTF-8)
 
-{% note %}
 For example:
-```latex
+{% code %}
 \begin{aligned}
 A &= B + C \\
   &\phantom{=} + D
 \end{aligned}
-```
+{% endcode %}
+generates
 $$
 \begin{aligned}
 A &= B + C \\
   & + D,
 \end{aligned}
 $$
-{% endnote %}
 
-{% note %}
-```latex
+{% code %}
 \begin{aligned}
 A &= B + C + D\\
   &\phantom{=} + E
 \end{aligned}
-```
+{% endcode %}
 generates
 $$
 \begin{aligned}
@@ -56,7 +56,6 @@ A &= B + C + D\\
   &\phantom{=} + E
 \end{aligned}
 $$
-{% endnote %}
 
 Notice the alignment at the beginning of the second line.
 

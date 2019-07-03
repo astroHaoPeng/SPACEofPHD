@@ -10,6 +10,7 @@ tags:
   - statistics
   - estimation
   - aerospace
+  - draft
 comments: true
 mathjax: true
 abbrlink: 7eefaeb9
@@ -23,8 +24,9 @@ John L. Crassidis, and John L. Junkins, Optimal Estimation of Dynamic Systems, C
 Corrections **to** the book can be found at: http://ancs.eng.buffalo.edu/index.php/Optimal_Estimation_of_Dynamic_Systems_2nd_Edition
 {% endnote %}
 
-
 ## 2.5. Maximum Likelihood Estimation
+
+<!-- more -->
 
 ## 2.6. Properties of Maximum Likelihood Estimation
 
