@@ -5,19 +5,12 @@ mathjax: false
 abbrlink: 654cf420
 categories:
   - Summaries
-<<<<<<< HEAD:source/_posts/summary-software-for-machine-learning-md.md
-  - 'Techniques, Softwares'
-tags:
-  - machine learning
-  - MATLAB
-=======
   - [Techniques, Softwares]
 tags:
   - machine learning
   - MATLAB
   - draft
 hide: true
->>>>>>> ebe9745b44f8f114db617a416c866827ae10a76b:source/_posts/summary-machine-learning-softwares.md
 date: 2019-06-09 23:05:57
 updated:
 ---
