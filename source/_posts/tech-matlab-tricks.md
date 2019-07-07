@@ -25,3 +25,11 @@ updated: 2019-06-28 17:59:15
 `Hatchfill`
 
 `Hatchfill2`
+
+<!-- more  -->
+
+# 需要掌握的一些 MATLAB 函数
+
+`/lang/assert`
+
+`/strfun/string`

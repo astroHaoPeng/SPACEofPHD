@@ -301,14 +301,14 @@ BTW, my collection of useful third-party repositories is also worth a look.
 # 6. :page_facing_up: Academic Contributions
 
 Here is a list of my journal publications and conference presentations. 
-Short introductions are attached below each paper to help understanding our studies. 
+Brief introductions are attached below each paper to help understanding our studies.
+You are always welcomed to discuss or leave comments at the bottom of the page.\
+(Papers are listed in a recommended reading order.)\
+([The chronological list is available here.](./publication-list))
 
-You are always welcomed to leave comments at the bottom of the page or get contact through email.
-
-{% note info %}
-`(J)` indicates a peer-reviewed journal paper.\
-`(C)` indicates a conference paper.\
-Papers are listed in a recommended reading order on this page. ([The chronological list is here.](./publication-list))
+{% note warning %}
+`(J)` -- **peer-reviewed journal paper**.\
+`(C)` -- **conference paper**.
 {% endnote %}
 <!-- citation format: Elsevier - Harvard (with titles) -->
 
@@ -316,14 +316,17 @@ Papers are listed in a recommended reading order on this page. ([The chronologic
 
 These machine learning results are collaborative works with [Prof. Xiaoli Bai](http://x-bai.rutgers.edu/) in [Rutgers University, Mechanical and Aerospace Engineering](https://mae.rutgers.edu/). 
 
-{% tabs MLiA %}
+<img src="./machine-learning-aerospace-flowchart.png" width="300px" title="Flowchart of the proposed Machine Learning approach. (click to zoom-in)">
+
+<img src="./machine-learning-aerospace-dataset.png" width="500px" title="Illustration of the dataset used in the Machine Learning approach. (click to zoom-in)">
+
+{% tabs MLA %}
 
 <!-- tab Improve Orbit Prediction Accuracy -->
-{% note %}
 {% note info %}
-`(J)` Hao Peng, and Xiaoli Bai, “<mark>Improving orbit prediction accuracy through supervised machine learning</mark>,” Advances in Space Research, vol. 61, May 2018, pp. 2628–2646. [[Link]](http://www.sciencedirect.com/science/article/pii/S0273117718302035).
-{% endnote %}
-We presents a methodology to predict RSOs’ trajectories with higher accuracy. 
+`(J)` Hao Peng, and Xiaoli Bai, “<mark>Improving orbit prediction accuracy through supervised machine learning</mark>,” Advances in Space Research, vol. 61, May 2018, pp. 2628–2646. [[Link]](http://www.sciencedirect.com/science/article/pii/S0273117718302035).\
+==========\
+We present a methodology to predict RSOs’ trajectories with higher accuracy. 
 Inspired by the machine learning (ML) theory through which the models are learned based on large amounts of observed data and the prediction is conducted without explicitly modeling space objects and space environment, the proposed ML approach integrates physics-based orbit prediction algorithms with a learning-based process that focuses on reducing the prediction errors. 
 Using a simulation-based space catalog environment as the test bed, the paper demonstrates three types of generalization capability for the proposed ML approach: 
 1. the ML model can be used to improve the same RSO’s orbit information that is not available during the learning process but shares the same time interval as the training data;
@@ -332,72 +335,71 @@ the same RSO at future epochs;
 3. the ML model based on a RSO can be applied to other RSOs that share some common features.
 {% endnote %}
 
-{% note %}
 {% note info %}
-`(J)` Hao Peng, and Xiaoli Bai, “<mark>Exploring Capability of Support Vector Machine for Improving Satellite Orbit Prediction Accuracy</mark>,” Journal of Aerospace Information Systems, vol. 15, Jun. 2018, pp. 366–381. [[Link]](https://arc.aiaa.org/doi/10.2514/1.I010616).\
-`(C)` Peng, H., Bai, X., 2017b. Limits of Machine Learning Approach on Improving Orbit Prediction Accuracy, in: Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference. Presented at the Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference, Wailea Marriott. <https://amostech.com/TechnicalPapers/2017/Astrodynamics/Bai.pdf>
-{% endnote %}
+`(J)` Hao Peng, and Xiaoli Bai, “<mark>Exploring Capability of Support Vector Machine for Improving Satellite Orbit Prediction Accuracy</mark>,” Journal of Aerospace Information Systems, vol. 15, Jun. 2018, pp. 366–381. [[Link]](https://arc.aiaa.org/doi/10.2514/1.I010616).
+`(C)` Peng, H., Bai, X., 2017b. Limits of Machine Learning Approach on Improving Orbit Prediction Accuracy, in: Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference. Presented at the Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference, Wailea Marriott. <https://amostech.com/TechnicalPapers/2017/Astrodynamics/Bai.pdf>\
+==========\
 In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
 {% endnote %}
 
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Artificial Neural Network–Based Machine Learning Approach to Improve Orbit Prediction Accuracy</mark>,” Journal of Spacecraft and Rockets, vol. 55, Sep. 2018, pp. 1248–1260. [[Link]](https://arc.aiaa.org/doi/10.2514/1.A34171).\
-`(C)` Peng, H., Bai, X., 2018. Using Artificial Neural Network in Machine Learning Approach to Improve Orbit Prediction Accuracy. American Institute of Aeronautics and Astronautics. <https://doi.org/10.2514/6.2018-1966> [has a journal-version]
-{% endnote %}
+`(C)` Peng, H., Bai, X., 2018. Using Artificial Neural Network in Machine Learning Approach to Improve Orbit Prediction Accuracy. American Institute of Aeronautics and Astronautics. <https://doi.org/10.2514/6.2018-1966> [has a journal-version]\
+==========\
 In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
 {% endnote %}
 
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Gaussian Processes for improving orbit prediction accuracy</mark>,” Acta Astronautica, vol. 161, Aug. 2019, pp. 44–56. [[Link]](https://linkinghub.elsevier.com/retrieve/pii/S0094576518320344).\
-`(C)` Peng, H., Bai, X., 2018d. Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT.
-{% endnote %}
+`(C)` Peng, H., Bai, X., 2018d. Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT.\
+==========\
 In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
 {% endnote %}
 
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Comparative Evaluation of Three Machine Learning Algorithms on Improving Orbit Prediction Accuracy (accepted)</mark>,” Astrodynamics, vol. 0, 2019, p. 0.\
-`(C)` Peng, H., Bai, X., 2018b. Comparison of Effective Machine Learning Algorithms on Improving Orbit Prediction Accuracy, in: 69th International Astronautical Congress (IAC). Presented at the 69th International Astronautical Congress (IAC), Bremen, Germany, pp. 1–12.
-{% endnote %}
+`(C)` Peng, H., Bai, X., 2018b. Comparison of Effective Machine Learning Algorithms on Improving Orbit Prediction Accuracy, in: 69th International Astronautical Congress (IAC). Presented at the 69th International Astronautical Congress (IAC), Bremen, Germany, pp. 1–12.\
+==========\
 In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
 {% endnote %}
 
 <!-- endtab -->
 
-<!-- tab Using Real Satellite Data: TLE & ILRS -->
-ILRS := International Laser Ranging Services
+<!-- tab Extend to Real Satellite Data from TLE & ILRS -->
+{% note warning %}
+TLE -- Two-Line Element (data format), available at [Space-Track.org](https://www.space-track.org/) and [CelesTrak.com](https://celestrak.com/).\
+ILRS -- International Laser Ranging Service, available at [ILRS website](https://ilrs.cddis.eosdis.nasa.gov/about/index.html).
+{% endnote %}
 
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Machine Learning Approach to Improve Satellite Orbit Prediction Accuracy Using Publicly Available Data</mark>,” The Journal of the Astronautical Sciences, May 2019. [[Link]](http://link.springer.com/10.1007/s40295-019-00158-3).\
-`(C)` Peng, H., Bai, X., 2018a. A Machine Learning Approach to Improve Satellite Orbit Prediction Accuracy: Validation Using Publicly Available Data, in: John L. Junkins Dynamical Systems Symposium. Presented at the John L. Junkins Dynamical Systems Symposium, College Station, TX.
-{% endnote %}
+`(C)` Peng, H., Bai, X., 2018a. A Machine Learning Approach to Improve Satellite Orbit Prediction Accuracy: Validation Using Publicly Available Data, in: John L. Junkins Dynamical Systems Symposium. Presented at the John L. Junkins Dynamical Systems Symposium, College Station, TX.\
+==========\
 In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
 {% endnote %}
 
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Gaussian Processes for improving orbit prediction accuracy</mark>,” Acta Astronautica, vol. 161, Aug. 2019, pp. 44–56. [[Link]](https://linkinghub.elsevier.com/retrieve/pii/S0094576518320344).\
-`(C)` Peng, H., Bai, X., 2018d. Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT.
-{% endnote %}
+`(C)` Peng, H., Bai, X., 2018d. Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT.\
+==========\
 In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
 {% endnote %}
 
-{% note %}
 {% note info %}
-`(C)` Peng, H., Bai, X., 2018c. <mark>Generalization Capability of Machine Learning Approach Among Different Satellites: Validated Using TLE Data</mark>, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT, pp. 1--17.
-{% endnote %}
+`(C)` Peng, H., Bai, X., 2018c. <mark>Generalization Capability of Machine Learning Approach Among Different Satellites: Validated Using TLE Data</mark>, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT, pp. 1--17.\
+==========\
 In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
 {% endnote %}
 <!-- endtab -->
 
-<!-- tab HAMR (High Area-to-Mass-Ratio) Objects -->
-{% note %}
-{% note info %}
-`(J)` Hao Peng, and Xiaoli Bai, “<mark>Recovering Area-to-Mass Ratio of Resident Space Objects through Data Mining</mark>,” Acta Astronautica, vol. 142, Jan. 2018, pp. 75–86. [[Link]](http://www.sciencedirect.com/science/article/pii/S0094576517304058).
+<!-- tab Extend to HAMR Objects -->
+{% note warning %}
+HAMR -- High Area-to-Mass-Ratio, complicated attitude-orbit-coupled dynamics, usually more sensitive to attitude dependent forces like atmosphere drag or solar radiation pressure.
 {% endnote %}
+
+{% note info %}
+`(J)` Hao Peng, and Xiaoli Bai, “<mark>Recovering Area-to-Mass Ratio of Resident Space Objects through Data Mining</mark>,” Acta Astronautica, vol. 142, Jan. 2018, pp. 75–86. [[Link]](http://www.sciencedirect.com/science/article/pii/S0094576517304058).\
+==========\
 Using random forest (RF) as the either a classification or a regression tool, we show that it is possible to recover the information of an unknown RSO. 
 This capability is critical for SSA. 
 <!-- endtab -->
@@ -409,72 +411,66 @@ This capability is critical for SSA.
 
 {% tabs RTBP %}
 <!-- tab ME-Halo Orbit -->
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and Shijie Xu, “<mark>Stability of two groups of multi-revolution elliptic halo orbits in the elliptic restricted three-body problem</mark>,” Celestial Mechanics & Dynamical Astronomy, vol. 123, Nov. 2015, pp. 279–303. [[Link]](http://link.springer.com/10.1007/s10569-015-9635-2).\
-`(C)` Peng, H., Xu, S., 2014b. Numerical stability study of multi-circle elliptic halo orbit in the elliptic restricted three-body problem, in: AAS/AIAA Spaceflight Mechanics Conference 2015. Presented at the AAS/AIAA Spaceflight Mechanics Conference 2015, Laurel, pp. 1–20. [has a journal-version] 
-{% endnote %}
+`(C)` Peng, H., Xu, S., 2014b. Numerical stability study of multi-circle elliptic halo orbit in the elliptic restricted three-body problem, in: AAS/AIAA Spaceflight Mechanics Conference 2015. Presented at the AAS/AIAA Spaceflight Mechanics Conference 2015, Laurel, pp. 1–20. [has a journal-version] \
+==========\
 We find that the ME-Halo orbit shows very different evolution of stability characteristics than conventional Halo orbits.
 Generally speaking, they are very unstable, including several bifurcations of their characteristic curves in the phase space.
 {% endnote %}
 
-{% note %}
 {% note info %}
-`(J)` Hao Peng, Xiaoli Bai, and Shijie Xu, “<mark>Continuation of periodic orbits in the Sun-Mercury elliptic restricted three-body problem</mark>,” Communications in Nonlinear Science and Numerical Simulation, vol. 47, Jun. 2017, pp. 1–15. [[Link]](http://linkinghub.elsevier.com/retrieve/pii/S100757041630404X).
-{% endnote %}
+`(J)` Hao Peng, Xiaoli Bai, and Shijie Xu, “<mark>Continuation of periodic orbits in the Sun-Mercury elliptic restricted three-body problem</mark>,” Communications in Nonlinear Science and Numerical Simulation, vol. 47, Jun. 2017, pp. 1–15. [[Link]](http://linkinghub.elsevier.com/retrieve/pii/S100757041630404X).\
+==========\
 A tangent continuation strategy along with the multi-segment optimization method is developed to constructing ME-Halo orbit in the highly elliptic Sun-Mercury system.
 {% endnote %}
 <!-- endtab -->
 
 <!-- tab Transfer Trajectory to ME-Halo -->
-{% note %}
 {% note info %}
-`(J)` Hao Peng, Xiaoli Bai, Josep J. Masdemont, Gerard Gómez, and Shijie Xu, “<mark>Libration Transfer Design Using Patched Elliptic Three-Body Models and Graphics Processing Units</mark>,” Journal of Guidance, Control, and Dynamics, vol. 40, Dec. 2017, pp. 3155–3166. [[Link]](https://arc.aiaa.org/doi/10.2514/1.G002692).
-{% endnote %}
+`(J)` Hao Peng, Xiaoli Bai, Josep J. Masdemont, Gerard Gómez, and Shijie Xu, “<mark>Libration Transfer Design Using Patched Elliptic Three-Body Models and Graphics Processing Units</mark>,” Journal of Guidance, Control, and Dynamics, vol. 40, Dec. 2017, pp. 3155–3166. [[Link]](https://arc.aiaa.org/doi/10.2514/1.G002692).\
+==========\
 The usage of ERTBP enables using GPU parallel computing to design transfer trajectories efficiently.
 The GPU parallel computing is implemented through MATLAB which is easier to master for engineers with limited computer science expertise.
 {% endnote %}
 
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and Shijie Xu, “<mark>Transfer to a Multi-Revolution Elliptic Halo Orbit in Earth-Moon Elliptic Restricted Three-Body Problem Using Stable Manifold</mark>,” Advances in Space Research, vol. 55, Nov. 2015, pp. 1015–1027. [[Link]](http://linkinghub.elsevier.com/retrieve/pii/S0273117714007169).\
-`(C)` Peng, H., Xu, S., 2014a. Transfer to Multi-circle Elliptic Halo Orbit in Earth-Moon Elliptic Restricted Three-Body Problem, in: 24th International Symposium on Space Flight Dynamics - 24th ISSFD. Presented at the 24th International Symposium on Space Flight Dynamics - 24th ISSFD, Laurel, pp. 1–15. [has a journal-version] 
-{% endnote %}
+`(C)` Peng, H., Xu, S., 2014a. Transfer to Multi-circle Elliptic Halo Orbit in Earth-Moon Elliptic Restricted Three-Body Problem, in: 24th International Symposium on Space Flight Dynamics - 24th ISSFD. Presented at the 24th International Symposium on Space Flight Dynamics - 24th ISSFD, Laurel, pp. 1–15. [has a journal-version] \
+==========\
+TBD.
 {% endnote %}
 
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and ShiJie Xu, “<mark>Low-energy transfers to a Lunar multi-revolution elliptic halo orbit</mark>,” Astrophysics and Space Science, vol. 357, May 2015, p. 87. [[Link]](http://link.springer.com/10.1007/s10509-015-2236-4)\
 `(C)` Peng, H., Xu, S., Shu, L., 2015b. Low-energy transfers to an earth-moon multi-revolution elliptic halo orbit, in: AAS/AIAA Spaceflight Mechanics Conference 2015. Presented at the AAS/AIAA Spaceflight Mechanics Conference 2015, Williamsburg, VA, pp. 1–19. [has a journal-version]\
-{% endnote %}
+==========\
+TBD.
 {% endnote %}
 <!-- endtab -->
 
 <!-- tab ME-Halo Maintenance & Applications-->
-{% note %}
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Natural Deep Space Satellite Constellation in the Earth-Moon Elliptic System</mark>,” Acta Astronautica, vol. 153, Dec. 2018, pp. 240–258. [[Link]](https://linkinghub.elsevier.com/retrieve/pii/S0094576517313322).\
-`(C)` Peng, H., Bai, X., 2017a. New Natural Formation Flying Configurations in the Earth-Moon Elliptic Three-Body System, in: 9th International Workshop on Satellite Constellations and Formation Flying. Presented at the 9th International Workshop on Satellite Constellations and Formation Flying, University of Colorado Boulder. [has a journal-version] 
-{% endnote %}
+`(C)` Peng, H., Bai, X., 2017a. New Natural Formation Flying Configurations in the Earth-Moon Elliptic Three-Body System, in: 9th International Workshop on Satellite Constellations and Formation Flying. Presented at the 9th International Workshop on Satellite Constellations and Formation Flying, University of Colorado Boulder. [has a journal-version] \
+==========\
 The previously developed ME-Halo orbit can be used to design new space constellations in the Earth-Moon system. 
 The prototype developed under the ERTBP model is expected to be more realistic and reliable, since it has taken the eccentricity of the Earth-Moon system into consideration.
 {% endnote %}
 
-{% note %}
 {% note info %}
 `(J)` Hao Peng, Yuxin Liao, Xiaoli Bai, and Shijie Xu, “<mark>Maintenance of Libration Point Orbit in Elliptic Sun-Mercury Model</mark>,” IEEE Transactions on Aerospace and Electronic Systems, vol. PP, 2017, pp. 1–15. [[Link]](http://ieeexplore.ieee.org/document/8010413/).\
-`(C)` Peng, H., Liao, Y., Jia, S., 2016. Maintain a libration point orbit in the Sun-Mercury elliptic restricted system, in: 26th AAS/AIAA Space Flight Mechanics Meeting. Presented at the 26th AAS/AIAA Space Flight Mechanics Meeting, Napa, CA, pp. 1–18. [has a journal-version] 
-{% endnote %}
+`(C)` Peng, H., Liao, Y., Jia, S., 2016. Maintain a libration point orbit in the Sun-Mercury elliptic restricted system, in: 26th AAS/AIAA Space Flight Mechanics Meeting. Presented at the 26th AAS/AIAA Space Flight Mechanics Meeting, Napa, CA, pp. 1–18. [has a journal-version] \
+==========\
 With the capability of constructing any ME-Halo orbit in the Sun-Mercury system, we further studied the controllability of an ME-Halo orbit, under both the ERTBP model and the more realistic ephemeris model.
 We notice that the solar radiation pressure force is not considered in this study, but it should not invalidate the results as it can be accommodated as a centrifugal	force in the current framework. 
 {% endnote %}
 <!-- endtab -->
 
 <!-- tab Non-conservative Energy in ERTBP -->
-{% note %}
 {% note info %}
-`(C)` Peng, H., Qi, Y., Xu, S., Li, Y., 2015a. Numerical energy analysis of the escape motion in the elliptic restricted three-body problem, in: AAS/AIAA Spaceflight Mechanics Conference 2015. Presented at the AAS/AIAA Spaceflight Mechanics Conference 2015, Williamsburg, VA, pp. 1–19.
-{% endnote %}
+`(C)` Peng, H., Qi, Y., Xu, S., Li, Y., 2015a. Numerical energy analysis of the escape motion in the elliptic restricted three-body problem, in: AAS/AIAA Spaceflight Mechanics Conference 2015. Presented at the AAS/AIAA Spaceflight Mechanics Conference 2015, Williamsburg, VA, pp. 1–19.\
+==========\
 The Earth-Moon ERTBP model is demonstrated to non-conservative in the inertial energy.
 This opens the opportunity to utilize such escaping feature of the trajectory to design a low-energy escaping trajectory, or vice verse, a low-energy capturing trajectory.
 {% endnote %}
@@ -492,11 +488,15 @@ By using a variational method to discover periodic orbits with special symmetrie
 More related studies are referred to [Prof. Duokui Yan's Google Scholar profile](https://scholar.google.com/citations?user=yxL7sJAAAAAJ&hl=en).
 {% endnote %}
 
+## 6.4. Asteroid Exploration
 
-## 6.4. Codes of Publications
+TBD.
 
-Some of my codes are shared publicly on [GitHub](https://github.com/AstroH-Peng), such as some [MATLAB multiple-shooting demos](https://github.com/AstroH-Peng/multipleShooting). 
+## Codes of Above Publications
+Some of my codes are shared publicly on [GitHub](https://github.com/AstroH-Peng), such as some [MATLAB multiple-shooting demos](https://github.com/AstroH-Peng/multipleShooting).
+
 Most of my works are maintained in private repositories, but you are welcomed to ask for the codes. 
+
 
 
 # 7. Honors
