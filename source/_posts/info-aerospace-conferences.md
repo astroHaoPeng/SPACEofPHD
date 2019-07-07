@@ -11,18 +11,16 @@ date: 2018-01-20 17:16:10
 updated: 2019-05-02 17:05:53
 abbrlink: info-aerospace-conferences
 mathjax: 
-sticky: 1000
+sticky: 100
 ---
 
 # Call-for-abstract
 
 - Open | Conference Date | Name | Location | <mark>**Abstract Deadline (chronological order)**</mark>
-- [x] | 20200106-10 | [SciTech 2020](https://www.aiaa.org/SciTech) | Orlando, FL |<mark> [**20190611**](https://www.aiaa.org/SciTech/presentations-papers/call-for-papers)</mark>
-- [x] | 20200106-10 | [30th AIAA/AAS Space Flight Mechanics Meeting](http://www.space-flight.org/conferences.html) | Orlando, FL | <mark>[**20190611**](http://www.space-flight.org/docs/2020_winter/CallForPapers2020.pdf)</mark>
-- [x] | 201908 | [中国宇航学会深空探测技术专业委员会第十六届学术年会](https://mp.weixin.qq.com/s/MUOMuj-offzomaOpPGmZkw) | 山东青岛 | <mark>20190630</mark>
-- [x] | 20190920-23 | [第十一届全国多体动力学与控制暨第六届全国航天动力学与控制和第十四届全国分析力学联合学术会议](http://maadycc2019.csp.escience.cn/dct/page/1) | 湖南长沙 | <mark>[**20190701**](http://maadycc2019.csp.escience.cn/dct/page/70003)</mark>
+- [ ] | 20200130-0205 | [43rd Annual AAS Guidance, Navigation and Control Conference - Rocky Mountain Region](https://aas-rocky-mountain-section.org/) | Breckenridge, Colorado | <mark>20190906</mark>
 - [ ] | 20200316-20 | [51st Lunar and Planetary Science Conference](https://www.hou.usra.edu/meetings/lpsc2020/) | The Woodlands, Texas | null
 - [ ] | ??? | [International Conference on Astrodynamics Tools and Techniques (ICATT)](https://trajectory.estec.esa.int/Astro/ICATT/ICATT_Home.html) | future null
+- [ ] | 20190625-27 | 2nd IAA/AAS SciTech Forum | Moscow, Russia | 20190518
 
 <!-- more -->
 > NOTICE: 
@@ -47,7 +45,9 @@ ul li, ol li {
 
 ## 2020
 - Done | <mark>**Conference Date (reverse order)**</mark> | Name | Location | Abstract Deadline | Others
-- null
+- [ ] | **20200106-10 | [30th AIAA/AAS Space Flight Mechanics Meeting](http://www.space-flight.org/conferences.html) | Orlando, FL | [20190611](http://www.space-flight.org/docs/2020_winter/CallForPapers2020.pdf)**
+- [ ] | 20200106-10 | [SciTech 2020](https://www.aiaa.org/SciTech) | Orlando, FL | [**20190611**](https://www.aiaa.org/SciTech/presentations-papers/call-for-papers)
+
 
 ## 2019
 - Done | <mark>**Conference Date (reverse order)**</mark> | Name | Location | Abstract Deadline | Others
@@ -56,8 +56,10 @@ ul li, ol li {
 - [ ] | 20191104-08 | [The 4th COSPAR Symposium: Small satellites for sustainable Science And Development](http://www.cospar2019.org/) | Herzliya, Israel | [20190430](http://www.cospar2019.org/call-for-abstracts/)
 - [ ] | 20191028-29 | [Symposium: 2nd IAA Symposium STEAM for Space leaders of tomorrow](http://iaaweb.org/content/view/769/1013/) | Cambridge, USA | null
 - [ ] | 20191021-25 | [70th International Astronautical Congress (IAC) 2019](https://www.iac2019.org/) | Washington D.C. | [20190228](http://www.iafastro.org/wp-content/uploads/2018/10/Call-for-Papers-IAC2019_2018-10-09_FINAL_updated_online.pdf) | *We have one paper.*
+- [ ] | 20190920-23 | [第十一届全国多体动力学与控制暨第六届全国航天动力学与控制和第十四届全国分析力学联合学术会议](http://maadycc2019.csp.escience.cn/dct/page/1) | 湖南长沙 | [20190701](http://maadycc2019.csp.escience.cn/dct/page/70003)
 - [ ] | 20190917-20 | [AMOS: Advanced Maui Optical and Space Surveillance Technologies Conference](https://amostech.com/) | Maui, HI | [20190301](https://amostech.com/amos-speakers/#papers)
 - [ ] **| 20190811-15 | [2019 AAS/AIAA Astrodynamics Specialist Conference](http://www.space-flight.org/docs/2019_summer/2019_summer.html) | Portland, ME | [20190405](http://www.space-flight.org/docs/2019_summer/CallForPapers2019.pdf) | *We have two papers.***
+- [ ] | 201908 | [中国宇航学会深空探测技术专业委员会第十六届学术年会](https://mp.weixin.qq.com/s/MUOMuj-offzomaOpPGmZkw) | 山东青岛 | 20190630
 - [x] | 20190603-05 | [2019 IAA Low-Cost Planetary Missions Conference](http://iaaweb.org/content/view/761/1001/) | Toulouse, France | 20190415
 - [x] | 20190521-24 | [7th International Conference Space Technologies: Present and Future](http://iaaweb.org/content/view/762/1002/) | Dnepr, Ukraine | 20190330
 - [x] | 20190506-10 | [12th IAA Symposium on Small Satellites for Earth Observation](http://smallsat.iaaweb.org) | Berlin, Germany | 20181031

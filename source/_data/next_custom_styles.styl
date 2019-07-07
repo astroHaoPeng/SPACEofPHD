@@ -3,12 +3,13 @@
 // add background
 body { 
     height: 100%;
-    background:url(../uploads/"Gaia's-Milky-Way.jpg");
+    // background:url(../uploads/"Gaia's-Milky-Way.jpg");
+    background:url(../uploads/heic0611b_Hubble_Ultra_Deep_Field.jpg);
     //background-repeat:no-repeat;
     background-size:contain; 
     background-position:center;
     //background-attachment:fixed;
-    opacity: 0.9;
+    opacity: 0.95;
 }
 
 // // expand toc on all post
@@ -29,12 +30,18 @@ body {
 }
 
 // show more condensed lists
-ul, ol {
-    padding-inline-start: 1.5em;
-    // margin-top: -1ex;
-    // white-space: nowrap;
-    // overflow: hidden;
-    // overflow-x: auto;
+p+ul, p+ol, div>ul, div>ol {
+  padding-inline-start: 2em;
+  margin-block-start: -10px;
+  margin-block-end: 10px;
+  // white-space: nowrap;
+  // overflow: hidden;
+  // overflow-x: auto;
+}
+ul.category-list, ul.category-list-child {
+  padding-inline-start: 2.5em !important;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
 // ul li, ol li {
 //     text-align: left;
@@ -69,15 +76,21 @@ ul, ol {
 .post-body {
   h1 {
     font-size: 2em;
-    margin: 0 0 5px 0;
+    // margin: 0 0 5px 0;
+    font-family: "Vollkorn Semi-Bold";
+    // font-style: italic;
   }
   h2 {
     font-size: 1.5em;
-    margin: 0 0 5px 10px;
+    // margin: 0 0 5px 10px;
   }
   h3 {
     font-size: 1.2em;
-    margin: 0 0 5px 20px;
+    // margin: 0 0 5px 20px;
+  }
+  h4 {
+    font-size: 1.0em;
+    // margin: 0 0 5px 20px;
   }
 }
 

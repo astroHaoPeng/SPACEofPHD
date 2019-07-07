@@ -168,7 +168,7 @@ markdown:
     # Class used for the permalink anchor tag.
     permalinkClass: header-anchor
     # The symbol used to make the permalink
-    permalinkSymbol: ¶
+    permalinkSymbol: ''
   plugins:
     - markdown-it-abbr
     - markdown-it-footnote
@@ -195,3 +195,17 @@ tag_cloud:
     textHeight: 12
     outlineColor: '#FFFFFF'  #'#E2E1D1'
     maxSpeed: 0.05 # range from [0.01 ~ 1]
+
+# https://github.com/lzane/hexo-light-gallery
+lightgallery:
+  # if you don't specify the css or js source, the default cdn will be used.
+  # css: # css source url
+  # js: #js source url
+  # sorry that I can not find any cdn hosting following plugins,
+  # please self-host the plugin js and add url here
+  # plugins:
+    # lg-thumbnail:
+    # lg-zoom:
+    # lg-autoplay:
+    # lg-fullscreen:
+    # lg-pager:

@@ -1,22 +1,32 @@
 ---
-title: summary_software_for_machine_learning.md
+title: summary software for machine learning
 comments: true
 mathjax: false
 abbrlink: 654cf420
 categories:
   - Summaries
+<<<<<<< HEAD:source/_posts/summary-software-for-machine-learning-md.md
   - 'Techniques, Softwares'
 tags:
   - machine learning
   - MATLAB
+=======
+  - [Techniques, Softwares]
+tags:
+  - machine learning
+  - MATLAB
+  - draft
+hide: true
+>>>>>>> ebe9745b44f8f114db617a416c866827ae10a76b:source/_posts/summary-machine-learning-softwares.md
 date: 2019-06-09 23:05:57
 updated:
 ---
 
 One day I run across this web page of [Software for machine learning](https://www.cs.ubc.ca/~murphyk/Teaching/CS540_Fall05/software.html) but sadly find that most links are not available anymore. 
 So, I decided to make a copy and try my best to maintain the sources.
-The machine learning is a big area, so this page may be only useful to researchers in my area (aerospace engineering), who usually have limited computer science knowledge than a CS professional reseacher.
+The machine learning is a big area, so this page may be only useful to researchers in my area (aerospace engineering), who usually have limited computer science knowledge than a CS professional researcher.
 
+<!-- more -->
 
 # Checked
 

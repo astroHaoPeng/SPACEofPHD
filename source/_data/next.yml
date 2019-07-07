@@ -113,6 +113,9 @@ github_banner:
 # SEO Settings
 # ---------------------------------------------------------------
 
+# Disable Baidu transformation on mobile devices.
+disable_baidu_transformation: true
+
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
 # Tips: Before you open this tag, remember set up your URL in hexo _config.yml ( ex. url: http://yourdomain.com )
@@ -140,15 +143,13 @@ menu:
   Dr. Hao Peng:
     default: cv/ || user  #list
     Publication List: publication-list/ || list
-  # New Updates: new-updates/ || hand-spock-o
   Articles: archives/ || archive
   Categories: categories/ || th-list
   Tags: tags/ || tags
-  Conference Info.: info-aerospace-conferences/ || users
+  Conference Notice: info-aerospace-conferences/ || users
+
+  # New Updates: new-updates/ || hand-spock-o
   # Publications: publication-list/ || list
-  #Posts: categories/学术/ || newspaper-o
-  #Notes: categories/笔记/ || sticky-note-o
-  # archives: /archives/ || archive
   #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
@@ -301,7 +302,7 @@ auto_excerpt:
 # Post meta display settings
 post_meta:
   item_text: true
-  created_at: true
+  created_at: false
   updated_at:
     enabled: true
     # If true, show updated date label only if `updated date` different from 'created date' (post edited in another day than was created).
@@ -332,7 +333,7 @@ codeblock:
 # Wechat Subscriber
 wechat_subscriber:
   enabled: false
-  qcode: /uploads/qrcode_for_gh_680cad214213_344.jpg
+  qcode: /uploads/
   description: SPACEofPHD
 
 # Reward
@@ -392,7 +393,7 @@ custom_logo:
 highlight_theme: normal
 
 # Enable "cheers" for archive page.
-cheers_enabled: false
+cheers: false
 
 # Manual define the max content width
 # !!Only available for Gemini Scheme currently
@@ -417,7 +418,7 @@ cheers_enabled: false
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 font:
-  enable: false
+  enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default).
   host:
@@ -437,7 +438,7 @@ font:
   # Fallback to `global` font settings.
   headings:
     external: true
-    family:
+    family: 
     size:
 
   # Font settings for posts.
@@ -451,7 +452,7 @@ font:
   # Fallback to `global` font settings.
   logo:
     external: true
-    family:
+    family: New Rocker
     size:
 
   # Font settings for <code> and code blocks.
@@ -755,7 +756,7 @@ local_search:
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
   # show top n results per article, show all results by setting to -1
-  top_n_per_article: -1
+  top_n_per_article: 5
   # unescape html strings to the readable one
   unescape: false
 
@@ -800,7 +801,7 @@ label: true
 tabs:
   enable: true
   transition:
-    tabs: true
+    tabs: false
     labels: true
   border_radius: 0
 

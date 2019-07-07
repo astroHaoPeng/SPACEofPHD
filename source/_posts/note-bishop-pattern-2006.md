@@ -6,10 +6,11 @@ categories:
 tags:
   - book
   - machine learning
+  - Bayesian inference
 mathjax: true
 abbrlink: 97ae8555
 date: 2018-09-26 16:15:43
-updated: 2019-06-07 12:09:43
+updated: 2019-06-15 17:54:17
 ---
 
 {% note info %}
@@ -23,15 +24,6 @@ It is *incorrect* to trying to understand the book through reading this post.
 Basically, I was just trying to simplify the book by extracting only useful definitions, equations, formulas, and explanations.
 So, to understand the context here, one should <mark>study the PRML book first</mark>.
 
-<mark>TODO:</mark>
-- see (#15-decision-theory), something about loss functions
-- see (#23-gaussian-distribution)
-- see (#35-evidence-approximation)
-- see (#57-bayesian-neural-networks)
-- see (#64-gaussian-processes)
-- see (#9-mixture-models-and-em-expectation-maximization)
-
-
 {% note success %}
 (p23) This book places a strong emphasis on the Bayesian viewpoint, reflecting the huge growth in the practical importance of Bayesian methods in the past few years, while also discussing useful frequentist concepts as required.
 {% endnote %}
@@ -41,7 +33,20 @@ So, to understand the context here, one should <mark>study the PRML book first</
 
 <!-- more -->
 
-# 1
+
+<mark>TODO:</mark>
+- see (#15-decision-theory), something about loss functions
+- ~~see (#23-gaussian-distribution)~~
+- ~~see (#35-evidence-approximation)~~
+- see all sections **marked as (to read)**.
+- see (#57-bayesian-neural-networks)
+- see (#64-gaussian-processes)
+- see (#9-mixture-models-and-em-expectation-maximization)
+
+
+
+
+# 1. Introduction
 
 ## 1.2 Probability Theory
 
@@ -177,9 +182,13 @@ $$ {\rm KL}(p||q) \approx \sum_{n=1}^N \left\{-\ln q(\bm{x}_n|\bm{\theta})+\ln p
 
 > Minimizing this Kullback-Leibler divergence is equivalent to maximizing the likelihood function.
 
-# 2
+# 2 PROBABILITY DISTRIBUTIONS
 
 ## 2.3 Gaussian Distribution
+
+> (p79) This section will be rather more technically involved than some of the earlier sections, and will require familiarity with various matrix identities.
+> However, we strongly encourage the reader to become proficient in manipulating Gaussian distributions using the techniques presented here as this will prove invaluable in understanding the more complex models presented in later chapters.
+
 Gaussian Distribution:
 $$
 \mathcal{N}(\bm{x}|\bm{\mu},\Sigma) = \frac{1}{(2\pi)^{D/2}} \frac{1}{|\Sigma|^{1/2}} \exp \left[ -\frac{1}{2}(\bm{x}-\bm{\mu})^T \Sigma^{-1} (\bm{x}-\bm{\mu}) \right]
@@ -245,7 +254,7 @@ $$p(\bm{x}_a) = \mathcal{N}(\bm{x}_a|\bm{\mu}_a,\Sigma_{aa})   \tag{2.98}$$
 
 
 
-### Bayes’ theorem for Gaussian variables
+### 2.3.3 Bayes’ theorem for Gaussian variables
 GIVEN:
 - Gaussian marginal distribution $p(\bm{x}) = \mathcal{N}(\bm{x}|\bm{\mu},\Lambda^{-1})$
 - Gaussian conditional distribution $p(\bm{y}|\bm{x}) = \mathcal{N}(\bm{y}|A\bm{x}+\bm{b},L^{-1})$
@@ -258,8 +267,66 @@ $$p(\bm{y}) = \mathcal{N}(\bm{y}|A\bm{\mu}+\bm{b},L^{-1}+A\Lambda^{-1}A^T) \tag{
 $$p(\bm{x}|\bm{y}) = \mathcal{N}(\Sigma[A^TL(\bm{y}-\bm{b})+A\bm{\mu}],\Sigma))\tag{2.112 or 2.116}$$
 $$\Sigma = (\Lambda+A^TLA)^{-1}$$
 
-### Bayesian inference for the Gaussian (p.97)
+### 2.3.4 Maximum likelihood for the Gaussian
+
+Given a dataset $\bm{X}=\{\bm{x}_1,\dots,\bm{x}_N\}^T$ drawn independently from a multivariate Gaussian distribution.
+
+Likelihood:
+$$ \ln p(\bm{X}|\bm{\mu},\Sigma)   \tag{2.118 left}$$
+
+Maximum likelihood estimations:
+$$ \bm{\mu}_{\rm ML} = \frac{1}{N} \sum_{n=1}^N \bm{x}_n   \tag{2.121}$$
+$$ \Sigma_{\rm ML} = \frac{1}{N} \sum_{n=1}^N (\bm{x}_n-\bm{\mu}_{\rm ML}) (\bm{x}_n-\bm{\mu}_{\rm ML})^T $$
+
+Expectation of the maximum likelihood estimate:
+$$ \mathbb{E}[\bm{\mu}_{\rm ML}] = \frac{1}{N} \sum \mathbb{E}[\bm{x}_n] = \mathbb{E}[\bm{x}_n]   \tag{2.123}$$
+$$ 
+\begin{aligned}
+\mathbb{E}[\Sigma_{\rm ML}] 
+&= \mathbb{E}\left[ \frac{1}{N} \sum_n \left( \bm{x}_n^2 - 2\bm{\mu}_{\rm ML}\bm{x}_n + \bm{\mu}_{\rm ML}^2 \right) \right]\\
+&= \frac{1}{N} \mathbb{E}\left[ \sum_n \bm{x}_n^2 - 2N\bm{\mu}_{\rm ML}^2 + N\bm{\mu}_{\rm ML}^2 \right]\\
+&= \frac{1}{N} \mathbb{E}\left[ \sum_n \bm{x}_n^2 - N\bm{\mu}_{\rm ML}^2 \right]\\
+&= \mathbb{E}[\bm{x}_n^2] - \mathbb{E}[\bm{\mu}_{\rm ML}^2] \\
+&= \mathbb{E}[\bm{x}_n^2] - \frac{1}{N^2}\sum_{n,m}\mathbb{E}\left[\bm{x}_n\bm{x}_m\right] \\
+&= \mathbb{E}[\bm{x}_n^2] - \frac{1}{N^2}N\mathbb{E}[\bm{x}_n^2]\\
+&= \frac{N-1}{N} \mathbb{E}[\bm{x}_n^2] = \frac{N-1}{N} \Sigma
+\end{aligned}
+\tag{2.124 + derivation}
+$$
+Correct the biased estimate in Eq. (2.124) as:
+$$ \tilde{\Sigma} = \frac{1}{N-1} \sum_n (\bm{x}_n-\bm{\mu}_{\rm ML}) (\bm{x}_n-\bm{\mu}_{\rm ML})^T $$
+
+> (p97) Maximum likelihood framework gave point estimates for the parameters $\bm{\mu}$ and $\Sigma$.
+
+### 2.3.5 Sequential estimation
+
+### 2.3.6 Bayesian inference for the Gaussian (p.97)
 Did not finish this part of reading.
+
+### 2.3.7 Student's t-distribution
+
+Student's t-distribution is obtained by adding up an infinite number of Gaussian distributions having the same means but different precisions.\
+This can be interpreted as an infinite mixture of Gaussians.\
+This gives the t-distribution an important property called *robustness*, which means that it is much less sensitive than the Gaussian to the presence of a few data points which are *outliers*.
+
+### 2.3.8 Periodic variables
+
+### 2.3.9 Mixtures of Gaussians
+
+> By using a sufficient number of Gaussians and by adjusting their means and covariances as well as the coefficients in the linear combination, almost any continuous density can be approximated to arbitrary accuracy. <span style="color:red">(Why it is "almost"? An counterexample?)</span>
+
+$$ \ln p(\bm{X}|\bm{\pi},\bm{\mu},\bm{\Sigma}) = \dots \tag{2.193} $$
+
+The likelihood function is now much more complex than with a single Gaussian, due to the presence of the summation over $k$ inside the logarithm.
+
+The maximum likelihood solution for the parameters no longer has a closed-form analytical solution. Alternatively,
+- to sue iterative numerical optimization techniques
+- <mark>expectation maximization</mark> (see [Chapter 6](#94-the-em-algorithm-in-general)).
+
+
+{% note info %}
+All the probatility distributions above are specific examples of a broad class of distributions called the <mark>exponential family</mark>.
+{% endnote %}
 
 
 ## 2.4. The Exponential Family
@@ -269,19 +336,44 @@ Did not finish this part of reading.
 
 ## 2.5 Nonparametric Methods (p.120)
 
+
 > Throughout this chapter, we have focussed on the use of probability distributions having specific functional forms governed by a small number of parameters whose values are to be determined from a data set. This is called the parametric approach to density modelling.
 
+Two widely used nonparametric techniques for desnity estimation:
+- kernel estimators
+- nearest neighbours
 
-# 3 Linear modelModels for Regression
+Both the K-nearest-neighbour method and the kernel density estimator require the entire training data set to be stored.
+
+These nonparametric methods are still severely limited.\
+Simple parametric models are very restricted in terms of the forms of distribution that they can represent.\
+Subsequent chapters will show how to achieve density models that are **very flexible** and yet for which the **complexity** of the models can be **controlled independently of the size of the training set**.\
+<span style="color:red">[TODO: summarize how the following chapters achieves this !]</span>
+
+
+
+
+# 3 Linear Models for Regression
+
+From a probabilistic perspective, we aim to model the predictive distribution $p(t|\bm{x})$ because this expresses our uncertainty about the value of $t$ for each value of $\bm{x}$.\
+From this **conditional distribution** we can make predictions of $t$, for any new value of $\bm{x}$, in such a way as to minimize the expected value of a suitably chosen loss function.
+- So, the ultimate goal of regression is to find $p(t|\bm{x})$ !
+
 
 ## 3.1 Linear Basis Function Model
 
-$$y=\bm{w}^T\bm{\phi}(\bm{x})$$
-
+$$y=\bm{w}^T\bm{\phi}(\bm{x})  \tag{3.3}$$
 where $\bm{w}=(w_0,\omega_1,\dots,w_{M-1})^T$, $\bm{\phi}=(\phi_0,\phi_1,\dots,\phi_{M-1})^T$
 
-$$t=y(\bm{x},\bm{w})+\epsilon$$
-$$p(t|\bm{x},\bm{w},\beta) = \mathcal{N}(t|y(\bm{x},\bm{w}),\beta^{-1}) \tag{3.8}$$
+
+### 3.1.1 Maximum likelihood and least squares
+
+$$t=y(\bm{x},\bm{w})+\epsilon  \tag{3.7}$$
+
+$$p(t|\bm{x},\bm{w},\beta) = \mathcal{N}(t|y(\bm{x},\bm{w}),\beta^{-1})  \tag{3.8}$$
+
+Above two equations imply an assumed priori distribution, the observation model.
+
 
 Now consider a data set of inputs $X = \{\bm{x}_1,\dots,\bm{x}_N\}$ with corresponding target values $\bm{t}=\{t_1,\dots,t_N\}$.
 
@@ -295,6 +387,9 @@ Log-likelihood function:
 $$\ln p(\bm{t}|\bm{w},\beta) = \sum_{n=1}^N \ln \left( \frac{1}{2\pi\beta^{-1/2}} \exp\left[ -\frac{\beta}{2} (\bm{t}_n-\bm{w}^T\bm{\phi}(\bm{x}_n))^T(\bm{t}_n-\bm{w}^T\bm{\phi}(\bm{x}_n)) \right] \right)$$
 $$= -\frac{N}{2}\ln(2\pi) + \frac{N}{2}\ln\beta - \frac{\beta}{2} \sum_{n=1}^{N}\|\bm{t}_n-\bm{w}^T\bm{\phi}(\bm{x}_n)\|^2  \tag{3.11 + 3.12}$$
 
+> Note that in supervised learning problems such as regressions, we are not seeking to model the distribution of the input variables.\
+> Thus we will drop the explicit $\bm{x}$ from expressions.
+
 <!-- $$
 \mathcal{N}(\bm{x}|\bm{\mu},\Sigma) = \frac{1}{(2\pi)^{D/2}} \frac{1}{|\Sigma|^{1/2}} \exp \left[ -\frac{1}{2}(\bm{x}-\bm{\mu})^T \Sigma^{-1} (\bm{x}-\bm{\mu}) \right]
 \tag{2.42}
@@ -303,8 +398,41 @@ $$ -->
 Having written down the likelihood function, we can use *maximum likelihood* to determine $\bm{w}$ and $\beta$.
 (Take gradient, and then set this gradient to zero gives)
 
-MAX LIKELIHOOD weights $\bm{w}_\text{ML}$:
-$$\bm{w}_\text{ML}=(\Phi^T\Phi)^{-1}\Phi^T\bm{t}    \tag{3.15}$$
+MAX LIKELIHOOD results: 
+
+Weights $\bm{w}_\text{ML}$:
+$$ \bm{w}_\text{ML}=(\Phi^T\Phi)^{-1}\Phi^T\bm{t}    \tag{3.15} $$
+where 
+$$ \Phi^\dagger \equiv (\Phi^T\Phi)^{-1}\Phi^T   \tag{3.17} $$
+is known as the **Mossre-Penrose pseudo-inverse** of the matrix $\Phi$.
+
+Precision parameter $\beta_{\rm ML}$:
+$$ \frac{1}{\beta} = \frac{1}{N} \sum_{n=1}^N \{t_n-\bm{w}_{\rm ML}^T\phi(\bm{x_n})\}^2   \tag{3.21} $$
+
+### 3.1.2 Geomertry of least square
+
+### 3.1.3 Sequential learning
+
+### 3.1.4 Regularized least squares
+
+sum-of-squares of the weight vector elements:\
+*weight decay* in machine learning literature\
+*parameter shrinkage* in statistics
+
+other regularizers:
+- lasso
+
+### 3.1.5 Multiple outputs
+
+
+
+> (p.147) In above discussions, assumed the form and number of basis functions are both fixed.
+
+
+## 3.2 The Bias-Variance Decomposition
+
+As we have seen in earlier chapters (FORGOT WHERE...), the phenomenon of over-fitting is really an unfortunate property of maximum likelihood and does not arise when we marginalize over parameters in a Bayesian setting.
+
 
 ## 3.3 Bayesian Linear Regression
 
@@ -393,9 +521,13 @@ There are two approaches to the maximization of the log marginal likelihood (log
 1. Evaluate the evidence function analytically and then set its derivative equal to zero to obtain re-estimation equations for $\alpha$ and $\beta$ (in Section 3.5.2).
 2. Use a technique called the expectation maximization (EM) algorithm (in Section 9.3.4).
 
+
+
 ### 3.5.1 Evaluation of the evidence function
 
-MARGINAL LIKELIHOOD function: see Eq.(3.8) and Eq.(3.52); using Eq.(2.115)
+MARGINAL LIKELIHOOD function over the weight parameters $\bm{w}$:\
+see Eq.(3.8) and Eq.(3.52);\
+using Eq.(2.115)
 $$p(\bm{t}|\alpha,\beta)=\int p(\bm{t}|\bm{w},\beta) p(\bm{w}|\alpha)\cdot {\rm d}\bm{w}    \tag{3.77}$$
 $$=\left(\frac{\beta}{2\pi}\right)^{N/2} \left(\frac{\alpha}{2\pi}\right)^{M/2} \int \exp\{-E(\bm{w})\} \cdot {\rm d}\bm{w} \tag{3.78}$$
 where
@@ -414,20 +546,94 @@ $$\int \exp\{-E(\bm{w})\} \cdot{\rm d}\bm{w} = \exp\{-E(\bm{m}_N)\}(2\pi)^{M/2}|
 LOG MARGINAL LIKELIHOOD function:
 $$\ln p(\bm{t}|\alpha,\beta) = \frac{M}{2}\ln\alpha + \frac{N}{2}\ln\beta - E(\bm{w}) - \frac{1}{2}\ln|A| - \frac{N}{2}\ln{2\pi}    \tag{3.86}$$
 
+### 3.5.2 Maximizing the evidence function
+
+$\alpha$ is determined by purely looking at the training data.
+
+$$ \text{define the eigenvector equation: } \left(\beta\Phi^T\Phi\right)\bm{u}_i = \lambda_i \bm{u}_i  \tag{3.87}$$
+$$ \gamma = \sum_i \frac{\gamma_i}{\alpha+\gamma_i}    \tag{3.91}$$
+$$ \alpha = \frac{\gamma}{\bm{m}_N^T\bm{m_N}}   \tag{3.92}$$
+
+This is an implicit solution for $\alpha$ and it can be solved iteratively:\
+initial guess -> $\bm{m}_N$ from Eq.(3.53) -> $\lambda_i$ from Eq.(3.87) -> $\gamma$ from EQ.(3.91) -> re-estimate $\alpha$.
+
+Similar for $\beta$.
+
+
 
 ## 3.6 Limitations of Fixed Basis Functions
 
+models comprising linear combinations of fixed, nonlinear basis functions
 
-# 5 Neural Network
+significant short comings:\
+the number of basis functions needs to grow rapidly with the dimensionality of the input space, often exponentially
 
-## 5.7 Bayesian Neural Networks
+SVM and NN both use some good properties to alleviate this problem.
+- data vectors typically lie close to a nonlinear manifold whose intrinsic dimensionality is smaller
+  - support vector machine, relevence vector machine, and neural network all use this one
+- target variables may have significant dependente on only a small number of possible directions
+  - neural netowok uses this one
 
-# 6 Kernel Methods
 
-## 6.4 Gaussian Processes
+# 4. Linear Models for classification (not read yet)
 
 
-# 7
+# 5. Neural Network (not read yet)
+
+## 5.7 Bayesian Neural Networks (to read)
+
+# 6. Kernel Methods (not read yet)
+
+> For recent btetbooks on kernel methods, see Scholkopf and Smola (2002), Herbrich (2002), and Shawe-Taylor and Cristianini (2004).
+
+## 6.1. Dual Representations
+
+The advantage of the dual formulation is that it is expressed entirely in terms of the kernel function $k(\bm{x},\bm{x}')$. We can therefore work directly in terms of kernels and avoid the explicit introduction of the feature vector $\phi(\bm{x})$, which allows us implicitly to use feature spaces of high, even infinite, dimensionality. 
+
+## 6.2. Constructing Kernels
+
+## 6.3. Radial Basis Function Networks
+
+
+
+
+
+## 6.4 Gaussian Processes (to read)
+
+Here we extend the role of kernels to probabilistic discriminative models, leading to the framework of Gaussian processes.
+
+{% note success %}
+For a <mark>linear regression models</mark> of the form $y(\bm{x},\bm{w}) = \bm{w}^T\phi(\bm{x})$, 
+a prior distribution over $\bm{w}$ induced a corresponding **prior distribution over functions** $y(\bm{x},\bm{w})$.\
+Evaluating the posterior distribution over $\bm{w}$ obtains the corresponding **posterior distribution over regression functions**.
+
+In the <mark>Gaussian process viewpoint</mark>, we dispense with the parametric model and instead define a prior probability distribution over functions directly.
+{% endnote %}
+
+Models equivalent to Gaussian processes in different fields:
+- kriging in geostatistics literature
+- ARMA models
+- Kalman filters
+- radial basis function networks
+
+
+### 6.4.1. Linear regression revisited
+
+A linear combination of $M$ basis functions $\phi = \{\phi_i\}$
+$$ y(\bm{x}) = \bm{w}^T \phi(\bm{x})    \tag{6.49}$$
+
+Set a prior distribution over $\bm{w}$
+$$ p(\bm{w}) = \mathcal{N}(\bm{w}|\bm{0},\alpha^{-1}\bm{I})    \tag{6.50}$$
+
+### 6.4.2. Gaussian processes for regression
+
+
+### 6.4.3. Learning the hyperparameters
+
+
+
+
+# 7. Sparse Kernel Mathod (not read yet)
 
 ## 7.2 Relevance Vector Machines
 
@@ -470,6 +676,12 @@ comparable SVM.
 > More significantly, in the relevance vector
 machine the parameters governing complexity and noise variance are determined
 automatically from a single training run
+
+
+
+# 8. Graphical Models (to read)
+
+## 8.4. Inference in Graphical Models (to read)
 
 
 
@@ -554,7 +766,7 @@ Substitute (10.5) into (10.3) and then dissect out the dependence on one of the 
 
 
 
-# 11 Sampling Methods
+# 11. Sampling Methods
 
 <mark>Approximate inference methods based on numerical sampling</mark> is also known as <mark>Monte Carlo techniques</mark>.
 
@@ -689,6 +901,21 @@ nowledge of the value of $Z_E$ can be useful for Bayesian model comparison since
 > (stopped here last time)
 
 
+# 12. Continuous Latent Variables
+
+## 12.4. Nonlinear Latent Variable Models (to read)
+
+
+
+# 13. Sequential Data (not read for now)
+
+# 14. Combining Models (not read for now)
+## 14.1. Bayesian Model Averaging
+## 14.2. Committees
+## 14.3. Boosting
+## 14.4. Tree-based Models
+
+------------------
 
 # Some Terms
 
@@ -699,6 +926,15 @@ nowledge of the value of $Z_E$ can be useful for Bayesian model comparison since
 (p30) Variables such as $\alpha$, which controls the distribution of model parameters, are called <mark>hyperparameters</mark>.
 
 (p30) Finding the most probable value of $\bm{w}$ given the data by maximing the posterior distribution is called <mark>maximum posterior, MAP</mark>.
+
+(p120) <mark>Parametric approach</mark> to density modelling: 
+the use of probability distributions having specific functional forms governed by a small number of parameters whose values are to be determined from a data set.
+
+(p120) <mark>Nonparametric approaches</mark> to density estimation that make few assumptions about the form of the distribution.
+
+(p165) empirical Bayes (statistics) == type 2 maximum likelihood (statistics) == generalized maximum likelihood (statistics) == evidence approximation (machine learning)
+
+
 
 
 # 疑问
