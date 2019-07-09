@@ -3,12 +3,12 @@ title: Publication List (chronological)
 mathjax: false
 comments: true
 date: 2018-01-20 17:16:10
-updated: 2018-11-14 10:57:57
+updated: 2019-07-07 17:52:11
 ---
 
 <!-- citation format: http://www.zotero.org/styles/hao-full-name -->
 
-( :construction: sci-hub links to be added...)
+<!-- ( :construction: sci-hub links to be added...) -->
 
 # Journals
 
@@ -29,10 +29,26 @@ updated: 2018-11-14 10:57:57
 15. Hao Peng, and Xiaoli Bai, “Machine Learning Approach to Improve Satellite Orbit Prediction Accuracy Using Publicly Available Data,” The Journal of the Astronautical Sciences, May 2019. [[Link]](http://link.springer.com/10.1007/s40295-019-00158-3).
 
 
-<!-- more -->
 
 # Conferences
 
-( :construction: to be added...)
+1. Hao Peng, and Shijie Xu, “Numerical stability study of multi-circle elliptic halo orbit in the elliptic restricted three-body problem,” AAS/AIAA Spaceflight Mechanics Conference 2015, Laurel: 2014, pp. 1–20.
+2. Hao Peng, and Shijie Xu, “Transfer to Multi-circle Elliptic Halo Orbit in Earth-Moon Elliptic Restricted Three-Body Problem,” 24th International Symposium on Space Flight Dynamics - 24th ISSFD, Laurel: 2014, pp. 1–15.
+3. Hao Peng, Yi Qi, Shijie Xu, and Yanyan Li, “Numerical energy analysis of the escape motion in the elliptic restricted three-body problem,” AAS/AIAA Spaceflight Mechanics Conference 2015, Williamsburg, VA: 2015, pp. 1–19.
+4. Hao Peng, Shijie Xu, and Leizheng Shu, “Low-energy transfers to an earth-moon multi-revolution elliptic halo orbit,” AAS/AIAA Spaceflight Mechanics Conference 2015, Williamsburg, VA: 2015, pp. 1–19.
+5. Hao Peng, Yuxin Liao, and Shiyuan Jia, “Maintain a libration point orbit in the Sun-Mercury elliptic restricted system,” 26th AAS/AIAA Space Flight Mechanics Meeting, Napa, CA: 2016, pp. 1–18.
+6. Hao Peng, and Xiaoli Bai, “Limits of Machine Learning Approach on Improving Orbit Prediction Accuracy,” Advanced Maui Optical and Space Surveillance (AMOS) Technologies Conference, Wailea Marriott: 2017. [[Link]](https://amostech.com/TechnicalPapers/2017/Astrodynamics/Bai.pdf).
+7. Hao Peng, and Xiaoli Bai, “New Natural Formation Flying Configurations in the Earth-Moon Elliptic Three-Body System,” 9th International Workshop on Satellite Constellations and Formation Flying, University of Colorado Boulder: 2017.
+8. Hao Peng, and Xiaoli Bai, “A Machine Learning Approach to Improve Satellite Orbit Prediction Accuracy: Validation Using Publicly Available Data,” John L. Junkins Dynamical Systems Symposium, College Station, TX: 2018.
+9. Hao Peng, and Xiaoli Bai, “Comparison of Effective Machine Learning Algorithms on Improving Orbit Prediction Accuracy,” 69th International Astronautical Congress (IAC), Bremen, Germany: 2018, pp. 1–12.
+10. Hao Peng, and Xiaoli Bai, “Generalization Capability of Machine Learning Approach Among Different Satellites: Validated Using TLE Data,” 2018 AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT: 2018, pp. 1--17.
+11. Hao Peng, and Xiaoli Bai, “Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy,” 2018 AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT: 2018, pp. 1–17.
+12. Hao Peng, and Xiaoli Bai, “Using Artificial Neural Network in Machine Learning Approach to Improve Orbit Prediction Accuracy,” 2018 Space Flight Mechanics Meeting, AIAA SciTech Forum, American Institute of Aeronautics and Astronautics, 2018. [[Link]](https://arc.aiaa.org/doi/10.2514/6.2018-1966).
+13. Hao Peng, and Xiaoli Bai, “Covariance Fusion Method of Gaussian Processes Covariance and Orbital Prediction Uncertainty (accepted),” 2019 AAS/AIAA Astrodynamics Specialist Conference, Portland, ME: 2019.
+
+
+# Resources
+
+[SCI-HUB](http://sci-hub.tw/) is a magic website. 
 
 

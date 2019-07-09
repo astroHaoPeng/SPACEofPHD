@@ -4,7 +4,7 @@ layout: post
 comment: false
 abbrlink: about
 date: 2018-01-20 17:16:10
-updated: 2019-05-18 18:20:00
+updated: 2019-07-07 19:08:32
 ---
 
 # 0. Bio
@@ -325,47 +325,87 @@ These machine learning results are collaborative works with [Prof. Xiaoli Bai](h
 <!-- tab Improve Orbit Prediction Accuracy -->
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Improving orbit prediction accuracy through supervised machine learning</mark>,” Advances in Space Research, vol. 61, May 2018, pp. 2628–2646. [[Link]](http://www.sciencedirect.com/science/article/pii/S0273117718302035).\
-==========\
-We present a methodology to predict RSOs’ trajectories with higher accuracy. 
-Inspired by the machine learning (ML) theory through which the models are learned based on large amounts of observed data and the prediction is conducted without explicitly modeling space objects and space environment, the proposed ML approach integrates physics-based orbit prediction algorithms with a learning-based process that focuses on reducing the prediction errors. 
+\==========\
+We present a methodology to predict RSOs' trajectories with higher accuracy. 
+Inspired by the machine learning (ML) theory through which the models are learned based on large amounts of observed data and the prediction is conducted without explicitly modeling space objects and space environment, the proposed ML approach integrates physics-based orbit prediction algorithms with a learning-based process that focuses on reducing the prediction errors.
+
 Using a simulation-based space catalog environment as the test bed, the paper demonstrates three types of generalization capability for the proposed ML approach: 
 1. the ML model can be used to improve the same RSO’s orbit information that is not available during the learning process but shares the same time interval as the training data;
 2. the ML model can be used to improve predictions of
 the same RSO at future epochs; 
 3. the ML model based on a RSO can be applied to other RSOs that share some common features.
+
+<img src="./three-generalization-capabilities.png" width="400px" title="Illustration of three types of generalization capability.">
+
+**Support Vector Machine (SVM)** algorithm is used as the ML model because it has universial approximation capability and sparse feature.
 {% endnote %}
 
 {% note info %}
-`(J)` Hao Peng, and Xiaoli Bai, “<mark>Exploring Capability of Support Vector Machine for Improving Satellite Orbit Prediction Accuracy</mark>,” Journal of Aerospace Information Systems, vol. 15, Jun. 2018, pp. 366–381. [[Link]](https://arc.aiaa.org/doi/10.2514/1.I010616).
-`(C)` Peng, H., Bai, X., 2017b. Limits of Machine Learning Approach on Improving Orbit Prediction Accuracy, in: Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference. Presented at the Advanced Maui Optical and Space Surveillance Technologies (AMOS) Conference, Wailea Marriott. <https://amostech.com/TechnicalPapers/2017/Astrodynamics/Bai.pdf>\
+`(J)` Hao Peng, and Xiaoli Bai, “<mark>Exploring Capability of Support Vector Machine for Improving Satellite Orbit Prediction Accuracy</mark>,” Journal of Aerospace Information Systems, vol. 15, Jun. 2018, pp. 366–381. [[Link]](https://arc.aiaa.org/doi/10.2514/1.I010616).\
+`(C)` Hao Peng, and Xiaoli Bai, “Limits of Machine Learning Approach on Improving Orbit Prediction Accuracy,” Advanced Maui Optical and Space Surveillance (AMOS) Technologies Conference, Wailea Marriott: 2017. [[Link]](https://amostech.com/TechnicalPapers/2017/Astrodynamics/Bai.pdf).\
 ==========\
-In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
+The limits and limitation of the above ML approach using SVM models have been explored. 
+It is demonstrated that
+1. the support vector machine model can reduce the orbit prediction errors with both good average and individual performances.
+2. the performance can be further improved with more training data, until adequate data information has been exploited. Last, it is illustrated that 
+3. the support vector machine model shall be updated frequently, and orbit predictions should not be made too far in the future. 
+It is concluded that the capabilities of the machine learning approach for improving orbit prediction accuracy are very promising.
+
+(In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.)
 {% endnote %}
 
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Artificial Neural Network–Based Machine Learning Approach to Improve Orbit Prediction Accuracy</mark>,” Journal of Spacecraft and Rockets, vol. 55, Sep. 2018, pp. 1248–1260. [[Link]](https://arc.aiaa.org/doi/10.2514/1.A34171).\
-`(C)` Peng, H., Bai, X., 2018. Using Artificial Neural Network in Machine Learning Approach to Improve Orbit Prediction Accuracy. American Institute of Aeronautics and Astronautics. <https://doi.org/10.2514/6.2018-1966> [has a journal-version]\
+`(C)` Hao Peng, and Xiaoli Bai, “Using Artificial Neural Network in Machine Learning Approach to Improve Orbit Prediction Accuracy,” 2018 Space Flight Mechanics Meeting, AIAA SciTech Forum, American Institute of Aeronautics and Astronautics, 2018. [[Link]](https://arc.aiaa.org/doi/10.2514/6.2018-1966).\
 ==========\
-In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
+The **Artifial Neural Network (ANN)** algorithm is exploited in the proposed ML approach. 
+For ANN, the biggest difficulty is to design the network structure, so that it will not either under-fit nor over-fit the dataset. 
+We carried out a grid search of critical parameters and presented the analysis of the resulting tendencies.
+
+In this paper, for the first time, we demonstrated a **coverage analysis** of the learning variables, which could obviously improve the type-III generalization capability in the previous studies. 
+Specifically, we focused on two cased:
+1. vary the orbit RAAN by $\Delta\Omega = -45\sim45\deg$ every 5 deg.
+2. vary the semi-major axis by $\Delta a = -45\sim45\deg$ every 10 km.
+
+<img src="./generalization-to-nearby-rsos.png" width="400px" title="Generalization capability to nearby RSOs with different RAAN and semi-major axis.">
+
+
+(In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.)
 {% endnote %}
 
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Gaussian Processes for improving orbit prediction accuracy</mark>,” Acta Astronautica, vol. 161, Aug. 2019, pp. 44–56. [[Link]](https://linkinghub.elsevier.com/retrieve/pii/S0094576518320344).\
-`(C)` Peng, H., Bai, X., 2018d. Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT.\
+`(C)` Hao Peng, and Xiaoli Bai, “Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy,” 2018 AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT: 2018, pp. 1–17.\
 ==========\
-In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
+SVN and ANN are powerful algorithms. However, they belong to classical frequentist method that only generate point estimation but not the distribution information. 
+In this paper, we have extended the ML approach to a Bayesian modeling method, **Gaussian Processes (GPs)**, which naturally gives uncertainty information about the ML-predicted orbit prediction accuracy.
+
+<img src="./gp-uncertainty-position.png" width="400px">
+<img src="./gp-uncertainty-velocity.png" width="400px" title="Uncertainty information generated by the GP models.">
+
+(In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.)
 {% endnote %}
 
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Comparative Evaluation of Three Machine Learning Algorithms on Improving Orbit Prediction Accuracy (accepted)</mark>,” Astrodynamics, vol. 0, 2019, p. 0.\
-`(C)` Peng, H., Bai, X., 2018b. Comparison of Effective Machine Learning Algorithms on Improving Orbit Prediction Accuracy, in: 69th International Astronautical Congress (IAC). Presented at the 69th International Astronautical Congress (IAC), Bremen, Germany, pp. 1–12.\
+`(C)` Hao Peng, and Xiaoli Bai, “Comparison of Effective Machine Learning Algorithms on Improving Orbit Prediction Accuracy,” 69th International Astronautical Congress (IAC), Bremen, Germany: 2018, pp. 1–12.\
 ==========\
-In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
+In this paper, we provide a systematical comparison study of the three ML algorithms: support vector machine (SVM), artificial neural network (ANN), and Gaussian processes (GP). 
+In a simulation environment consisting of orbit propagation, measurement, estimation, and prediction processes, totally 12 resident space objects (RSOs) in SSO, LEO and MEO are simulated to compare the performance of three ML algorithms.
+
+The results in this paper show that 
+1. ANN usually has the best approximation capability but is easiest to overfit data; 
+2. SVM is least likely to overfit but the performance usually cannot surpass ANN and GP. 
+3. the ML approach with all the three algorithms is observed to be robust with respect to the measurement noise.
+
+(The journal version has been accepted for a long time but still not online yet.)
+
+(In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.)
 {% endnote %}
 
 <!-- endtab -->
 
-<!-- tab Extend to Real Satellite Data from TLE & ILRS -->
+<!-- tab Using Real Data of TLE & ILRS (click to expand) -->
 {% note warning %}
 TLE -- Two-Line Element (data format), available at [Space-Track.org](https://www.space-track.org/) and [CelesTrak.com](https://celestrak.com/).\
 ILRS -- International Laser Ranging Service, available at [ILRS website](https://ilrs.cddis.eosdis.nasa.gov/about/index.html).
@@ -373,26 +413,44 @@ ILRS -- International Laser Ranging Service, available at [ILRS website](https:/
 
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Machine Learning Approach to Improve Satellite Orbit Prediction Accuracy Using Publicly Available Data</mark>,” The Journal of the Astronautical Sciences, May 2019. [[Link]](http://link.springer.com/10.1007/s40295-019-00158-3).\
-`(C)` Peng, H., Bai, X., 2018a. A Machine Learning Approach to Improve Satellite Orbit Prediction Accuracy: Validation Using Publicly Available Data, in: John L. Junkins Dynamical Systems Symposium. Presented at the John L. Junkins Dynamical Systems Symposium, College Station, TX.\
+`(C)` Hao Peng, and Xiaoli Bai, “A Machine Learning Approach to Improve Satellite Orbit Prediction Accuracy: Validation Using Publicly Available Data,” John L. Junkins Dynamical Systems Symposium, College Station, TX: 2018.\
 ==========\
+The ML approach (SVM algorithm) is validated using a combination of the TLE catalog and the ILRS catalog, which are all publicaly available data sources. 
+Due to the limited information in the TLE catalog, **the learning variables have been redesigned**.
+Finally, the results show that the performace can be reserved in most cases:
+1. the orbit prediction accuracy can be improved.
+2. the uncertainty information is accurate.
+
+<img src="./tle-orbits.png" width="400px" title="TLE orbits used to validate the ML approach.">
+
 In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
 {% endnote %}
 
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Gaussian Processes for improving orbit prediction accuracy</mark>,” Acta Astronautica, vol. 161, Aug. 2019, pp. 44–56. [[Link]](https://linkinghub.elsevier.com/retrieve/pii/S0094576518320344).\
-`(C)` Peng, H., Bai, X., 2018d. Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT.\
+`(C)` Hao Peng, and Xiaoli Bai, “Obtain Confidence Interval for the Machine Learning Approach to Improve Orbit Prediction Accuracy,” 2018 AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT: 2018, pp. 1–17.\
 ==========\
-In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
+SVN and ANN are powerful algorithms. However, they belong to classical frequentist method that only generate point estimation but not the distribution information. 
+In this paper, we have extended the ML approach to a Bayesian modeling method, **Gaussian Processes (GPs)**, which naturally gives uncertainty information about the ML-predicted orbit prediction accuracy.
+
+<img src="./gp-uncertainty-position.png" width="400px">
+<img src="./gp-uncertainty-velocity.png" width="400px" title="Uncertainty information generated by the GP models.">
+
+(In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.)
 {% endnote %}
 
 {% note info %}
-`(C)` Peng, H., Bai, X., 2018c. <mark>Generalization Capability of Machine Learning Approach Among Different Satellites: Validated Using TLE Data</mark>, in: AAS/AIAA Astrodynamics Specialist Conference. Presented at the AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT, pp. 1--17.\
+`(C)` Hao Peng, and Xiaoli Bai, “Generalization Capability of Machine Learning Approach Among Different Satellites: Validated Using TLE Data,” 2018 AAS/AIAA Astrodynamics Specialist Conference, Snowbird, UT: 2018, pp. 1--17.\
 ==========\
-In the journal version, further improvements have been made based on the reviewers' comments and the feedbacks on the conference.
+The type-III generaliztion capability, from one RSO to another, is validated using TLE and ILRS data.
+Due to the limited information in both catalog, it is hardly to draw any concrete conclusion, which is left for future studies.
+However, we still observed that the ML approach is effective in many cases.
+
+This direction is still under research. We may have more concerete results after IAC-2019 in Washington DC.
 {% endnote %}
 <!-- endtab -->
 
-<!-- tab Extend to HAMR Objects -->
+<!-- tab Extend to HAMR Objects (click to expand) -->
 {% note warning %}
 HAMR -- High Area-to-Mass-Ratio, complicated attitude-orbit-coupled dynamics, usually more sensitive to attitude dependent forces like atmosphere drag or solar radiation pressure.
 {% endnote %}
@@ -407,7 +465,14 @@ This capability is critical for SSA.
 {% endtabs %}
 
 
+
 ## 6.2. Restricted Three-Body Problem
+
+{% note warning %}
+**CRTBP** -- Circular Restricted Three-Body Problem\
+**ERTBP** -- Elliptic Restricted Three-Body Problem\
+**ME-Halo Orbit** -- Multi-revolution Elliptic Halo Orbit, a special kind of libration point periodic orbit that only exists in the ERTBP model, first published by me and my PhD supervisor, Prof. Shijie Xu.
+{% endnote %}
 
 {% tabs RTBP %}
 <!-- tab ME-Halo Orbit -->
@@ -417,16 +482,24 @@ This capability is critical for SSA.
 ==========\
 We find that the ME-Halo orbit shows very different evolution of stability characteristics than conventional Halo orbits.
 Generally speaking, they are very unstable, including several bifurcations of their characteristic curves in the phase space.
+
+<img src="./me-halo-orbit-demo1.png" width="400px" title="Examples of the newly discovered ME-Halo orbit in the ERTBP.">
+
+<img src="./me-halo-orbit-stability.png" width="400px" title="Bifurcation and collision of statiblity of the ME-Halo orbit family.">
+
 {% endnote %}
 
 {% note info %}
 `(J)` Hao Peng, Xiaoli Bai, and Shijie Xu, “<mark>Continuation of periodic orbits in the Sun-Mercury elliptic restricted three-body problem</mark>,” Communications in Nonlinear Science and Numerical Simulation, vol. 47, Jun. 2017, pp. 1–15. [[Link]](http://linkinghub.elsevier.com/retrieve/pii/S100757041630404X).\
 ==========\
 A tangent continuation strategy along with the multi-segment optimization method is developed to constructing ME-Halo orbit in the highly elliptic Sun-Mercury system.
+
+<img src="./me-halo-orbit-sun-mercury-system.png" width="400px" title="ME-Halo orbit in the Sum-Merucry ERTBP model, with the exact eccentricity and mass ratio.">
+
 {% endnote %}
 <!-- endtab -->
 
-<!-- tab Transfer Trajectory to ME-Halo -->
+<!-- tab Transfer Trajectory to ME-Halo (click to expand) -->
 {% note info %}
 `(J)` Hao Peng, Xiaoli Bai, Josep J. Masdemont, Gerard Gómez, and Shijie Xu, “<mark>Libration Transfer Design Using Patched Elliptic Three-Body Models and Graphics Processing Units</mark>,” Journal of Guidance, Control, and Dynamics, vol. 40, Dec. 2017, pp. 3155–3166. [[Link]](https://arc.aiaa.org/doi/10.2514/1.G002692).\
 ==========\
@@ -438,36 +511,50 @@ The GPU parallel computing is implemented through MATLAB which is easier to mast
 `(J)` Hao Peng, and Shijie Xu, “<mark>Transfer to a Multi-Revolution Elliptic Halo Orbit in Earth-Moon Elliptic Restricted Three-Body Problem Using Stable Manifold</mark>,” Advances in Space Research, vol. 55, Nov. 2015, pp. 1015–1027. [[Link]](http://linkinghub.elsevier.com/retrieve/pii/S0273117714007169).\
 `(C)` Peng, H., Xu, S., 2014a. Transfer to Multi-circle Elliptic Halo Orbit in Earth-Moon Elliptic Restricted Three-Body Problem, in: 24th International Symposium on Space Flight Dynamics - 24th ISSFD. Presented at the 24th International Symposium on Space Flight Dynamics - 24th ISSFD, Laurel, pp. 1–15. [has a journal-version] \
 ==========\
-TBD.
+Unlike the common Halo orbit in the CRTBP, the ME-Halo can have two stable directions, thus a two-dimensional (un)stable manifold which can be used to design impulsive tranfer. 
+In this paper, we investigated the two-impulsive transfer from Earth to a special lunar ME-Halo orbit.
+
+<img src="./me-halo-orbit-transfer-impulsive.png" width="400px" title="Impulsive transfer along the two-dimensional stable manifold to a lunar ME-Halo oribt.">
+
 {% endnote %}
 
 {% note info %}
 `(J)` Hao Peng, and ShiJie Xu, “<mark>Low-energy transfers to a Lunar multi-revolution elliptic halo orbit</mark>,” Astrophysics and Space Science, vol. 357, May 2015, p. 87. [[Link]](http://link.springer.com/10.1007/s10509-015-2236-4)\
 `(C)` Peng, H., Xu, S., Shu, L., 2015b. Low-energy transfers to an earth-moon multi-revolution elliptic halo orbit, in: AAS/AIAA Spaceflight Mechanics Conference 2015. Presented at the AAS/AIAA Spaceflight Mechanics Conference 2015, Williamsburg, VA, pp. 1–19. [has a journal-version]\
 ==========\
-TBD.
+Simialr to the low-energy (or weak stability boundary) transfer concept in the CRTBP model, there also exist low-energy transfer trajectories to the lunar ME-Halo orbit in the ERTBP.
+Due to the additional freedom of the whole system, the eccentricity, the distribution of the transfers in the phase space is even sparser and more compoicated.
+
+<img src="./me-halo-orbit-transfer-low-energy.png" width="400px" title="Examples of the low-energy transfer a lunar ME-Halo oribt.">
+
 {% endnote %}
 <!-- endtab -->
 
-<!-- tab ME-Halo Maintenance & Applications-->
+<!-- tab ME-Halo Maintenance & Applications (click to expand) -->
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Natural Deep Space Satellite Constellation in the Earth-Moon Elliptic System</mark>,” Acta Astronautica, vol. 153, Dec. 2018, pp. 240–258. [[Link]](https://linkinghub.elsevier.com/retrieve/pii/S0094576517313322).\
-`(C)` Peng, H., Bai, X., 2017a. New Natural Formation Flying Configurations in the Earth-Moon Elliptic Three-Body System, in: 9th International Workshop on Satellite Constellations and Formation Flying. Presented at the 9th International Workshop on Satellite Constellations and Formation Flying, University of Colorado Boulder. [has a journal-version] \
+`(C)` Hao Peng, and Xiaoli Bai, “New Natural Formation Flying Configurations in the Earth-Moon Elliptic Three-Body System,” 9th International Workshop on Satellite Constellations and Formation Flying, University of Colorado Boulder: 2017.\
 ==========\
 The previously developed ME-Halo orbit can be used to design new space constellations in the Earth-Moon system. 
 The prototype developed under the ERTBP model is expected to be more realistic and reliable, since it has taken the eccentricity of the Earth-Moon system into consideration.
+
+<img src="./me-halo-orbit-formation.png" width="400px" title="Examples of a natural formation configuration in the Earth-Moon ERTBP model.">
+
 {% endnote %}
 
 {% note info %}
 `(J)` Hao Peng, Yuxin Liao, Xiaoli Bai, and Shijie Xu, “<mark>Maintenance of Libration Point Orbit in Elliptic Sun-Mercury Model</mark>,” IEEE Transactions on Aerospace and Electronic Systems, vol. PP, 2017, pp. 1–15. [[Link]](http://ieeexplore.ieee.org/document/8010413/).\
-`(C)` Peng, H., Liao, Y., Jia, S., 2016. Maintain a libration point orbit in the Sun-Mercury elliptic restricted system, in: 26th AAS/AIAA Space Flight Mechanics Meeting. Presented at the 26th AAS/AIAA Space Flight Mechanics Meeting, Napa, CA, pp. 1–18. [has a journal-version] \
+`(C)` Hao Peng, Yuxin Liao, and Shiyuan Jia, “Maintain a libration point orbit in the Sun-Mercury elliptic restricted system,” 26th AAS/AIAA Space Flight Mechanics Meeting, Napa, CA: 2016, pp. 1–18.\
 ==========\
 With the capability of constructing any ME-Halo orbit in the Sun-Mercury system, we further studied the controllability of an ME-Halo orbit, under both the ERTBP model and the more realistic ephemeris model.
-We notice that the solar radiation pressure force is not considered in this study, but it should not invalidate the results as it can be accommodated as a centrifugal	force in the current framework. 
+We notice that the solar radiation pressure force is not considered in this study, but it should not invalidate the results as it can be accommodated as a centrifugal force in the current framework. 
+
+<img src="./me-halo-orbit-control.png" width="400px" title="Example of the designed receding horizon controller that could easily stablize an ME-Halo orbit in the Sun-Mercury ERTBP system, as well as in the ephemeris system.">
+
 {% endnote %}
 <!-- endtab -->
 
-<!-- tab Non-conservative Energy in ERTBP -->
+<!-- tab Non-conservative Energy in ERTBP (click to expand) -->
 {% note info %}
 `(C)` Peng, H., Qi, Y., Xu, S., Li, Y., 2015a. Numerical energy analysis of the escape motion in the elliptic restricted three-body problem, in: AAS/AIAA Spaceflight Mechanics Conference 2015. Presented at the AAS/AIAA Spaceflight Mechanics Conference 2015, Williamsburg, VA, pp. 1–19.\
 ==========\
