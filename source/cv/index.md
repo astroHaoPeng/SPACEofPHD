@@ -317,9 +317,7 @@ You are always welcomed to discuss or leave comments at the bottom of the page.\
 
 These machine learning results are collaborative works with [Prof. Xiaoli Bai](http://x-bai.rutgers.edu/) in [Rutgers University, Mechanical and Aerospace Engineering](https://mae.rutgers.edu/). 
 
-{% fullimage "./machine-learning-aerospace-flowchart.png", , Flowchart of the proposed Machine Learning approach. (click to zoom-in), 900px %}
-
-<!-- {% img "./machine-learning-aerospace-flowchart.png" Flowchart of the proposed Machine Learning approach. (click to zoom-in) %} -->
+{% fullimage "./machine-learning-aerospace-flowchart.png", , Flowchart of the proposed Machine Learning approach. (click to zoom-in), 400px %}
 
 
 {% tabs MLA %}
