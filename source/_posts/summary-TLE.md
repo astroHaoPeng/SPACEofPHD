@@ -15,6 +15,7 @@ date: 2018-06-13 14:40:41
 updated: 2018-06-27 17:50:36
 ---
 
+
 TLE 的生成
 =========
 
@@ -82,3 +83,10 @@ p6:
 Our Initial manual experiments suggested that different fitting periods were optimal for different orbit categories. 
 These results are consistent with Alfriend et al. (2002), Danielson et al. (2000).
 
+
+
+
+> - Salvatore Alfano, and David Finkleman, “On selecting satellite conjunction filter parameters,” Acta Astronautica, vol. 99, 2014, pp. 193–200. [[Link]](http://dx.doi.org/10.1016/j.actaastro.2014.02.004).
+> 
+> In practice, the <mark>three day</mark> interval is the trustworthy lifetime of TLE data. 
+Uncertainty often grows unacceptably large when orbit elements are propagated over longer than a few days because there are natural phenomena with measureable effects that occur within that time scale.
