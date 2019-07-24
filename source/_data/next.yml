@@ -139,10 +139,10 @@ index_with_subtitle: false
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
 menu:
-  Home: / || home
   Dr. Hao Peng:
     default: cv/ || user  #list
     Publication List: publication-list/ || list
+  Home Page: / || home
   Articles: archives/ || archive
   Categories: categories/ || th-list
   Tags: tags/ || tags
@@ -453,13 +453,13 @@ font:
   logo:
     external: true
     family: New Rocker
-    size:
+    size: 22
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
     family:
-    size:
+    size: 16
 
 
 # ---------------------------------------------------------------
@@ -520,7 +520,7 @@ pangu: true
 disqus:
   enable: true
   shortname: space-research-blog
-  count: false
+  count: true
   lazyload: false
 
 # Hypercomments
