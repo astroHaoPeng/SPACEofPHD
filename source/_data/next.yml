@@ -12,24 +12,22 @@ override: false
 cache:
   enable: true
 
-# Redefine custom file paths. Introduced in NexT v6.0.2.
-# If commented, will be used default custom file paths.
-
-# For example, you want to put your custom styles file
-# outside theme directory in root `source/_data`, set
-# `styles: source/_data/styles.styl`
+# Define custom file paths.
+# Create your custom files in site directory `source/_data` and uncomment needed files below.
 custom_file_path:
-  # Default paths: layout/_custom/*
   #head: source/_data/head.swig
   #header: source/_data/header.swig
   #sidebar: source/_data/sidebar.swig
-
-  # Default path: source/css/_variables/custom.styl
-  variables: source/_data/variables.styl
-  # Default path: source/css/_mixins/custom.styl
-  #mixins: source/_data/mixins.styl
-  # Default path: source/css/_custom/custom.styl
-  styles: source/_data/next_custom_styles.styl #source/_theme-next-data/custom.styl
+  #postMeta: source/_data/post-meta.swig
+  #postBodyEnd: source/_data/post-body-end.swig
+  #footer: source/_data/footer.swig
+  bodyEnd: source/_data/body-end.swig
+  variable: source/_data/variables.styl
+  #mixin: source/_data/mixins.styl
+  style: source/_data/next_custom_styles.styl #source/_theme-next-data/custom.styl
+  #head: source/_data/head.swig
+  #header: source/_data/header.swig
+  #sidebar: source/_data/sidebar.swig
 
 
 # ---------------------------------------------------------------
@@ -142,6 +140,7 @@ menu:
   Dr. Hao Peng:
     default: cv/ || user  #list
     Publication List: publication-list/ || list
+    Visulaizations: visulaizations/ || picture-o
   Home Page: / || home
   Articles: archives/ || archive
   Categories: categories/ || th-list
@@ -378,14 +377,8 @@ mobile_layout_economy: false
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
 
-# Custom Logo.
-# !!Only available for Default Scheme currently.
-# Options:
-#   enabled: [true/false] - Replace with specific image
-#   image: url-of-image   - Images's url
-custom_logo:
-  enabled: false
-  image: 
+# Custom Logo (Do not support scheme Mist)
+custom_logo: #/uploads/custom-logo.jpg
 
 # Code Highlight theme
 # Available values: normal | night | night eighties | night blue | night bright
@@ -432,7 +425,7 @@ font:
   global:
     external: true
     family: Lato
-    size: 16
+    size: 16px
 
   # Font settings for Headlines (H1, H2, H3, H4, H5, H6).
   # Fallback to `global` font settings.
@@ -453,13 +446,13 @@ font:
   logo:
     external: true
     family: New Rocker
-    size: 22
+    size: 22px
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
     family:
-    size: 16
+    size: 16px
 
 
 # ---------------------------------------------------------------
@@ -501,9 +494,6 @@ math:
     # Bootcss, works great in China, but not so well in other region
     #cdn: //cdn.bootcss.com/KaTeX/0.7.1/katex.min.css
 
-# Han Support
-# Dependencies: https://github.com/theme-next/theme-next-han
-han: false
 
 # Pangu Support
 # Dependencies: https://github.com/theme-next/theme-next-pangu
@@ -856,8 +846,9 @@ fancybox: true
 # Dependencies: https://github.com/theme-next/theme-next-fastclick
 fastclick: false
 
-# Added switch option for separated repo in 6.0.0.
-# Dependencies: https://github.com/theme-next/theme-next-jquery-lazyload
+# Vanilla JavaScript plugin for lazyloading images.
+# Dependencies: https://github.com/theme-next/theme-next-lazyload
+# For more information: https://github.com/ApoorvSaxena/lozad.js
 lazyload: false
 
 # Progress bar in the top during page loading.

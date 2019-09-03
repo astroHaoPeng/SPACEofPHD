@@ -189,12 +189,12 @@ image_caption:
   class_name: #if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'
 
 # hexo-tag-cloud
-tag_cloud:
-    textFont: 'Trebuchet MS, Helvetica'
-    textColor: '#333'
-    textHeight: 12
-    outlineColor: '#FFFFFF'  #'#E2E1D1'
-    maxSpeed: 0.05 # range from [0.01 ~ 1]
+#tag_cloud:
+#    textFont: 'Trebuchet MS, Helvetica'
+#    textColor: '#333'
+#    textHeight: 12
+#    outlineColor: '#FFFFFF'  #'#E2E1D1'
+#    maxSpeed: 0.05 # range from [0.01 ~ 1]
 
 # https://github.com/lzane/hexo-light-gallery
 lightgallery:

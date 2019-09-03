@@ -294,7 +294,7 @@ Machine does not make error, but human does, because human makes machine.
 {% endtabs %}
 
 I use Git regularly to manage all my codes. 
-[My GitHub is here](https://github.com/AstroH-Peng), but most work-related codes are in private repositories (available upon requests).\
+[My GitHub is here](https://github.com/astroHaoPeng), but most work-related codes are in private repositories (available upon requests).\
 BTW, my collection of useful third-party repositories is also worth a look.
 
 
@@ -463,6 +463,8 @@ HAMR -- High Area-to-Mass-Ratio, complicated attitude-orbit-coupled dynamics, us
 ==========\
 Using random forest (RF) as the either a classification or a regression tool, we show that it is possible to recover the information of an unknown RSO. 
 This capability is critical for SSA. 
+
+{% fullimage "./averaging_predicted_AMR.png", , Averaged predicted area-to-mass-ratio., 500px %}
 <!-- endtab -->
 {% endnote %}
 {% endtabs %}

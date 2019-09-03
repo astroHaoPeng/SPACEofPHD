@@ -23,6 +23,7 @@ or this (equivalent)
 {% fullimage "{% asset_path FPKE_history.png%}" [@lazy], [alt], [title], [size] %}
 ```
 
+
 # General HTML
 
 Add color to text
