@@ -1,15 +1,16 @@
 .posts-expand .post-title {
   word-wrap();
-  font-weight: $posts-expand-title-font-weight;
+  font-weight: $font-weight-normal;
   margin: initial;
   text-align: center;
 
   if (hexo-config('post_edit.enable')) {
     .post-edit-link {
       border-bottom: none;
-      color: #bbb;
+      color: $grey;
       display: inline-block;
       float: right;
+      font-size: $font-size-larger;
       the-transition-ease-in();
       margin-left: -1.2em;
 
@@ -33,7 +34,7 @@
   vertical-align: top;
 
   &::before {
-    background-color: #000;
+    background-color: black;
     bottom: 0;
     content: '';
     height: 2px;
@@ -51,7 +52,7 @@
   }
 
   .fa {
-    font-size: $font-size-larger;
+    font-size: $font-size-small;
     margin-left: 5px;
   }
 }

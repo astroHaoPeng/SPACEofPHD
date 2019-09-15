@@ -33,7 +33,22 @@ hide: true # Add a hide parameter to the the post's Front-matter to hide the pos
   - https://github.com/Mrminfive/hexo-theme-skapp 支持多作者
   - https://itimetraveler.github.io/hexo-theme-hiero/
   - https://github.com/iTimeTraveler/hexo-theme-hipaper
+  - https://zhwangart.github.io/
+  - http://miccall.tech/
   - 
+
+# Collection of Hugo Themes
+
+For Rutgers Life:
+- https://themes.gohugo.io/theme/restaurant-hugo/#blog
+- https://github.com/qqhann/hugo-primer
+- https://themes.gohugo.io/hugo-w3-simple/
+- https://github.com/yihui/hugo-xmag
+
+For Gallery:
+- https://github.com/kishaningithub/hugo-creative-portfolio-theme
+- https://themes.gohugo.io/theme/parsa-hugo-personal-blog-theme/
+
 
 # Bugs
 - [ ] 在 Tab 中或者是 Note 中的换行渲染有问题，少空格。
@@ -45,6 +60,11 @@ hide: true # Add a hide parameter to the the post's Front-matter to hide the pos
 
 
 # Logs
+
+(2019-09-15 12:08:13)\
+更新到NexT v7.4.0，官方去掉了对 `full-image tag` 的支持，偶尔发现可能通过`https://github.com/theme-next/hexo-next-tag`这个临时解决，添加full-image的支持。\
+cv页必须用到这个tag（考虑减少对主题的依赖，如果有可能，将来转到Hugo）。
+
 
 (2019-09-03 15:42:43)\
 添加YouTube视频，使其居中。

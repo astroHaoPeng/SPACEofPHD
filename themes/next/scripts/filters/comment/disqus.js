@@ -4,7 +4,6 @@
 
 const path = require('path');
 const {iconText} = require('./common');
-const priority = hexo.config.inject_priority || {};
 
 // Add comment
 hexo.extend.filter.register('theme_inject', injects => {
@@ -23,7 +22,7 @@ hexo.extend.filter.register('theme_inject', injects => {
 
   injects.bodyEnd.file('disqus', path.join(hexo.theme_dir, 'layout/_third-party/comments/disqus.swig'));
 
-}, priority.disqus);
+});
 
 // Add post_meta
 hexo.extend.filter.register('theme_inject', injects => {
@@ -33,12 +32,12 @@ hexo.extend.filter.register('theme_inject', injects => {
   injects.postMeta.raw('disqus', `
   {% if post.comments %}
   <span class="post-meta-item">
-    ${iconText}
-    <a href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">
-      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span>
-    </a>
+    ${iconText('comment-o', 'disqus')}
+    <a title="disqus" href="{{ url_for(post.path) }}#comments" itemprop="discussionUrl">{#
+      #}<span class="post-comments-count disqus-comment-count" data-disqus-identifier="{{ post.path }}" itemprop="commentCount"></span>{#
+    #}</a>
   </span>
   {% endif %}
-  `);
+  `, {}, {}, theme.disqus.post_meta_order);
 
-}, priority.disqus_post_meta);
+});

@@ -18,38 +18,24 @@ tags:
 :rocket:
 {% endnote %}
 
-# Less Commonly Used but Useful Commands
+# Useful Commands
 
 Some commands that are not easy to search for. 
 
 <!-- more -->
 
-## \phantom
+## `\phantom{}`
 Use `\phantom{}` (/'fæntəm/) to generate a empty space with desired horizontal length. 
 [Google results of "latex phantom".](https://www.google.com/search?q=latex+phantom&rlz=1C5CHFA_enUS803US807&oq=latex+phantom&aqs=chrome..69i57.233j0j1&sourceid=chrome&ie=UTF-8)
 
 For example:
-{% code %}
-\begin{aligned}
-A &= B + C \\
-  &\phantom{=} + D
-\end{aligned}
-{% endcode %}
-generates
-$$
-\begin{aligned}
-A &= B + C \\
-  & + D,
-\end{aligned}
-$$
-
-{% code %}
+```
 \begin{aligned}
 A &= B + C + D\\
   &\phantom{=} + E
 \end{aligned}
-{% endcode %}
-generates
+```
+generates (Notice the alignment at the beginning of the second line)
 $$
 \begin{aligned}
 A &= B + C + D\\
@@ -57,9 +43,12 @@ A &= B + C + D\\
 \end{aligned}
 $$
 
-Notice the alignment at the beginning of the second line.
+## `\raisebox{}{}`
+The baseline of an image is at the bottom. You could use \raisebox to shift it up. Use half of \height, which stands for the height of the box to be raised.
 
-
+```latex
+\raisebox{-.5\height}{\includegraphics{some_picture}}
+```
 
 # My Preambles
 

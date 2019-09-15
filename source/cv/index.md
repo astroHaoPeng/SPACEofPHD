@@ -325,7 +325,7 @@ These machine learning results are collaborative works with [Prof. Xiaoli Bai](h
 <!-- tab Improve Orbit Prediction Accuracy -->
 {% note info %}
 `(J)` Hao Peng, and Xiaoli Bai, “<mark>Improving orbit prediction accuracy through supervised machine learning</mark>,” Advances in Space Research, vol. 61, May 2018, pp. 2628–2646. [[Link]](http://www.sciencedirect.com/science/article/pii/S0273117718302035).\
-\==========\
+==========\
 We present a methodology to predict RSOs' trajectories with higher accuracy. 
 Inspired by the machine learning (ML) theory through which the models are learned based on large amounts of observed data and the prediction is conducted without explicitly modeling space objects and space environment, the proposed ML approach integrates physics-based orbit prediction algorithms with a learning-based process that focuses on reducing the prediction errors.
 
