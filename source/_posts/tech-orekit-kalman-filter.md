@@ -13,11 +13,10 @@ mathjax: true
 abbrlink: 4de12de9
 date: 2019-04-23 15:03:16
 updated: 2019-05-03 17:07:38
-# sticky: 100
 ---
 
 
-# Novariance/noise matrix 在 body frame 和 inertial frame 之间的转换
+# Covariance/noise matrix 在 body frame 和 inertial frame 之间的转换
 
 这部分代码出现在 [`UnivariateProcessNoise`](https://www.orekit.org/site-orekit-9.3.1/apidocs/org/orekit/estimation/sequential/UnivariateProcessNoise.html) 中，see \
 [#537: \`FIXME\` in codes](https://gitlab.orekit.org/orekit/orekit/issues/537) \
@@ -29,6 +28,7 @@ RSW === LVLH in Orekit.
 
 `lofCartesianProcessNoiseMatrix` Local orbital frame (RSW, or LVLH) 中的 covariance $Q^{RSW}$
 - GP-prediction covariance, a diagonal 6 x 6 matrix. (in my codes)
+
 
 `jacLofToInertial` $J_{R2I} = J_{RSW\rightarrow Iner.} = \frac{\partial X^{Iner.}}{\partial X^{RSW}}$
 - **Question?** Is there a loss of information at this step?
@@ -182,4 +182,3 @@ Testing results:
 <!-- - force $P_{k|k-1}$ equals $2*P_{k|k-1}$:  -->
 
 So, **all calculations are correct**.
-

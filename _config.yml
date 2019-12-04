@@ -104,7 +104,7 @@ search:
 deploy:
   type: git
   repo: 
-    #github: git@github.com:AstroH-Peng/blog.git,gh-pages
+    # github: git@github.com:astroHaoPeng/blog.git,gh-pages
     vultr: git@45.63.5.49:/home/git/hexo.git,master
 
 
@@ -183,7 +183,7 @@ abbrlink:
   alg: crc32  #算法选项：crc16、crc32，区别见之前的文章，这里默认为crc16
   rep: hex    #输出进制：十进制和十六进制，默认为10进制。
   
-# add caption for iamges # need fancybox
+# add caption for images # need fancybox
 image_caption:
   enable: true #false to disable
   class_name: #if you wanna customize the style for the caption,you can assign a class name, default is 'image-caption'
@@ -197,7 +197,7 @@ image_caption:
 #    maxSpeed: 0.05 # range from [0.01 ~ 1]
 
 # https://github.com/lzane/hexo-light-gallery
-lightgallery:
+# lightgallery:
   # if you don't specify the css or js source, the default cdn will be used.
   # css: # css source url
   # js: #js source url

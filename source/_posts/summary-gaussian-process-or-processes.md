@@ -1,24 +1,29 @@
 ---
-title: Machine Learning
-comments: true
+title: >-
+  Gaussian Process is a plural noun describing a random function with assumed
+  Gaussian joint distribution
+abbrlink: c5317df1
 categories:
   - Summaries
 tags:
   - Machine Learning
   - Gaussian Processes
   - draft
-abbrlink: c5317df1
+comments: true
+mathjax: true
 date: 2019-06-11 17:42:03
-updated:
+updated: 2019-09-31 11:08:44
 ---
+
 
 
 Again, I run into the question that "what's the difference between GP and GPs"?
 Here, GP is Gaussian process while GPs is Gaussian process<mark>es</mark>.
 So you see the difference?
 
-In this post, I decided to solve this confusion (a better words? puzzle? bewilderment? perplexity?) once and for all, If I could.
+In this post, I decided to solve this confusion (a better words? puzzle? bewilderment? perplexity?) once and for all.
 
+<!-- more -->
 
 ----
 
@@ -44,7 +49,6 @@ According to [Wikipedia:Multivariate_normal_distribution](https://en.wikipedia.o
 猜测（待进一步验证）：
 
 | 随机变量 | GP |
-| :-: | :-: |
-| 随机变量的联合分布 | GPs |
-| 对一个确定值$x$进行$N$次观测，每次观测得到一个随机变量$\tilde{x}_i$，然后可以通过$\sum w_i \tilde{x}_i$对$x$进行近似。| 对一个函数$f$进行$N$次测量（？），每次观测得到一个随机函数$\tilde{f}_i$，然后通过$\sum w_i \tilde{f}_i$进行近似。
-| | <mark>？这里的观测怎么解释？怎么对应到GP的推导中？</mark>
+| :-----: | :-: |
+| 随机变量们 | GPs |
+| 对一个确定值$x$进行$n$次观测，每次观测得到一个随机变量$\tilde{x}_i$ | 对一个函数$f$进行$N$次采样，每次采样得到是随机函数在某个点$x$的latent value+noise即$\tilde{f}_i=f_i+\epsilon_i$    |    然后可以通过$\sum_{i=1}^n w_i \tilde{x}_i$对$x$进行近似 | 这些不同的采样点$\tilde{f}_i$是属于不同的$\tilde{f}$，实际的$f$需要根据先验证$f\sim\mathcal{GP}$和假设的likelihood模型$\tilde{f}=f_i+\epsilon$推断。

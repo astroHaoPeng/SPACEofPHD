@@ -61,6 +61,10 @@ For Gallery:
 
 # Logs
 
+(2019-10-31 16:57:09)\
+更新next.yml配置文件，数学模块的配置发生了变化，导致Katex无法渲染。
+
+
 (2019-09-15 12:08:13)\
 更新到NexT v7.4.0，官方去掉了对 `full-image tag` 的支持，偶尔发现可能通过`https://github.com/theme-next/hexo-next-tag`这个临时解决，添加full-image的支持。\
 cv页必须用到这个tag（考虑减少对主题的依赖，如果有可能，将来转到Hugo）。

@@ -1,10 +1,23 @@
 ---
-title: tutorial-git-for-phd-researcher
+title: Tutorial of Git for PhD with no CS Background
 abbrlink: b3fe0a4e
+comments: true
+mathjax: false
 date: 2019-05-12 18:12:06
-updated:
+updated: 2019-10-30 12:16:17
+categories:
+  - [Notes]
+  - [Techniques, Softwares]
+tags:
+  - Tutorial
+  - Git
 ---
 
+
+# 基础知识
+网络上的大量的教程供学习，先去搜索学习一段时间（2天）后再来看这个教程。
+
+<!-- more -->
 
 # 基本概念
 （不一定精确）
@@ -13,8 +26,8 @@ updated:
 有很多 GUI 界面的工具可以提供更方便的操作形式，即鼠标点击，来完成大部分常用的版本控制工作。
 所有的 GUI 本质上都是相同的，各有千秋，哪个最好只是玄学问题。
 通常，掌握一个软件，即可很容易地掌握其它软件。
-这里，我使用 `SourceTree`，因为它免费，跨平台，易学习。
 
+这里，我使用 `SourceTree`，因为它免费，跨平台，易学习。
 
 
 
@@ -45,6 +58,20 @@ This post will summarize how to use `Git`, based my experience, from a non-progr
 - 科研注重的是结果的正确性、可重现性，不是完备性和兼容性。
 所以很多时候过程中的代码已经天翻地覆，但是我只要求结果是正确的即可，对过程中发生的不严谨的地方，不是很在意。
 这样的话，写测试文件就会变成一个巨大的负担。
+
+# 技术问题
+
+## Fork 后继续更新源 repository
+[GitHub官方有明确的操作说明。](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+
+思路：
+- 自己的本地repo与自己的远程repo同步，远程的叫`origin`。
+- 给自己的本地repo，添加与源repo同步的能力，这个源repo被称为`upstream`。
+- `origin`和`upstream`的代码可以在本地被分别提取，然后进行各种操作，然后再把操作后的branch推送到相应的远程repo。
+- 远程的`origin`应该不知道有`upstream`的存在。
+
+为什么要这样做？
+因为这是逻辑上几乎唯一不会导致混乱，可溯源可追踪的方式，在目前Git的框架下。
 
 
 【教程完】

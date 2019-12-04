@@ -1,5 +1,6 @@
 ---
 title: Gaussian Processes for Machine Learning 读书笔记
+abbrlink: 79506b93
 categories:
   - 读书笔记
 tags:
@@ -7,18 +8,15 @@ tags:
   - 机器学习
   - 高斯过程
   - Gaussian Processes
-abbrlink: 79506b93
+comments: true
+mathjax: false
+date: 2019-10-31 11:54:20
 data: 2017-06-05 00:00:00
+updated:
 ---
 
-> Rasmussen, Carl Edward, and Christopher K. I. Williams. 2006. Gaussian Processes for Machine Learning. Adaptive Computation and Machine Learning. Cambridge, Mass: MIT Press. http://www.gaussianprocess.org/gpml/chapters/.
+> Rasmussen, Carl Edward, and Christopher K. I. Williams. 2006. Gaussian Processes for Machine Learning. Adaptive Computation and Machine Learning. Cambridge, Mass: MIT Press. http://www.gaussianprocess.org/gpml/chapters/.
 
-
-| 我的       | 水平         |
-| ---------- | ------------ |
-| 数学基础   | 数学本科略高 |
-| 概率基础   | 弱           |
-| 计算机基础 | 一般         |
 
 # 笔记
 
@@ -36,18 +34,21 @@ Sec 4讲不同covairance的性质，未看，待看。
 
 Bayesian inference
 
+<!-- more -->
 
 # 待解决的问题
 
+【大部分问题已经搞明白了，有时间来更新】
+
 1. 如何实现非线性？如何直观地解释？分别从weight-space和function-space。
-1. Gaussian distribution存在于哪些推导过程中？这里的过程不是指Gaussian process的process。
-1. 如何训练网络？为什么计算复杂度为O(n^3)？
-1. 为什么预测的计算复杂度为O(n)？预测方差的计算复杂度为O(n^2)？
-1. 对大数据量的近似算法是什么原理？怎么评价近似结果？
-1. 如何解释对于非Gaussian distribution使用GP的道理？
-1. GP和SVM的关系？
-1. GP和RBF的关系？
-1. GP和其它Bayesian method的关系？有无？
+2. Gaussian distribution存在于哪些推导过程中？这里的过程不是指Gaussian process的process。
+3. 如何训练网络？为什么计算复杂度为O(n^3)？
+4. 为什么预测的计算复杂度为O(n)？预测方差的计算复杂度为O(n^2)？
+5. 对大数据量的近似算法是什么原理？怎么评价近似结果？
+6. 如何解释对于非Gaussian distribution使用GP的道理？
+7. GP和SVM的关系？
+8. GP和RBF的关系？
+9. GP和其它Bayesian method的关系？有无？
 
 
 # 参考资料

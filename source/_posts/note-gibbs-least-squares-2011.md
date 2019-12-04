@@ -1,21 +1,23 @@
 ---
-title: Least-squares estimation, kalman filtering, and modeling[:] a practical handbook
+title: Least-squares estimation, kalman filtering, and modeling -- a practical handbook
+abbrlink: e8aef91d
 categories:
   - Reading Note
 tags:
   - Book Notes
   - Kalman filter
   - neural network
-abbrlink: e8aef91d
+comments: true
+mathjax: false
 data: 2017-06-05 00:00:00
+updated: 2019-10-31 11:58:40
 ---
 
-Least-squares estimation, kalman filtering, and modeling: a practical handbook
-
+> Bruce P. Gibbs, Least-squares estimation, kalman filtering, and modeling: a practical handbook, Hoboken, N.J: Wiley, 2011.
 
 所有的估计都可以理解为 inverse modeling 的过程。(P?)
 
-
+<!-- more -->
 
 # 读书时用到的数学概念摘要
 

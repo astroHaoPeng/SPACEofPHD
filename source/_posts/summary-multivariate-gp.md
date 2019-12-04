@@ -1,14 +1,18 @@
 ---
 title: Multivariate Gaussian Processes (GP) theories and packages
+abbrlink: 76e7ddf2
 categories:
   - - Techniques
     - Software
   - - Academics
     - Math
-abbrlink: 76e7ddf2
+comments: true
+mathjax: false
 date: 2019-05-20 14:41:22
 updated: 2019-05-20 14:41:51
+tags:
 ---
+
 
 # Posts
 

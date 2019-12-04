@@ -4,11 +4,20 @@ Use only the hierarchies designed in this file.
 
 ----------------------
 
-Information
-
 Academics
     Aerospace
     Math
+    Calibration
+
+Collections
+    YouTube
+
+Information
+
+Languages
+    Writing
+    Listening
+    Speaking
 
 Notes
     Paper Notes
@@ -17,20 +26,14 @@ Notes
     Web Post Notes
     Others
 
+Others
+
+Summaries
+
 Techniques
     Softwares
     Hardwares
 
-Summaries
-
-Collections
-    YouTube
-
-Languages
-    Writing
-    Listening
-    Speaking
-
-Others
+Tutorials
 
 ----------------------
