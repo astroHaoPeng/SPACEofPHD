@@ -119,7 +119,7 @@ $$
 
 So, even if the exact posterior $p(\tilde{f}|\mathcal{D},\theta,\phi) is not available$
 
-## From latents $\bm{y}$ to observations $\bm{y}$
+## From latents $\bm{f}$ to observations $\bm{y}$
 
 <span style="color:red">Bayes</span>
 

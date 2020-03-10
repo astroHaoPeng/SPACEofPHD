@@ -27,7 +27,7 @@ photo ={
                     '<div class="ImageInCard" style="height:'+ 300 * imageY / imageX + 'px">' +
                     //href 和 src 的链接地址是相册照片外部链接，也可以放博客目录里
                       '<a data-fancybox="gallery" href="./img/' + imgNameWithPattern + '" data-caption="' + imgName + '">' +
-                        '<img class="lozad" src="./img/' + imgNameWithPattern + '"/>' +
+                        '<img src="./img/' + imgNameWithPattern + '"/>' +
                       '</a>' +
                     '</div>' +
                     '<div class="TextInCard">' + imgName + '</div>' +  //图片下显示文件名作为说明的功能

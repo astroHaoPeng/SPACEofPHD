@@ -96,6 +96,10 @@ iframe {
 }
 ```
 
+(2020-01-08 16:39:38)\
+[Hexo博客及环境依赖包的正确升级方法](https://hexo.imydl.tech/archives/51612.html\)
+
+
 (2019-06-20 19:04:50)\
 Remove redundant `\\` in inline equations;
 Remove `_` in post titles;
