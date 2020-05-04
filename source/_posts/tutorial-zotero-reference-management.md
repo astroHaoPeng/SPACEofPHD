@@ -61,7 +61,7 @@ Tag Name | Description and purpose
 `_Status:Implemented` | Implemented.
 `_Status:Cited` | Cited in my papers, posts, reports, etc.
 **Rating system tags** |
-`-Rate:0` | Not related to my current research, but highly possible I will encounter it again in the future, so keep it in the libraty for record. 
+`-Rate:0` | Not related to my current research, but highly possible I will encounter it again in the future, so keep it in the library for record. 
 `-Rate:1` | Related but not so good literatures. May from non-mainstream publications. 
 `-Rate:2` | Could be studied and used but may not be cited in my future publications. 
 `-Rate:3` | Good ones. Most related papers should be scored 3.

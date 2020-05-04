@@ -1,5 +1,5 @@
 ---
-title: High Area-to-Mass Ratio (HAMR) 文献摘要
+title: Summary of High Area-to-Mass Ratio (HAMR)
 categories:
   - [Notes, Paper Notes]
   - [Academics, Aerospace]

@@ -1,5 +1,5 @@
 ---
-title: Multivariate Gaussian Processes (GP) theories and packages
+title: Summary of Multivariate Gaussian Processes (GP) theories and packages
 abbrlink: 76e7ddf2
 categories:
   - - Techniques
@@ -11,6 +11,8 @@ mathjax: false
 date: 2019-05-20 14:41:22
 updated: 2019-05-20 14:41:51
 tags:
+  - draft
+  - Gaussian Processes
 ---
 
 

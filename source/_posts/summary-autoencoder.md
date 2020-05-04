@@ -1,16 +1,21 @@
 ---
-title: AutoEncoder 总结和摘要
+title: Summary of Autoencoder and Variations
 comments: true
 mathjax: true
 abbrlink: ac2f4940
 date: 2020-01-07 14:30:53
-updated:
+updated: 2020-04-19 23:59:14
 categories:
+  - Summaries
 tags:
+  - Autoencoder
+  - Machine Learning
 ---
 
 
 # Learning Materials
+
+## Autoencoder
 
 - [一文看懂AutoEncoder模型演进图谱](https://flashgene.com/archives/42935.html)
   - “深度推荐系统”
@@ -34,13 +39,57 @@ tags:
   - 直接使用还原误差 (reconstruction error) 的 mean absolute error (MAE) 作为判断异常的标准，不用再接一个分类网络
   - 参考是了[这里](https://medium.com/@curiousily/credit-card-fraud-detection-using-autoencoders-in-keras-tensorflow-for-hackers-part-vii-20e0c85301bd)
 
+<!-- more -->
+
+- [Building Autoencoders in Keras](https://blog.keras.io/building-autoencoders-in-keras.html)
+  - 官方出品，值得参考
+  - Autoencoders are data-specific
+  - Usually not good at data compression
+  - They are rarely used in practical applications. 
+  - In 2012 they briefly found an application in greedy layer-wise pretraining for deep convolutional neural networks [1], but this quickly fell out of fashion as we started realizing that better random weight initialization schemes were sufficient for training deep networks from scratch.
+  - Autoencoders are not a true unsupervised learning technique, they are a self-supervised technique
+  - Today two interesting practical applications of autoencoders are 
+    - <mark>data denoising</mark> (which we feature later in this post), and 
+    - <mark>dimensionality reduction</mark> for data visualization.
+  - 有 Variational AE 的实现例子
+
+
+- [A Gentle Introduction to LSTM Autoencoders](https://machinelearningmastery.com/lstm-autoencoders/)
+  - 讲了 Prediction LSTM Autoencoder，<mark>需要研究一下，借鉴过来</mark>
+
+
 
 ## VAE
-https://zhuanlan.zhihu.com/p/34998569
-- 它本质上就是在我们常规的自编码器的基础上，对 encoder 的结果（在VAE中对应着计算均值的网络）加上了“高斯噪声”，使得结果 decoder 能够对噪声有鲁棒性；而那个额外的 KL loss（目的是让均值为 0，方差为 1），事实上就是相当于对 encoder 的一个正则项，希望 encoder 出来的东西均有零均值。
-- 说白了，重构的过程是希望没噪声的，而 KL loss 则希望有高斯噪声的，两者是对立的。所以，VAE 跟 GAN 一样，内部其实是包含了一个对抗的过程，只不过它们两者是混合起来，共同进化的。
-- 一句话，VAE 的名字中“变分”，是因为它的推导过程用到了 KL 散度及其性质。
+- [变分自编码器VAE：原来是这么一回事 | 附开源代码](https://zhuanlan.zhihu.com/p/34998569)
+  - 它本质上就是在我们常规的自编码器的基础上，对 encoder 的结果（在VAE中对应着计算均值的网络）加上了“高斯噪声”，使得结果 decoder 能够对噪声有鲁棒性；而那个额外的 KL loss（目的是让均值为 0，方差为 1），事实上就是相当于对 encoder 的一个正则项，希望 encoder 出来的东西均有零均值。
+  - 说白了，重构的过程是希望没噪声的，而 KL loss 则希望有高斯噪声的，两者是对立的。所以，VAE 跟 GAN 一样，内部其实是包含了一个对抗的过程，只不过它们两者是混合起来，共同进化的。
+  - 一句话，VAE 的名字中“变分”，是因为它的推导过程用到了 KL 散度及其性质。
 
+
+- [Implementing Variational Autoencoders in Keras: Beyond the Quickstart Tutorial](http://louistiao.me/posts/implementing-variational-autoencoders-in-keras-beyond-the-quickstart-tutorial/)
+  - when combined, Keras' building blocks are powerful enough to encapsulate most variants of the variational autoencoder and more generally, recognition-generative model combinations for which the generative model belongs to a large family of deep latent Gaussian models (DLGMs) <mark>（查这个DLGM是什么？）</mark>
+    - study variational autoencoders as a special case of variational inference in deep latent Gaussian models using inference networks
+    - use Keras to implement them in a modular fashion such that they can be easily adapted to approximate inference in tasks beyond unsupervised learning, and with complicated (non-Gaussian) likelihoods.
+  - The goal of this post is to propose a clean and elegant alternative implementation that takes better advantage of Keras' modular design.
+    - This first post will lay the groundwork for a series of future posts that explore ways to extend this basic modular framework to implement the cutting-edge methods proposed in the latest research......
+  - analytically intractable and cannot be evaluated in closed-form
+    - To circumvent this intractability we turn to variational inference, which formulates inference as an optimization problem.
+  - evidence lower bound (ELBO)
+    - a lower bound to the log marginal likelihood
+  - simultaneously maximizing it with respect to θ and ϕ gets us two birds with one stone.
+    - minimize KL divergence
+    - *approximately* maximizes the log marginal likelihood
+  - the form of the approximate posterior $q_\phi(\bm{z}|\bm{x})$, which can be viewed as a probabilistic encoder.
+  - Classically, inference networks are known as recognition models, and have now been used for decades in a wide variety of probabilistic methods. 
+    - When composed end-to-end, the recognition-generative model combination can be seen as having an autoencoder structure. 
+    - Indeed, this structure contains the variational autoencoder as a special case, and also the now less fashionable Helmholtz machine [4]. 
+    - Even more generally, this recognition-generative model combination constitutes a widely-applicable approach currently known as amortized variational inference, which can be used to perform approximate inference in models that lie beyond even the large class of deep latent Gaussian models.
+  - 【问题】最后得到的结果，和直接定义 `loss` 实现的 Autoencoder 似乎没有区别。
+- [Tutorial - What is a variational autoencoder?](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/)
+  - 与上一篇类似，从 probability modeling 的角度解读了 autoencoder
+  - 我对其中的概论和推导还不是很熟悉，勉强可以看懂
+  - 对应的[代码在这里](https://github.com/altosaar/variational-autoencoder/blob/master/train_variational_autoencoder_tensorflow.py#L25)
+  - 
 
 
 <!-- more -->

@@ -4,7 +4,7 @@ comments: true
 mathjax: true
 abbrlink: 514e25fd
 date: 2019-05-23 16:04:48
-updated: 2019-06-28 17:59:22
+updated: 2020-03-24 17:33:17
 categories: 
   - [Techniques, Softwares]
 tags:
@@ -128,6 +128,29 @@ The baseline of an image is at the bottom. You could use \raisebox to shift it u
 % [not needed]
 %\usepackage[utf8]{inputenc}  % allow input utf8 chars.
 ```
+
+
+# Problems and Solutions 
+Only keep a record of those ot easy to search for a solution.
+
+## Half-solved
+
+### Case-01
+> ~~"Fragile" problem with `\caption` and `\newcommand` with an optional argument.~~
+<!-- will get an error, so have to put them in a code block -->
+```latex
+Use a command with an optional parameter defined by `\newcommand[1][]{\ph}{#1}` will fail in the figure caption, 
+if called via `\caption{\ph[k]}`, but success via `\caption{\ph}`.
+Don't quite understand the background principle, but it is related to something called `fragile command` and `robust command`.
+Many posts say it could be solved by replace `\newcommand` with `\DeclareRobustCommand`,
+but in my case the **SOLUTION** is to use `\caption{\protect{\ph[k]}}` instead.
+```
+It turns out that this is incorrect, at least not fully correct. 
+This problem roots in the template of `AAS.cls` for the American Astronautical Society (AAS) conference.
+Using `\newline` rather than `\\` in the caption solves the problem perfectly.
+
+
+## Completely-solved
 
 
 # Workflows
