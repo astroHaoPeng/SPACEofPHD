@@ -5,8 +5,11 @@ comment: false
 mathjax: true
 abbrlink: cv
 date: 2018-01-20 17:16:10
-updated: 2019-07-09 18:55:12
+updated: 2020-05-15 15:40:27
 ---
+
+> (Short bio) 
+> Dr. Hao Peng is a Postdoctoral Associate in the Rutgers University, under the supervision of Prof. Xiaoli Bai. He obtained his PhD in 2016 from Beihang University. He is recently working on developing on-board machine learning calibration methods for space sensors. He is also working on a machine learning approach to improve orbit prediction accuracy. His research interests also include trajectory design, optimal control, restricted three-body problem, and dynamical systems.
 
 # 0. Bio
 
