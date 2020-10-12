@@ -95,45 +95,60 @@ $\quad = \frac{b^2}{b \left[ \left(1-\frac{x^2}{a^2}\right) \right]^{1/2}} \left
 ~~尝试换成 $r,\alpha$ 坐标（放弃）：~~
 
 $$ 
+\begin{aligned}
 x \rightarrow r\cos\alpha \\
 y \rightarrow r\sin\alpha
+\end{aligned}
 $$
 
 $$ 
+\begin{aligned}
 \dot x \rightarrow  \dot r \cos\alpha - r\dot\alpha\sin\alpha = V\cos\theta + u\\
 \dot y \rightarrow  \dot r \sin\alpha + r\dot\alpha\cos\alpha = V\sin\theta
+\end{aligned}
 $$
 
 $$ 
+\begin{aligned}
 \dot r = (V\cos\theta + u)\cos\alpha + V\sin\theta\sin\alpha \\
 \dot\alpha = \frac{1}{r} \left[ V\sin\theta\cos\alpha - (V\cos\theta+u)\sin\alpha \right]
+\end{aligned}
 $$
 
 $$ 
+\begin{aligned}
 \max \int_0^T y\dot x\,dt = \int_0^T r\sin\alpha(\dot r \cos\alpha - r\dot\alpha\sin\alpha)\,dt\\
 = \frac{1}{2} \int_0^T \left[ r\dot r\sin2\alpha - r^2\dot\alpha(1-\cos2\alpha) \right]\,dt
-\tag{cost function}$$
+\tag{cost function}
+\end{aligned}
+$$
 
 $$ H = r\dot r\sin2\alpha - r^2\dot\alpha(1-\cos2\alpha) 
 + \lambda_r ((V\cos\theta + u)\cos\alpha + V\sin\theta\sin\alpha) 
 + \lambda_a \left(\frac{1}{r} \left[ V\sin\theta\cos\alpha - (V\cos\theta+u)\sin\alpha \right] \right) $$
 
 $$ 
+\begin{aligned}
 \dot\lambda_r = - \frac{\partial H}{\partial r} 
 = - \dot r\sin2\alpha + 2r\dot\alpha(1-\cos2\alpha) + \lambda_a\left(\frac{1}{r^2}\left[ V\sin\theta\cos\alpha - (V\cos\theta+u)\sin\alpha \right]\right)\\
 \dot\lambda_a = - \frac{\partial H}{\partial \alpha} 
 = - r\frac{\partial\dot r}{\partial\alpha}\sin2\alpha - 2r\dot r\cos2\alpha + r^2\frac{\partial\dot\alpha}{\partial \alpha}(1-\cos2\alpha) + 2r^2\dot\alpha\sin2\alpha + \lambda_r(V\cos\theta+u)\sin\alpha - \lambda_r V\sin\theta\cos\alpha\\ 
-- \lambda_a \left(\frac{1}{r} \left[ -V\sin\theta\sin\alpha - (V\cos\theta+u)\cos\alpha \right] \right)$$
+- \lambda_a \left(\frac{1}{r} \left[ -V\sin\theta\sin\alpha - (V\cos\theta+u)\cos\alpha \right] \right)
+\end{aligned}
+$$
 
 太复杂了，推导不下去了……
 
 $$
+\begin{aligned}
 \text{cost function}
 = \int_0^T \frac{1}{2}\left[ r((V\cos\theta + u)\cos\alpha + V\sin\theta\sin\alpha)\sin2\alpha - r(V\sin\theta\cos\alpha - (V\cos\theta+u)\sin\alpha)(1-\cos2\alpha) \right]\,dt \\
 = \int_0^T \frac{r}{2}\left[ ((V\cos\theta + u)\cos\alpha + V\sin\theta\sin\alpha)\sin2\alpha - (V\sin\theta\cos\alpha - (V\cos\theta+u)\sin\alpha)(1-\cos2\alpha) \right]\,dt \\
 \text{inner} = (V\cos\theta + u)\cos\alpha\sin2\alpha + V\sin\theta\sin\alpha\sin2\alpha \\
 -(V\sin\theta\cos\alpha - (V\cos\theta+u)\sin\alpha)\\
-+(V\sin\theta\cos\alpha\cos2\alpha - (V\cos\theta+u)\sin\alpha\cos2\alpha) = ...$$
++(V\sin\theta\cos\alpha\cos2\alpha - (V\cos\theta+u)\sin\alpha\cos2\alpha) = ...
+\end{aligned}
+$$
 
 太复杂了，化简不下去了……
 

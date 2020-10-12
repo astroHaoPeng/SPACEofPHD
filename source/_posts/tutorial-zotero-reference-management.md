@@ -82,7 +82,7 @@ My system is inspired by the following very insightful `Tag System`:
 > 
 > [2019, Damien Goutte-Gattat, "Managing academic literature with Zotero and Docear"](https://incenp.org/notes/2019/managing-academic-literature.html)
 >
-> <img src="tutorial-zotero-reference-management/Snipaste_2020-02-14_15-25-16.png" width="400px" title="Using tags to organize reading workflow.">
+> <img src="Snipaste_2020-02-14_15-25-16.png" width="400px" title="Using tags to organize reading workflow.">
 > 
 > 1. Ideally this tag should not be used; it’s better to take the time to actually skim the paper rather than marking it as “to be skimmed”.
 > 2. “Skimmed” references should be accompanied with a note summarizing them.

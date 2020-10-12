@@ -29,7 +29,6 @@
     "hexo-renderer-njucks": "^1.0.0",
     "hexo-renderer-stylus": "^2.0.1",
     "hexo-server": "^2.0.0",
-    "hexo-sliding-spoiler": "^1.2.1",
     "hexo-symbols-count-time": "^0.7.0",
     "image-size": "^0.9.1",
     "markdown-it": "^11.0.1",
