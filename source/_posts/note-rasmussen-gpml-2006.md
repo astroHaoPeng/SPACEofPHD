@@ -2,10 +2,11 @@
 title: Gaussian Processes for Machine Learning 读书笔记
 abbrlink: 79506b93
 categories:
-  - 读书笔记
+  - [Notes, Book Notes]
 tags:
   - 读书笔记
   - 机器学习
+  - Machine Learning
   - 高斯过程
   - Gaussian Processes
 comments: true

@@ -9,27 +9,26 @@ updated: 2020-05-15 15:40:27
 ---
 
 > (Short bio) 
-> Dr. Hao Peng is a Postdoctoral Associate in the Rutgers University, under the supervision of Prof. Xiaoli Bai. He obtained his PhD in 2016 from Beihang University. He is recently working on developing on-board machine learning calibration methods for space sensors. He is also working on a machine learning approach to improve orbit prediction accuracy. His research interests also include trajectory design, optimal control, restricted three-body problem, and dynamical systems.
+> Dr. Hao Peng is a Postdoctoral Associate at Rutgers University, under the supervision of Prof. Xiaoli Bai. He obtained his PhD in aerospace engineering in 2016 from Beihang University. 
+> He is recently working on developing on-board machine learning calibration methods for space sensors. 
+> He is also working on a machine learning approach to improve orbit prediction accuracy. 
+> His research interests also include: restricted three-body problem; dynamical systems; deep space trajectory design;optimal control; low-thrust trajectory design; etc.
 
 # 0. Bio
 
-:mortar_board: Dr. **Hao Peng** is now a Postdoctoral Associate in the [Mechanical and Aerospace Engineering Department](https://mae.rutgers.edu/) at Rutgers University, NJ.
+:mortar_board: Dr. **Hao Peng** is now a Postdoctoral Associate in the [Mechanical and Aerospace Engineering Department](https://mae.rutgers.edu/) at Rutgers University, NJ, USA.
 
 I am working with [Prof. Xiaoli Bai](http://x-bai.rutgers.edu/) on several projects recently.\
 We have been actively promoting the intersection of aerospace dynamics and machine learning techniques.
-Up to now, we have published 7 paper and presented several conference reports about using machine learning models to improve orbit prediction accuracy, validated using both simulated data and publicly available space object catalog data. 
+Up to now, we have published a series of papers and presented several conference reports about using machine learning models to improve orbit prediction accuracy, which are validated using both simulated data and publicly available space object catalog data. 
 We are still exploring the limits of this novel approach. 
 Please see [6.1. Machine Learning in Aerospace](#6-1-machine-learning-in-aerospace) below for details.
 
-Before joining Prof. Bai's research group in Rutgers, I received an PhD degree in Aerospace Engineering from Beihang University (previously known as Beijing University of Aeronautics and Astronautics). 
-My PhD advisor was Prof. Shijie Xu. He is a renowned prefessor in the aerospace area.
-[My PhD thesis (in Chinese)](no_link_yet) has been selected as *Excellent Doctoral Degree Dissertation* of the year 2016, where only 10 theses from around 20 departments. 
-Most of the content in the thesis have been published in English in top-ranking journals, please check [6.2. Restricted Three-Body Problem](#6-2-restricted-three-body-problem) below.
+Before joining Prof. Bai's research group at Rutgers, I received my PhD degree in Aerospace Engineering from Beihang University (previously known as Beijing University of Aeronautics and Astronautics). 
+My PhD advisor was Prof. Shijie Xu who is a renowned professor in the aerospace area.
+[My PhD thesis (in Chinese)](no_link_yet) has been selected as *Excellent Doctoral Degree Dissertation* of the year 2016, among 10 theses from around 20 departments. 
+Most of the content in the thesis have been published in English in top-ranking journals, please check [6.2. Restricted Three-Body Problem](#6-2-restricted-three-body-problem) below for details.
 
-<!-- where I was a graduate research assistant at the Spacecraft Guidance, Navigation, and Controls Lab. My Master's thesis advisor was Prof. Amit Sanyal. My MS thesis research focused on coupled orbit-attitude spacecraft dynamics in the proximity of asteroids. I also looked into the nonlinear controllability of underactuated spacecraft in such enviornments using differential geometry tools.  -->
-
-<!-- I was also fortunate to complete my bachelor thesis at the French Space Agency (CNES), Toulouse, France. My bachelor thesis supervisor was Jean-Yves Prado and I worked on asteroid hazard mitigation using Yarkovsky effect reduction. I continued working on the orbital mechanics aspect of this problem as a research assistant at the Institut de Mécanique céleste et de calcul des éphémérides (IMCCE), Paris observatory under the supervision of Dr. Florent Deleflie. I also completed a summer internship during my junior year at the Institute of Space Systems, German Aerospace Center (DLR), Bremen, Germany. -->
-<!-- Prior to starting graduate research, I spent some wonderful years at BITS - Pilani in India, from where I double majored in Electronics and Instrumentation Engineering and Economics. -->
 
 
 # 1. Educational Background
@@ -51,18 +50,19 @@ section Haifa, Israel
 Satellite Formation Flying Summer School at Technion : crit, active, 2012-07-20, 2012-08-20
 {% endmermaid %}
 
-**2011/09 -- 2016/06**: <mark>Ph.D of Engineering</mark>, Spacecraft Design
+**2011/09 -- 2016/06**: <mark>Ph.D of Engineering</mark>
 - [Honors College of Beihang University](http://hc.buaa.edu.cn/) and School of Astronautics, Beihang University
-- Dissertation: Orbital Dynamics in the Elliptic Restricted Three-Body Problem for Deep Space Exploration (in Chinese, most chapters published in English)
+- Dissertation: **Orbital Dynamics in the Elliptic Restricted Three-Body Problem for Deep Space Exploration** (in Chinese; most chapters have been published on top journals in English)
 - Supervisor: Prof. Shijie Xu
 
-**2007/09 -- 2011/07**: <mark>Bachelor of Engineering</mark>, Spacecraft Design
+**2007/09 -- 2011/07**: <mark>Bachelor of Engineering</mark>
 - [Honors College of Beihang University](http://hc.buaa.edu.cn/) and School of Astronautics, Beihang University
 - Dissertation: Venus Exploring Trajectory Optimal Design using Variable-Specific-Impulse Magnetoplasma Rocket (in Chinese)
 - Supervisor: Prof. Shijie Xu
 
 **2015.09 -- 2015.12**: Visiting Ph.D. student
 - Departament de Matemàtica Aplicada I, Universitat Politècnica de Catalunya (UPC), Barcelona, Spain
+- Work: Lunar polar orbit to Sun-Earth L2 point libration orbit transfer trajectory design and survey
 - Supervisor: Prof. Josep J. Masdemont
 
 **2013.08 -- 2013.08**: Visiting Ph.D. student
@@ -73,9 +73,10 @@ Satellite Formation Flying Summer School at Technion : crit, active, 2012-07-20,
 
 
 
-I am a man of vision. I have determined to conduct scientific research since high school.
-So, during my undergraduate and graduate studies, I have taken a lot of courses to solid my research background as much as I could.
-Compared with mastering various kinds of knowledge and skills, I always pay more attention to visionary, critical thinking and a broad vision.
+I am a man of vision. 
+I have determined to conduct scientific research in aerospace engineering (AE) since high school.
+During my undergraduate and graduate studies, I have taken a lot of courses to solid my research background as much as I could.
+While mastering various knowledge and skills, I also attach great importance to developing my own vision, critical thinking and broad vision.
 
 {% tabs Courses, 4 %}
 <!-- tab Mathematics -->
@@ -128,7 +129,7 @@ Only list some books that I have seriously spent a lot of time studying carefull
 8. David A. Vallado, Fundamentals of Astrodynamics and Applications, New York, NY: The McGraw-Hill Companies, Inc., 1997. [[Link]](http://www.springer.com/us/book/9780070668348).
 
 
-Find more books at my [book reading notes](../categories/Notes/Book-Notes/).
+(Find more book recommendations at my [book reading notes](../categories/Notes/Book-Notes/).)
 <!-- endtab -->
 {% endtabs %}
 

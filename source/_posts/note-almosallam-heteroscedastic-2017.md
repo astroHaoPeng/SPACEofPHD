@@ -5,14 +5,14 @@ categories:
   - [Notes, Thesis Notes]
 tags:
   - thesis-phd
-  - machine learning
+  - Machine Learning
   - bayesian
   - gaussian process
   - ANN
 mathjax: true
 abbrlink: 6ce106ea
 date: 2018-09-25 10:59:29
-updated: 2018-10-10 17:29:40
+updated: 2020-10-05 07:13:44
 ---
 
 almosallam_heteroscedastic_2017
@@ -41,19 +41,18 @@ $$ p(\bm{x}............. \tag{A.11}$$
 
 ## 2.6 Summary
 
-> We have shown in this chapter that basis function models are sparse Gaussian processes of type SoR, but with a different prior on the latent variables.
+> We have shown in this chapter that basis function models are sparse Gaussian processes of type SoR, but with a different prior on the latent variables.
 
 BFM 的 latent variables 的 prior 与 SoR 不同，其它相同。
 
 
-> A main distinction between the way ANNs are traditionally optimised and how BFMs are trained, is that the former performs a regularised maximum likelihood
-30 Chapter 2. Gaussian Processes for Regression estimation, or maximum a posterior (MAP), while the latter maximises the marginal likelihood. Maximising the marginal likelihood is less prone to overtting, due to the
-additional cost term that minimises the variance on the weight vector w, which we
-have shown is related to the sparsity constraint in sparse auto-encoders. In the next
-chapter, we show how we can use this view of sparse GPs to extend their modelling
-capabilities.
+> A main distinction between the way ANNs are traditionally optimised and how BFMs are trained, is that the former performs a regularised maximum likelihood estimation, or maximum a posterior (MAP), while the latter maximises the marginal likelihood. Maximising the marginal likelihood is less prone to overfitting, due to the additional cost term that minimises the variance on the weight vector w, which we have shown is related to the sparsity constraint in sparse auto-encoders. In the next chapter, we show how we can use this view of sparse GPs to extend their modelling capabilities.
 
-所以 BFM 不容易过拟合，根本上是因为使用了 maximum MARGINAL LIKELIHOOD。（？待进一步研究理论基础）
+？？Maximum likelihood estimation 和 MAP 是同一个概念（核实一下）
+
+所以 BFM 不容易过拟合，根本上是因为使用了 maximum MARGINAL LIKELIHOOD。
+
+和 ANN 与 AE 才能扯上点关系。
 
 
 ## 2.1 Full Gaussian Processes
@@ -134,7 +133,7 @@ $$q(\bm{f}_*|\bm{f}_p)=\mathcal{N}(K_{*p}K_{pp}^{-1}\bm{f}_p,0) \tag{2.29}$$
 Effective prior:
 $$q(\bm{f}_x,\bm{f}_*) = \mathcal{N}([f_x;f_*]|0,[Q_{xx},Q_{x*};Q_{*x},Q_{**}]) \tag{2.30}$$
 where $Q_{ab}=K_{ap}K_{pp}^{-1}K_{pb}$ is the equivalent covariance function. 
-（？？猜测这一步应该是经过了配方消魂求解Eq.2.25）
+（？？猜测这一步应该是经过了配方法求解Eq.2.25）
 
 $$\mathbb{E}(\bm{f}_*) = \sigma^{-2}K_{*p}\Sigma_p^{-1}K_{px}\bm{y} \tag{2.34}$$
 $$\mathbb{V}(\bm{f}_*) = K_{*p}\Sigma_p^{-1}K_{p*}  \tag{2.35}$$
@@ -158,6 +157,15 @@ where $\Lambda = \text{diag}[K_{xx}-Q_{xx}]+\sigma^2I_n$.
 
 ## 2.4 Basic Function Models
 
+> 20201002 重新梳理思路：\
+> 定义 BFM 模型 
+> --> 得到 BFM 模型下 y 的 likelihood $p( y | X, \theta, w)$ （注意这里带有 w ） \
+> --> 定义 BFM 模型中 w 的 prior $p( w | \alpha )$ (此时 GP 的 prior 已经在 full GP 定义过了) \
+> --> 计算 evidence (marginal likelihood) $p( y | X, \theta )$：把 $p( f | X, \theta, w )$ 中的 $w$ 积分掉；把 $p( y | f_x, X, \theta)$ 中的 $f_x$ 积分掉 \
+> --> 用 Bayes' theorem 计算 $w$ 的 posterior $p(w|y,X,\theta,\alpha)= \frac{p(y|w,X,\theta,\alpha) p(w|\alpha)}{p(y|X,\theta,\alpha)}$ （右边这几项都有了，所以可以算出来） \
+> --> 用 Bayes' theorem 也可以关于 $w$ 计算 evidence $p( y | X, \theta )，即拆分 $p( y, w | X, \theta, \alpha )$ 得到 evidence \
+> --> 得到较简单形式的 marginal likelihood function
+
 BFM: linear combination of $m$ non-linear basis functions plus additive noise
 $$ y_i = \bm{\phi}(\bm{x}_i)^T\bm{w} + \varepsilon_i $$
 > $\bm{\phi}(\bm{x}_i) = [\phi_1(\bm{x}_i),\cdots,\phi_m(\bm{x}_i)]^T \in \mathbb{R}^m, \quad m\ll n$
@@ -180,7 +188,7 @@ $$ p(\bm{w}|\alpha) = \mathcal{N}(\bm{w}|0,\bm{A}^{-1}) $$
 $$p(\bm{f}_x|X,\bm{\theta}) = \int p(\bm{f}_x|X,\bm{\theta},\bm{w}) p(\bm{w}|\alpha) \cdot {\rm d}\bm{w}    \tag{2.51.改}$$
 $$ = \mathcal{N}(\bm{f}_x|0,\Phi_x^TA^{-1}\Phi_x)   \tag{2.54.改}$$
 
-MARGINAL LIKELIHOOD:
+MARGINAL LIKELIHOOD (from [Wiki](https://en.wikipedia.org/wiki/Marginal_likelihood): In the context of Bayesian statistics, it may also be referred to as the <mark>evidence</mark> or model evidence.):
 $$p(\bm{y}|X,\bm{\theta}) = \int p(\bm{y}|\bm{f}_x,\bm{\theta})p(\bm{f}_x|X,\bm{\theta}) \cdot {\rm d}\bm{f}_x  \tag{2.55}$$
 $$ = \mathcal{N}(\bm{y}|0,\Phi_x^TA^{-1}\Phi_x+\sigma^2I_n)   \tag{2.56}$$
 
@@ -223,7 +231,7 @@ $$\ln p(\bm{y}|X,\bm{\theta}) = -\frac{\beta}{2}\|\Phi_x^T\bm{\bar{w}}-\bm{y}\|^
 [我的更正：in Eq.2.64: $\Phi_x\bar{\bm{w}}\rightarrow\Phi_x^T\bar{\bm{w}}$]
 
 ------------
-### 验证 Eq.2.64 和 Eq.2.56 等价
+### 验证 Eq.2.64 和 ln(Eq.2.56) 等价
 **r.h.s of Eq.2.64:**
 $$ -2\cdot term1 -2\cdot term4 = \beta (\Phi_x^T\bar{w}-\bm{y})^T(\Phi_x^T\bar{w}-\bm{y}) + \alpha \bar{w}^T\bar{w} $$
 $$ = \beta\bm{y}^T\bm{y} + \beta( \bar{w}^T\Phi_x\Phi_x^T\bar{w} - 2 \bar{w}^T\Phi_x\bm{y} ) + \alpha\bar{w}^T\bar{w}  \tag{expand}$$
@@ -397,9 +405,28 @@ where $d$ is the dimension of input $\bm{x}$, $n$ is the number of training data
 这章很重要，讲了如果 $x$ 有噪音的情况下，如何进行训练和预测。
 
 推导很复杂，繁琐，目前似乎应用不到，暂时不看了。
+这章的很多推导都没有详细过程
 
 代码中的 $\Psi$ 出现在这一节，考虑输入变量 $\bm{x}$ 本身存在不确定性时的推导。
 
+> (p.63) We will first address how to predict with known input noise in Section 5.1.1, since this can be addressed independently of the training data.
+
+> (p.64) In Section 5.2.1, we consider the case in which training data inputs are uncertain by approximating the expected value of the marginal likelihood.
+
+先研究 prediction，因为 prediction 简单，不依赖训练数据。问题：
+- 是不是要先知道输入的分布才行？
+- 为什么和 training 是分开的？
+
+
+> (p.70) It requires us to have a probabilistic model for each possible set of missing variables, which grows exponentially large as the dimensionality of the input increases. 
+
+
+# 6 Photometric Redshift Estimation
+
+> (p.126) The former, the model uncertainty, helps in identifying regions where more data is needed, whereas the latter, the intrinsic noise uncertainty, helps in identifying regions where better or more precise features are needed.
+
+
+> (p.133) Finally, we introduced the capability of handling missing photometry, not present in any other method apart from random forests. This is particularly useful when using a model trained on one survey to predict the photometric redshift on another survey that does not share the same photometry but overlaps.
 
 
 ```

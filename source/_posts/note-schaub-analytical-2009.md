@@ -6,6 +6,7 @@ abbrlink: 95a90a1
 date: 2020-05-19 12:01:26
 updated:
 categories:
+  - [Notes, Book Notes]
 tags:
 ---
 

@@ -184,8 +184,8 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   #GitHub: https://github.com/yourname || github
-  GoogleScholar: https://scholar.google.com/citations?user=kOEKfc0AAAAJ&hl=zh-CN || ai-google-scholar
-  ResearchGate: https://www.researchgate.net/profile/Hao_Peng9 || ai-researchgate
+  GoogleScholar: https://scholar.google.com/citations?user=kOEKfc0AAAAJ&hl=zh-CN || #ai-google-scholar
+  ResearchGate: https://www.researchgate.net/profile/Hao_Peng9 || #ai-researchgate
   #E-Mail: mailto:yourname@gmail.com || envelope
   #Weibo: https://weibo.com/yourname || weibo
   #Google: https://plus.google.com/yourname || google
@@ -230,7 +230,7 @@ toc:
 chat:
   enable: false
   #service: chatra
-  service: tidio
+  #service: tidio
   icon: comment # Icon name in Font Awesome, set false to disable icon.
   text: Chat # Button text, change it as you wish.
 
@@ -291,13 +291,13 @@ follow_me:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: true
+  enable: false
   title: "My Other Related Posts:" # Custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
     #PPMixingRate: 0.0
-    isDate: false
+    #isDate: false
     #isImage: false
     #isExcerpt: false
 
@@ -517,7 +517,7 @@ math:
   katex:
     enable: true
     # See: https://github.com/KaTeX/KaTeX/tree/master/contrib/copy-tex
-    copy_tex: true
+    copy_tex: false
 
 # Easily enable fast Ajax navigation on your website.
 # Dependencies: https://github.com/theme-next/theme-next-pjax
@@ -579,7 +579,7 @@ comments:
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
   # Lazyload all comment systems.
-  lazyload: true
+  lazyload: false
   # Modify texts or order for any navs, here are some examples.
   nav:
     #disqus:
@@ -781,7 +781,7 @@ chatra:
 # See: https://www.tidiochat.com
 # Dashboard: https://www.tidiochat.com/panel/dashboard
 tidio:
-  enable: true
+  enable: false
   key: 0lsggi2qsj3lhugzsy426pso70dgi9gh # Public Key, get it from dashboard. See: https://www.tidiochat.com/panel/settings/developer
 
 
@@ -908,7 +908,7 @@ vendors:
   # katex: //cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css
   # copy_tex_js: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js
   # copy_tex_css: //cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css
-  katex:
+  katex: 
   copy_tex_js:
   copy_tex_css:
 

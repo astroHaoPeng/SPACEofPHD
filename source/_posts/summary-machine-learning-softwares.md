@@ -7,7 +7,7 @@ categories:
   - Summaries
   - [Techniques, Softwares]
 tags:
-  - machine learning
+  - Machine Learning
   - MATLAB
   - draft
 hide: true

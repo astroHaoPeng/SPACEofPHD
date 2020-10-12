@@ -6,7 +6,7 @@ categories:
     - Book Notes
 tags:
   - book
-  - machine learning
+  - Machine Learning
   - Gaussian Processes
 mathjax: true
 abbrlink: 7f6588b9

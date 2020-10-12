@@ -10,7 +10,7 @@
 
       {%- set display_toc = page.toc.enable and display_toc %}
       {%- if display_toc %}
-        {%- set toc = toc(page.content, { "class": "nav", list_number: page.toc.number, max_depth: page.toc.max_depth }) %}
+        {%- set toc = toc(page.content, { class: "nav", list_number: page.toc.number, max_depth: page.toc.max_depth }) %}
         {%- set display_toc = toc.length > 1 and display_toc %}
       {%- endif %}
 
@@ -48,4 +48,3 @@
   </aside>
   <div id="sidebar-dimmer"></div>
 {% endmacro %}
-

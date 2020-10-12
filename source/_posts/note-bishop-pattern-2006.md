@@ -5,7 +5,7 @@ categories:
   - [Notes, Book Notes]
 tags:
   - book
-  - machine learning
+  - Machine Learning
   - Bayesian inference
 mathjax: true
 abbrlink: 97ae8555
