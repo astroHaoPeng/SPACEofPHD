@@ -1,7 +1,8 @@
 ---
-title: Some reading notes of space debris
+title: Summary of Space Debris
 layout: post
 categories:
+  - Summaries
   - [Notes, Paper Notes]
 tags:
   - Academic

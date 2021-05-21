@@ -17,9 +17,10 @@ sticky:
 # <span style="color:blue">Call-for-abstract Open</span>
 
 - Open | Conference Date | Name | Location | <mark>**Abstract Deadline (chronological order)**</mark>
-- [x] | 20200815-22 | 43rd COSPAR Scientific Assembly | Sydney, Australia | [<mark>20200223</mark>](https://www.cospar-assembly.org/)
 - [x] | 20201012-16 | 71st International Astronautical Congress (IAC-2020) | Dubai, United Arab Emirates | [<mark>20200228</mark>](http://www.iafastro.org/wp-content/uploads/2019/10/IAC2020_Call-for-Papers_2019-09-30_FINAL_PRINT_online.pdf)
-- [x] | 20200809-13 | AAS/AIAA Astrodynamics Specialist Conference | South Lake Tahoe, CA | [<mark>20200410</mark>](http://www.space-flight.org/docs/2020_summer/2020_summer.html)
+- [x] | 20200809-13 | AAS/AIAA Astrodynamics Specialist Conference | South Lake Tahoe, CA | [<mark>20200515</mark>](http://www.space-flight.org/docs/2020_summer/2020_summer.html)
+- [ ] | 20210131-0204 | 31st AAS/AIAA Space Flight Mechanics Meeting | Charlotte, North Carolina | [future](http://www.space-flight.org/docs/2021_winter/2021_winter.html)
+- [ ] | 202104??-?? | The 28th International Symposium on Space Flight Dynamics (ISSFD) | Xi’an, China | [future](https://issfd.org/)
 - [ ] | ??? | [International Conference on Astrodynamics Tools and Techniques (ICATT)](https://trajectory.estec.esa.int/Astro/ICATT/ICATT_Home.html) | future | null
 
 <!-- more -->
@@ -43,12 +44,15 @@ ul li, ol li {
 
 # Conferences
 
+## 2021
+- [ ] | 20210503-07 | (Postpone to 2021) [16th International Conference on Space Operations (SpaceOps 2020)](http://www.spaceops2020.org/call-for-papers/) | Cape Town, South Africa | [20190831](http://www.spaceops2020.org/wp-content/uploads/2019/06/CallforPapers_SpaceOps2020.pdf)
+
 ## 2020
 - Done | <mark>**Conference Date (reverse order)**</mark> | Name | Location | Abstract Deadline | Others
-- [ ] | 20200518-20 | [16th International Conference on Space Operations (SpaceOps 2020)](http://www.spaceops2020.org/call-for-papers/) | Cape Town, South Africa | [20190831](http://www.spaceops2020.org/wp-content/uploads/2019/06/CallforPapers_SpaceOps2020.pdf)
-- [ ] | 20200511-12 | Inter-Planetary Small Satellite Conference | California Institute Of Technology, Pasadena, CA 91125 | [20200229](http://www.intersmallsatconference.com/index.html)
+- [ ] | 20200815-22 | 43rd COSPAR Scientific Assembly | Sydney, Australia | [<mark>202003031</mark>](https://www.cospar-assembly.org/)
+- [ ] | 20200511-12 | (Free, On-Line) Inter-Planetary Small Satellite Conference | California Institute Of Technology, Pasadena, CA 91125 | [20200229](http://www.intersmallsatconference.com/index.html)
 - [ ] | 20200507-14 | 41st IEEE Aerospace Conference 2020 | Yellowstone Conference Center, Big Sky, Montana | [20190701](https://www.aeroconf.org/key-dates)
-- [ ] | 20200316-20 | [51st Lunar and Planetary Science Conference](https://www.hou.usra.edu/meetings/lpsc2020/) | The Woodlands, Texas | null
+- [x] | 20200316-20 | (canceled) [51st Lunar and Planetary Science Conference](https://www.hou.usra.edu/meetings/lpsc2020/) | The Woodlands, Texas | null
 - [x] | 20200130-0205 | [43rd Annual AAS Guidance, Navigation and Control Conference - Rocky Mountain Region](https://aas-rocky-mountain-section.org/) | Breckenridge, Colorado | 20190906
 - [x] | 20200106-10 | [30th AIAA/AAS Space Flight Mechanics Meeting](http://www.space-flight.org/conferences.html) | Orlando, FL | [20190611](http://www.space-flight.org/docs/2020_winter/CallForPapers2020.pdf)
 - [x] | 20200106-10 | [SciTech 2020](https://www.aiaa.org/SciTech) | Orlando, FL | [**20190611**](https://www.aiaa.org/SciTech/presentations-papers/call-for-papers)
@@ -111,9 +115,6 @@ ul li, ol li {
 
 
 <!-- - [ ] Planetary Science Deep Space SmallSat Mission Concepts | | ~~Mar 18~~ | Woodlands, TX | |
-- [ ] 49th Lunar and Planetary Science Conference (LPSC) | ~~Jan 9~~ | ~~Mar 19–23~~ | Woodlands, TX | |
- 39th IEEE Aerospace Conference | | ~~Mar 4-11~~ | Big Sky, Montana | |
-- [ ] [首届中国航天大会 暨第三届中国航天高峰论坛](http://www.csaspace.org.cn/CMS/Academic/ArticleShow.asp?ArticleID=1201) | ~~Mar 1 (全文)~~ | ~~Apr 23-24~~ | 哈尔滨，中国 | |
 - [ ] 15th International Conference on Space Operations (SpaceOps) | ~~Jul 17, 2017~~ | ~~May 28-Jun 1~~ | Marseille, France | |
 - [ ] International Symposium on Lunar and Planetary Science 2018 | ~~Apr 20~~ | ~~Jun 13-15, 2018~~ | Macau, China
 - [ ] 5 th European Workshop on Space Debris Modelling and Remediation | ~~May 7~~ | June 25-27, 2018 | Paris

@@ -1,5 +1,5 @@
 ---
-title: summary software for machine learning
+title: Summary of software for machine learning
 comments: true
 mathjax: false
 abbrlink: 654cf420
@@ -7,7 +7,7 @@ categories:
   - Summaries
   - [Techniques, Softwares]
 tags:
-  - machine learning
+  - Machine Learning
   - MATLAB
   - draft
 hide: true

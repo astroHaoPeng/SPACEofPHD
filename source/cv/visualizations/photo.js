@@ -1,4 +1,4 @@
-photo ={
+photo = {
     page: 1,
     //offset 用于设置照片数量的上限
     offset: 100,

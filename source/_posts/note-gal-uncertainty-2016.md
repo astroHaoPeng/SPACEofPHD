@@ -1,5 +1,5 @@
 ---
-title: 博士论文 "Uncertainty in Deep Learning" 阅读笔记
+title: Notes of "Uncertainty in Deep Learning"
 categories:
   - [Notes, Thesis Notes]
 tags:

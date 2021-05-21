@@ -1,16 +1,16 @@
 Use only the hierarchies designed in this file.
 
-
-
 ----------------------
 
 Academics
     Aerospace
     Math
     Calibration
+    Machine Learning
 
 Collections
-    YouTube
+    Videos
+    Websites
 
 Information
 
@@ -20,20 +20,20 @@ Languages
     Speaking
 
 Notes
-    Paper Notes
-    Book Notes
-    Thesis Notes
-    Web Post Notes
+    Paper Note
+    Book Note
+    Thesis Note
+    Web Post Note
     Others
 
-Others
+Summaries (should be further categorized to `Techs` or `Academics`)
 
-Summaries
-
-Techniques
-    Softwares
-    Hardwares
+Techs
+    Software
+    Hardware
 
 Tutorials
+
+Others
 
 ----------------------

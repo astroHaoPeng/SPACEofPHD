@@ -121,7 +121,7 @@ For small training sets, you can quickly apply deep learning by performing trans
 
 ## Regularization
 
->It is possible to improve generalization if you modify the performance function by adding a term that consists of the mean of the sum of squares of the network weights and biases **msereg=γ∗msw+(1−γ)∗mse**, where γ is the performance ratio
+>It is possible to improve generalization if you modify the performance function by adding a term that consists of the mean of the sum of squares of the network weights and biases **msereg=γ∗msw+(1-γ)∗mse**, where γ is the performance ratio
 >
 >Using this performance function causes the network to have smaller weights and biases, and this forces the network response to be smoother and less likely to overfit.
 
@@ -130,7 +130,7 @@ For small training sets, you can quickly apply deep learning by performing trans
   - 问题：不好取最优的正则化参数：过大会导致过拟合；过小会导致学习效果差。
 - Automated Regularization (trainbr)
   - provides a measure of how many network parameters (weights and biases) are being effectively used by the network.
-  - The [`trainbr`](https://cn.mathworks.com/help/nnet/ref/trainbr.html) algorithm generally works best when the network inputs and targets are scaled so that they fall approximately in the range [−1,1]. 通过 pro- post- processing 实现。
+  - The [`trainbr`](https://cn.mathworks.com/help/nnet/ref/trainbr.html) algorithm generally works best when the network inputs and targets are scaled so that they fall approximately in the range [-1,1]. 通过 pro- post- processing 实现。
   - When using [`trainbr`](https://cn.mathworks.com/help/nnet/ref/trainbr.html), it is important to let the algorithm run until the effective number of parameters has converged. 要充分训练
 
 
@@ -209,7 +209,7 @@ It is standard practice to normalize the inputs before applying them to the netw
 
 Generally, the normalization step is applied to both the input vectors and the target vectors in the data set.
 
-| [`mapminmax`](https://cn.mathworks.com/help/nnet/ref/mapminmax.html) | Normalize inputs/targets to fall in the range [−1, 1] |
+| [`mapminmax`](https://cn.mathworks.com/help/nnet/ref/mapminmax.html) | Normalize inputs/targets to fall in the range [-1, 1] |
 | ---------------------------------------- | ---------------------------------------- |
 | [`mapstd`](https://cn.mathworks.com/help/nnet/ref/mapstd.html) | Normalize inputs/targets to have zero mean and unity variance |
 | [`processpca`](https://cn.mathworks.com/help/nnet/ref/processpca.html) | Extract principal components from the input vector |
@@ -370,7 +370,7 @@ For a list of functions, type: `help nntransfer`
   - the computation required does increase geometrically with the size of the network, because the equivalent of a matrix inverse must be computed at each iteration. （计算量几何增大）
 -  [`trainbr`](https://cn.mathworks.com/help/nnet/ref/trainbr.html?searchHighlight=trainbr&s_tid=doc_srchtitle): Bayesian regularization training algorithm
   - Bayesian regularization has been implemented 包含了自动正则化 [(ref)](https://cn.mathworks.com/help/nnet/ug/improve-neural-network-generalization-and-avoid-overfitting.html#bss4gz0-40)
-  - The [`trainbr`](https://cn.mathworks.com/help/nnet/ref/trainbr.html) algorithm generally works best when the network inputs and targets are scaled so that they fall approximately in the range [−1,1]. [(ref)](https://cn.mathworks.com/help/nnet/ug/improve-neural-network-generalization-and-avoid-overfitting.html#bss4gz0-40)
+  - The [`trainbr`](https://cn.mathworks.com/help/nnet/ref/trainbr.html) algorithm generally works best when the network inputs and targets are scaled so that they fall approximately in the range [-1,1]. [(ref)](https://cn.mathworks.com/help/nnet/ug/improve-neural-network-generalization-and-avoid-overfitting.html#bss4gz0-40)
   - When using [`trainbr`](https://cn.mathworks.com/help/nnet/ref/trainbr.html), it is important to let the algorithm run until the effective number of parameters has converged. [(ref)](https://cn.mathworks.com/help/nnet/ug/improve-neural-network-generalization-and-avoid-overfitting.html#bss4gz0-40)
   - ！！有待仔细学习
 -  ​

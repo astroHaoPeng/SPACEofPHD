@@ -1,6 +1,5 @@
 ---
-title: >-
-  Gaussian Process is a plural noun describing a random function with assumed
+title: Gaussian Process is a plural noun describing a random function with assumed
   Gaussian joint distribution
 abbrlink: c5317df1
 categories:
@@ -46,7 +45,7 @@ According to [Wikipedia:Multivariate_normal_distribution](https://en.wikipedia.o
 
 ----
 
-猜测（待进一步验证）：
+结论（待进一步验证）：
 
 | 随机变量 | GP |
 | :-----: | :-: |

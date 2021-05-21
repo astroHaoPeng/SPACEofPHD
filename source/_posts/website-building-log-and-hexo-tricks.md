@@ -61,6 +61,17 @@ For Gallery:
 
 # Logs
 
+(2020-07-06 21:41:38)\
+发现一个hexo的bug，（这个bug很烦，在写公式的时候尤其需要注意）
+```
+在无法处理不在代码框里的 `{#`，因为在写公式时用`\newcommand{\aaa}[1]{x_{#1}}`出现了`{#`组合，无法被翻译成html。
+```
+解决办法：使用`{ #`，加个空格。\
+参考\
+[Hexo错误”expected end of comment, got end of file”](https://www.dyxmq.cn/cloud/hexo/the-hexo-error-expected-end-of-comment.html)
+这里有另一个解决办法，但是不适合我的用处，[hexo generate 处理 #](http://zhang-jc.github.io/2016/09/11/hexo-generate-%E5%A4%84%E7%90%86-hashes/)
+
+
 (2019-10-31 16:57:09)\
 更新next.yml配置文件，数学模块的配置发生了变化，导致Katex无法渲染。
 
@@ -97,7 +108,7 @@ iframe {
 ```
 
 (2020-01-08 16:39:38)\
-[Hexo博客及环境依赖包的正确升级方法](https://hexo.imydl.tech/archives/51612.html\)
+[Hexo博客及环境依赖包的正确升级方法](https://hexo.imydl.tech/archives/51612.html)
 
 
 (2019-06-20 19:04:50)\
