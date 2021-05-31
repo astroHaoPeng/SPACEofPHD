@@ -5,7 +5,7 @@ mathjax: false
 abbrlink: efaf52e4
 categories:
   - - Techniques
-    - Softwares
+    - Software
 tags:
   - LaTeX
   - tricks

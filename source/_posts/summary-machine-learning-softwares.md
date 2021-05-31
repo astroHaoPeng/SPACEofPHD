@@ -5,7 +5,7 @@ mathjax: false
 abbrlink: 654cf420
 categories:
   - Summaries
-  - [Techniques, Softwares]
+  - [Techniques, Software]
 tags:
   - Machine Learning
   - MATLAB

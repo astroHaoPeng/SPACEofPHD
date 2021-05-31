@@ -1,10 +1,10 @@
 ---
 title: Summary of High Area-to-Mass Ratio (HAMR)
 categories:
-  - [Notes, Paper Notes]
+  - [Notes, Paper Note]
   - [Academics, Aerospace]
 tags:
-  - Paper Notes
+  - Paper Note
   - HAMR
   - Fokker-Planck-Kolmogorov
   - FPK equation

@@ -8,26 +8,41 @@ date: 2018-01-20 17:16:10
 updated: 2020-05-15 15:40:27
 ---
 
-> (Short bio) 
+
+
+# 0. Bio
+
+## Short bio
+
+> (20210530) 
+> Dr. Hao Peng has been a Postdoctoral Associate at Rutgers University since 2016, under the supervision of Prof. Xiaoli Bai. 
+> They are actively working on machine learning applications in aerospace engineering problems.
+> Their exploration emphasizes on the uniqueness and exclusiveness of the problems that are suitable and may only be solved by the machine learning (ML) and artificial intelligence (AI) technology. 
+> For example, they have developed a machine learning approach to improve orbit prediction accuracy; a Bayesian optimization  observation planning method for a constellation; a machine learning calibration method for MEMS gyro; etc.
+> Dr. Peng's research interests also include other general dynamics and operational problems.
+
+<!-- > (20200515) 
 > Dr. Hao Peng is a Postdoctoral Associate at Rutgers University, under the supervision of Prof. Xiaoli Bai. He obtained his PhD in aerospace engineering in 2016 from Beihang University. 
 > He is recently working on developing on-board machine learning calibration methods for space sensors. 
 > He is also working on a machine learning approach to improve orbit prediction accuracy. 
-> His research interests also include: restricted three-body problem; dynamical systems; deep space trajectory design;optimal control; low-thrust trajectory design; etc.
+> His research interests also include: restricted three-body problem; dynamical systems; deep space trajectory design;optimal control; low-thrust trajectory design; etc. -->
 
-# 0. Bio
+
+
+## Long bio
 
 :mortar_board: Dr. **Hao Peng** is now a Postdoctoral Associate in the [Mechanical and Aerospace Engineering Department](https://mae.rutgers.edu/) at Rutgers University, NJ, USA.
 
 I am working with [Prof. Xiaoli Bai](http://x-bai.rutgers.edu/) on several projects recently.\
-We have been actively promoting the intersection of aerospace dynamics and machine learning techniques.
-Up to now, we have published a series of papers and presented several conference reports about using machine learning models to improve orbit prediction accuracy, which are validated using both simulated data and publicly available space object catalog data. 
+We are actively promoting the intersection of aerospace dynamics and machine learning techniques.
+Up to today, we have published a series of papers and presented several conference reports about using machine learning models to improve orbit prediction accuracy, which are validated using both simulated data and publicly available space object catalog data. 
 We are still exploring the limits of this novel approach. 
 Please see [6.1. Machine Learning in Aerospace](#6-1-machine-learning-in-aerospace) below for details.
 
-Before joining Prof. Bai's research group at Rutgers, I received my PhD degree in Aerospace Engineering from Beihang University (previously known as Beijing University of Aeronautics and Astronautics). 
-My PhD advisor was Prof. Shijie Xu who is a renowned professor in the aerospace area.
-[My PhD thesis (in Chinese)](no_link_yet) has been selected as *Excellent Doctoral Degree Dissertation* of the year 2016, among 10 theses from around 20 departments. 
-Most of the content in the thesis have been published in English in top-ranking journals, please check [6.2. Restricted Three-Body Problem](#6-2-restricted-three-body-problem) below for details.
+Before joining Prof. Bai's research group at Rutgers, I received my PhD degree in Aerospace Engineering from Beijing University of Aeronautics and Astronautics (aka Beihang University).\
+My PhD advisor was Prof. Shijie Xu who was a renowned professor in the aerospace area.
+My PhD thesis (in Chinese; available upon request) has been selected as *Excellent Doctoral Degree Dissertation* of the year 2016, among 10 theses from around 20 departments. 
+Most of the content in my thesis have been published in English in top-ranking journals, please check [6.2. Restricted Three-Body Problem](#6-2-restricted-three-body-problem) below for details.
 
 
 
@@ -234,9 +249,9 @@ I have given several introduction lectures (80 mins) to some graduate students i
 
 
 
-# 5. :computer: Programming Skills
+# 5. Programming Skills
 
-{% tabs Programming Skill %}
+{% tabs Programming Skill :computer: %}
 
 <!-- tab MATLAB -->
 Most of my works are accomplished using MATLAB.
@@ -303,9 +318,9 @@ BTW, my collection of useful third-party repositories is also worth a look.
 
 
 
-# 6. :page_facing_up: Academic Contributions
+# 6. Academic Contributions
 
-Here is a list of my journal publications and conference presentations. 
+Here is a list of my journal publications and conference presentations :page_facing_up:. 
 Brief introductions are attached below each paper to help understanding our studies.
 You are always welcomed to discuss or leave comments at the bottom of the page.\
 (Papers are listed in a recommended reading order.)\

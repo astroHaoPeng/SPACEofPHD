@@ -2,7 +2,7 @@
 title: Reading Notes | PRML (Bishop 2006)
 comments: true
 categories:
-  - [Notes, Book Notes]
+  - [Notes, Book Note]
 tags:
   - book
   - Machine Learning

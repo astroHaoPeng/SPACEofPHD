@@ -9,16 +9,7 @@
 # See: https://theme-next.js.org/docs/theme-settings/
 # ---------------------------------------------------------------
 
-# If false, merge configs from `_data/next.yml` into default configuration (rewrite).
-# If true, will fully override default configuration by options from `_data/next.yml` (override). Only for NexT settings.
-# And if true, all config from default NexT `_config.yml` have to be copied into `next.yml`. Use if you know what you are doing.
-# Useful if you want to comment some options from NexT `_config.yml` by `next.yml` without editing default config.
-override: false
-
-# Console reminder if new version released.
-reminder: false
-
-# Allow to cache content generation. Introduced in NexT v6.0.0.
+# Allow to cache content generation.
 cache:
   enable: true
 
@@ -37,7 +28,7 @@ custom_file_path:
   bodyEnd: source/_data/body-end.njk
   variable: source/_data/variables.styl
   #mixin: source/_data/mixins.styl
-  #style: source/_data/styles.styl
+  style: source/_data/styles.styl
 
 
 # ---------------------------------------------------------------
@@ -56,7 +47,6 @@ darkmode: false
 
 # ---------------------------------------------------------------
 # Site Information Settings
-# See: https://theme-next.org/docs/getting-started/
 # ---------------------------------------------------------------
 
 favicon:
@@ -65,20 +55,21 @@ favicon:
   apple_touch_icon: /favicons/apple-touch-icon.png
   safari_pinned_tab: /favicons/safari-pinned-tab.svg
   #android_manifest: /images/manifest.json
-  #ms_browserconfig: /images/browserconfig.xml
 
 # Custom Logo (Warning: Do not support scheme Mist)
 custom_logo: #/uploads/custom-logo.jpg
 
 # Creative Commons 4.0 International License.
-# See: https://creativecommons.org/share-your-work/licensing-types-examples
-# Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-# You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
-# CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
+# See: https://creativecommons.org/about/cclicenses/
 creative_commons:
+  # Available values: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | cc-zero
   license: by-nc-sa
+  # Available values: big | small
+  size: small
   sidebar: true
   post: true
+  # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
+  # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
   language:
 
 
@@ -276,7 +267,7 @@ symbols_count_time:
 # Use icon instead of the symbol # to indicate the tag at the bottom of the post
 tag_icon: false
 
-# Reward (Donate)
+# Donate (Sponsor) settings
 # Front-matter variable (unsupport animation).
 reward_settings:
   # If true, a donate button will be displayed in every article by default.
@@ -301,15 +292,15 @@ follow_me:
 # Related popular posts
 # Dependencies: https://github.com/tea3/hexo-related-popular-posts
 related_posts:
-  enable: false
-  title: "My Other Related Posts:" # Custom header, leave empty to use the default one
+  enable: true
+  title: "My Other Posts:" # Custom header, leave empty to use the default one
   display_in_home: false
   params:
     maxCount: 5
     #PPMixingRate: 0.0
-    #isDate: false
-    #isImage: false
-    #isExcerpt: false
+    # isDate: false
+    # isImage: false
+    # isExcerpt: false
 
 # Post edit
 # Easily browse and edit blog source code online.
@@ -320,7 +311,7 @@ post_edit:
 
 # Show previous post and next post in post footer if exists
 # Available values: left | right | false
-post_navigation: left
+post_navigation: false
 
 
 # ---------------------------------------------------------------
@@ -330,7 +321,6 @@ post_navigation: left
 
 # TagCloud settings for tags page.
 tagcloud:
-  # All values below are same as default, change them by yourself.
   min: 14 # Minimun font size in px
   max: 40 # Maxium font size in px
   amount: 200 # Total amount of tags
@@ -356,6 +346,10 @@ calendar:
 # See: https://theme-next.js.org/docs/theme-settings/miscellaneous
 # ---------------------------------------------------------------
 
+# Preconnect CDN for fonts and plugins.
+# For more information: https://www.w3.org/TR/resource-hints/#preconnect
+preconnect: false
+
 # Set the text alignment in posts / pages.
 text_align:
   # Available values: start | end | left | right | center | justify | justify-all | match-parent
@@ -367,6 +361,13 @@ mobile_layout_economy: false
 
 # Android Chrome header panel color ($brand-bg / $headband-bg => $black-deep).
 android_chrome_color: "#222"
+
+# Override browsers' default behavior.
+body_scrollbar:
+  # Place the scrollbar over the content.
+  overlay: false
+  # Present the scrollbar even if the content is not overflowing.
+  stable: false
 
 codeblock:
   # Code Highlight theme
@@ -393,8 +394,11 @@ back2top:
 # Reading progress bar
 reading_progress:
   enable: false
+  # Available values: left | right
+  startAt: left
   # Available values: top | bottom
   position: top
+  reversed: false
   color: "#37c6c0"
   height: 3px
 
@@ -422,7 +426,7 @@ github_banner:
 #   light | light italic | normal | normal italic | bold | bold italic
 # Be aware that setting too much fonts will cause site running slowly
 # ---------------------------------------------------------------
-# To avoid space between header and sidebar in scheme Pisces / Gemini, Web Safe fonts are recommended for `global` (and `title`):
+# Web Safe fonts are recommended for `global` (and `title`):
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 
@@ -480,13 +484,15 @@ index_with_subtitle: false
 
 # Automatically add external URL with Base64 encrypt & decrypt.
 exturl: false
+# If true, an icon will be attached to each external URL
+exturl_icon: true
 
 # Google Webmaster tools verification.
 # See: https://www.google.com/webmasters
 google_site_verification: -57pSlFmDI7MN_2dcyrnQIi-rSbvfa2sYeBlbFsCHZE
 
 # Bing Webmaster tools verification.
-# See: https://www.bing.com/webmaster
+# See: https://www.bing.com/webmasters
 bing_site_verification:
 
 # Yandex Webmaster tools verification.
@@ -516,10 +522,12 @@ math:
   # Default (false) will load mathjax / katex script on demand.
   # That is it only render those page which has `mathjax: true` in front-matter.
   # If you set it to true, it will load mathjax / katex srcipt EVERY PAGE.
-  per_page: false
+  every_page: false
 
   mathjax:
     enable: false
+    # Available values: none | ams | all
+    tags: none
 
   katex:
     enable: true
@@ -531,16 +539,16 @@ math:
 pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
-# For more information: https://fancyapps.com/fancybox
+# For more information: https://fancyapps.com/fancybox/
 fancybox: true
 
 # A JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
-# For more information: https://github.com/francoischalifour/medium-zoom
+# For more information: https://medium-zoom.francoischalifour.com
 mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
-# For more information: https://github.com/ApoorvSaxena/lozad.js
+# For more information: https://apoorv.pro/lozad.js/demo/
 lazyload: false
 
 # Pangu Support
@@ -549,7 +557,7 @@ lazyload: false
 pangu: true
 
 # Quicklink Support
-# For more information: https://github.com/GoogleChromeLabs/quicklink
+# For more information: https://getquick.link
 # Front-matter variable (unsupport home archive).
 quicklink:
   enable: false
@@ -568,6 +576,7 @@ quicklink:
 
   # For more flexibility you can add some patterns (RegExp, Function, or Array) to ignores.
   # See: https://github.com/GoogleChromeLabs/quicklink#custom-ignore-patterns
+  # This option is deprecated. Use `CONFIG.quicklink.ignores` in your custom scripts instead.
   ignores:
 
 
@@ -581,7 +590,7 @@ comments:
   # Available values: tabs | buttons
   style: tabs
   # Choose a comment system to be displayed by default.
-  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
+  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
   active:
   # Setting `true` means remembering the comment system selected by the visitor.
   storage: true
@@ -596,6 +605,7 @@ comments:
     #  order: -2
 
 # Disqus
+# For more information: https://disqus.com
 disqus:
   enable: true
   shortname: space-research-blog
@@ -620,24 +630,6 @@ changyan:
   enable: false
   appid:
   appkey:
-
-# Valine
-# For more information: https://valine.js.org, https://github.com/xCss/Valine
-valine:
-  enable: false
-  appid: # Your leancloud application appid
-  appkey: # Your leancloud application appkey
-  serverURLs: # When the custom domain name is enabled, fill it in here
-  placeholder: Just go go # Comment box placeholder
-  avatar: mm # Gravatar style
-  meta: [nick, mail, link] # Custom comment header
-  pageSize: 10 # Pagination size
-  lang: # Language, available values: en, zh-cn
-  visitor: false # Article reading statistic
-  comment_count: true # If false, comment count will only be displayed in post page, not in home page
-  recordIP: false # Whether to record the commenter IP
-  enableQQ: false # Whether to enable the Nickname box to automatically get QQ Nickname and QQ Avatar
-  requiredFields: [] # Set required fields: [nick] | [nick, mail]
 
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
@@ -694,8 +686,9 @@ baidu_analytics: # <app_id>
 # Growingio Analytics
 growingio_analytics: # <project_id>
 
-# CNZZ count
-cnzz_siteid:
+# Cloudflare Web Analytics
+# See: https://www.cloudflare.com/web-analytics/
+cloudflare_analytics:
 
 # Show number of visitors of each article.
 # You can visit https://leancloud.cn to get AppID and AppKey.
@@ -759,9 +752,6 @@ local_search:
   # Preload the search data when the page loads.
   preload: false
 
-# Swiftype Search API Key
-swiftype_key:
-
 
 # ---------------------------------------------------------------
 # Chat Services
@@ -797,7 +787,7 @@ note:
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: simple
+  style: flat
   icons: false
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
   # Offset also applied to label tag variables. This option can work with disabled note tag.
@@ -896,7 +886,7 @@ vendors:
   mathjax:
 
   # KaTeX
-  katex:
+  katex: https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css
   copy_tex_js:
   copy_tex_css:
 
@@ -924,9 +914,6 @@ vendors:
   disqusjs_js:
   disqusjs_css:
 
-  # Valine
-  valine:
-
   # Gitalk
   gitalk_js:
   gitalk_css:
@@ -938,6 +925,9 @@ vendors:
   # Algolia Search
   algolia_search:
   instant_search:
+
+  # PDF
+  pdfobject:
 
   # Mermaid
   mermaid:
@@ -954,6 +944,7 @@ vendors:
   canvas_ribbon:
 
 # Assets
+# Accelerate delivery of static files using a CDN
 css: css
 js: js
 images: images

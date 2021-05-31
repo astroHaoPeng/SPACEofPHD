@@ -1,7 +1,7 @@
 ---
 title: Notes of "Uncertainty in Deep Learning"
 categories:
-  - [Notes, Thesis Notes]
+  - [Notes, Thesis Note]
 tags:
   - Thesis.phd
   - 读书笔记

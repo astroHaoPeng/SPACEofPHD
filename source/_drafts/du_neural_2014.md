@@ -1,8 +1,6 @@
 ---
 title: 读书笔记 | Neural Networks and Statistical Learning
-  - Notes
 tags:
-  - Book Notes
 abbrlink: f0398937
 mathjax: true
 comments: true

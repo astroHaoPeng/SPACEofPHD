@@ -3,7 +3,7 @@ title: Summary of Space Debris
 layout: post
 categories:
   - Summaries
-  - [Notes, Paper Notes]
+  - [Notes, Paper Note]
 tags:
   - Academic
   - Information

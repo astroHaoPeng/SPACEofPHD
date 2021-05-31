@@ -6,7 +6,7 @@ abbrlink: 95a90a1
 date: 2020-05-19 12:01:26
 updated:
 categories:
-  - [Notes, Book Notes]
+  - [Notes, Book Note]
 tags:
 ---
 
@@ -111,7 +111,7 @@ $$
 $$
 \{\bm{b}_1, \bm{b}_2, \bm{b}_3\} \begin{pmatrix} v_{b_1} \\ v_{b_2} \\ v_{b_3} \end{pmatrix} 
 = \{\bm{n}_1, \bm{n}_2, \bm{n}_3\} \textcolor{red}{[C]^T \begin{pmatrix} v_{b_1} \\ v_{b_2} \\ v_{b_3} \end{pmatrix}} 
-= \{\bm{n}_1, \bm{n}_2, \bm{n}_3\} \textcolor{red}{\begin{pmatrix} v_{n_1} \\ v_{n_2} \\ v_{n_3} \end{pmatrix}} \\
+= \{\bm{n}_1, \bm{n}_2, \bm{n}_3\} \textcolor{red}{\begin{pmatrix} v_{n_1} \\ v_{n_2} \\ v_{n_3} \end{pmatrix}}
 $$
 
 $$

@@ -6,7 +6,7 @@ abbrlink: pittelkau-survey-2007
 date: 2019-12-11 15:06:25
 updated:
 categories:
-  - [Notes, Book Notes]
+  - [Notes, Book Note]
 tags:
 ---
 

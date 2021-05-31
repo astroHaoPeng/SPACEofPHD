@@ -2,7 +2,7 @@
 title: Least-squares estimation, kalman filtering, and modeling -- a practical handbook
 abbrlink: e8aef91d
 categories:
-  - [Notes, Book Notes]
+  - [Notes, Book Note]
 tags:
   - Kalman filter
   - Neural Network

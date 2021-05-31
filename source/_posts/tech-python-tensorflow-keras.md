@@ -9,6 +9,9 @@ categories:
   - [Techs, Software]
   - [Academics, Machine Learning]
 tags:
+  - Machine Learning
+  - TensorFlow
+  - Keras
 ---
 
 If you are looking at this post, it means you are also pretty much a newbie to `TensorFlow`, like me, as of 2020-07-29.
@@ -34,6 +37,9 @@ If you are looking at this post, it means you are also pretty much a newbie to `
 > Set all random seeds\
 > Use `tensorflow.keras` instead standalone `keras`\
 > Use `model.predict_on_batch(x).numpy()` for predicting speed.
+
+
+<!-- more -->
 
 
 Put this at the very beginning should work. 

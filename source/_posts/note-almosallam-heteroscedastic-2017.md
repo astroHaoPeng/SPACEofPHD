@@ -2,7 +2,7 @@
 title: 阅读笔记：Heteroscedastic Gaussian processes for uncertain and incomplete data
 comments: true
 categories:
-  - [Notes, Thesis Notes]
+  - [Notes, Thesis Note]
 tags:
   - thesis-phd
   - Machine Learning

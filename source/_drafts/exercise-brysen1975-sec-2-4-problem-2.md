@@ -1,13 +1,10 @@
+---
 title: 解题答案
 abbrlink: a5263334
-categories:
-  - Math - Optimal Control
 tags:
-  - draft
-  - Optimal Control
 mathjax: true
 date: 2019-05-02 14:04:00
-updated:
+updated: 2020-10-12 17:48:48
 ---
 
 

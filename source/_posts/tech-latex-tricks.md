@@ -6,7 +6,7 @@ abbrlink: 514e25fd
 date: 2019-05-23 16:04:48
 updated: 2020-03-24 17:33:17
 categories: 
-  - [Techniques, Softwares]
+  - [Techniques, Software]
 tags:
   - LaTeX
   - tricks

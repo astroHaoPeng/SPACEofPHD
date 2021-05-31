@@ -5,7 +5,7 @@ mathjax: false
 abbrlink: 59c075a8
 categories:
   - - Techniques
-    - Softwares
+    - Software
 tags:
   - draft
 date: 2019-07-02 18:28:08

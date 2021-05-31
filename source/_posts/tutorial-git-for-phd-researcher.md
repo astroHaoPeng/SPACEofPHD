@@ -7,7 +7,7 @@ date: 2019-05-12 18:12:06
 updated: 2019-10-30 12:16:17
 categories:
   - [Notes]
-  - [Techniques, Softwares]
+  - [Techniques, Software]
 tags:
   - Tutorial
   - Git

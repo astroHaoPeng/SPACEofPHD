@@ -13,8 +13,8 @@ timezone: America/New_York
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://SpaceResearch.top/blog #SPACEofPHD
-root: /blog/
+url: https://SpaceResearch.top/ #SPACEofPHD
+root: /
 permalink: :abbrlink/ #-:year:month:day/
 permalink_defaults:
 
@@ -129,62 +129,16 @@ math:
     config:
       # KaTeX config
 
-# kramed: # this is used with 'mathjax'
-#   gfm: true
-#   pedantic: false
-#   sanitize: false
-#   tables: true
-#   breaks: true
-#   smartLists: true
-#   smartypants: true
-
-# markdown_it_plus: # this is used with 'katex'
-#   highlight: true
-#   html: true
-#   xhtmlOut: true
-#   breaks: true
-#   langPrefix:
-#   linkify: true
-#   typographer:
-#   quotes: “”‘’
-#   pre_class: highlight
 
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki/
-# markdown:
-#   render:
-#     html: true
-#     xhtmlOut: false
-#     breaks: false
-#     linkify: true
-#     typographer: true
-#     quotes: '“”‘’'
-#   anchors:
-#     # Minimum level for ID creation. (Ex. h2 to h6)
-#     level: 1
-#     # A suffix that is prepended to the number given if the ID is repeated.
-#     collisionSuffix: 'v'
-#     # If `true`, creates an anchor tag with a permalink besides the heading.
-#     permalink: true
-#     # Class used for the permalink anchor tag.
-#     permalinkClass: header-anchor
-#     # The symbol used to make the permalink
-#     permalinkSymbol: ''
-#   plugins:
-#     - markdown-it-abbr
-#     - markdown-it-footnote
-#     - markdown-it-ins
-#     - markdown-it-emoji
-#     - '@iktakahiro/markdown-it-katex'
-#     - markdown-it-task-checkbox
-# 
 markdown:
   preset: 'default'
   render:
     html: true
     xhtmlOut: false
     langPrefix: 'language-'
-    breaks: true
+    breaks: false
     linkify: true
     typographer: true
     quotes: '“”‘’'
@@ -197,14 +151,15 @@ markdown:
     - markdown-it-emoji
     - '@iktakahiro/markdown-it-katex'
     - markdown-it-task-checkbox
+    - markdown-it-named-headings
   anchors:
-    level: 2
+    level: 1
     collisionSuffix: 'v'
-    permalink: true
+    permalink: false
     permalinkClass: 'header-anchor'
     permalinkSide: 'left'
     permalinkSymbol: '¶'
-    case: 0
+    case: 1
     separator: ''
 
 # abbrlink config

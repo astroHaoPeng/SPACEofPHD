@@ -6,7 +6,13 @@ abbrlink: d82d0c1a
 date: 2019-11-07 12:49:27
 updated: 2020-10-05 07:13:49
 categories:
+  - [Notes, Thesis Note]
+  - [Academics, Machine Learning]
 tags:
+  - Gaussian Processes
+  - Machine Learning
+  - Kalman Filter
+  - Latent Variable Model
 ---
 
 
@@ -38,6 +44,7 @@ $$
 p(z_t|x_t) \approx \mathcal{N}(\text{GP}_\mu(x_t,D_o), \text{GP}_\Sigma(x_t,D_o))
 $$
 
+<!-- more -->
 
 # 4 Filtering and State Estimation with Gaussian
 

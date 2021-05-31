@@ -7,7 +7,7 @@ categories:
   - - Academics
     - Calibration
   - - Notes
-    - Web Post Notes
+    - Web Post Note
   - - Techniques
     - Hardwares
 tags:

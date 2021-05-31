@@ -61,6 +61,17 @@ For Gallery:
 
 # Logs
 
+(2021-05-31 17:22:08)
+升级到 theme next 8.5。刚开始升级后无法hexo s编译，报错莫名其妙，把node_modules全部删除后重新hexo install安装，正常了。
+关闭了Disqus的recommendations功能，使用related popular post插件来推荐文章。
+
+(2020-10-12 17:32:32)
+KaTeX生成的公式字体不对，not italic。
+检索一翻发现是因为KaTeX升级到0.11.1->0.12.0后发生了一些变化，[参见这里](https://github.com/laurent22/joplin/issues/3664)。\
+~~在`next/_vendors.yml`中把KaTeX默认改成0.11.1后~~
+在`_config.next.yml`中添加KaTeX的css地址https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css 后可以恢复。
+
+
 (2020-07-06 21:41:38)\
 发现一个hexo的bug，（这个bug很烦，在写公式的时候尤其需要注意）
 ```

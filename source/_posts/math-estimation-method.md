@@ -31,7 +31,7 @@ $$ f(\theta \mid x) = \frac{f(x\mid \theta )\,g(\theta )}{\int _{\Theta }f(x\mid
 
 ------------
 
-**最大似然估计 / maximum likelihood (ML) estimation**
+## 最大似然估计 / maximum likelihood (ML) estimation
 
 $$\hat{\theta}_{\rm ML}(x) = \arg \max_{\theta} \mathcal{L}(\theta|x) = \arg \max_{\theta} f(x|\theta)$$
 
@@ -40,11 +40,16 @@ $$\hat{\theta}_{\rm MAP}(x) = \arg \max_{\theta}{\frac{f(x\mid\theta )\,g(\theta
 <!-- $$\hat{\theta}_{\rm MAP}(x) = \arg \max_{{\theta }}{\frac{f(x\mid\theta )\,g(\theta )}{\int_{{\Theta }}f(x\mid\theta ')\,g(\theta ')\,d\theta '}}=\arg \max_{{\theta }}f(x|\theta )\,g(\theta)$$ -->
 
 
-**最大后验概率估计 / Maximum a posteriori (MAP) estimation**
+## 最大后验概率估计 / Maximum a posteriori (MAP) estimation
 
 $g(\theta)$ 是假设的先验概率；分母与 $\theta$ 的取值无关；$g(\theta)$ 为均匀分布时与 $\hat\theta_{\rm ML}$ 等价。
 
-**贝叶斯估计**
+## 贝叶斯估计
+
+## Type-II maximum likelihood (MLII)
+
+## Empirical Bayes estimation
+
 
 -----------------
 

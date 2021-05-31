@@ -7,7 +7,7 @@ date: 2020-03-29 13:31:15
 updated: 2020-04-21 22:46:05
 categories:
 - Summaries
-- [Notes, Web Post Notes]
+- [Notes, Web Post Note]
 tags:
 - ANN
 - RNN

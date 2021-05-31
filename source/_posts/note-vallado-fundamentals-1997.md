@@ -7,7 +7,7 @@ tags:
   - orbital dynamics
   - astrodynamics
 categories:
-  - [Notes, Book Notes]
+  - [Notes, Book Note]
 mathjax: true
 abbrlink: 20909fdd
 updated: 2018-06-20 12:17:48

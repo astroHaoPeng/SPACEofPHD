@@ -3,7 +3,7 @@ title: Reading Notes | Markov chain Monte Carlo algorithms for Gaussian processe
 comments: true
 categories:
   - - Notes
-    - Book Notes
+    - Book Note
 tags:
   - book
   - Machine Learning
